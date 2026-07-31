@@ -7,11 +7,8 @@ node_modules/
 .precompiled/
 .DS_Store
 
-# Omne runtime noise
+# Runtime noise
 logs/
 *.log
 out.jar
 out.jar.bak*
-
-# GitHub hard limit (>100MB)
-Omne/jaba/lib/modules

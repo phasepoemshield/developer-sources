@@ -5,7 +5,6 @@ Private remote archive of Minecraft client / research trees that previously live
 ## Trees
 
 - Desktop-FluxVisuals-Patch
-- Omne
 - Polairis-1.21.11-main
 - Pouche
 - Pulse
@@ -22,4 +21,4 @@ Private remote archive of Minecraft client / research trees that previously live
 
 ## Ignored locally
 
-Build/runtime caches (`.gradle`, `build`, `run`, …), Omne logs/`out.jar`, and `Omne/jaba/lib/modules` (>100MB GitHub limit).
+Build/runtime caches (`.gradle`, `build`, `run`, …), `logs/`, `*.log`, `out.jar*`.
