@@ -1,0 +1,47 @@
+{
+  "bell": {
+    "sounds": [
+      "rain:bell"
+    ]
+  },
+  "bonk": {
+    "sounds": [
+      "rain:bonk"
+    ]
+  },
+  "bubble": {
+    "sounds": [
+      "rain:bubble"
+    ]
+  },
+  "module_disable": {
+    "sounds": [
+      "rain:gui/module_disable"
+    ]
+  },
+  "module_enable": {
+    "sounds": [
+      "rain:gui/module_enable"
+    ]
+  },
+  "pop": {
+    "sounds": [
+      "rain:pop"
+    ]
+  },
+  "slider": {
+    "sounds": [
+      "rain:gui/slider"
+    ]
+  },
+  "uwu": {
+    "sounds": [
+      "rain:uwu"
+    ]
+  },
+  "vk": {
+    "sounds": [
+      "rain:vk"
+    ]
+  }
+}

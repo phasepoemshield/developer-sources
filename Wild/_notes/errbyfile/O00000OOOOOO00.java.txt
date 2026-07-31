@@ -1,0 +1,59 @@
+﻿ru\metaculture\protection\O00000OOOOOO00.java:68: error: reference to 
+O00000000 is ambiguous
+         o0000O000O0O0.O00000000(null);
+                      ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O00000OOOOOO00.java:99: error: reference to 
+O000000000000 is ambiguous
+            o0000O000O0O0.O000000000000(null);
+                         ^
+  both method O000000000000(String) in O0000O000O0O0 and method O000000000000(ColorSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O00000OOOOOO00.java:110: error: reference to 
+O000000000000 is ambiguous
+            o0000O000O0O0.O000000000000(null);
+                         ^
+  both method O000000000000(String) in O0000O000O0O0 and method O000000000000(ColorSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O00000OOOOOO00.java:133: error: reference to 
+O0000000000000 is ambiguous
+            o0000O000O0O0.O0000000000000(null);
+                         ^
+  both method O0000000000000(String) in O0000O000O0O0 and method O0000000000000(ColorSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O00000OOOOOO00.java:144: error: reference to 
+O0000000000000 is ambiguous
+            o0000O000O0O0.O0000000000000(null);
+                         ^
+  both method O0000000000000(String) in O0000O000O0O0 and method O0000000000000(ColorSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O00000OOOOOO00.java:68: error: reference to 
+O00000000 is ambiguous
+           o0000O000O0O0.O00000000(null);
+                        ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O00000OOOOOO00.java:99: error: reference to 
+O000000000000 is ambiguous
+              o0000O000O0O0.O000000000000(null);
+                           ^
+    both method O000000000000(String) in O0000O000O0O0 and method O000000000000(ColorSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O00000OOOOOO00.java:110: error: reference to 
+O000000000000 is ambiguous
+              o0000O000O0O0.O000000000000(null);
+                           ^
+    both method O000000000000(String) in O0000O000O0O0 and method O000000000000(ColorSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O00000OOOOOO00.java:133: error: reference to 
+O0000000000000 is ambiguous
+              o0000O000O0O0.O0000000000000(null);
+                           ^
+    both method O0000000000000(String) in O0000O000O0O0 and method O0000000000000(ColorSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O00000OOOOOO00.java:144: error: reference to 
+O0000000000000 is ambiguous
+              o0000O000O0O0.O0000000000000(null);
+                           ^
+    both method O0000000000000(String) in O0000O000O0O0 and method O0000000000000(ColorSetting) in O0000O000O0O0 match

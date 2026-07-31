@@ -1,0 +1,92 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package kotakbaz.rain.ui.api;
+
+import kotakbaz.rain.client.interfaces.a_0;
+import kotakbaz.rain.client.util.render.font.D;
+import kotakbaz.rain.client.util.render.font.E;
+import kotlin.Metadata;
+import org.jetbrains.annotations.NotNull;
+
+@Metadata(mv={2, 3, 0}, k=1, xi=48, d1={"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0002\b\u001a\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0016\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\b\u0002\u0010\u0003J%\u0010\b\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0004\u00a2\u0006\u0004\b\b\u0010\tJ\u001d\u0010\n\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u0004\u00a2\u0006\u0004\b\n\u0010\u000bR\"\u0010\f\u001a\u00020\u00048\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\b\f\u0010\r\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011R\"\u0010\u0012\u001a\u00020\u00048\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\b\u0012\u0010\r\u001a\u0004\b\u0013\u0010\u000f\"\u0004\b\u0014\u0010\u0011R\"\u0010\u0005\u001a\u00020\u00048\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\b\u0005\u0010\r\u001a\u0004\b\u0015\u0010\u000f\"\u0004\b\u0016\u0010\u0011R\"\u0010\u0017\u001a\u00020\u00048\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\b\u0017\u0010\r\u001a\u0004\b\u0018\u0010\u000f\"\u0004\b\u0019\u0010\u0011R\"\u0010\u0006\u001a\u00020\u00048\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\b\u0006\u0010\r\u001a\u0004\b\u001a\u0010\u000f\"\u0004\b\u001b\u0010\u0011R\"\u0010\u001c\u001a\u00020\u00048\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\b\u001c\u0010\r\u001a\u0004\b\u001d\u0010\u000f\"\u0004\b\u001e\u0010\u0011R\u0011\u0010\"\u001a\u00020\u001f8F\u00a2\u0006\u0006\u001a\u0004\b \u0010!R\u0011\u0010$\u001a\u00020\u001f8F\u00a2\u0006\u0006\u001a\u0004\b#\u0010!\u00a8\u0006%"}, d2={"Lkotakbaz/rain/ui/api/UIComponent;", "Lkotakbaz/rain/client/interfaces/IFunctionalWidget;", "<init>", "()V", "", "y", "height", "size", "calcMidY", "(FFF)F", "centerText", "(FF)F", "alpha", "F", "getAlpha", "()F", "setAlpha", "(F)V", "x", "getX", "setX", "getY", "setY", "width", "getWidth", "setWidth", "getHeight", "setHeight", "padding", "getPadding", "setPadding", "Lkotakbaz/rain/client/util/render/font/Font;", "getDefaultFont", "()Lkotakbaz/rain/client/util/render/font/Font;", "defaultFont", "getIconFont", "iconFont", "rain-visuals"})
+public class UIComponent
+implements a_0 {
+    private float alpha = 1.0f;
+    private float x;
+    private float y;
+    private float width;
+    private float height;
+    private float padding = 5.0f;
+
+    public UIComponent() {
+        super();
+    }
+
+    public final float getAlpha() {
+        return this.alpha;
+    }
+
+    public final void setAlpha(float f2) {
+        this.alpha = f2;
+    }
+
+    public final float getX() {
+        return this.x;
+    }
+
+    public final void setX(float f2) {
+        this.x = f2;
+    }
+
+    public final float getY() {
+        return this.y;
+    }
+
+    public final void setY(float f2) {
+        this.y = f2;
+    }
+
+    public final float getWidth() {
+        return this.width;
+    }
+
+    public final void setWidth(float f2) {
+        this.width = f2;
+    }
+
+    public final float getHeight() {
+        return this.height;
+    }
+
+    public final void setHeight(float f2) {
+        this.height = f2;
+    }
+
+    public final float getPadding() {
+        return this.padding;
+    }
+
+    public final void setPadding(float f2) {
+        this.padding = f2;
+    }
+
+    @NotNull
+    public final E getDefaultFont() {
+        return D.INSTANCE.getGS_REGULAR();
+    }
+
+    @NotNull
+    public final E getIconFont() {
+        return D.INSTANCE.getICON();
+    }
+
+    public final float calcMidY(float f2, float f3, float f4) {
+        return f2 + (f3 - f4) / 2.0f;
+    }
+
+    public final float centerText(float f2, float f3) {
+        return this.calcMidY(0.0f, f3, f2);
+    }
+}
+

@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\RotationBuilderScreen.java:528: error: 
+incompatible types: Object cannot be converted to W210
+            for (O00000OO0000O.W210 var26 : var21) {
+                                            ^
+
+  ru\metaculture\protection\RotationBuilderScreen.java:528: error: 
+incompatible types: Object cannot be converted to W210
+              for (O00000OO0000O.W210 var26 : var21) {
+                                              ^

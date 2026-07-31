@@ -1,0 +1,119 @@
+﻿ru\metaculture\protection\O0000O000O0O0.java:265: error: reference to 
+O00000000 is ambiguous
+      this.O00000000(null);
+          ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0O0.java:286: error: reference to 
+O00000000 is ambiguous
+      this.O00000000(null);
+          ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0O0.java:306: error: reference to 
+O00000000 is ambiguous
+      this.O00000000(null);
+          ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0O0.java:337: error: reference to 
+O00000000 is ambiguous
+         this.O00000000(null);
+             ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0O0.java:589: error: reference to 
+O00000000 is ambiguous
+      this.O00000000(null);
+          ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0O0.java:920: error: reference to 
+O00000000 is ambiguous
+      this.O00000000(null);
+          ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0O0.java:1001: error: reference to 
+O00000000 is ambiguous
+      this.O00000000(null);
+          ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0O0.java:1022: error: reference to 
+O00000000 is ambiguous
+      this.O00000000(null);
+          ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0O0.java:1048: error: reference to 
+O00000000 is ambiguous
+      this.O00000000(null);
+          ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0O0.java:1103: error: reference to 
+O00000000 is ambiguous
+      this.O00000000(null);
+          ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0O0.java:265: error: reference to 
+O00000000 is ambiguous
+        this.O00000000(null);
+            ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0O0.java:286: error: reference to 
+O00000000 is ambiguous
+        this.O00000000(null);
+            ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0O0.java:306: error: reference to 
+O00000000 is ambiguous
+        this.O00000000(null);
+            ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0O0.java:337: error: reference to 
+O00000000 is ambiguous
+           this.O00000000(null);
+               ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0O0.java:589: error: reference to 
+O00000000 is ambiguous
+        this.O00000000(null);
+            ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0O0.java:920: error: reference to 
+O00000000 is ambiguous
+        this.O00000000(null);
+            ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0O0.java:1001: error: reference to 
+O00000000 is ambiguous
+        this.O00000000(null);
+            ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0O0.java:1022: error: reference to 
+O00000000 is ambiguous
+        this.O00000000(null);
+            ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0O0.java:1048: error: reference to 
+O00000000 is ambiguous
+        this.O00000000(null);
+            ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0O0.java:1103: error: reference to 
+O00000000 is ambiguous
+        this.O00000000(null);
+            ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match

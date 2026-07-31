@@ -1,0 +1,19 @@
+﻿ru\metaculture\protection\CreeperFarm.java:193: error: incompatible 
+types: Object cannot be converted to CreeperEntity
+      for (CreeperEntity var7 : var2) {
+                                ^
+
+ru\metaculture\protection\CreeperFarm.java:212: error: incompatible 
+types: Object cannot be converted to ItemEntity
+      for (ItemEntity var8 : var3) {
+                             ^
+
+  ru\metaculture\protection\CreeperFarm.java:193: error: incompatible 
+types: Object cannot be converted to CreeperEntity
+        for (CreeperEntity var7 : var2) {
+                                  ^
+
+  ru\metaculture\protection\CreeperFarm.java:212: error: incompatible 
+types: Object cannot be converted to ItemEntity
+        for (ItemEntity var8 : var3) {
+                               ^

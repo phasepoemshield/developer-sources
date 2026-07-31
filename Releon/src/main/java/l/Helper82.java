@@ -1,0 +1,13 @@
+package l;
+
+public class Helper82 {
+   public static final byte START = -1;
+   public static final byte PRE = 0;
+   public static final byte ON = 1;
+   public static final byte POST = 2;
+   public static final byte SEND = 3;
+   public static final byte RECIEVE = 4;
+
+   public Helper82() {
+   }
+}

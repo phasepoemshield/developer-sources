@@ -1,0 +1,21 @@
+﻿ru\metaculture\protection\O000000O0O00.java:30: error: incompatible 
+types: invalid method reference
+            double var16 = var15.<Double>map(vec3d::squaredDistanceTo).orElse(0.0);
+                                             ^
+    incompatible types: Object cannot be converted to Vec3d
+
+ru\metaculture\protection\O000000O0O00.java:34: error: incompatible 
+types: Object cannot be converted to Vec3d
+               var11 = var15.orElse(vec3d);
+                                   ^
+
+  ru\metaculture\protection\O000000O0O00.java:30: error: incompatible 
+types: invalid method reference
+              double var16 = var15.<Double>map(vec3d::squaredDistanceTo).orElse(0.0);
+                                               ^
+      incompatible types: Object cannot be converted to Vec3d
+
+  ru\metaculture\protection\O000000O0O00.java:34: error: incompatible 
+types: Object cannot be converted to Vec3d
+                 var11 = var15.orElse(vec3d);
+                                     ^

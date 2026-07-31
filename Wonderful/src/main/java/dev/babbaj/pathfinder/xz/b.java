@@ -1,0 +1,28 @@
+package dev.babbaj.pathfinder.xz;
+
+import dev.babbaj.pathfinder.xz.k;
+
+abstract class b
+implements k {
+    b() {
+    }
+
+    public static boolean a(long l2) {
+        return l2 >= 4L && l2 <= 9L;
+    }
+
+    @Override
+    public final boolean a() {
+        return false;
+    }
+
+    @Override
+    public final boolean b() {
+        return true;
+    }
+
+    @Override
+    public final boolean c() {
+        return false;
+    }
+}

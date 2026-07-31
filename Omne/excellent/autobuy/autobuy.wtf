@@ -1,0 +1,211 @@
+{
+  "items": [
+    {
+      "item": "item.minecraft.diamond",
+      "name": "Алмаз",
+      "price": 5000,
+      "enabled": true
+    },
+    {
+      "item": "item.minecraft.golden_apple",
+      "name": "Золотое яблоко",
+      "price": 10000,
+      "enabled": true
+    },
+    {
+      "item": "item.minecraft.experience_bottle",
+      "name": "Пузырёк опыта",
+      "price": 1500,
+      "enabled": true
+    },
+    {
+      "item": "item.minecraft.firework_rocket",
+      "name": "Фейерверк",
+      "price": 1500,
+      "enabled": true
+    },
+    {
+      "item": "item.minecraft.zombie_villager_spawn_egg",
+      "name": "Яйцо зомби жителя",
+      "price": 180000,
+      "enabled": true
+    },
+    {
+      "item": "item.minecraft.villager_spawn_egg",
+      "name": "Яйцо жителя",
+      "price": 400000,
+      "enabled": true
+    },
+    {
+      "item": "item.minecraft.enchanted_golden_apple",
+      "name": "Зачарованное золотое яблоко",
+      "price": 100000,
+      "enabled": true
+    },
+    {
+      "item": "item.minecraft.elytra",
+      "name": "Элитра",
+      "price": 300000,
+      "enabled": true
+    },
+    {
+      "item": "block.minecraft.dragon_head",
+      "name": "Голова дракона",
+      "price": 250000,
+      "enabled": true
+    },
+    {
+      "item": "block.minecraft.wither_skeleton_skull",
+      "name": "Череп визер скелета",
+      "price": 250000,
+      "enabled": true
+    },
+    {
+      "item": "item.minecraft.totem_of_undying",
+      "name": "Тотем бессмертия",
+      "price": 90000,
+      "enabled": true
+    },
+    {
+      "item": "block.minecraft.ancient_debris",
+      "name": "Древние обломки",
+      "price": 250000,
+      "enabled": true
+    },
+    {
+      "item": "item.minecraft.netherite_ingot",
+      "name": "Незеритовый слиток",
+      "price": 1000000,
+      "enabled": true
+    },
+    {
+      "item": "item.minecraft.iron_nugget",
+      "name": "Серебро",
+      "price": 30000,
+      "enabled": true,
+      "tooltips": [
+        "§b[★]§3 Серебро"
+      ]
+    },
+    {
+      "item": "block.minecraft.tripwire_hook",
+      "name": "Отмычка с броней",
+      "price": 400000,
+      "enabled": true,
+      "tooltips": [
+        "§9С Броней"
+      ]
+    },
+    {
+      "item": "block.minecraft.tripwire_hook",
+      "name": "Отмычка с инструментами",
+      "price": 200000,
+      "enabled": true,
+      "tooltips": [
+        "§9С Инструментами"
+      ]
+    },
+    {
+      "item": "block.minecraft.tripwire_hook",
+      "name": "Отмычка с ресурсами",
+      "price": 1750000,
+      "enabled": true,
+      "tooltips": [
+        "§9С Ресурсами"
+      ]
+    },
+    {
+      "item": "block.minecraft.tripwire_hook",
+      "name": "Отмычка с оружием",
+      "price": 1350000,
+      "enabled": true,
+      "tooltips": [
+        "§9С Оружием"
+      ]
+    },
+    {
+      "item": "block.minecraft.tripwire_hook",
+      "name": "Отмычка с сферами",
+      "price": 8000000,
+      "enabled": true,
+      "tooltips": [
+        "§9С Сферами"
+      ]
+    },
+    {
+      "item": "item.minecraft.splash_potion",
+      "name": "Зелье агента",
+      "price": 1000000,
+      "enabled": true,
+      "tooltips": [
+        "[★] Зелье агента"
+      ]
+    },
+    {
+      "item": "item.minecraft.netherite_helmet",
+      "name": "Незеритовый шлем",
+      "price": 250000,
+      "enabled": true,
+      "enchantments": {
+        "0": [
+          4,
+          5
+        ],
+        "36": [
+          1
+        ]
+      }
+    },
+    {
+      "item": "item.minecraft.netherite_chestplate",
+      "name": "Незеритовый нагрудник",
+      "price": 250000,
+      "enabled": true,
+      "enchantments": {
+        "0": [
+          4,
+          5
+        ],
+        "36": [
+          1
+        ]
+      }
+    },
+    {
+      "item": "item.minecraft.netherite_leggings",
+      "name": "Незеритовые штаны",
+      "price": 250000,
+      "enabled": true,
+      "enchantments": {
+        "0": [
+          4,
+          5
+        ],
+        "36": [
+          1
+        ]
+      }
+    },
+    {
+      "item": "item.minecraft.netherite_boots",
+      "name": "Незеритовые ботинки",
+      "price": 250000,
+      "enabled": true,
+      "enchantments": {
+        "0": [
+          4,
+          5
+        ],
+        "36": [
+          1
+        ]
+      }
+    },
+    {
+      "item": "block.minecraft.shulker_box",
+      "name": "Шалкер",
+      "price": 10000,
+      "enabled": true
+    }
+  ]
+}

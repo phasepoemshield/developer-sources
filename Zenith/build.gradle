@@ -1,0 +1,113 @@
+import net.fabricmc.tinyremapper.TinyRemapper
+import net.fabricmc.tinyremapper.TinyUtils
+import net.fabricmc.tinyremapper.OutputConsumerPath
+import java.nio.file.Paths
+
+plugins {
+    id 'fabric-loom' version '1.9-SNAPSHOT'
+    id 'maven-publish'
+}
+
+version = '1.0.0'
+group = 'zenith'
+
+loom {
+    accessWidenerPath = file("src/main/resources/zenith.accesswidener")
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+}
+
+dependencies {
+    minecraft 'com.mojang:minecraft:1.21.4'
+    mappings 'net.fabricmc:yarn:1.21.4+build.8:v2'
+    modImplementation 'net.fabricmc:fabric-loader:0.16.14'
+    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.119.2+1.21.4'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.named('compileJava') {
+    enabled = false
+}
+
+tasks.named('validateAccessWidener') {
+    enabled = false
+}
+
+tasks.register('applyCosmeticsPatches') {
+    group = 'zenith'
+    description = 'Rebuild and apply cosmetics/Figura runtime patches'
+    doLast {
+        def javaHome = System.getenv('JAVA_HOME') ?: System.getProperty('java.home')
+        def javac = "${javaHome}/bin/javac"
+        def java = "${javaHome}/bin/java"
+        def out = file('patches/cosmetics/out')
+        out.mkdirs()
+        exec {
+            commandLine javac, '--release', '21', '-d', out.absolutePath, 'patches/cosmetics/ApplyCosmeticsPatches.java'
+        }
+        exec {
+            commandLine java, '-cp', out.absolutePath, 'ApplyCosmeticsPatches'
+        }
+    }
+}
+
+tasks.named('runClient') {
+    dependsOn applyCosmeticsPatches
+}
+
+// Re-apply after setupRunClasses if that task regenerates obfuscated classes
+tasks.matching { it.name == 'setupRunClasses' }.configureEach {
+    finalizedBy applyCosmeticsPatches
+}
+
+task setupRunClasses {
+    doLast {
+        def inputJar = file("C:/Users/withyou/Desktop/soucred/ZenithClient-1.0.0.jar").toPath()
+        def outputJar = file("build/libs/ZenithClient-named.jar").toPath()
+        def mappingsTiny = file("C:/Users/withyou/Desktop/soucred/tools/mappings/fully_remapped_tiny.tiny").toPath()
+        def targetDir = file("build/classes/java/main")
+
+        println "1. Remapping " + inputJar + " -> " + outputJar
+        def remapper = TinyRemapper.newRemapper()
+                .withMappings(TinyUtils.createTinyMappingProvider(mappingsTiny, "intermediary", "named"))
+                .ignoreConflicts(true)
+                .build()
+
+        try (def outputConsumer = new OutputConsumerPath.Builder(outputJar).build()) {
+            outputConsumer.addNonClassFiles(inputJar)
+            remapper.readInputs(inputJar)
+            remapper.apply(outputConsumer)
+        } finally {
+            remapper.finish()
+        }
+
+        println "2. Extracting named classes..."
+        delete targetDir
+        copy {
+            from zipTree(outputJar)
+            into targetDir
+            include "**/*.class"
+        }
+
+        println "3. Running smart bytecode remapper..."
+        exec {
+            commandLine 'python', 'C:/Users/withyou/Desktop/soucred/tools/smart_bytecode_remapper.py'
+        }
+        println "4. Patching branding strings (del1very -> developer, LifeTime)..."
+        exec {
+            commandLine 'python', 'C:/Users/withyou/Desktop/soucred/tools/patch_branding.py'
+        }
+        println "Classes ready in build/classes/java/main!"
+    }
+}

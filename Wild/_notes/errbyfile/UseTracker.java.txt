@@ -1,0 +1,19 @@
+﻿ru\metaculture\protection\UseTracker.java:170: error: incompatible types: 
+Object cannot be converted to Entry
+            for (Entry var9 : var6.entrySet()) {
+                                           ^
+
+ru\metaculture\protection\UseTracker.java:239: error: incompatible types: 
+Object cannot be converted to W108
+         for (UseTracker.W108 var6 : var4) {
+                                     ^
+
+  ru\metaculture\protection\UseTracker.java:170: error: incompatible 
+types: Object cannot be converted to Entry
+              for (Entry var9 : var6.entrySet()) {
+                                             ^
+
+  ru\metaculture\protection\UseTracker.java:239: error: incompatible 
+types: Object cannot be converted to W108
+           for (UseTracker.W108 var6 : var4) {
+                                       ^

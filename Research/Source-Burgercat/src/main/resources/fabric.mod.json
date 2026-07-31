@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "nexis",
+  "version": "${version}",
+  "name": "mod-menu-api",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "accessWidener": "nexis.accesswidener",
+  "entrypoints": {
+    "main": [
+      "fun.nexisdlc.NexisClient"
+    ]
+  },
+  "mixins": [
+    "nexis-client.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

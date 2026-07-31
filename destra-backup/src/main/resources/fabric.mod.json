@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "destra",
+  "name": "Destra",
+  "version": "1.0.0",
+  "description": "Destra",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "ru.destra.core.DestraClient"
+    ],
+    "client": [
+      "ru.destra.fix.KeybindFix"
+    ]
+  },
+  "mixins": [
+    "destra.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.4",
+    "java": ">=21"
+  }
+}

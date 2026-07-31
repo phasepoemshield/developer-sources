@@ -1,0 +1,27 @@
+﻿ru\metaculture\protection\O000000OOOO000.java:845: error: incompatible 
+types: Object cannot be converted to String
+         for (String var6 : var2) {
+                            ^
+
+ru\metaculture\protection\O000000OOOO000.java:940: error: incompatible 
+types: invalid method reference
+      return var1.<String>map(Identifier::toString).orElse("");
+                              ^
+    method toString in class Identifier cannot be applied to given types
+      required: no arguments
+      found:    Object
+      reason: actual and formal argument lists differ in length
+
+  ru\metaculture\protection\O000000OOOO000.java:845: error: incompatible 
+types: Object cannot be converted to String
+           for (String var6 : var2) {
+                              ^
+
+  ru\metaculture\protection\O000000OOOO000.java:940: error: incompatible 
+types: invalid method reference
+        return var1.<String>map(Identifier::toString).orElse("");
+                                ^
+      method toString in class Identifier cannot be applied to given types
+        required: no arguments
+        found:    Object
+        reason: actual and formal argument lists differ in length

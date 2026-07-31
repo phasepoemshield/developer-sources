@@ -1,0 +1,19 @@
+﻿ru\metaculture\protection\ReconnectCommand.java:311: error: incompatible 
+types: Object cannot be converted to String
+            for (String var10 : var3) {
+                                ^
+
+ru\metaculture\protection\ReconnectCommand.java:318: error: incompatible 
+types: Object cannot be converted to String
+            for (String var11 : var3) {
+                                ^
+
+  ru\metaculture\protection\ReconnectCommand.java:311: error: 
+incompatible types: Object cannot be converted to String
+              for (String var10 : var3) {
+                                  ^
+
+  ru\metaculture\protection\ReconnectCommand.java:318: error: 
+incompatible types: Object cannot be converted to String
+              for (String var11 : var3) {
+                                  ^

@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\O00000OO00OO.java:31: error: incompatible 
+types: Object cannot be converted to Module
+         for (Module var18 : var12) {
+                             ^
+
+  ru\metaculture\protection\O00000OO00OO.java:31: error: incompatible 
+types: Object cannot be converted to Module
+           for (Module var18 : var12) {
+                               ^

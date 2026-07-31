@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "pulse",
+  "version": "1.0-SNAPSHOT",
+  "name": "pulse",
+  "description": "pulse client for Minecraft (no native protection stubbed)",
+  "authors": [
+    "You"
+  ],
+  "license": "All-Rights-Reserved",
+  "icon": "assets/pulse/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [],
+    "main": [
+      "ru.pulse.Pulse"
+    ]
+  },
+  "mixins": [
+    "pulse.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.0",
+    "fabric": "*",
+    "minecraft": "1.21.4",
+    "java": ">=21"
+  }
+}

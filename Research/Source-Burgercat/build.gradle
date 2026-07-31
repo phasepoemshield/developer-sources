@@ -1,0 +1,178 @@
+plugins {
+    id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+    id 'maven-publish'
+    id 'com.gradleup.shadow' version '8.3.5'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+repositories {
+    mavenCentral()
+    maven { name = "ViaVersion"; url = "https://repo.viaversion.com" }
+    maven { name = "Lenni0451"; url = "https://maven.lenni0451.net/everything" }
+    maven {
+        name = "Jitpack"
+        url = "https://jitpack.io"
+        content { includeGroup "com.github.oryxel1" }
+    }
+    // Baritone (форк cabaletta) — запасной источник API
+    maven { name = "Baritone"; url = "https://repo.nea.moe/releases" }
+    // Baritone (форк Meteor) — releases
+    maven { name = "Baritone-Meteor"; url = "https://maven.meteordev.org/releases" }
+    // Baritone (форк Meteor) — snapshots, нужно для *-SNAPSHOT версий
+    maven { name = "Baritone-Meteor-Snapshots"; url = "https://maven.meteordev.org/snapshots" }
+}
+
+// что shadow зашьёт в jar (ТОЛЬКО onnxruntime, без Minecraft и прочего)
+configurations {
+    shadowBundle
+}
+
+dependencies {
+    // Версии менять в gradle.properties
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    // Fabric API. Технически опционально, но почти всегда нужен.
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+//  modImplementation "com.viaversion:viafabricplus:${project.viafabricplus_version}"
+
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+    implementation 'net.java.dev.jna:jna:5.14.0'
+
+    modImplementation("com.squareup.okhttp3:okhttp:4.12.0") { transitive = true }
+    include "com.squareup.okhttp3:okhttp:4.12.0"
+    modImplementation("com.squareup.okio:okio:3.6.0") { transitive = true }
+    include "com.squareup.okio:okio:3.6.0"
+    modImplementation("org.json:json:20231013") { transitive = true }
+    include "org.json:json:20231013"
+
+    // Baritone 1.21.11: ТОЛЬКО компиляция, НЕ кладётся в jar.
+    // В рантайме классы есть лишь если юзер сам поставил Baritone в mods.
+    // Нет include() = нет встраивания.
+    modCompileOnly("meteordevelopment:baritone:1.21.11-SNAPSHOT")
+
+    // onnxruntime: на компиляцию + в shadow-бандл (НЕ через include/JiJ — иначе нативку не урезать)
+    implementation("com.microsoft.onnxruntime:onnxruntime:1.18.0")
+    shadowBundle("com.microsoft.onnxruntime:onnxruntime:1.18.0")
+}
+
+processResources {
+    def version = project.version
+    inputs.property "version", version
+    filesMatching("fabric.mod.json") {
+        expand "version": version
+    }
+    // в jar из models попадут ТОЛЬКО .onnx
+    exclude "assets/nexis/models/nexis_rotation_logs/**"   // папка с логами + csv
+    exclude "assets/nexis/models/*.py"                     // train_rotation.py
+    exclude "assets/nexis/models/nexis_models/**"
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 21
+}
+
+java {
+    // Loom сам прицепит sourcesJar к RemapSourcesJar и к задаче "build", если она есть.
+    // Убери эту строку — исходники не сгенерятся.
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/nexis.accesswidener")
+
+    runs {
+        client1 {
+            client()
+            configName = "Fabric Client 1"
+            runDir = "run/client1"
+            source = sourceSets.main
+            ideConfigGenerated = true
+            // Dev auth whitelist in Initializator uses user.name (sterford/User).
+            vmArg "-Duser.name=sterford"
+            programArg "--username"
+            programArg "Dev1"
+        }
+
+        client2 {
+            client()
+            configName = "Fabric Client 2"
+            runDir = "run/client2"
+            source = sourceSets.main
+            ideConfigGenerated = true
+            vmArg "-Duser.name=sterford"
+            programArg "--username"
+            programArg "Dev2"
+        }
+
+        client3 {
+            client()
+            configName = "Fabric Client 3"
+            runDir = "run/client3"
+            source = sourceSets.main
+            ideConfigGenerated = true
+            vmArg "-Duser.name=sterford"
+            programArg "--username"
+            programArg "Dev3"
+        }
+
+        client4 {
+            client()
+            configName = "Fabric Client 4"
+            runDir = "run/client4"
+            source = sourceSets.main
+            ideConfigGenerated = true
+            vmArg "-Duser.name=sterford"
+            programArg "--username"
+            programArg "Dev4"
+        }
+    }
+}
+
+// shadow зашивает onnxruntime, оставляя ТОЛЬКО win-x64
+shadowJar {
+    configurations = [project.configurations.shadowBundle]
+    archiveClassifier = "shadow"   // промежуточный jar, дальше его ремапит Loom
+
+    exclude "ai/onnxruntime/native/linux*/**"   // linux x64 + aarch64
+    exclude "ai/onnxruntime/native/osx*/**"      // mac x64 + arm
+    exclude "ai/onnxruntime/native/win-x86/**"   // 32-бит винда
+    // остаётся ai/onnxruntime/native/win-x64/**
+
+    from("LICENSE") {
+        rename { "${it}_${project.name}" }
+    }
+}
+
+// итоговый ремап-jar собираем из shadow-выхода
+remapJar {
+    dependsOn shadowJar
+    inputFile = shadowJar.archiveFile
+}
+
+jar {
+    def projectName = project.name
+    inputs.property "projectName", projectName
+    from("LICENSE") {
+        rename { "${it}_$projectName" }
+    }
+}
+
+// настройка maven-публикации
+publishing {
+    publications {
+        create("mavenJava", MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        // Сюда репозитории для публикации артефакта.
+        // Внимание: это НЕ то же, что блок repositories наверху.
+    }
+}

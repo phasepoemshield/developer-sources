@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "kotakbaz.rain.guard.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "priority": 1400,
+  "mixinPriority": 1400,
+  "client": [
+    "GuardMinecraftClientMixin",
+    "GuardHudMixin",
+    "GuardPlayerMixin",
+    "GuardKeyboardMixin",
+    "GuardGameRendererMixin"
+  ],
+  "mixins": [
+    "GuardScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

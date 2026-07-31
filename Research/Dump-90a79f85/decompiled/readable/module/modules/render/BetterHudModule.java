@@ -1,0 +1,795 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package kotakbaz.rain.module.modules.render;
+
+import java.nio.charset.StandardCharsets;
+import java.security.Key;
+import java.util.Arrays;
+import java.util.Base64;
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.PBEKeySpec;
+import javax.crypto.spec.SecretKeySpec;
+import kotakbaz.rain.module.a_0;
+import kotakbaz.rain.module.setting.settings.c;
+import kotlin.Metadata;
+import kotlin.ranges.RangesKt;
+import org.jetbrains.annotations.NotNull;
+
+/*
+ * Renamed from kotakbaz.rain.module.modules.render.k
+ */
+@Metadata(mv={2, 3, 0}, k=1, xi=48, d1={"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\r\b\u00c6\u0002\u0018\u00002\u00020\u0001B\t\b\u0002\u00a2\u0006\u0004\b\u0002\u0010\u0003J\u0015\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004\u00a2\u0006\u0004\b\u0007\u0010\bR\u0017\u0010\n\u001a\u00020\t8\u0006\u00a2\u0006\f\n\u0004\b\n\u0010\u000b\u001a\u0004\b\f\u0010\rR\u0017\u0010\u000e\u001a\u00020\t8\u0006\u00a2\u0006\f\n\u0004\b\u000e\u0010\u000b\u001a\u0004\b\u000f\u0010\rR\u0017\u0010\u0010\u001a\u00020\t8\u0006\u00a2\u0006\f\n\u0004\b\u0010\u0010\u000b\u001a\u0004\b\u0011\u0010\rR$\u0010\u0012\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00048\u0006@BX\u0086\u000e\u00a2\u0006\f\n\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u0014\u0010\u0015\u00a8\u0006\u0016"}, d2={"Lkotakbaz/rain/module/modules/render/BetterHudModule;", "Lkotakbaz/rain/module/Module;", "<init>", "()V", "", "value", "", "setTabProgress", "(F)V", "Lkotakbaz/rain/module/setting/settings/BooleanSetting;", "animateHotbar", "Lkotakbaz/rain/module/setting/settings/BooleanSetting;", "getAnimateHotbar", "()Lkotakbaz/rain/module/setting/settings/BooleanSetting;", "animateChat", "getAnimateChat", "smoothTab", "getSmoothTab", "tabProgress", "F", "getTabProgress", "()F", "rain-visuals"})
+public final class k_0
+extends a_0 {
+    @NotNull
+    public static final k_0 INSTANCE;
+    @NotNull
+    private static final c a;
+    @NotNull
+    private static final c A;
+    @NotNull
+    private static final c b;
+    private static float B;
+    private static Object[] c;
+    private static Object d;
+    private static Object[] D;
+    private static Object[] C;
+    private static Object[] e;
+    public static int[] E;
+
+    private k_0() {
+        int n = E[0];
+        n += E[1];
+        int n2 = E[3];
+        n2 += E[4];
+        int n3 = E[6];
+        n3 += E[7];
+        super((String)c[n ^= E[2]], kotakbaz.rain.client.extensions.a_0.getRENDER(), (String)c[n2 ^= E[5]] + (String)c[n3 ^= E[8]]);
+    }
+
+    @NotNull
+    public final c getAnimateHotbar() {
+        return a;
+    }
+
+    @NotNull
+    public final c getAnimateChat() {
+        return A;
+    }
+
+    @NotNull
+    public final c getSmoothTab() {
+        return b;
+    }
+
+    public final float getTabProgress() {
+        return B;
+    }
+
+    public final void setTabProgress(float f2) {
+        B = RangesKt.coerceIn(f2, 0.0f, 1.0f);
+    }
+
+    static {
+        k_0.b();
+        long l = 8548592487419719680L;
+        long l2 = -7619173497344206570L;
+        long l3 = -5949123092707877793L;
+        long l4 = -7784508260525821866L;
+        long l5 = -7868332050773934343L;
+        long l6 = 692911517594522594L;
+        long l7 = -3182619285475088004L;
+        long l8 = 6463895446917613519L;
+        long l9 = 7248851617806335669L;
+        long l10 = 3216702817229377150L;
+        long l11 = 3321567029893733699L;
+        long l12 = -2231001898306685831L;
+        long l13 = -1795467542923689587L;
+        long l14 = 4256427205084185987L;
+        int n = E[9];
+        n -= E[10];
+        c = new Object[n -= E[11]];
+        long l15 = l14;
+        int n2 = E[12];
+        n2 ^= E[13];
+        l14 = l15 ^ (0L ^ l15) & -1L << (n2 ^= E[14]);
+        Object[] objectArray = new Object[E[15]];
+        objectArray[k_0.E[16]] = C;
+        objectArray[k_0.E[17]] = E[18];
+        int n3 = E[19];
+        Object object = k_0.A()[E[20]];
+        if (object == null) {
+            char[] cArray = "\u1650\u164b\u1680\u1660\u1651\u1661\u165d\u1673\u1661\u1661\u163a\u167e\u1670\u1653\u167e\u1658\u1691\u1636\u1675\u1661\u165c\u164d\u1638\u165d\u1637\u166d\u166b\u164b\u165e\u1675\u1636\u1690\u1657\u16a2\u1691\u1639\u1690\u166f\u1639\u1671\u1676\u1654\u1647\u1678\u167c\u1671\u167b\u1656\u164b\u1662\u168c\u1690\u1657\u165d\u1650\u166b\u1655\u168b\u1653\u1639\u1650\u168c\u164b\u1650\u1654\u1638\u1655\u165a\u1655\u1662\u165a\u167b\u164d\u1691\u164a\u1659\u1638\u167d\u16a2\u168d\u168b\u169e\u1648\u1646\u164c\u1638\u1678\u1655\u165f\u1658\u163a\u1674\u169e\u16a2\u1660\u1676\u1662\u1647\u166f\u168d\u1657\u1660\u167f\u167b\u1668\u164f\u1662\u1682\u1646\u166b\u165e\u1668\u169e\u164f\u164d\u1654\u1676\u1638\u168c\u1638\u1637\u167a\u1678\u1690\u1657\u1673\u1681\u1657\u167a\u1659\u1660\u1655\u1638\u1648\u165d\u167c\u1656\u1658\u1658\u1657\u1647\u1676\u164b\u1637\u165e\u166b\u1671\u1646\u1650\u1636\u1675\u1681\u1691\u1639\u1679\u165e\u164d\u167a\u1653\u1653\u1662\u1637\u1680\u164b\u164c\u164b\u1660\u1658\u1690\u1690\u167b\u1647\u164c\u1656\u165e\u1677\u169e\u1668\u1650\u1662\u1680\u1651\u1654\u167e\u1657\u1691\u1661\u1654\u1671\u1680\u1666\u1658\u164f\u1656\u1675\u1648\u165b\u1656\u1662\u165f\u168c\u1671\u1676\u1682\u1678\u166d\u167d\u168b\u1656\u16a2\u1680\u166b\u1659\u1661\u1656\u1638\u1671\u1654\u164f\u1655\u1660\u168b\u1670\u1651\u1675\u165c\u1647\u1657\u166d\u165e\u167b\u166a\u164d\u165c\u163a\u166d\u1657\u1679\u1682\u1639\u167e\u1679\u167b\u164a\u163a\u1682\u1646\u166b\u1660\u1676\u1659\u1637\u1650\u165b\u166d\u1674".toCharArray();
+            for (int i2 = E[21]; i2 < E[22]; ++i2) {
+                int n4 = cArray[i2];
+                n4 -= E[23];
+                n4 -= E[24];
+                n4 += E[25];
+                n4 ^= E[26];
+                n4 -= E[27];
+                n4 -= E[28];
+                n4 -= E[29];
+                n4 -= E[30];
+                n4 -= E[31];
+                n4 += E[32];
+                n4 ^= E[33];
+                cArray[i2] = (char)(n4 ^= E[34]);
+            }
+            object = k_0.A()[k_0.E[35]] = new String(cArray);
+        }
+        objectArray[n3] = (String)object;
+        char[] cArray = ((String)k_0.a(objectArray)).toCharArray();
+        long l16 = l5;
+        int n5 = E[36];
+        n5 += E[37];
+        l5 = l16 ^ (0x6600000000L ^ l16) & -1L << (n5 ^= E[38]);
+        long l17 = l12;
+        int n6 = E[39];
+        n6 ^= E[40];
+        l12 = l17 ^ (0L ^ l17) & -1L >>> (n6 += E[41]);
+        while (true) {
+            int n7 = E[42];
+            n7 ^= E[43];
+            if ((int)l12 >= (int)(l5 >>> (n7 -= E[44]))) break;
+            int n8 = (int)l12;
+            long l18 = l12;
+            int n9 = E[45];
+            n9 -= E[46];
+            int n10 = E[48];
+            n10 -= E[49];
+            l12 = l18 ^ (l18 ^ l18 + (long)(n9 ^= E[47])) & -1L >>> (n10 ^= E[50]);
+            long l19 = l8;
+            int n11 = E[51];
+            n11 -= E[52];
+            l8 = l19 ^ ((long)cArray[n8] ^ l19) & -1L >>> (n11 += E[53]);
+            int n12 = (int)l12;
+            long l20 = l12;
+            int n13 = E[54];
+            n13 ^= E[55];
+            int n14 = E[57];
+            n14 += E[58];
+            l12 = l20 ^ (l20 ^ l20 + (long)(n13 -= E[56])) & -1L >>> (n14 ^= E[59]);
+            int n15 = E[60];
+            n15 += E[61];
+            long l21 = l9;
+            int n16 = E[63];
+            n16 ^= E[64];
+            l9 = l21 ^ ((long)cArray[n12] << (n15 -= E[62]) ^ l21) & -1L << (n16 ^= E[65]);
+            int n17 = E[66];
+            n17 ^= E[67];
+            n17 -= E[68];
+            int n18 = E[69];
+            n18 -= E[70];
+            long l22 = l11;
+            int n19 = E[72];
+            n19 ^= E[73];
+            l11 = l22 ^ ((long)((int)l8 << n17 | (int)(l9 >>> (n18 ^= E[71]))) ^ l22) & -1L >>> (n19 -= E[74]);
+            char[] cArray2 = new char[(int)l11];
+            long l23 = l13;
+            int n20 = E[75];
+            n20 += E[76];
+            l13 = l23 ^ (0L ^ l23) & -1L << (n20 ^= E[77]);
+            while (true) {
+                int n21 = E[78];
+                n21 ^= E[79];
+                if ((int)(l13 >>> (n21 += E[80])) >= (int)l11) break;
+                int n22 = E[81];
+                n22 ^= E[82];
+                int n23 = E[84];
+                n23 ^= E[85];
+                cArray2[(int)(l13 >>> (n22 ^= k_0.E[83]))] = cArray[(int)l12 + (int)(l13 >>> (n23 ^= E[86]))];
+                l13 += 0x100000000L;
+            }
+            int n24 = E[87];
+            n24 ^= E[88];
+            int n25 = (int)(l14 >>> (n24 ^= E[89]));
+            l14 += 0x100000000L;
+            k_0.c[n25] = new String(cArray2);
+            long l24 = l12;
+            int n26 = E[90];
+            n26 ^= E[91];
+            l12 = l24 ^ ((long)((int)l12 + (int)l11) ^ l24) & -1L >>> (n26 -= E[92]);
+        }
+        INSTANCE = new k_0();
+        int n27 = E[93];
+        n27 -= E[94];
+        int n28 = E[96];
+        n28 -= E[97];
+        boolean bl = E[99];
+        bl -= E[100];
+        a = INSTANCE.boolean((String)c[n27 += E[95]] + (String)c[n28 += E[98]], bl -= E[101]);
+        int n29 = E[102];
+        n29 ^= E[103];
+        boolean bl2 = E[105];
+        bl2 ^= E[106];
+        A = INSTANCE.boolean((String)c[n29 += E[104]], bl2 ^= E[107]);
+        int n30 = E[108];
+        n30 += E[109];
+        boolean bl3 = E[111];
+        bl3 += E[112];
+        b = INSTANCE.boolean((String)c[n30 ^= E[110]], bl3 ^= E[113]);
+    }
+
+    public static Object a(Object[] object) {
+        Object object2;
+        int n = (Integer)object[E[114]];
+        String string = (String)object[E[115]];
+        object = object[E[116]];
+        Object[] objectArray = D;
+        if (D == null) {
+            objectArray = D = new Object[E[117]];
+        }
+        if ((object2 = objectArray[n]) == null) {
+            Object object3 = object;
+            if (object == null) {
+                Object[] objectArray2 = new Object[E[118]];
+                C = objectArray2;
+                object3 = objectArray2;
+                byte[] byArray = new byte[E[120] ^ E[121]];
+                byArray[k_0.E[122] ^ k_0.E[123]] = E[124] ^ E[125];
+                byArray[k_0.E[126] ^ k_0.E[127]] = E[128] ^ E[129];
+                byArray[k_0.E[130] ^ k_0.E[131]] = E[132] ^ E[133];
+                byArray[k_0.E[134] ^ k_0.E[135]] = E[136] ^ E[137];
+                byArray[k_0.E[138] ^ k_0.E[139]] = E[140] ^ E[141];
+                byArray[k_0.E[142] ^ k_0.E[143]] = E[144] ^ E[145];
+                byArray[k_0.E[146] ^ k_0.E[147]] = E[148] ^ E[149];
+                byArray[k_0.E[150] ^ k_0.E[151]] = E[152] ^ E[153];
+                byArray[k_0.E[154] ^ k_0.E[155]] = E[156] ^ E[157];
+                byArray[k_0.E[158] ^ k_0.E[159]] = E[160] ^ E[161];
+                byArray[k_0.E[162] ^ k_0.E[163]] = E[164] ^ E[165];
+                byArray[k_0.E[166] ^ k_0.E[167]] = E[168] ^ E[169];
+                byArray[k_0.E[170] ^ k_0.E[171]] = E[172] ^ E[173];
+                byArray[k_0.E[174] ^ k_0.E[175]] = E[176] ^ E[177];
+                byArray[k_0.E[178] ^ k_0.E[179]] = E[180] ^ E[181];
+                byArray[k_0.E[182] ^ k_0.E[183]] = E[184] ^ E[185];
+                objectArray2[k_0.E[119]] = byArray;
+            }
+            byte[] byArray = (byte[])object3[E[186]];
+            if (d == null) {
+                byte[] byArray2 = new byte[E[187] ^ E[188]];
+                byArray2[k_0.E[189] ^ k_0.E[190]] = E[191] ^ E[192];
+                byArray2[k_0.E[193] ^ k_0.E[194]] = E[195] ^ E[196];
+                byArray2[k_0.E[197] ^ k_0.E[198]] = E[199] ^ E[200];
+                byArray2[k_0.E[201] ^ k_0.E[202]] = E[203] ^ E[204];
+                byArray2[k_0.E[205] ^ k_0.E[206]] = E[207] ^ E[208];
+                byArray2[k_0.E[209] ^ k_0.E[210]] = E[211] ^ E[212];
+                byArray2[k_0.E[213] ^ k_0.E[214]] = E[215] ^ E[216];
+                byArray2[k_0.E[217] ^ k_0.E[218]] = E[219] ^ E[220];
+                byArray2[k_0.E[221] ^ k_0.E[222]] = E[223] ^ E[224];
+                byArray2[k_0.E[225] ^ k_0.E[226]] = E[227] ^ E[228];
+                byArray2[k_0.E[229] ^ k_0.E[230]] = E[231] ^ E[232];
+                byArray2[k_0.E[233] ^ k_0.E[234]] = E[235] ^ E[236];
+                byArray2[k_0.E[237] ^ k_0.E[238]] = E[239] ^ E[240];
+                byArray2[k_0.E[241] ^ k_0.E[242]] = E[243] ^ E[244];
+                byArray2[k_0.E[245] ^ k_0.E[246]] = E[247] ^ E[248];
+                byArray2[k_0.E[249] ^ k_0.E[250]] = E[251] ^ E[252];
+                byArray2[k_0.E[253] ^ k_0.E[254]] = E[255] ^ E[256];
+                byArray2[k_0.E[257] ^ k_0.E[258]] = E[259] ^ E[260];
+                byArray2[k_0.E[261] ^ k_0.E[262]] = E[263] ^ E[264];
+                byArray2[k_0.E[265] ^ k_0.E[266]] = E[267] ^ E[268];
+                byArray2[k_0.E[269] ^ k_0.E[270]] = E[271] ^ E[272];
+                byArray2[k_0.E[273] ^ k_0.E[274]] = E[275] ^ E[276];
+                byArray2[k_0.E[277] ^ k_0.E[278]] = E[279] ^ E[280];
+                byArray2[k_0.E[281] ^ k_0.E[282]] = E[283] ^ E[284];
+                byArray2[k_0.E[285] ^ k_0.E[286]] = E[287] ^ E[288];
+                byArray2[k_0.E[289] ^ k_0.E[290]] = E[291] ^ E[292];
+                byArray2[k_0.E[293] ^ k_0.E[294]] = E[295] ^ E[296];
+                byArray2[k_0.E[297] ^ k_0.E[298]] = E[299] ^ E[300];
+                byArray2[k_0.E[301] ^ k_0.E[302]] = E[303] ^ E[304];
+                byArray2[k_0.E[305] ^ k_0.E[306]] = E[307] ^ E[308];
+                byArray2[k_0.E[309] ^ k_0.E[310]] = E[311] ^ E[312];
+                byArray2[k_0.E[313] ^ k_0.E[314]] = E[315] ^ E[316];
+                byte[] byArray3 = new byte[byArray.length + byArray2.length];
+                System.arraycopy(byArray, E[317], byArray3, E[318], byArray.length);
+                System.arraycopy(byArray2, E[319], byArray3, byArray.length, byArray2.length);
+                Object object4 = k_0.A()[E[320]];
+                if (object4 == null) {
+                    char[] cArray = "\u0843\u0845\u080a\u0877\u0809\u0fd5\u08a6\u08a8\u0847\u08ab\u080b\u085c\u0ff0\u0ff2\u0842\u080b\u0850\u0820".toCharArray();
+                    for (int i2 = E[321]; i2 < E[322]; ++i2) {
+                        int n2 = cArray[i2];
+                        n2 ^= E[323];
+                        n2 -= E[324];
+                        n2 ^= E[325];
+                        n2 += E[326];
+                        n2 ^= E[327];
+                        n2 -= E[328];
+                        n2 ^= E[329];
+                        n2 += E[330];
+                        n2 += E[331];
+                        n2 += E[332];
+                        n2 += E[333];
+                        cArray[i2] = (char)(n2 ^= E[334]);
+                    }
+                    object4 = k_0.A()[k_0.E[335]] = new String(cArray);
+                }
+                SecretKeyFactory secretKeyFactory = SecretKeyFactory.getInstance((String)object4);
+                byte[] byArray4 = new byte[E[336]];
+                byArray4[k_0.E[337]] = E[338];
+                byArray4[k_0.E[339]] = E[340];
+                byArray4[k_0.E[341]] = E[342];
+                byArray4[k_0.E[343]] = E[344];
+                byArray4[k_0.E[345]] = E[346];
+                byArray4[k_0.E[347]] = E[348];
+                byArray4[k_0.E[349]] = E[350];
+                byArray4[k_0.E[351]] = E[352];
+                byArray4[k_0.E[353]] = E[354];
+                byArray4[k_0.E[355]] = E[356];
+                byArray4[k_0.E[357]] = E[358];
+                byArray4[k_0.E[359]] = E[360];
+                byArray4[k_0.E[361]] = E[362];
+                byArray4[k_0.E[363]] = E[364];
+                byArray4[k_0.E[365]] = E[366];
+                byArray4[k_0.E[367]] = E[368];
+                PBEKeySpec pBEKeySpec = new PBEKeySpec(new String(byArray3, StandardCharsets.UTF_8).toCharArray(), byArray4, E[369], E[370]);
+                byte[] byArray5 = secretKeyFactory.generateSecret(pBEKeySpec).getEncoded();
+                Object object5 = k_0.A()[E[371]];
+                if (object5 == null) {
+                    char[] cArray = "\u6e8e\u690a\u6a7c".toCharArray();
+                    for (int i3 = E[372]; i3 < E[373]; ++i3) {
+                        int n3 = cArray[i3];
+                        n3 -= E[374];
+                        n3 ^= E[375];
+                        n3 += E[376];
+                        n3 ^= E[377];
+                        n3 -= E[378];
+                        n3 -= E[379];
+                        n3 ^= E[380];
+                        n3 ^= E[381];
+                        n3 += E[382];
+                        n3 += E[383];
+                        n3 += E[384];
+                        n3 -= E[385];
+                        n3 ^= E[386];
+                        cArray[i3] = (char)(n3 += E[387]);
+                    }
+                    object5 = k_0.A()[k_0.E[388]] = new String(cArray);
+                }
+                d = new SecretKeySpec(byArray5, (String)object5);
+            }
+            byte[] byArray6 = Base64.getDecoder().decode(string);
+            byte[] byArray7 = Arrays.copyOfRange(byArray6, E[389], E[390]);
+            byte[] byArray8 = Arrays.copyOfRange(byArray6, E[391], byArray6.length);
+            Object object6 = k_0.A()[E[392]];
+            if (object6 == null) {
+                char[] cArray = "\ub632\ub62e\ub624\ub618\ub634\ub633\ub634\ub618\ub621\ub63c\ub634\ub624\ub5fe\ub621\ub652\ub64d\ub64d\ub65a\ub657\ub650".toCharArray();
+                for (int i4 = E[393]; i4 < E[394]; ++i4) {
+                    int n4 = cArray[i4];
+                    n4 += E[395];
+                    n4 -= E[396];
+                    n4 += E[397];
+                    n4 ^= E[398];
+                    n4 ^= E[399];
+                    n4 += 456;
+                    n4 += 872;
+                    n4 += 45897;
+                    n4 -= 55291;
+                    cArray[i4] = (char)(n4 -= 12606);
+                }
+                object6 = k_0.A()[3] = new String(cArray);
+            }
+            Cipher cipher = Cipher.getInstance((String)object6);
+            cipher.init(2, (Key)((SecretKey)d), new IvParameterSpec(byArray7));
+            byte[] byArray9 = cipher.doFinal(byArray8);
+            object2 = new String(byArray9, StandardCharsets.UTF_8);
+        }
+        return object2;
+    }
+
+    private static Object[] A() {
+        Object[] objectArray = e;
+        if (e == null) {
+            e = new Object[4];
+            objectArray = e;
+        }
+        return objectArray;
+    }
+
+    public static void b() {
+        E = new int[0xCC53 ^ 0xCDC3];
+        k_0.E[0xDD3F ^ 0xDDA3] = 0xFFFF2708 ^ 0xDDA3;
+        k_0.E[0x99E5 ^ 0x991B] = 0x1F81 ^ 0x991B;
+        k_0.E[0x1BD ^ 0x164] = 0x8B04 ^ 0x164;
+        k_0.E[0x7E87 ^ 0x7FA7] = 0xF2F ^ 0x7FA7;
+        k_0.E[0xCBBD ^ 0xCB5E] = 0xFFFFB304 ^ 0xCB5E;
+        k_0.E[0x1647 ^ 0x1772] = 0x9CF7 ^ 0x1772;
+        k_0.E[0xA38C ^ 0xA3DC] = 0xA3A0 ^ 0xA3DC;
+        k_0.E[0xD072 ^ 0xD01A] = 0xFFFF2FEB ^ 0xD01A;
+        k_0.E[0x13B6 ^ 0x13D7] = 0x13C7 ^ 0x13D7;
+        k_0.E[0xFDBD ^ 0xFCC5] = 0xB221 ^ 0xFCC5;
+        k_0.E[0xFE72 ^ 0xFE45] = 0xFE75 ^ 0xFE45;
+        k_0.E[0x34F5 ^ 0x3417] = 0xB3AB ^ 0x3417;
+        k_0.E[0xB81C ^ 0xB911] = 0x1B6C ^ 0xB911;
+        k_0.E[0x84D9 ^ 0x85C4] = 0xF550 ^ 0x85C4;
+        k_0.E[0x604E ^ 0x614B] = 0xCDE4 ^ 0x614B;
+        k_0.E[0x8CC4 ^ 0x8DD1] = 0xD315 ^ 0x8DD1;
+        k_0.E[0xB765 ^ 0xB775] = 0xB775 ^ 0xB775;
+        k_0.E[0x251D ^ 0x2537] = 0xFFFFDA38 ^ 0x2537;
+        k_0.E[0x10508 ^ 0x1046B] = 0x1046D ^ 0x1046B;
+        k_0.E[0x28B3 ^ 0x29E7] = 0xFFFFD642 ^ 0x29E7;
+        k_0.E[0x1B14 ^ 0x1B7A] = 0x1B06 ^ 0x1B7A;
+        k_0.E[0x27B8 ^ 0x2786] = 0x2789 ^ 0x2786;
+        k_0.E[0xA61B ^ 0xA76A] = 0xA77B ^ 0xA76A;
+        k_0.E[0x14DF ^ 0x1551] = 0x4D92 ^ 0x1551;
+        k_0.E[0xB00C ^ 0xB02D] = 0x9810 ^ 0xB02D;
+        k_0.E[0x10ED2 ^ 0x10E39] = 0x11F87 ^ 0x10E39;
+        k_0.E[0xF1B8 ^ 0xF1F9] = 0xF191 ^ 0xF1F9;
+        k_0.E[0x611E ^ 0x618B] = 0x3C6 ^ 0x618B;
+        k_0.E[0x105D9 ^ 0x105D0] = 0xFFFEFA63 ^ 0x105D0;
+        k_0.E[0x6142 ^ 0x6187] = 0x858A ^ 0x6187;
+        k_0.E[0x7927 ^ 0x781D] = 0xC35E ^ 0x781D;
+        k_0.E[0x1E36 ^ 0x1E50] = 0x1E4E ^ 0x1E50;
+        k_0.E[0x726B ^ 0x7339] = 0x7364 ^ 0x7339;
+        k_0.E[0x808C ^ 0x81B1] = 0x81B1 ^ 0x81B1;
+        k_0.E[0x108D7 ^ 0x10950] = 0x10940 ^ 0x10950;
+        k_0.E[0xAC1E ^ 0xAC5B] = 0xFFFF538B ^ 0xAC5B;
+        k_0.E[0xCA63 ^ 0xCABD] = 0x765A ^ 0xCABD;
+        k_0.E[0xAE3A ^ 0xAF39] = 0xF9F3 ^ 0xAF39;
+        k_0.E[0x60BB ^ 0x61E8] = 0x61E2 ^ 0x61E8;
+        k_0.E[0xF11D ^ 0xF00C] = 0x8AB0 ^ 0xF00C;
+        k_0.E[0xE21 ^ 0xF56] = 0xFF95 ^ 0xF56;
+        k_0.E[0xAA3B ^ 0xAB1F] = 0x18D4 ^ 0xAB1F;
+        k_0.E[0x9EFB ^ 0x9F94] = 0x9F97 ^ 0x9F94;
+        k_0.E[0x5C93 ^ 0x5DBB] = 0xD722 ^ 0x5DBB;
+        k_0.E[0xC6B8 ^ 0xC7FA] = 0xC7E8 ^ 0xC7FA;
+        k_0.E[0x64E2 ^ 0x64D0] = 0xFFFF9B29 ^ 0x64D0;
+        k_0.E[0xA42F ^ 0xA402] = 0xA401 ^ 0xA402;
+        k_0.E[0xFDEB ^ 0xFCE1] = 0x733 ^ 0xFCE1;
+        k_0.E[0xE2EA ^ 0xE22B] = 0x1479 ^ 0xE22B;
+        k_0.E[0xE131 ^ 0xE000] = 0x7446 ^ 0xE000;
+        k_0.E[0xAC36 ^ 0xACDB] = 0x1A72 ^ 0xACDB;
+        k_0.E[0x10099 ^ 0x101C0] = 0x101C2 ^ 0x101C0;
+        k_0.E[0x7360 ^ 0x7378] = 0x4D2C ^ 0x7378;
+        k_0.E[0x5042 ^ 0x50E8] = 0x9AC9 ^ 0x50E8;
+        k_0.E[0x749F ^ 0x75E0] = 0xB26E ^ 0x75E0;
+        k_0.E[0x6972 ^ 0x69D3] = 0x3CCC ^ 0x69D3;
+        k_0.E[0xB998 ^ 0xB811] = 0xB811 ^ 0xB811;
+        k_0.E[0x2287 ^ 0x22A9] = 0xFFFFDD0F ^ 0x22A9;
+        k_0.E[0xB8D ^ 0xB16] = 0xE41 ^ 0xB16;
+        k_0.E[0x9B10 ^ 0x9BC4] = 0xB2C0 ^ 0x9BC4;
+        k_0.E[0x6C03 ^ 0x6D25] = 0xE7BC ^ 0x6D25;
+        k_0.E[0x64A2 ^ 0x6411] = 0x9FA5 ^ 0x6411;
+        k_0.E[0xE039 ^ 0xE0DD] = 0x6761 ^ 0xE0DD;
+        k_0.E[0x9B64 ^ 0x9BF3] = 0xFD69 ^ 0x9BF3;
+        k_0.E[0x769E ^ 0x765E] = 0x660F ^ 0x765E;
+        k_0.E[0x6A48 ^ 0x6A95] = 0xD666 ^ 0x6A95;
+        k_0.E[0xEF04 ^ 0xEFC9] = 0xCF63 ^ 0xEFC9;
+        k_0.E[0x3016 ^ 0x313F] = 0x8C63 ^ 0x313F;
+        k_0.E[0x1F8C ^ 0x1EC1] = 0xDF9C ^ 0x1EC1;
+        k_0.E[0xE74A ^ 0xE7CC] = 0x709B ^ 0xE7CC;
+        k_0.E[0x22D4 ^ 0x23BA] = 0xFFFFDC49 ^ 0x23BA;
+        k_0.E[0x8CB0 ^ 0x8C06] = 0xAD61 ^ 0x8C06;
+        k_0.E[0xB4D0 ^ 0xB591] = 0xB591 ^ 0xB591;
+        k_0.E[0x4F70 ^ 0x4FDD] = 0x85F5 ^ 0x4FDD;
+        k_0.E[0x3182 ^ 0x310C] = 0x13511 ^ 0x310C;
+        k_0.E[0xA7ED ^ 0xA66E] = 0xD095 ^ 0xA66E;
+        k_0.E[0x100FF ^ 0x10058] = 0x1423E ^ 0x10058;
+        k_0.E[0x44E6 ^ 0x44CF] = 0x44F3 ^ 0x44CF;
+        k_0.E[0xDF1D ^ 0xDFF1] = 0xCE58 ^ 0xDFF1;
+        k_0.E[0xC425 ^ 0xC439] = 0x8122 ^ 0xC439;
+        k_0.E[0x8524 ^ 0x8598] = 0x6F66 ^ 0x8598;
+        k_0.E[0x1999 ^ 0x194B] = 0x304F ^ 0x194B;
+        k_0.E[0xC4C5 ^ 0xC5B5] = 0xC5A6 ^ 0xC5B5;
+        k_0.E[0x715E ^ 0x700B] = 0x7006 ^ 0x700B;
+        k_0.E[0x762B ^ 0x762C] = 0x762F ^ 0x762C;
+        k_0.E[0xCB1A ^ 0xCB53] = 0xCB53 ^ 0xCB53;
+        k_0.E[0xAE16 ^ 0xAEAC] = 0xAEAC ^ 0xAEAC;
+        k_0.E[0x2FB6 ^ 0x2FC1] = 0x2FC1 ^ 0x2FC1;
+        k_0.E[0x88AF ^ 0x8894] = 0xFFFF7747 ^ 0x8894;
+        k_0.E[0xBC26 ^ 0xBD07] = 0xEC4 ^ 0xBD07;
+        k_0.E[0xDB09 ^ 0xDB51] = 0xDB0C ^ 0xDB51;
+        k_0.E[0xE01D ^ 0xE0CC] = 0xC9CA ^ 0xE0CC;
+        k_0.E[0x498C ^ 0x48E8] = 0x48CB ^ 0x48E8;
+        k_0.E[0xCAF9 ^ 0xCBF6] = 0x69BC ^ 0xCBF6;
+        k_0.E[0x10BB ^ 0x1000] = 0xFADE ^ 0x1000;
+        k_0.E[0xCDD7 ^ 0xCDA8] = 0xA3C1 ^ 0xCDA8;
+        k_0.E[0x429E ^ 0x43C3] = 0x43CD ^ 0x43C3;
+        k_0.E[0x5C38 ^ 0x5D78] = 0x5D79 ^ 0x5D78;
+        k_0.E[0x687E ^ 0x6886] = 0x7D4F ^ 0x6886;
+        k_0.E[0x106AE ^ 0x106D6] = 0x1D7B0 ^ 0x106D6;
+        k_0.E[0x8868 ^ 0x8924] = 0xABAF ^ 0x8924;
+        k_0.E[0xA752 ^ 0xA794] = 0x438F ^ 0xA794;
+        k_0.E[0x106B1 ^ 0x10640] = 0x19BF3 ^ 0x10640;
+        k_0.E[0xFDA3 ^ 0xFDD0] = 0xFDD2 ^ 0xFDD0;
+        k_0.E[0x7618 ^ 0x7701] = 0x9552 ^ 0x7701;
+        k_0.E[0xA4D8 ^ 0xA408] = 0x84A1 ^ 0xA408;
+        k_0.E[0x9262 ^ 0x9220] = 0x92F1 ^ 0x9220;
+        k_0.E[0x10784 ^ 0x1077F] = 0x1D75A ^ 0x1077F;
+        k_0.E[0x53EF ^ 0x528A] = 0x528B ^ 0x528A;
+        k_0.E[0x3758 ^ 0x3747] = 0x1C9B ^ 0x3747;
+        k_0.E[0xADD9 ^ 0xAD6C] = 0x56D8 ^ 0xAD6C;
+        k_0.E[0xE200 ^ 0xE35E] = 0xFFFF1CB3 ^ 0xE35E;
+        k_0.E[0x189C ^ 0x1840] = 0x9231 ^ 0x1840;
+        k_0.E[0xDDF5 ^ 0xDD6C] = 0xBBF6 ^ 0xDD6C;
+        k_0.E[0xC9FD ^ 0xC9F6] = 0xFFFF367C ^ 0xC9F6;
+        k_0.E[0xF32B ^ 0xF3A3] = 0x64B1 ^ 0xF3A3;
+        k_0.E[0x1D76 ^ 0x1D70] = 0xFFFFE2D4 ^ 0x1D70;
+        k_0.E[0x6CE1 ^ 0x6C3A] = 0xFFFF198E ^ 0x6C3A;
+        k_0.E[0x3FB ^ 0x2F2] = 0xF92E ^ 0x2F2;
+        k_0.E[0xB88F ^ 0xB858] = 0xA6DB ^ 0xB858;
+        k_0.E[0xDF80 ^ 0xDED8] = 0xFFFF217A ^ 0xDED8;
+        k_0.E[0x6FEA ^ 0x6F9A] = 0x6FEA ^ 0x6F9A;
+        k_0.E[0x70B3 ^ 0x7087] = 0x70A6 ^ 0x7087;
+        k_0.E[0x3DE3 ^ 0x3CAB] = 0xB22D ^ 0x3CAB;
+        k_0.E[0x83E2 ^ 0x83D7] = 0xFFFF7C2E ^ 0x83D7;
+        k_0.E[0x9E17 ^ 0x9E6A] = 0x2C30 ^ 0x9E6A;
+        k_0.E[0x5FAC ^ 0x5F7F] = 0x762E ^ 0x5F7F;
+        k_0.E[0x4CAD ^ 0x4CE6] = 0xFFFFB30D ^ 0x4CE6;
+        k_0.E[0x10CC3 ^ 0x10C40] = 0xD8C ^ 0x10C40;
+        k_0.E[0x4C28 ^ 0x4D4E] = 0xFFFFB2C9 ^ 0x4D4E;
+        k_0.E[0x6838 ^ 0x681F] = 0xFFFF97EB ^ 0x681F;
+        k_0.E[0xF951 ^ 0xF97A] = 0xFFFF06F8 ^ 0xF97A;
+        k_0.E[0xA7AE ^ 0xA7F2] = 0xFFFF5834 ^ 0xA7F2;
+        k_0.E[0xF221 ^ 0xF24C] = 0xF278 ^ 0xF24C;
+        k_0.E[0x50EB ^ 0x50F8] = 0x50FA ^ 0x50F8;
+        k_0.E[0x10DA8 ^ 0x10DDA] = 0x10DDB ^ 0x10DDA;
+        k_0.E[0x791A ^ 0x79D2] = 0x9DC9 ^ 0x79D2;
+        k_0.E[0x527 ^ 0x461] = 0xBE95 ^ 0x461;
+        k_0.E[0xC30F ^ 0xC30E] = 0xFFFF3CB5 ^ 0xC30E;
+        k_0.E[0x3C8 ^ 0x30F] = 0xFFFF189F ^ 0x30F;
+        k_0.E[0xC820 ^ 0xC843] = 0xFFFF3788 ^ 0xC843;
+        k_0.E[0x34DF ^ 0x3598] = 0x36FD ^ 0x3598;
+        k_0.E[0x2A7C ^ 0x2B06] = 0xDD01 ^ 0x2B06;
+        k_0.E[0x8831 ^ 0x885B] = 0x8823 ^ 0x885B;
+        k_0.E[0xF926 ^ 0xF83E] = 0xA6FD ^ 0xF83E;
+        k_0.E[0xB52 ^ 0xBFB] = 0x499D ^ 0xBFB;
+        k_0.E[0xE93D ^ 0xE993] = 0xCA ^ 0xE993;
+        k_0.E[0x8030 ^ 0x80CA] = 0x50D1 ^ 0x80CA;
+        k_0.E[0x5E7E ^ 0x5E36] = 0xFFFFA1C5 ^ 0x5E36;
+        k_0.E[0xE3D3 ^ 0xE3AD] = 0x8DC7 ^ 0xE3AD;
+        k_0.E[0x6C3 ^ 0x7ED] = 0xBE5A ^ 0x7ED;
+        k_0.E[0x438C ^ 0x42FE] = 0x43FE ^ 0x42FE;
+        k_0.E[0xBF24 ^ 0xBF1C] = 0xFFFF40D9 ^ 0xBF1C;
+        k_0.E[0x9394 ^ 0x93B0] = 0x9363 ^ 0x93B0;
+        k_0.E[0x6140 ^ 0x61B0] = 0xD716 ^ 0x61B0;
+        k_0.E[0x5918 ^ 0x5943] = 0x5944 ^ 0x5943;
+        k_0.E[0x3F1 ^ 0x2ED] = 0xE0A6 ^ 0x2ED;
+        k_0.E[0xA463 ^ 0xA418] = 0x1642 ^ 0xA418;
+        k_0.E[0x252A ^ 0x25E4] = 0x54D ^ 0x25E4;
+        k_0.E[0x5378 ^ 0x5263] = 0xFFFF4F9D ^ 0x5263;
+        k_0.E[0x2F29 ^ 0x2FC7] = 0x9961 ^ 0x2FC7;
+        k_0.E[0xE3EE ^ 0xE2A1] = 0xE2A0 ^ 0xE2A1;
+        k_0.E[0xEBAE ^ 0xEBBC] = 0xEBBC ^ 0xEBBC;
+        k_0.E[0xAF9F ^ 0xAE99] = 0x233 ^ 0xAE99;
+        k_0.E[0x10CF4 ^ 0x10CA7] = 0xFFFEF320 ^ 0x10CA7;
+        k_0.E[0xE1D ^ 0xE82] = 0x5B9D ^ 0xE82;
+        k_0.E[0x6997 ^ 0x681B] = 0x17C8 ^ 0x681B;
+        k_0.E[0x2CC5 ^ 0x2CCF] = 0x2CED ^ 0x2CCF;
+        k_0.E[0x1088E ^ 0x10986] = 0x1A52C ^ 0x10986;
+        k_0.E[0x1F0C ^ 0x1F1B] = 0xA0BF ^ 0x1F1B;
+        k_0.E[0x31D2 ^ 0x31DD] = 0x31DE ^ 0x31DD;
+        k_0.E[0xDCAA ^ 0xDDC7] = 0xDDC7 ^ 0xDDC7;
+        k_0.E[0x23AB ^ 0x2293] = 0xA912 ^ 0x2293;
+        k_0.E[0x4538 ^ 0x4567] = 0xFFFFBAEE ^ 0x4567;
+        k_0.E[0x1A30 ^ 0x1B7A] = 0x7492 ^ 0x1B7A;
+        k_0.E[0x79F2 ^ 0x7930] = 0x8F7C ^ 0x7930;
+        k_0.E[0x7381 ^ 0x7385] = 0xFFFF8C19 ^ 0x7385;
+        k_0.E[0x6932 ^ 0x6948] = 0xDB14 ^ 0x6948;
+        k_0.E[0xDE7E ^ 0xDE9F] = 0x5931 ^ 0xDE9F;
+        k_0.E[0xF9EA ^ 0xF90C] = 0x1E3 ^ 0xF90C;
+        k_0.E[0xD7C4 ^ 0xD7C1] = 0xFFFF2813 ^ 0xD7C1;
+        k_0.E[0x89F ^ 0x813] = 0xFFFF01A4 ^ 0x813;
+        k_0.E[0xF014 ^ 0xF137] = 0x42CF ^ 0xF137;
+        k_0.E[0xEF1A ^ 0xEE91] = 0xDB02 ^ 0xEE91;
+        k_0.E[0x9F77 ^ 0x9FC9] = 0x8F98 ^ 0x9FC9;
+        k_0.E[0x25B4 ^ 0x2518] = 0xFFFF1095 ^ 0x2518;
+        k_0.E[0x4604 ^ 0x4786] = 0x2D3C ^ 0x4786;
+        k_0.E[0xCB88 ^ 0xCBC4] = 0xFFFF3423 ^ 0xCBC4;
+        k_0.E[0x1092F ^ 0x10851] = 0x16B1F ^ 0x10851;
+        k_0.E[0xB605 ^ 0xB67C] = 0x670A ^ 0xB67C;
+        k_0.E[0xD38B ^ 0xD347] = 0x55F0 ^ 0xD347;
+        k_0.E[0xCC0E ^ 0xCD3D] = 0xFFFFA6EB ^ 0xCD3D;
+        k_0.E[0xD08A ^ 0xD043] = 0x56E1 ^ 0xD043;
+        k_0.E[0xAAA ^ 0xBC6] = 0xFFFFF41B ^ 0xBC6;
+        k_0.E[0x6C14 ^ 0x6CA3] = 0x4DC6 ^ 0x6CA3;
+        k_0.E[0x5BAA ^ 0x5B3C] = 0x3DA8 ^ 0x5B3C;
+        k_0.E[0x9E8E ^ 0x9E7A] = 0x3C8 ^ 0x9E7A;
+        k_0.E[0x3432 ^ 0x3506] = 0xA146 ^ 0x3506;
+        k_0.E[0x6ABC ^ 0x6A4F] = 0xF7D1 ^ 0x6A4F;
+        k_0.E[0x737F ^ 0x734E] = 0xFFFF8C87 ^ 0x734E;
+        k_0.E[0xB8CA ^ 0xB9DA] = 0x1BBE ^ 0xB9DA;
+        k_0.E[0xCB1C ^ 0xCBB4] = 0xFFFF7619 ^ 0xCBB4;
+        k_0.E[0x3EB ^ 0x317] = 0xD30C ^ 0x317;
+        k_0.E[0x10DE0 ^ 0x10C66] = 0x10C76 ^ 0x10C66;
+        k_0.E[0xAF5D ^ 0xAE59] = 0xF897 ^ 0xAE59;
+        k_0.E[0xF89E ^ 0xF841] = 0x44EB ^ 0xF841;
+        k_0.E[0x101A6 ^ 0x10199] = 0x101C2 ^ 0x10199;
+        k_0.E[0xC690 ^ 0xC6B2] = 0x5D7C ^ 0xC6B2;
+        k_0.E[0x215D ^ 0x2062] = 0x2062 ^ 0x2062;
+        k_0.E[0x8CAE ^ 0x8DBA] = 0xF715 ^ 0x8DBA;
+        k_0.E[0x90AC ^ 0x90AC] = 0x90A7 ^ 0x90AC;
+        k_0.E[0xE969 ^ 0xE869] = 0x6EF3 ^ 0xE869;
+        k_0.E[0x4E68 ^ 0x4E0A] = 0xFFFFB18C ^ 0x4E0A;
+        k_0.E[0x945A ^ 0x9476] = 0x941B ^ 0x9476;
+        k_0.E[0x74EE ^ 0x75C1] = 0xCC2D ^ 0x75C1;
+        k_0.E[0xAA22 ^ 0xAB6B] = 0x568C ^ 0xAB6B;
+        k_0.E[0xDC78 ^ 0xDC4E] = 0xFFFF23B8 ^ 0xDC4E;
+        k_0.E[0xDF31 ^ 0xDE51] = 0xFFFF21DD ^ 0xDE51;
+        k_0.E[0x5C86 ^ 0x5CB6] = 0xFFFFA314 ^ 0x5CB6;
+        k_0.E[0x10043 ^ 0x10015] = 0xFFFEFFA4 ^ 0x10015;
+        k_0.E[0x8DF4 ^ 0x8CBF] = 0x4054 ^ 0x8CBF;
+        k_0.E[0xEC44 ^ 0xECF4] = 0x595 ^ 0xECF4;
+        k_0.E[0xD5A2 ^ 0xD428] = 0xD43C ^ 0xD428;
+        k_0.E[0x105D ^ 0x10EF] = 0xEB54 ^ 0x10EF;
+        k_0.E[0x81B ^ 0x834] = 0x868 ^ 0x834;
+        k_0.E[0xF11 ^ 0xFAC] = 0x1FF4 ^ 0xFAC;
+        k_0.E[0xC8DD ^ 0xC8FB] = 0xC8A5 ^ 0xC8FB;
+        k_0.E[0xC6E9 ^ 0xC7B2] = 0xC7BD ^ 0xC7B2;
+        k_0.E[0x1DAD ^ 0x1DED] = 0x1DFE ^ 0x1DED;
+        k_0.E[0xF62B ^ 0xF729] = 0xA1E7 ^ 0xF729;
+        k_0.E[0x1F72 ^ 0x1E1B] = 0x1E10 ^ 0x1E1B;
+        k_0.E[0xF615 ^ 0xF714] = 0xA1D7 ^ 0xF714;
+        k_0.E[0x103E5 ^ 0x102A6] = 0x13E86 ^ 0x102A6;
+        k_0.E[0x69B5 ^ 0x698F] = 0xFFFF9600 ^ 0x698F;
+        k_0.E[0x97D7 ^ 0x9701] = 0x89F4 ^ 0x9701;
+        k_0.E[0x43E9 ^ 0x4292] = 0xF0DB ^ 0x4292;
+        k_0.E[0x10EC6 ^ 0x10E56] = 0xFFFFF597 ^ 0x10E56;
+        k_0.E[0xF6B0 ^ 0xF7F4] = 0x560 ^ 0xF7F4;
+        k_0.E[0x3081 ^ 0x30D5] = 0xFFFFCF14 ^ 0x30D5;
+        k_0.E[0xCC60 ^ 0xCC3D] = 0xCC45 ^ 0xCC3D;
+        k_0.E[0x6C46 ^ 0x6CD7] = 0x168C6 ^ 0x6CD7;
+        k_0.E[0x572D ^ 0x57AC] = 0x39C5 ^ 0x57AC;
+        k_0.E[0xE8E1 ^ 0xE875] = 0x8A3E ^ 0xE875;
+        k_0.E[0x325F ^ 0x330E] = 0x3302 ^ 0x330E;
+        k_0.E[0x4E0E ^ 0x4EC5] = 0xC818 ^ 0x4EC5;
+        k_0.E[0x62CD ^ 0x63BE] = 0x63BC ^ 0x63BE;
+        k_0.E[0xF99D ^ 0xF9A1] = 0xF995 ^ 0xF9A1;
+        k_0.E[0x103DC ^ 0x10385] = 0xFFFEFC54 ^ 0x10385;
+        k_0.E[0xFC6A ^ 0xFC7E] = 0xFC7E ^ 0xFC7E;
+        k_0.E[0x2723 ^ 0x2757] = 0x2757 ^ 0x2757;
+        k_0.E[0x2B68 ^ 0x2A53] = 0xFFFF6EA2 ^ 0x2A53;
+        k_0.E[0x1017F ^ 0x10060] = 0x170F3 ^ 0x10060;
+        k_0.E[0xF42 ^ 0xF26] = 0xFFFFF098 ^ 0xF26;
+        k_0.E[0xB6B4 ^ 0xB7DC] = 0xFFFF4820 ^ 0xB7DC;
+        k_0.E[0x97E8 ^ 0x977A] = 0xF53F ^ 0x977A;
+        k_0.E[0xA518 ^ 0xA580] = 0xFFFF3CD4 ^ 0xA580;
+        k_0.E[0x51D3 ^ 0x51C9] = 0x6A41 ^ 0x51C9;
+        k_0.E[0x563C ^ 0x5685] = 0x77E0 ^ 0x5685;
+        k_0.E[0xD9BE ^ 0xD8C3] = 0xA00E ^ 0xD8C3;
+        k_0.E[0x10CFA ^ 0x10C70] = 0x1FA50 ^ 0x10C70;
+        k_0.E[0x7EE3 ^ 0x7E20] = 0x880E ^ 0x7E20;
+        k_0.E[0x1C77 ^ 0x1C69] = 0x12D5 ^ 0x1C69;
+        k_0.E[0xAA30 ^ 0xAB6A] = 0xFFFF54CA ^ 0xAB6A;
+        k_0.E[0x5139 ^ 0x51A7] = 0x4B2 ^ 0x51A7;
+        k_0.E[0xDD1 ^ 0xD80] = 0xDDB ^ 0xD80;
+        k_0.E[0x2B88 ^ 0x2B7F] = 0x3EDE ^ 0x2B7F;
+        k_0.E[0x908C ^ 0x91DB] = 0x91D2 ^ 0x91DB;
+        k_0.E[0x2025 ^ 0x213B] = 0x51B3 ^ 0x213B;
+        k_0.E[0xD85 ^ 0xCB3] = 0x8732 ^ 0xCB3;
+        k_0.E[0x5C73 ^ 0x5D05] = 0x2BA7 ^ 0x5D05;
+        k_0.E[0x4971 ^ 0x49DE] = 0xA087 ^ 0x49DE;
+        k_0.E[0xBE43 ^ 0xBFC3] = 0xE3F1 ^ 0xBFC3;
+        k_0.E[0xCAE0 ^ 0xCAA3] = 0xCAFB ^ 0xCAA3;
+        k_0.E[0xA14A ^ 0xA100] = 0xFFFF5ED3 ^ 0xA100;
+        k_0.E[0xAF85 ^ 0xAF6A] = 0x199B ^ 0xAF6A;
+        k_0.E[0xAE8 ^ 0xB8A] = 0xBB0 ^ 0xB8A;
+        k_0.E[0xA130 ^ 0xA1B4] = 0x1A013 ^ 0xA1B4;
+        k_0.E[0xCD3C ^ 0xCC19] = 0x469A ^ 0xCC19;
+        k_0.E[0x745F ^ 0x74EB] = 0xFFFF709A ^ 0x74EB;
+        k_0.E[0x3765 ^ 0x3723] = 0xFFFFC8DA ^ 0x3723;
+        k_0.E[0x4EE0 ^ 0x4EF6] = 0x4FF6 ^ 0x4EF6;
+        k_0.E[0x68DE ^ 0x68AF] = 0xFFFF9714 ^ 0x68AF;
+        k_0.E[0xC1AD ^ 0xC137] = 0xC464 ^ 0xC137;
+        k_0.E[0x20AA ^ 0x21A4] = 0x83C0 ^ 0x21A4;
+        k_0.E[0xCCF ^ 0xCA0] = 0xFFFFF3EA ^ 0xCA0;
+        k_0.E[0x7A57 ^ 0x7B08] = 0x7B0D ^ 0x7B08;
+        k_0.E[0x338A ^ 0x3389] = 0x33BC ^ 0x3389;
+        k_0.E[0xE7A4 ^ 0xE781] = 0xFFFF182A ^ 0xE781;
+        k_0.E[0xE846 ^ 0xE964] = 0x5AAF ^ 0xE964;
+        k_0.E[0x951 ^ 0x95C] = 0xFFFFF6D4 ^ 0x95C;
+        k_0.E[0xEFCC ^ 0xEEB9] = 0xEEBA ^ 0xEEB9;
+        k_0.E[0x793C ^ 0x7932] = 0x790F ^ 0x7932;
+        k_0.E[0xD15D ^ 0xD134] = 0xFFFF2E89 ^ 0xD134;
+        k_0.E[0x400C ^ 0x4042] = 0xFFFFBFB0 ^ 0x4042;
+        k_0.E[0x4D2B ^ 0x4DEF] = 0xBBA3 ^ 0x4DEF;
+        k_0.E[0x2CB8 ^ 0x2D81] = 0x96C8 ^ 0x2D81;
+        k_0.E[0x9D9B ^ 0x9D1E] = 0x19CD2 ^ 0x9D1E;
+        k_0.E[0x762F ^ 0x7612] = 0xFFFF89E9 ^ 0x7612;
+        k_0.E[0x6D40 ^ 0x6C77] = 0xE7B8 ^ 0x6C77;
+        k_0.E[0x205 ^ 0x279] = 0xB046 ^ 0x279;
+        k_0.E[0xD9A8 ^ 0xD957] = 0x5FD9 ^ 0xD957;
+        k_0.E[0x1349 ^ 0x1358] = 0x1359 ^ 0x1358;
+        k_0.E[0xC513 ^ 0xC5B3] = 0x90B9 ^ 0xC5B3;
+        k_0.E[0xDCF1 ^ 0xDC0C] = 0x5A81 ^ 0xDC0C;
+        k_0.E[0x10DB8 ^ 0x10D60] = 0x11395 ^ 0x10D60;
+        k_0.E[0x4CB2 ^ 0x4CC4] = 0x4CC5 ^ 0x4CC4;
+        k_0.E[0x1656 ^ 0x174C] = 0xF507 ^ 0x174C;
+        k_0.E[0xCBA5 ^ 0xCBF2] = 0xFFFF345E ^ 0xCBF2;
+        k_0.E[0x5ED7 ^ 0x5E5E] = 0xC904 ^ 0x5E5E;
+        k_0.E[0x3AF8 ^ 0x3BC4] = 0x8087 ^ 0x3BC4;
+        k_0.E[0x98B ^ 0x97D] = 0x1CB4 ^ 0x97D;
+        k_0.E[0xC807 ^ 0xC8A5] = 0x28CC ^ 0xC8A5;
+        k_0.E[0x248D ^ 0x259F] = 0x5F30 ^ 0x259F;
+        k_0.E[0x3AD7 ^ 0x3AB7] = 0x3A3C ^ 0x3AB7;
+        k_0.E[0x6597 ^ 0x65E2] = 0x65E3 ^ 0x65E2;
+        k_0.E[0xD33C ^ 0xD362] = 0xFFFF2C99 ^ 0xD362;
+        k_0.E[0xDF96 ^ 0xDF35] = 0x3F5D ^ 0xDF35;
+        k_0.E[0xF9BD ^ 0xF984] = 0xF9E0 ^ 0xF984;
+        k_0.E[0x9903 ^ 0x9814] = 0xFFFF395A ^ 0x9814;
+        k_0.E[0x9759 ^ 0x9744] = 0x3AF ^ 0x9744;
+        k_0.E[0x104EE ^ 0x10456] = 0x12560 ^ 0x10456;
+        k_0.E[0x100DE ^ 0x1002C] = 0x19D9E ^ 0x1002C;
+        k_0.E[0x2A18 ^ 0x2AED] = 0x3F3F ^ 0x2AED;
+        k_0.E[0xD86A ^ 0xD936] = 0xFFFF26D4 ^ 0xD936;
+        k_0.E[0xF5AA ^ 0xF542] = 0xDAD ^ 0xF542;
+        k_0.E[0xB3D4 ^ 0xB35F] = 0x4578 ^ 0xB35F;
+        k_0.E[0x3BD5 ^ 0x3AE7] = 0xAEA7 ^ 0x3AE7;
+        k_0.E[0xA48A ^ 0xA40A] = 0xFFFF35C7 ^ 0xA40A;
+        k_0.E[0x907E ^ 0x9072] = 0xFFFF6FE7 ^ 0x9072;
+        k_0.E[0x54BB ^ 0x54B3] = 0xFFFFAB10 ^ 0x54B3;
+        k_0.E[0x8F0A ^ 0x8E5C] = 0xFFFF718E ^ 0x8E5C;
+        k_0.E[0x3FB8 ^ 0x3E30] = 0x3E33 ^ 0x3E30;
+        k_0.E[0x120D ^ 0x124A] = 0xFFFFEDBD ^ 0x124A;
+        k_0.E[0x9C08 ^ 0x9D04] = 0x66D6 ^ 0x9D04;
+        k_0.E[0x6A0 ^ 0x72D] = 0xD40E ^ 0x72D;
+        k_0.E[0xEB1D ^ 0xEA69] = 0xEA69 ^ 0xEA69;
+        k_0.E[0x5896 ^ 0x5912] = 0x5910 ^ 0x5912;
+        k_0.E[0xFD87 ^ 0xFD1A] = 0xF84D ^ 0xFD1A;
+        k_0.E[0x6CA5 ^ 0x6C0E] = 0xA626 ^ 0x6C0E;
+        k_0.E[0x85B0 ^ 0x857A] = 0x3CD ^ 0x857A;
+        k_0.E[0xA1AB ^ 0xA1E6] = 0xFFFF5E14 ^ 0xA1E6;
+        k_0.E[0x4F90 ^ 0x4F12] = 0x14EDB ^ 0x4F12;
+        k_0.E[0x10C1A ^ 0x10CBC] = 0x14ED1 ^ 0x10CBC;
+        k_0.E[0x51DA ^ 0x516B] = 0xB832 ^ 0x516B;
+        k_0.E[0x21CE ^ 0x20E4] = 0x9DB8 ^ 0x20E4;
+        k_0.E[0x73A3 ^ 0x7349] = 0x62E0 ^ 0x7349;
+        k_0.E[0x6951 ^ 0x69F5] = 0x89AA ^ 0x69F5;
+        k_0.E[0xABDB ^ 0xAB89] = 0xFFFF5475 ^ 0xAB89;
+        k_0.E[0xF25C ^ 0xF239] = 0xF234 ^ 0xF239;
+        k_0.E[0x668D ^ 0x679E] = 0x1D39 ^ 0x679E;
+        k_0.E[0xDC0 ^ 0xCEC] = 0xB1B0 ^ 0xCEC;
+        k_0.E[0xE20B ^ 0xE2AE] = 0x2C6 ^ 0xE2AE;
+        k_0.E[0x10BB0 ^ 0x10A8E] = 0x10A8E ^ 0x10A8E;
+        k_0.E[0x32E7 ^ 0x339B] = 0x2216 ^ 0x339B;
+        k_0.E[0x5D40 ^ 0x5C56] = 0x295 ^ 0x5C56;
+        k_0.E[0x5B22 ^ 0x5A05] = 0xD09C ^ 0x5A05;
+        k_0.E[0xD72B ^ 0xD641] = 0xFFFF29D7 ^ 0xD641;
+        k_0.E[0xEB59 ^ 0xEB40] = 0x8B85 ^ 0xEB40;
+        k_0.E[0x42B2 ^ 0x42D9] = 0xFFFFBD1D ^ 0x42D9;
+        k_0.E[0x9C0E ^ 0x9C41] = 0x9C17 ^ 0x9C41;
+        k_0.E[0xFFA9 ^ 0xFF50] = 0x2F56 ^ 0xFF50;
+        k_0.E[0x277B ^ 0x275B] = 0xA1F7 ^ 0x275B;
+        k_0.E[0xE3F9 ^ 0xE278] = 0x2FAF ^ 0xE278;
+        k_0.E[0x24E5 ^ 0x2400] = 0xDCFF ^ 0x2400;
+        k_0.E[0x106BC ^ 0x106DB] = 0x106CA ^ 0x106DB;
+        k_0.E[0x108A6 ^ 0x10821] = 0x19F7B ^ 0x10821;
+        k_0.E[0xF3A5 ^ 0xF295] = 0x4B22 ^ 0xF295;
+        k_0.E[0x107B5 ^ 0x10698] = 0x1BF23 ^ 0x10698;
+        k_0.E[0x3CD9 ^ 0x3CFA] = 0x3CFA ^ 0x3CFA;
+        k_0.E[0x1F50 ^ 0x1EDF] = 0x2808 ^ 0x1EDF;
+        k_0.E[0xD74F ^ 0xD71A] = 0xD74A ^ 0xD71A;
+        k_0.E[0x99AC ^ 0x98CB] = 0x98C3 ^ 0x98CB;
+        k_0.E[0xC3DC ^ 0xC3DE] = 0xFFFF3C1D ^ 0xC3DE;
+        k_0.E[0x3ED3 ^ 0x3E5E] = 0xC879 ^ 0x3E5E;
+        k_0.E[0xA86F ^ 0xA904] = 0xA900 ^ 0xA904;
+        k_0.E[0xF287 ^ 0xF208] = 0x1F619 ^ 0xF208;
+        k_0.E[0x40F7 ^ 0x402D] = 0xCA5C ^ 0x402D;
+        k_0.E[0x5FC3 ^ 0x5FAF] = 0x5FE5 ^ 0x5FAF;
+        k_0.E[0xEFCB ^ 0xEEAA] = 0xEEAD ^ 0xEEAA;
+        k_0.E[0xB83 ^ 0xA88] = 0xF12D ^ 0xA88;
+        k_0.E[0x2161 ^ 0x21B4] = 0x3F5E ^ 0x21B4;
+        k_0.E[0xA5C7 ^ 0xA554] = 0xC719 ^ 0xA554;
+        k_0.E[0x7501 ^ 0x744F] = 0xB591 ^ 0x744F;
+        k_0.E[0xB745 ^ 0xB63C] = 0xBFA ^ 0xB63C;
+        k_0.E[0xEC7A ^ 0xEC93] = 0xFD31 ^ 0xEC93;
+        k_0.E[0x35AB ^ 0x35F1] = 0xFFFFCA10 ^ 0x35F1;
+        k_0.E[0x87E0 ^ 0x8707] = 0x7F87 ^ 0x8707;
+        k_0.E[0x10D23 ^ 0x10D36] = 0x10D36 ^ 0x10D36;
+        k_0.E[0x55D9 ^ 0x54F2] = 0xFFFF163B ^ 0x54F2;
+        k_0.E[0x5740 ^ 0x56C5] = 0x56C5 ^ 0x56C5;
+        k_0.E[0x6D42 ^ 0x6D6A] = 0x6D7A ^ 0x6D6A;
+        k_0.E[0xD7B5 ^ 0xD786] = 0xD7CE ^ 0xD786;
+        k_0.E[0x237A ^ 0x222A] = 0x223A ^ 0x222A;
+        k_0.E[0x2BA4 ^ 0x2BBF] = 0x2AA6 ^ 0x2BBF;
+        k_0.E[0x2CBD ^ 0x2C72] = 0xCC1 ^ 0x2C72;
+        k_0.E[0xF445 ^ 0xF4FA] = 0xFFFF1B3C ^ 0xF4FA;
+        k_0.E[0x3B5 ^ 0x2F0] = 0x6ED4 ^ 0x2F0;
+        k_0.E[0x540B ^ 0x550C] = 0xF9E3 ^ 0x550C;
+        k_0.E[0x1A0D ^ 0x1A49] = 0x1A30 ^ 0x1A49;
+        k_0.E[0xA61D ^ 0xA6FD] = 0x1A1A ^ 0xA6FD;
+    }
+}
+

@@ -1,0 +1,57 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 7/1/26, 3:48 PM
+Description: Unexpected error
+
+java.lang.ExceptionInInitializerError
+	at native0.E6tWIfrR1ZIHzfJHNDWjfInsqil3KwHwn1AX5XxaeOenl8l0HdQSJPuRZ2b4KtDLlQCW.fljBxFG2UGEnSBWVDf7JAl7K5W9OHB1791ayULn3mGtn2rj6qMxv75zaYijgecWhJ9i9(SourceFile:28)
+	at net.minecraft.client.renderer.GameRenderer.updateCameraAndRender(SourceFile:784)
+	at net.minecraft.client.Minecraft.runGameLoop(SourceFile:852)
+	at net.minecraft.client.Minecraft.run(SourceFile:506)
+	at ru.kotopushka.Launcher.start(SourceFile:141)
+	at ru.kotopushka.Launcher.start(SourceFile:94)
+	at start.Start.main(SourceFile:11)
+Caused by: java.lang.IllegalStateException: Shader program failed to link: ERROR: Input of fragment shader 'texCoord' not written by vertex shader
+
+	at native0.b4rQbn0s8C6kh5D9gqkRdUpGLFeicHA8TLT5h1cB8KZP9S3QTqoY4bwLMuTdyIqmiEJL.<init>(SourceFile:47)
+	at native0.b4rQbn0s8C6kh5D9gqkRdUpGLFeicHA8TLT5h1cB8KZP9S3QTqoY4bwLMuTdyIqmiEJL.<clinit>(SourceFile:18)
+	... 7 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Mac OS X (aarch64) version 26.5.1
+	Java Version: 25.0.3, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Azul Systems, Inc.
+	Memory: 241287528 bytes (230 MB) / 394264576 bytes (376 MB) up to 17179869184 bytes (16384 MB)
+	CPUs: 10
+	JVM Flags: 1 total; -Xverify:none
+	Launched Version: 1.16.5
+	Backend library: LWJGL version 3.3.4+7
+	Backend API: Apple M1 Max GL version 2.1 Metal - 90.5, Apple
+	GL Caps: Using framebuffer using ARB_framebuffer_object extension
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 10x Apple M1 Max
+	OptiFine Version: OptiFine_1.16.5_HD_U_G8
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 2.1 Metal - 90.5
+	OpenGlRenderer: Apple M1 Max
+	OpenGlVendor: Apple
+	CpuCount: 10

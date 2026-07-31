@@ -1,0 +1,19 @@
+﻿ru\metaculture\protection\AutoBuy.java:519: error: incompatible types: 
+Object cannot be converted to String
+      for (String var7 : var15) {
+                         ^
+
+ru\metaculture\protection\AutoBuy.java:536: error: incompatible types: 
+Object cannot be converted to String
+            for (String var11 : (Set)var19.getValue()) {
+                                ^
+
+  ru\metaculture\protection\AutoBuy.java:519: error: incompatible types: 
+Object cannot be converted to String
+        for (String var7 : var15) {
+                           ^
+
+  ru\metaculture\protection\AutoBuy.java:536: error: incompatible types: 
+Object cannot be converted to String
+              for (String var11 : (Set)var19.getValue()) {
+                                  ^

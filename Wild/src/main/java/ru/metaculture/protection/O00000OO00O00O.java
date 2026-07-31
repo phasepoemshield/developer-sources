@@ -1,0 +1,12 @@
+package ru.metaculture.protection;
+
+public class O00000OO00O00O extends O00000OO000O0O {
+   public static boolean O000000000() {
+      if (!O00000OO000O0O.O00000000O00 && O00000OO000O0O.O00000000000OO.O0000000000O() > 0.0) {
+         O00000OO000O0O.O00000000000OO.O00000000(0.0, 0.4F, O0000O0O00.O000000000O0O);
+         O00000OO000O0O.O00000000O00 = true;
+      }
+
+      return false;
+   }
+}

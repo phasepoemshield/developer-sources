@@ -1,0 +1,980 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.mojang.blaze3d.textures.GpuTexture
+ *  net.minecraft.class_1058
+ *  net.minecraft.class_10868
+ *  net.minecraft.class_1293
+ *  net.minecraft.class_2561
+ *  net.minecraft.class_2960
+ *  net.minecraft.class_329
+ *  net.minecraft.class_6880
+ *  net.minecraft.class_746
+ */
+package kotakbaz.rain.module.modules.hud;
+
+import com.mojang.blaze3d.textures.GpuTexture;
+import java.nio.charset.StandardCharsets;
+import java.security.Key;
+import java.util.Arrays;
+import java.util.Base64;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.PBEKeySpec;
+import javax.crypto.spec.SecretKeySpec;
+import kotakbaz.rain.module.modules.hud.container.HudModule;
+import kotakbaz.rain.module.modules.hud.container.a;
+import kotakbaz.rain.module.modules.hud.container.a_0;
+import kotakbaz.rain.module.modules.hud.container.b;
+import kotakbaz.rain.module.modules.hud.container.b_0;
+import kotakbaz.rain.module.modules.hud.container.d;
+import kotakbaz.rain.module.modules.hud.container.d_0;
+import kotakbaz.rain.module.modules.hud.container.e;
+import kotakbaz.rain.module.modules.render.w_0;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import net.minecraft.class_1058;
+import net.minecraft.class_10868;
+import net.minecraft.class_1293;
+import net.minecraft.class_2561;
+import net.minecraft.class_2960;
+import net.minecraft.class_329;
+import net.minecraft.class_6880;
+import net.minecraft.class_746;
+import org.jetbrains.annotations.NotNull;
+import sweetie.evaware.flora.api.Commando;
+
+@Metadata(mv={2, 3, 0}, k=1, xi=48, d1={"\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u00c6\u0002\u0018\u00002\u00020\u0001B\t\b\u0002\u00a2\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0007\u00a2\u0006\u0004\b\u0007\u0010\bJ\u001b\u0010\f\u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020\u000b0\tH\u0014\u00a2\u0006\u0004\b\f\u0010\rJ\u0017\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u000f\u001a\u00020\u000eH\u0002\u00a2\u0006\u0004\b\u0011\u0010\u0012J\u0015\u0010\u0016\u001a\u00020\u00152\u0006\u0010\u0014\u001a\u00020\u0013\u00a2\u0006\u0004\b\u0016\u0010\u0017R \u0010\u0019\u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020\u000b0\u00188\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\b\u0019\u0010\u001a\u00a8\u0006\u001b"}, d2={"Lkotakbaz/rain/module/modules/hud/EffectsModule;", "Lkotakbaz/rain/module/modules/hud/container/HudModule;", "<init>", "()V", "Lkotakbaz/rain/event/events/OverlayRenderEvent;", "event", "", "onOverlayRender", "(Lkotakbaz/rain/event/events/OverlayRenderEvent;)V", "", "Lkotakbaz/rain/module/modules/hud/container/Data$First;", "Lkotakbaz/rain/module/modules/hud/container/Data$Second;", "getCurrentData", "()Ljava/util/Map;", "Lnet/minecraft/class_1293;", "effect", "Lkotakbaz/rain/module/modules/hud/container/Data$Leading$Texture;", "effectLeading", "(Lnet/minecraft/class_1293;)Lkotakbaz/rain/module/modules/hud/container/Data$Leading$Texture;", "", "ticks", "", "durationText", "(I)Ljava/lang/String;", "Ljava/util/LinkedHashMap;", "map", "Ljava/util/LinkedHashMap;", "rain-visuals"})
+public final class C
+extends HudModule {
+    @NotNull
+    public static final C INSTANCE;
+    @NotNull
+    private static final LinkedHashMap<b_0, d_0> map;
+    private static Object[] a;
+    private static Object b;
+    private static Object[] B;
+    private static Object[] A;
+    private static Object[] c;
+    public static int[] C;
+
+    private C() {
+        int n = C[0];
+        n ^= C[1];
+        n += C[2];
+        int n2 = C[3];
+        n2 -= C[4];
+        int n3 = C[6];
+        n3 ^= C[7];
+        int n4 = C[9];
+        n4 -= C[10];
+        super((String)a[n], (String)a[n2 ^= C[5]] + (String)a[n3 -= C[8]], 200.0f, 200.0f, (String)a[n4 ^= C[11]]);
+    }
+
+    @Commando
+    public final void onOverlayRender(@NotNull kotakbaz.rain.event.events.C c2) {
+        int n = C[12];
+        n ^= C[13];
+        Intrinsics.checkNotNullParameter(c2, (String)a[n -= C[14]]);
+        this.renderContainer(c2);
+    }
+
+    @Override
+    @NotNull
+    protected Map<b_0, d_0> getCurrentData() {
+        long l = -5524904060660778082L;
+        map.clear();
+        class_746 class_7462 = kotakbaz.rain.client.extensions.b_0.getMc().field_1724;
+        if (class_7462 == null) {
+            return map;
+        }
+        class_746 class_7463 = class_7462;
+        for (class_1293 class_12932 : class_7463.method_6026()) {
+            String string;
+            String string2;
+            Intrinsics.checkNotNull(class_12932);
+            if (w_0.INSTANCE.isInjectedNightVisionEffect(class_12932)) continue;
+            if (class_12932.method_5578() > 0) {
+                int n = C[15];
+                n -= C[16];
+                n ^= C[17];
+                int n2 = C[18];
+                n2 += C[19];
+                long l2 = l;
+                int n3 = C[21];
+                n3 += C[22];
+                l = l2 ^ ((long)(class_12932.method_5578() + n) << (n2 += C[20]) ^ l2) & -1L << (n3 ^= C[23]);
+                int n4 = C[24];
+                n4 += C[25];
+                int n5 = C[27];
+                n5 ^= C[28];
+                string2 = (String)a[n4 += C[26]] + (int)(l >>> (n5 += C[29]));
+            } else {
+                string2 = "";
+            }
+            String string3 = string = string2;
+            String string4 = class_2561.method_43471((String)class_12932.method_5586()).getString();
+            String string5 = string4 + string3;
+            String string6 = this.durationText(class_12932.method_5584());
+            ((Map)map).put(new b(string5, this.effectLeading(class_12932)), new d(string6, e.INSTANCE.getVALUE_COLOR()));
+        }
+        return map;
+    }
+
+    private final a_0 effectLeading(class_1293 class_12932) {
+        long l = -8395082921591356000L;
+        class_2960 class_29602 = class_329.method_71644((class_6880)class_12932.method_5579());
+        class_1058 class_10582 = kotakbaz.rain.client.extensions.b_0.getMc().method_52699().method_18667(class_29602);
+        GpuTexture gpuTexture = kotakbaz.rain.client.extensions.b_0.getMc().method_1531().method_4619(class_10582.method_45852()).method_68004();
+        int n = C[30];
+        n += C[31];
+        int n2 = C[33];
+        n2 += C[34];
+        Intrinsics.checkNotNull(gpuTexture, (String)a[n -= C[32]] + (String)a[n2 -= C[35]]);
+        int n3 = C[36];
+        n3 += C[37];
+        long l2 = l;
+        int n4 = C[39];
+        n4 -= C[40];
+        l = l2 ^ ((long)((class_10868)gpuTexture).method_68427() << (n3 -= C[38]) ^ l2) & -1L << (n4 -= C[41]);
+        int n5 = C[42];
+        n5 ^= C[43];
+        return new a((int)(l >>> (n5 ^= C[44])), class_10582.method_4594(), class_10582.method_4575(), class_10582.method_4577() - class_10582.method_4594(), class_10582.method_4593() - class_10582.method_4575());
+    }
+
+    @NotNull
+    public final String durationText(int n) {
+        String string;
+        long l = 5949589025234189068L;
+        long l2 = 2683843545684909544L;
+        long l3 = 671230911625524946L;
+        long l4 = 2514538462617150116L;
+        long l5 = -995366609783671996L;
+        long l6 = 3786599400370183320L;
+        long l7 = -4641919643376311816L;
+        long l8 = 7614160269152552346L;
+        long l9 = 6288274475149208253L;
+        long l10 = 5416645403660516524L;
+        int n2 = C[45];
+        n2 ^= C[46];
+        if (n == (n2 ^= C[47])) {
+            int n3 = C[48];
+            n3 -= C[49];
+            return (String)a[n3 -= C[50]];
+        }
+        int n4 = C[51];
+        n4 ^= C[52];
+        n4 += C[53];
+        int n5 = C[54];
+        n5 += C[55];
+        long l11 = l7;
+        int n6 = C[57];
+        n6 -= C[58];
+        l7 = l11 ^ ((long)(n / n4) << (n5 ^= C[56]) ^ l11) & -1L << (n6 ^= C[59]);
+        int n7 = C[60];
+        n7 -= C[61];
+        n7 ^= C[62];
+        int n8 = C[63];
+        n8 += C[64];
+        long l12 = l10;
+        int n9 = C[66];
+        n9 ^= C[67];
+        l10 = l12 ^ ((long)((int)(l7 >>> n7) / (n8 += C[65])) ^ l12) & -1L >>> (n9 ^= C[68]);
+        int n10 = C[69];
+        n10 -= C[70];
+        n10 += C[71];
+        int n11 = C[72];
+        n11 -= C[73];
+        long l13 = l10;
+        int n12 = C[75];
+        n12 -= C[76];
+        l10 = l13 ^ ((long)((int)l10 / n10) << (n11 += C[74]) ^ l13) & -1L << (n12 -= C[77]);
+        int n13 = C[78];
+        n13 += C[79];
+        long l14 = l3;
+        int n14 = C[81];
+        n14 += C[82];
+        l3 = l14 ^ ((long)((int)l10 % (n13 -= C[80])) ^ l14) & -1L >>> (n14 ^= C[83]);
+        int n15 = C[84];
+        n15 ^= C[85];
+        n15 ^= C[86];
+        int n16 = C[87];
+        n16 += C[88];
+        long l15 = l5;
+        int n17 = C[90];
+        n17 -= C[91];
+        l5 = l15 ^ ((long)((int)(l7 >>> n15) % (n16 += C[89])) ^ l15) & -1L >>> (n17 ^= C[92]);
+        int n18 = C[93];
+        n18 ^= C[94];
+        if ((int)(l10 >>> (n18 ^= C[95])) > 0) {
+            int n19 = C[96];
+            n19 += C[97];
+            String string2 = (String)a[n19 ^= C[98]];
+            int n20 = C[99];
+            n20 += C[100];
+            Object[] objectArray = new Object[n20 += C[101]];
+            int n21 = C[102];
+            n21 ^= C[103];
+            int n22 = C[105];
+            n22 ^= C[106];
+            objectArray[n21 += kotakbaz.rain.module.modules.hud.C.C[104]] = (int)(l10 >>> (n22 ^= C[107]));
+            int n23 = C[108];
+            n23 += C[109];
+            objectArray[n23 ^= kotakbaz.rain.module.modules.hud.C.C[110]] = (int)l3;
+            int n24 = C[111];
+            n24 += C[112];
+            objectArray[n24 ^= kotakbaz.rain.module.modules.hud.C.C[113]] = (int)l5;
+            String string3 = String.format(string2, Arrays.copyOf(objectArray, objectArray.length));
+            string = string3;
+            int n25 = C[114];
+            n25 += C[115];
+            Intrinsics.checkNotNullExpressionValue(string3, (String)a[n25 -= C[116]]);
+        } else if ((int)l10 > 0) {
+            int n26 = C[117];
+            n26 += C[118];
+            String string4 = (String)a[n26 -= C[119]];
+            int n27 = C[120];
+            n27 -= C[121];
+            Object[] objectArray = new Object[n27 ^= C[122]];
+            int n28 = C[123];
+            n28 -= C[124];
+            objectArray[n28 += kotakbaz.rain.module.modules.hud.C.C[125]] = (int)l10;
+            int n29 = C[126];
+            n29 ^= C[127];
+            objectArray[n29 += kotakbaz.rain.module.modules.hud.C.C[128]] = (int)l5;
+            String string5 = String.format(string4, Arrays.copyOf(objectArray, objectArray.length));
+            string = string5;
+            int n30 = C[129];
+            n30 += C[130];
+            Intrinsics.checkNotNullExpressionValue(string5, (String)a[n30 -= C[131]]);
+        } else {
+            int n31 = C[132];
+            n31 ^= C[133];
+            n31 -= C[134];
+            int n32 = C[135];
+            n32 ^= C[136];
+            long l16 = l9;
+            int n33 = C[138];
+            n33 += C[139];
+            l9 = l16 ^ ((long)((int)(l7 >>> n31)) << (n32 ^= C[137]) ^ l16) & -1L << (n33 += C[140]);
+            int n34 = C[141];
+            n34 -= C[142];
+            int n35 = C[144];
+            n35 -= C[145];
+            string = (int)(l9 >>> (n34 -= C[143])) + (String)a[n35 += C[146]];
+        }
+        return string;
+    }
+
+    static {
+        kotakbaz.rain.module.modules.hud.C.b();
+        long l = -3583343907950293044L;
+        long l2 = 9188555776848881485L;
+        long l3 = -7396138662795419331L;
+        long l4 = -6115819512257522677L;
+        long l5 = 6136652067402822588L;
+        long l6 = -316771060443483555L;
+        long l7 = 7131704351422221948L;
+        long l8 = 1092450821276185519L;
+        long l9 = -6004233722434894741L;
+        long l10 = -4774607023503382083L;
+        long l11 = -1752990384040825690L;
+        long l12 = 2078879715976771108L;
+        long l13 = 6615908628012428846L;
+        long l14 = -269718036741791947L;
+        int n = C[147];
+        n += C[148];
+        a = new Object[n += C[149]];
+        long l15 = l14;
+        int n2 = C[150];
+        n2 += C[151];
+        l14 = l15 ^ (0L ^ l15) & -1L << (n2 += C[152]);
+        Object[] objectArray = new Object[C[153]];
+        objectArray[kotakbaz.rain.module.modules.hud.C.C[154]] = A;
+        objectArray[kotakbaz.rain.module.modules.hud.C.C[155]] = C[156];
+        int n3 = C[157];
+        Object object = kotakbaz.rain.module.modules.hud.C.A()[C[158]];
+        if (object == null) {
+            char[] cArray = "\uc65e\uc6be\uc6ff\uc6e1\uc6ea\uc6fd\uc6eb\uc6a7\uc659\uc6e3\uc65c\uc6fd\uc6bd\uc643\uc65e\uc6bc\uc6fe\uc430\uc430\uc6a4\uc652\uc64b\uc6ac\uc6ac\uc6a7\uc6e1\uc64a\uc645\uc6af\uc6a9\uc6af\uc678\uc65e\uc6ff\uc6a6\uc650\uc6ab\uc6a3\uc6ff\uc6a8\uc6a3\uc650\uc6e2\uc6a8\uc6fd\uc64c\uc6eb\uc643\uc658\uc6be\uc6ab\uc6a3\uc643\uc6bd\uc65f\uc6a9\uc6a7\uc649\uc6ab\uc641\uc672\uc64c\uc672\uc6ac\uc6a6\uc651\uc6fd\uc64a\uc6e3\uc6a9\uc651\uc6fc\uc642\uc641\uc673\uc6e1\uc6a7\uc673\uc6ad\uc430\uc6bf\uc6af\uc64a\uc6ac\uc6fc\uc65d\uc6a9\uc6ea\uc6ab\uc6a7\uc647\uc6fe\uc67a\uc6ae\uc672\uc6e3\uc653\uc64d\uc64a\uc651\uc647\uc6bf\uc652\uc646\uc64d\uc6a4\uc6bc\uc6ea\uc65a\uc679\uc645\uc430\uc671\uc6be\uc6a8\uc64d\uc6a4\uc641\uc65a\uc6bc\uc65f\uc659\uc6e9\uc67a\uc647\uc6a6\uc6be\uc6bc\uc404\uc6bd\uc6a8\uc653\uc64d\uc6aa\uc679\uc6e1\uc646\uc659\uc6a9\uc6bf\uc658\uc404\uc64d\uc6e3\uc6ab\uc641\uc678\uc6bf\uc67a\uc6aa\uc658\uc679\uc67a\uc6eb\uc649\uc6be\uc6bf\uc6aa\uc64c\uc6af\uc6e8\uc642\uc644\uc64e\uc67a\uc64f\uc65a\uc64b\uc679\uc670\uc648\uc65f\uc64c\uc6eb\uc6a3\uc6ab\uc650\uc658\uc65c\uc651\uc6a9\uc6a3\uc6a8\uc647\uc6e3\uc6e8\uc6ac\uc6e3\uc6e2\uc6e2\uc6e2\uc64f\uc6ad\uc672\uc6a2\uc6a6\uc64d\uc6af\uc6bf\uc6e9\uc644\uc650\uc6a5\uc64e\uc65d\uc649\uc67a\uc6a3\uc6a4\uc65e\uc64c\uc64b\uc65f\uc64e\uc645\uc64c\uc6a8\uc647\uc650\uc6ea\uc6a5\uc678\uc6ff\uc671\uc643\uc6ac\uc678\uc653\uc6ae\uc64e\uc643\uc430\uc65c\uc6aa\uc641\uc6a9\uc6ad\uc65c\uc6e1\uc64a\uc679\uc6fc\uc6ae\uc64b\uc6eb\uc6eb\uc6aa\uc646\uc659\uc678\uc6be\uc649\uc641\uc651\uc6a5\uc6e1\uc6ab\uc64d\uc6aa\uc64d\uc67a\uc6e8\uc653\uc6be\uc6a7\uc6e8\uc6bd\uc64a\uc6fd\uc641\uc65f\uc6a4\uc64e\uc6bf\uc6fe\uc6be\uc6a3\uc649\uc6ff\uc65f\uc6ff\uc64c\uc6aa\uc6a4\uc6ff\uc6fd\uc6e3\uc6fd\uc6fd\uc64a\uc6a6\uc646\uc648\uc6fc\uc6e2\uc6e9\uc6a8\uc6fd\uc6a6\uc6be\uc651\uc6a6\uc6aa\uc6be\uc65e\uc6be\uc6a7\uc642\uc6a2\uc6e1\uc649\uc65d\uc648\uc6a9\uc6af\uc6af\uc649\uc64b\uc678\uc6e9\uc6a6\uc6fe\uc658\uc64e\uc642\uc6a5\uc6be\uc672\uc6a3\uc659\uc651\uc64b\uc6eb\uc6a2\uc6bd\uc6a5\uc648\uc646\uc643\uc6eb\uc6be\uc65a\uc436\uc436".toCharArray();
+            for (int i2 = C[159]; i2 < C[160]; ++i2) {
+                int n4 = cArray[i2];
+                n4 ^= C[161];
+                n4 -= C[162];
+                n4 += C[163];
+                n4 -= C[164];
+                n4 += C[165];
+                n4 -= C[166];
+                n4 += C[167];
+                n4 ^= C[168];
+                n4 += C[169];
+                n4 += C[170];
+                cArray[i2] = (char)(n4 ^= C[171]);
+            }
+            object = kotakbaz.rain.module.modules.hud.C.A()[kotakbaz.rain.module.modules.hud.C.C[172]] = new String(cArray);
+        }
+        objectArray[n3] = (String)object;
+        char[] cArray = ((String)kotakbaz.rain.module.modules.hud.C.a(objectArray)).toCharArray();
+        long l16 = l5;
+        int n5 = C[173];
+        n5 += C[174];
+        l5 = l16 ^ (0xC500000000L ^ l16) & -1L << (n5 += C[175]);
+        long l17 = l12;
+        int n6 = C[176];
+        n6 ^= C[177];
+        l12 = l17 ^ (0L ^ l17) & -1L >>> (n6 ^= C[178]);
+        while (true) {
+            int n7 = C[179];
+            n7 -= C[180];
+            if ((int)l12 >= (int)(l5 >>> (n7 += C[181]))) break;
+            int n8 = (int)l12;
+            long l18 = l12;
+            int n9 = C[182];
+            n9 += C[183];
+            int n10 = C[185];
+            n10 ^= C[186];
+            l12 = l18 ^ (l18 ^ l18 + (long)(n9 += C[184])) & -1L >>> (n10 -= C[187]);
+            long l19 = l8;
+            int n11 = C[188];
+            n11 ^= C[189];
+            l8 = l19 ^ ((long)cArray[n8] ^ l19) & -1L >>> (n11 += C[190]);
+            int n12 = (int)l12;
+            long l20 = l12;
+            int n13 = C[191];
+            n13 -= C[192];
+            int n14 = C[194];
+            n14 ^= C[195];
+            l12 = l20 ^ (l20 ^ l20 + (long)(n13 -= C[193])) & -1L >>> (n14 ^= C[196]);
+            int n15 = C[197];
+            n15 ^= C[198];
+            long l21 = l9;
+            int n16 = C[200];
+            n16 -= C[201];
+            l9 = l21 ^ ((long)cArray[n12] << (n15 += C[199]) ^ l21) & -1L << (n16 ^= C[202]);
+            int n17 = C[203];
+            n17 ^= C[204];
+            n17 += C[205];
+            int n18 = C[206];
+            n18 += C[207];
+            long l22 = l11;
+            int n19 = C[209];
+            n19 -= C[210];
+            l11 = l22 ^ ((long)((int)l8 << n17 | (int)(l9 >>> (n18 -= C[208]))) ^ l22) & -1L >>> (n19 += C[211]);
+            char[] cArray2 = new char[(int)l11];
+            long l23 = l13;
+            int n20 = C[212];
+            n20 ^= C[213];
+            l13 = l23 ^ (0L ^ l23) & -1L << (n20 ^= C[214]);
+            while (true) {
+                int n21 = C[215];
+                n21 -= C[216];
+                if ((int)(l13 >>> (n21 ^= C[217])) >= (int)l11) break;
+                int n22 = C[218];
+                n22 -= C[219];
+                int n23 = C[221];
+                n23 += C[222];
+                cArray2[(int)(l13 >>> (n22 ^= kotakbaz.rain.module.modules.hud.C.C[220]))] = cArray[(int)l12 + (int)(l13 >>> (n23 ^= C[223]))];
+                l13 += 0x100000000L;
+            }
+            int n24 = C[224];
+            n24 ^= C[225];
+            int n25 = (int)(l14 >>> (n24 += C[226]));
+            l14 += 0x100000000L;
+            kotakbaz.rain.module.modules.hud.C.a[n25] = new String(cArray2);
+            long l24 = l12;
+            int n26 = C[227];
+            n26 ^= C[228];
+            l12 = l24 ^ ((long)((int)l12 + (int)l11) ^ l24) & -1L >>> (n26 ^= C[229]);
+        }
+        INSTANCE = new C();
+        map = new LinkedHashMap();
+    }
+
+    public static Object a(Object[] object) {
+        Object object2;
+        int n = (Integer)object[C[230]];
+        String string = (String)object[C[231]];
+        object = object[C[232]];
+        Object[] objectArray = B;
+        if (B == null) {
+            objectArray = B = new Object[C[233]];
+        }
+        if ((object2 = objectArray[n]) == null) {
+            Object object3 = object;
+            if (object == null) {
+                Object[] objectArray2 = new Object[C[234]];
+                A = objectArray2;
+                object3 = objectArray2;
+                byte[] byArray = new byte[C[236] ^ C[237]];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[238] ^ kotakbaz.rain.module.modules.hud.C.C[239]] = C[240] ^ C[241];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[242] ^ kotakbaz.rain.module.modules.hud.C.C[243]] = C[244] ^ C[245];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[246] ^ kotakbaz.rain.module.modules.hud.C.C[247]] = C[248] ^ C[249];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[250] ^ kotakbaz.rain.module.modules.hud.C.C[251]] = C[252] ^ C[253];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[254] ^ kotakbaz.rain.module.modules.hud.C.C[255]] = C[256] ^ C[257];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[258] ^ kotakbaz.rain.module.modules.hud.C.C[259]] = C[260] ^ C[261];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[262] ^ kotakbaz.rain.module.modules.hud.C.C[263]] = C[264] ^ C[265];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[266] ^ kotakbaz.rain.module.modules.hud.C.C[267]] = C[268] ^ C[269];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[270] ^ kotakbaz.rain.module.modules.hud.C.C[271]] = C[272] ^ C[273];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[274] ^ kotakbaz.rain.module.modules.hud.C.C[275]] = C[276] ^ C[277];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[278] ^ kotakbaz.rain.module.modules.hud.C.C[279]] = C[280] ^ C[281];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[282] ^ kotakbaz.rain.module.modules.hud.C.C[283]] = C[284] ^ C[285];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[286] ^ kotakbaz.rain.module.modules.hud.C.C[287]] = C[288] ^ C[289];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[290] ^ kotakbaz.rain.module.modules.hud.C.C[291]] = C[292] ^ C[293];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[294] ^ kotakbaz.rain.module.modules.hud.C.C[295]] = C[296] ^ C[297];
+                byArray[kotakbaz.rain.module.modules.hud.C.C[298] ^ kotakbaz.rain.module.modules.hud.C.C[299]] = C[300] ^ C[301];
+                objectArray2[kotakbaz.rain.module.modules.hud.C.C[235]] = byArray;
+            }
+            byte[] byArray = (byte[])object3[C[302]];
+            if (b == null) {
+                byte[] byArray2 = new byte[C[303] ^ C[304]];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[305] ^ kotakbaz.rain.module.modules.hud.C.C[306]] = C[307] ^ C[308];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[309] ^ kotakbaz.rain.module.modules.hud.C.C[310]] = C[311] ^ C[312];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[313] ^ kotakbaz.rain.module.modules.hud.C.C[314]] = C[315] ^ C[316];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[317] ^ kotakbaz.rain.module.modules.hud.C.C[318]] = C[319] ^ C[320];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[321] ^ kotakbaz.rain.module.modules.hud.C.C[322]] = C[323] ^ C[324];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[325] ^ kotakbaz.rain.module.modules.hud.C.C[326]] = C[327] ^ C[328];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[329] ^ kotakbaz.rain.module.modules.hud.C.C[330]] = C[331] ^ C[332];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[333] ^ kotakbaz.rain.module.modules.hud.C.C[334]] = C[335] ^ C[336];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[337] ^ kotakbaz.rain.module.modules.hud.C.C[338]] = C[339] ^ C[340];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[341] ^ kotakbaz.rain.module.modules.hud.C.C[342]] = C[343] ^ C[344];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[345] ^ kotakbaz.rain.module.modules.hud.C.C[346]] = C[347] ^ C[348];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[349] ^ kotakbaz.rain.module.modules.hud.C.C[350]] = C[351] ^ C[352];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[353] ^ kotakbaz.rain.module.modules.hud.C.C[354]] = C[355] ^ C[356];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[357] ^ kotakbaz.rain.module.modules.hud.C.C[358]] = C[359] ^ C[360];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[361] ^ kotakbaz.rain.module.modules.hud.C.C[362]] = C[363] ^ C[364];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[365] ^ kotakbaz.rain.module.modules.hud.C.C[366]] = C[367] ^ C[368];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[369] ^ kotakbaz.rain.module.modules.hud.C.C[370]] = C[371] ^ C[372];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[373] ^ kotakbaz.rain.module.modules.hud.C.C[374]] = C[375] ^ C[376];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[377] ^ kotakbaz.rain.module.modules.hud.C.C[378]] = C[379] ^ C[380];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[381] ^ kotakbaz.rain.module.modules.hud.C.C[382]] = C[383] ^ C[384];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[385] ^ kotakbaz.rain.module.modules.hud.C.C[386]] = C[387] ^ C[388];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[389] ^ kotakbaz.rain.module.modules.hud.C.C[390]] = C[391] ^ C[392];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[393] ^ kotakbaz.rain.module.modules.hud.C.C[394]] = C[395] ^ C[396];
+                byArray2[kotakbaz.rain.module.modules.hud.C.C[397] ^ kotakbaz.rain.module.modules.hud.C.C[398]] = C[399] ^ 0x72AA;
+                byArray2[0x824B ^ 0x8248] = 0xFFFF7D99 ^ 0x8248;
+                byArray2[0x27D1 ^ 0x27D4] = 0xFFFFD817 ^ 0x27D4;
+                byArray2[0x219B ^ 0x2193] = 0x21A4 ^ 0x2193;
+                byArray2[0xAAE9 ^ 0xAAFC] = 0xAAC8 ^ 0xAAFC;
+                byArray2[0xD561 ^ 0xD579] = 0xD555 ^ 0xD579;
+                byArray2[0x1C7C ^ 0x1C68] = 0xFFFFE3ED ^ 0x1C68;
+                byArray2[0x9E56 ^ 0x9E5A] = 0x9E3C ^ 0x9E5A;
+                byArray2[0x7D5F ^ 0x7D46] = 0x7D0B ^ 0x7D46;
+                byte[] byArray3 = new byte[byArray.length + byArray2.length];
+                System.arraycopy(byArray, 0, byArray3, 0, byArray.length);
+                System.arraycopy(byArray2, 0, byArray3, byArray.length, byArray2.length);
+                Object object4 = kotakbaz.rain.module.modules.hud.C.A()[1];
+                if (object4 == null) {
+                    char[] cArray = "\ub26e\u4b70\u4b7d\u4b72\u4bd4\u4bc0\ub289\ub243\u4a02\ub246\u4a26\ub247\ub21b\ub215\ub265\u4a26\u4b7b\u4bcb".toCharArray();
+                    for (int i2 = 0; i2 < 18; ++i2) {
+                        int n2 = cArray[i2];
+                        n2 ^= 0x5906;
+                        n2 ^= 0x9C27;
+                        n2 -= 27592;
+                        n2 -= 42089;
+                        n2 ^= 0xEDAA;
+                        n2 -= 38667;
+                        n2 ^= 0xA46C;
+                        n2 -= 53612;
+                        n2 ^= 0x8EB2;
+                        n2 ^= 0x2793;
+                        n2 -= 46291;
+                        n2 -= 50517;
+                        n2 += 49206;
+                        cArray[i2] = (char)(n2 ^= 0x75D6);
+                    }
+                    object4 = kotakbaz.rain.module.modules.hud.C.A()[1] = new String(cArray);
+                }
+                SecretKeyFactory secretKeyFactory = SecretKeyFactory.getInstance((String)object4);
+                byte[] byArray4 = new byte[16];
+                byArray4[10] = -83;
+                byArray4[11] = 3;
+                byArray4[15] = -121;
+                byArray4[1] = -61;
+                byArray4[13] = -55;
+                byArray4[0] = 91;
+                byArray4[12] = 101;
+                byArray4[9] = -77;
+                byArray4[4] = -99;
+                byArray4[14] = 45;
+                byArray4[8] = -113;
+                byArray4[3] = 31;
+                byArray4[7] = 123;
+                byArray4[2] = -50;
+                byArray4[5] = 54;
+                byArray4[6] = -91;
+                PBEKeySpec pBEKeySpec = new PBEKeySpec(new String(byArray3, StandardCharsets.UTF_8).toCharArray(), byArray4, 15, 256);
+                byte[] byArray5 = secretKeyFactory.generateSecret(pBEKeySpec).getEncoded();
+                Object object5 = kotakbaz.rain.module.modules.hud.C.A()[2];
+                if (object5 == null) {
+                    char[] cArray = "\u2695\u2691\u282b".toCharArray();
+                    for (int i3 = 0; i3 < 3; ++i3) {
+                        int n3 = cArray[i3];
+                        n3 -= 31264;
+                        n3 += 28609;
+                        n3 ^= 0x5283;
+                        n3 ^= 0x7A25;
+                        n3 ^= 0xD328;
+                        n3 ^= 0xCFAB;
+                        n3 ^= 0xBECF;
+                        n3 ^= 0x4A30;
+                        n3 += 4946;
+                        n3 ^= 0xB6D3;
+                        n3 ^= 0x25D7;
+                        n3 -= 56568;
+                        n3 ^= 0x9859;
+                        cArray[i3] = (char)(n3 -= 7642);
+                    }
+                    object5 = kotakbaz.rain.module.modules.hud.C.A()[2] = new String(cArray);
+                }
+                b = new SecretKeySpec(byArray5, (String)object5);
+            }
+            byte[] byArray6 = Base64.getDecoder().decode(string);
+            byte[] byArray7 = Arrays.copyOfRange(byArray6, 0, 16);
+            byte[] byArray8 = Arrays.copyOfRange(byArray6, 16, byArray6.length);
+            Object object6 = kotakbaz.rain.module.modules.hud.C.A()[3];
+            if (object6 == null) {
+                char[] cArray = "\u0394\u03a0\u038e\u03a2\u039e\u0395\u039e\u03a2\u0383\u0386\u039e\u038e\u03b0\u0383\u0274\u027f\u027f\u027c\u0269\u027a".toCharArray();
+                for (int i4 = 0; i4 < 20; ++i4) {
+                    int n4 = cArray[i4];
+                    n4 -= 39488;
+                    n4 -= 53506;
+                    n4 += 35431;
+                    n4 -= 39177;
+                    n4 -= 27212;
+                    n4 += 16110;
+                    n4 ^= 0xF78E;
+                    n4 -= 16657;
+                    n4 += 33842;
+                    n4 += 18291;
+                    n4 -= 43860;
+                    n4 ^= 0xC27A;
+                    cArray[i4] = (char)(n4 += 46299);
+                }
+                object6 = kotakbaz.rain.module.modules.hud.C.A()[3] = new String(cArray);
+            }
+            Cipher cipher = Cipher.getInstance((String)object6);
+            cipher.init(2, (Key)((SecretKey)b), new IvParameterSpec(byArray7));
+            byte[] byArray9 = cipher.doFinal(byArray8);
+            object2 = new String(byArray9, StandardCharsets.UTF_8);
+        }
+        return object2;
+    }
+
+    private static Object[] A() {
+        Object[] objectArray = c;
+        if (c == null) {
+            c = new Object[4];
+            objectArray = c;
+        }
+        return objectArray;
+    }
+
+    public static void b() {
+        C = new int[0xB9A3 ^ 0xB833];
+        kotakbaz.rain.module.modules.hud.C.C[0x293 ^ 0x3E5] = 0x2D9E ^ 0x3E5;
+        kotakbaz.rain.module.modules.hud.C.C[0x31CD ^ 0x31D4] = 0xFFFFCE10 ^ 0x31D4;
+        kotakbaz.rain.module.modules.hud.C.C[0xBBFA ^ 0xBB64] = 0xBB64 ^ 0xBB64;
+        kotakbaz.rain.module.modules.hud.C.C[0x10625 ^ 0x1060A] = 0xFFFEF9EB ^ 0x1060A;
+        kotakbaz.rain.module.modules.hud.C.C[0xD1CB ^ 0xD11E] = 0xD13E ^ 0xD11E;
+        kotakbaz.rain.module.modules.hud.C.C[0x6714 ^ 0x666C] = 0x4817 ^ 0x666C;
+        kotakbaz.rain.module.modules.hud.C.C[0x10013 ^ 0x100ED] = 0x1739B ^ 0x100ED;
+        kotakbaz.rain.module.modules.hud.C.C[0x8770 ^ 0x860E] = 0xD6F ^ 0x860E;
+        kotakbaz.rain.module.modules.hud.C.C[0xAB92 ^ 0xAB06] = 0xAB13 ^ 0xAB06;
+        kotakbaz.rain.module.modules.hud.C.C[0x6B8F ^ 0x6BFC] = 0x6BFC ^ 0x6BFC;
+        kotakbaz.rain.module.modules.hud.C.C[0x9776 ^ 0x9647] = 0x6B07 ^ 0x9647;
+        kotakbaz.rain.module.modules.hud.C.C[0x7971 ^ 0x7986] = 0x7A8A ^ 0x7986;
+        kotakbaz.rain.module.modules.hud.C.C[0x6BDD ^ 0x6B4F] = 0xFFFF94B5 ^ 0x6B4F;
+        kotakbaz.rain.module.modules.hud.C.C[0x7570 ^ 0x7518] = 0x755A ^ 0x7518;
+        kotakbaz.rain.module.modules.hud.C.C[0x522C ^ 0x52FD] = 0x5279 ^ 0x52FD;
+        kotakbaz.rain.module.modules.hud.C.C[0x5A9 ^ 0x484] = 0x8028 ^ 0x484;
+        kotakbaz.rain.module.modules.hud.C.C[0x10213 ^ 0x10296] = 0x102A5 ^ 0x10296;
+        kotakbaz.rain.module.modules.hud.C.C[0x302 ^ 0x202] = 0x7147 ^ 0x202;
+        kotakbaz.rain.module.modules.hud.C.C[0x10DEE ^ 0x10D80] = 0x10DEB ^ 0x10D80;
+        kotakbaz.rain.module.modules.hud.C.C[0x4486 ^ 0x4429] = 0xFFFFBBDA ^ 0x4429;
+        kotakbaz.rain.module.modules.hud.C.C[0xCA12 ^ 0xCA3A] = 0xFFFF358C ^ 0xCA3A;
+        kotakbaz.rain.module.modules.hud.C.C[0xEADD ^ 0xEA3A] = 0xEA38 ^ 0xEA3A;
+        kotakbaz.rain.module.modules.hud.C.C[0x9AAC ^ 0x9BCA] = 0xD2C6 ^ 0x9BCA;
+        kotakbaz.rain.module.modules.hud.C.C[0x540B ^ 0x54CB] = 0xFFFFAB2E ^ 0x54CB;
+        kotakbaz.rain.module.modules.hud.C.C[0x1A1C ^ 0x1A68] = 0xFFFFE5AA ^ 0x1A68;
+        kotakbaz.rain.module.modules.hud.C.C[0x74B ^ 0x65C] = 0x84D ^ 0x65C;
+        kotakbaz.rain.module.modules.hud.C.C[0xCCE5 ^ 0xCC1E] = 0xBF9D ^ 0xCC1E;
+        kotakbaz.rain.module.modules.hud.C.C[0x502C ^ 0x5071] = 0xFFFFAF86 ^ 0x5071;
+        kotakbaz.rain.module.modules.hud.C.C[0xD23 ^ 0xD36] = 0xD3C ^ 0xD36;
+        kotakbaz.rain.module.modules.hud.C.C[0x7ABE ^ 0x7B8A] = 0x86C4 ^ 0x7B8A;
+        kotakbaz.rain.module.modules.hud.C.C[0xADE9 ^ 0xAC94] = 0x27E3 ^ 0xAC94;
+        kotakbaz.rain.module.modules.hud.C.C[0x10B14 ^ 0x10BDD] = 0xFFFEF415 ^ 0x10BDD;
+        kotakbaz.rain.module.modules.hud.C.C[0xC631 ^ 0xC765] = 0x90AB ^ 0xC765;
+        kotakbaz.rain.module.modules.hud.C.C[0x10119 ^ 0x1017C] = 0xFFFEFEBC ^ 0x1017C;
+        kotakbaz.rain.module.modules.hud.C.C[0xA084 ^ 0xA092] = 0xFFFF5F15 ^ 0xA092;
+        kotakbaz.rain.module.modules.hud.C.C[0x5456 ^ 0x553A] = 0x7246 ^ 0x553A;
+        kotakbaz.rain.module.modules.hud.C.C[0xD4E2 ^ 0xD5F3] = 0x321B ^ 0xD5F3;
+        kotakbaz.rain.module.modules.hud.C.C[0x6B40 ^ 0x6BE2] = 0x7F92 ^ 0x6BE2;
+        kotakbaz.rain.module.modules.hud.C.C[0xA121 ^ 0xA001] = 0xFFFFDC89 ^ 0xA001;
+        kotakbaz.rain.module.modules.hud.C.C[0xF3D0 ^ 0xF374] = 0x7876 ^ 0xF374;
+        kotakbaz.rain.module.modules.hud.C.C[0x38FB ^ 0x38FC] = 0x38F5 ^ 0x38FC;
+        kotakbaz.rain.module.modules.hud.C.C[0xA092 ^ 0xA03A] = 0xFEFD ^ 0xA03A;
+        kotakbaz.rain.module.modules.hud.C.C[0x98DC ^ 0x98FA] = 0xFFFF6730 ^ 0x98FA;
+        kotakbaz.rain.module.modules.hud.C.C[0xBD85 ^ 0xBD07] = 0xFFFF42BB ^ 0xBD07;
+        kotakbaz.rain.module.modules.hud.C.C[0xBC2C ^ 0xBD70] = 0xB1DF ^ 0xBD70;
+        kotakbaz.rain.module.modules.hud.C.C[0x7835 ^ 0x7833] = 0x787B ^ 0x7833;
+        kotakbaz.rain.module.modules.hud.C.C[0x108C9 ^ 0x108DD] = 0x10893 ^ 0x108DD;
+        kotakbaz.rain.module.modules.hud.C.C[0xAEAE ^ 0xAE53] = 0xDDD0 ^ 0xAE53;
+        kotakbaz.rain.module.modules.hud.C.C[0xB2DC ^ 0xB38E] = 0xE440 ^ 0xB38E;
+        kotakbaz.rain.module.modules.hud.C.C[0xF577 ^ 0xF4F1] = 0xFC0D ^ 0xF4F1;
+        kotakbaz.rain.module.modules.hud.C.C[0xA95C ^ 0xA81E] = 0x830C ^ 0xA81E;
+        kotakbaz.rain.module.modules.hud.C.C[0x87CC ^ 0x8730] = 0xF4D8 ^ 0x8730;
+        kotakbaz.rain.module.modules.hud.C.C[0x4129 ^ 0x4002] = 0xC4AE ^ 0x4002;
+        kotakbaz.rain.module.modules.hud.C.C[0xFEBB ^ 0xFE09] = 0xFE46 ^ 0xFE09;
+        kotakbaz.rain.module.modules.hud.C.C[0xC870 ^ 0xC840] = 0xFFFF370D ^ 0xC840;
+        kotakbaz.rain.module.modules.hud.C.C[0x4288 ^ 0x43D3] = 0x4F5F ^ 0x43D3;
+        kotakbaz.rain.module.modules.hud.C.C[0xEF1D ^ 0xEE5D] = 0xFFEF ^ 0xEE5D;
+        kotakbaz.rain.module.modules.hud.C.C[0xCD9 ^ 0xC7A] = 0x9848 ^ 0xC7A;
+        kotakbaz.rain.module.modules.hud.C.C[0x3233 ^ 0x3306] = 0x7F2E ^ 0x3306;
+        kotakbaz.rain.module.modules.hud.C.C[0xCAFB ^ 0xCA9D] = 0xCA8C ^ 0xCA9D;
+        kotakbaz.rain.module.modules.hud.C.C[0xC31C ^ 0xC397] = 0xC3E4 ^ 0xC397;
+        kotakbaz.rain.module.modules.hud.C.C[0xB8EA ^ 0xB8DC] = 0xFFFF4767 ^ 0xB8DC;
+        kotakbaz.rain.module.modules.hud.C.C[0x6C42 ^ 0x6C96] = 0xFFFF9331 ^ 0x6C96;
+        kotakbaz.rain.module.modules.hud.C.C[0x525B ^ 0x532B] = 0xAA2F ^ 0x532B;
+        kotakbaz.rain.module.modules.hud.C.C[0xB34E ^ 0xB20A] = 0x9918 ^ 0xB20A;
+        kotakbaz.rain.module.modules.hud.C.C[0xB39F ^ 0xB331] = 0xB313 ^ 0xB331;
+        kotakbaz.rain.module.modules.hud.C.C[0xAA7B ^ 0xAA5E] = 0xAA4A ^ 0xAA5E;
+        kotakbaz.rain.module.modules.hud.C.C[0x67EF ^ 0x6768] = 0x6752 ^ 0x6768;
+        kotakbaz.rain.module.modules.hud.C.C[0xC63E ^ 0xC676] = 0xC611 ^ 0xC676;
+        kotakbaz.rain.module.modules.hud.C.C[0x8D97 ^ 0x8C8B] = 0xFFFF0A07 ^ 0x8C8B;
+        kotakbaz.rain.module.modules.hud.C.C[0x2BB7 ^ 0x2A9B] = 0xFFFF51CC ^ 0x2A9B;
+        kotakbaz.rain.module.modules.hud.C.C[0xF95C ^ 0xF9DC] = 0xF990 ^ 0xF9DC;
+        kotakbaz.rain.module.modules.hud.C.C[0x47B4 ^ 0x4693] = 0x723B ^ 0x4693;
+        kotakbaz.rain.module.modules.hud.C.C[0xC045 ^ 0xC095] = 0xC093 ^ 0xC095;
+        kotakbaz.rain.module.modules.hud.C.C[0xE4C4 ^ 0xE42E] = 0xE42F ^ 0xE42E;
+        kotakbaz.rain.module.modules.hud.C.C[0x53DD ^ 0x52CD] = 0xB520 ^ 0x52CD;
+        kotakbaz.rain.module.modules.hud.C.C[0x28B7 ^ 0x2991] = 0x1D38 ^ 0x2991;
+        kotakbaz.rain.module.modules.hud.C.C[0x5C6F ^ 0x5CC9] = 0x2AF ^ 0x5CC9;
+        kotakbaz.rain.module.modules.hud.C.C[0xE0A ^ 0xED4] = 0xE93 ^ 0xED4;
+        kotakbaz.rain.module.modules.hud.C.C[0xFEBE ^ 0xFFF0] = 0xF6CB ^ 0xFFF0;
+        kotakbaz.rain.module.modules.hud.C.C[0x702D ^ 0x711D] = 0xFCDF ^ 0x711D;
+        kotakbaz.rain.module.modules.hud.C.C[0x651E ^ 0x646A] = 0xBC02 ^ 0x646A;
+        kotakbaz.rain.module.modules.hud.C.C[0xEE90 ^ 0xEE9A] = 0xEED8 ^ 0xEE9A;
+        kotakbaz.rain.module.modules.hud.C.C[0x943 ^ 0x917] = 0x966 ^ 0x917;
+        kotakbaz.rain.module.modules.hud.C.C[0x1C0D ^ 0x1CB3] = 0xFFFFE365 ^ 0x1CB3;
+        kotakbaz.rain.module.modules.hud.C.C[0xD699 ^ 0xD7B6] = 0x5A54 ^ 0xD7B6;
+        kotakbaz.rain.module.modules.hud.C.C[0x289E ^ 0x2844] = 0x28CC ^ 0x2844;
+        kotakbaz.rain.module.modules.hud.C.C[0xCED3 ^ 0xCF94] = 0x1CA69 ^ 0xCF94;
+        kotakbaz.rain.module.modules.hud.C.C[0x128B ^ 0x1204] = 0xFFFFEDF1 ^ 0x1204;
+        kotakbaz.rain.module.modules.hud.C.C[0xD0E8 ^ 0xD05F] = 0xD00B ^ 0xD05F;
+        kotakbaz.rain.module.modules.hud.C.C[0xC2E3 ^ 0xC272] = 0xC237 ^ 0xC272;
+        kotakbaz.rain.module.modules.hud.C.C[0x3220 ^ 0x331D] = 0x22BC ^ 0x331D;
+        kotakbaz.rain.module.modules.hud.C.C[0x1CE0 ^ 0x1DE1] = 0x6E9C ^ 0x1DE1;
+        kotakbaz.rain.module.modules.hud.C.C[0xBCE1 ^ 0xBC5B] = 0xFFFF43A3 ^ 0xBC5B;
+        kotakbaz.rain.module.modules.hud.C.C[0x7B39 ^ 0x7A56] = 0x8320 ^ 0x7A56;
+        kotakbaz.rain.module.modules.hud.C.C[0xCFF5 ^ 0xCF13] = 0xCF12 ^ 0xCF13;
+        kotakbaz.rain.module.modules.hud.C.C[0x1700 ^ 0x1703] = 0xFFFFE8F9 ^ 0x1703;
+        kotakbaz.rain.module.modules.hud.C.C[0x9CFC ^ 0x9CED] = 0x9CEA ^ 0x9CED;
+        kotakbaz.rain.module.modules.hud.C.C[0xFE14 ^ 0xFE4B] = 0xFE75 ^ 0xFE4B;
+        kotakbaz.rain.module.modules.hud.C.C[0x4E2D ^ 0x4E78] = 0x4E4A ^ 0x4E78;
+        kotakbaz.rain.module.modules.hud.C.C[0x402E ^ 0x4163] = 0x484A ^ 0x4163;
+        kotakbaz.rain.module.modules.hud.C.C[0x1FD4 ^ 0x1F12] = 0xFFFFE09D ^ 0x1F12;
+        kotakbaz.rain.module.modules.hud.C.C[0x1377 ^ 0x1228] = 0xFFFF111B ^ 0x1228;
+        kotakbaz.rain.module.modules.hud.C.C[0x4D34 ^ 0x4D13] = 0xFFFFB2DB ^ 0x4D13;
+        kotakbaz.rain.module.modules.hud.C.C[0xAB8B ^ 0xAB6E] = 0xAB55 ^ 0xAB6E;
+        kotakbaz.rain.module.modules.hud.C.C[0x5427 ^ 0x5564] = 0xFFFF81E7 ^ 0x5564;
+        kotakbaz.rain.module.modules.hud.C.C[0x36C9 ^ 0x361B] = 0x360A ^ 0x361B;
+        kotakbaz.rain.module.modules.hud.C.C[0x6F1B ^ 0x6F72] = 0xFFFF90D1 ^ 0x6F72;
+        kotakbaz.rain.module.modules.hud.C.C[0x780F ^ 0x78AE] = 0x567E ^ 0x78AE;
+        kotakbaz.rain.module.modules.hud.C.C[0xB85C ^ 0xB8D5] = 0xB8BC ^ 0xB8D5;
+        kotakbaz.rain.module.modules.hud.C.C[0xBA50 ^ 0xBA6A] = 0xFFFF45A6 ^ 0xBA6A;
+        kotakbaz.rain.module.modules.hud.C.C[0xC6BA ^ 0xC6C3] = 0xC687 ^ 0xC6C3;
+        kotakbaz.rain.module.modules.hud.C.C[0xE2BA ^ 0xE3FB] = 0xC8F9 ^ 0xE3FB;
+        kotakbaz.rain.module.modules.hud.C.C[0xEB70 ^ 0xEBEF] = 0xEBEF ^ 0xEBEF;
+        kotakbaz.rain.module.modules.hud.C.C[0x1027C ^ 0x10333] = 0x10A66 ^ 0x10333;
+        kotakbaz.rain.module.modules.hud.C.C[0x7FB1 ^ 0x7EF9] = 0x17B01 ^ 0x7EF9;
+        kotakbaz.rain.module.modules.hud.C.C[0x4C52 ^ 0x4C33] = 0xFFFFB3CD ^ 0x4C33;
+        kotakbaz.rain.module.modules.hud.C.C[0x5FD5 ^ 0x5FF4] = 0x5F95 ^ 0x5FF4;
+        kotakbaz.rain.module.modules.hud.C.C[0x255B ^ 0x2515] = 0x2556 ^ 0x2515;
+        kotakbaz.rain.module.modules.hud.C.C[0x7F21 ^ 0x7F3A] = 0x7F7A ^ 0x7F3A;
+        kotakbaz.rain.module.modules.hud.C.C[0x3B9D ^ 0x3BE5] = 0xFFFFC403 ^ 0x3BE5;
+        kotakbaz.rain.module.modules.hud.C.C[0xAA71 ^ 0xAB78] = 0xE3A5 ^ 0xAB78;
+        kotakbaz.rain.module.modules.hud.C.C[0xC81 ^ 0xC80] = 0xCD4 ^ 0xC80;
+        kotakbaz.rain.module.modules.hud.C.C[0xE82C ^ 0xE922] = 0xECC ^ 0xE922;
+        kotakbaz.rain.module.modules.hud.C.C[0xA11F ^ 0xA184] = 0xA185 ^ 0xA184;
+        kotakbaz.rain.module.modules.hud.C.C[0xA0AC ^ 0xA0D0] = 0xA0B3 ^ 0xA0D0;
+        kotakbaz.rain.module.modules.hud.C.C[0xF3F8 ^ 0xF27C] = 0xE5D8 ^ 0xF27C;
+        kotakbaz.rain.module.modules.hud.C.C[0x744D ^ 0x7409] = 0x7407 ^ 0x7409;
+        kotakbaz.rain.module.modules.hud.C.C[0x2BAA ^ 0x2AC8] = 0x4472 ^ 0x2AC8;
+        kotakbaz.rain.module.modules.hud.C.C[0xE2A6 ^ 0xE324] = 0xF480 ^ 0xE324;
+        kotakbaz.rain.module.modules.hud.C.C[0x49FD ^ 0x4942] = 0xFFFFB6C4 ^ 0x4942;
+        kotakbaz.rain.module.modules.hud.C.C[0xA7C0 ^ 0xA641] = 0xB1FB ^ 0xA641;
+        kotakbaz.rain.module.modules.hud.C.C[0xBF8 ^ 0xAC2] = 0x90A6 ^ 0xAC2;
+        kotakbaz.rain.module.modules.hud.C.C[0x6E2F ^ 0x6E12] = 0xFFFF91D9 ^ 0x6E12;
+        kotakbaz.rain.module.modules.hud.C.C[0x3058 ^ 0x3147] = 0xB20C ^ 0x3147;
+        kotakbaz.rain.module.modules.hud.C.C[0x9912 ^ 0x991B] = 0x9914 ^ 0x991B;
+        kotakbaz.rain.module.modules.hud.C.C[0x7A61 ^ 0x7AF1] = 0x7AA0 ^ 0x7AF1;
+        kotakbaz.rain.module.modules.hud.C.C[0x695B ^ 0x6949] = 0x696C ^ 0x6949;
+        kotakbaz.rain.module.modules.hud.C.C[0x497E ^ 0x497A] = 0x4932 ^ 0x497A;
+        kotakbaz.rain.module.modules.hud.C.C[0xF579 ^ 0xF5CA] = 0xFFFF0A66 ^ 0xF5CA;
+        kotakbaz.rain.module.modules.hud.C.C[0xDA41 ^ 0xDAA0] = 0xDAC0 ^ 0xDAA0;
+        kotakbaz.rain.module.modules.hud.C.C[0x989D ^ 0x98B1] = 0xFFFF6770 ^ 0x98B1;
+        kotakbaz.rain.module.modules.hud.C.C[0x10893 ^ 0x1083A] = 0x16D10 ^ 0x1083A;
+        kotakbaz.rain.module.modules.hud.C.C[0x9033 ^ 0x906D] = 0xFFFF6F84 ^ 0x906D;
+        kotakbaz.rain.module.modules.hud.C.C[0x3653 ^ 0x37D4] = 0xFFFFC0AA ^ 0x37D4;
+        kotakbaz.rain.module.modules.hud.C.C[0x92E8 ^ 0x9393] = 0xF129 ^ 0x9393;
+        kotakbaz.rain.module.modules.hud.C.C[0xF8AD ^ 0xF863] = 0xF870 ^ 0xF863;
+        kotakbaz.rain.module.modules.hud.C.C[0x93C ^ 0x9C3] = 0x7ABE ^ 0x9C3;
+        kotakbaz.rain.module.modules.hud.C.C[0x4C05 ^ 0x4C49] = 0x4C22 ^ 0x4C49;
+        kotakbaz.rain.module.modules.hud.C.C[0x11E2 ^ 0x113A] = 0x1148 ^ 0x113A;
+        kotakbaz.rain.module.modules.hud.C.C[0xD1A2 ^ 0xD1E1] = 0xFFFF2E42 ^ 0xD1E1;
+        kotakbaz.rain.module.modules.hud.C.C[0x28D1 ^ 0x29E7] = 0x65C2 ^ 0x29E7;
+        kotakbaz.rain.module.modules.hud.C.C[0x683C ^ 0x69B5] = 0x5713 ^ 0x69B5;
+        kotakbaz.rain.module.modules.hud.C.C[0x76A1 ^ 0x76DC] = 0x7683 ^ 0x76DC;
+        kotakbaz.rain.module.modules.hud.C.C[0xAC1E ^ 0xACEA] = 0xB901 ^ 0xACEA;
+        kotakbaz.rain.module.modules.hud.C.C[0xEB79 ^ 0xEB50] = 0xFFFF14A2 ^ 0xEB50;
+        kotakbaz.rain.module.modules.hud.C.C[0x775B ^ 0x7664] = 0x67F4 ^ 0x7664;
+        kotakbaz.rain.module.modules.hud.C.C[0xCC31 ^ 0xCCDD] = 0x2853 ^ 0xCCDD;
+        kotakbaz.rain.module.modules.hud.C.C[0x34D2 ^ 0x3483] = 0x34DF ^ 0x3483;
+        kotakbaz.rain.module.modules.hud.C.C[0x4323 ^ 0x43FF] = 0x43B9 ^ 0x43FF;
+        kotakbaz.rain.module.modules.hud.C.C[0xD79E ^ 0xD759] = 0xD711 ^ 0xD759;
+        kotakbaz.rain.module.modules.hud.C.C[0xA0D2 ^ 0xA0AD] = 0xFFFF5F19 ^ 0xA0AD;
+        kotakbaz.rain.module.modules.hud.C.C[0xDE3B ^ 0xDF41] = 0xBDF8 ^ 0xDF41;
+        kotakbaz.rain.module.modules.hud.C.C[0xA2EF ^ 0xA365] = 0x9DC5 ^ 0xA365;
+        kotakbaz.rain.module.modules.hud.C.C[0xB0B5 ^ 0xB18D] = 0xFDA8 ^ 0xB18D;
+        kotakbaz.rain.module.modules.hud.C.C[0x20B9 ^ 0x208B] = 0xFFFFDF39 ^ 0x208B;
+        kotakbaz.rain.module.modules.hud.C.C[0x20E4 ^ 0x218A] = 0xD88E ^ 0x218A;
+        kotakbaz.rain.module.modules.hud.C.C[0xD088 ^ 0xD078] = 0xFFFF9106 ^ 0xD078;
+        kotakbaz.rain.module.modules.hud.C.C[0xB3B2 ^ 0xB3BA] = 0xB384 ^ 0xB3BA;
+        kotakbaz.rain.module.modules.hud.C.C[0xD2F5 ^ 0xD2A7] = 0xD2B6 ^ 0xD2A7;
+        kotakbaz.rain.module.modules.hud.C.C[0x483D ^ 0x48C5] = 0xFFFFB46B ^ 0x48C5;
+        kotakbaz.rain.module.modules.hud.C.C[0x86EA ^ 0x8660] = 0x8676 ^ 0x8660;
+        kotakbaz.rain.module.modules.hud.C.C[0xAD84 ^ 0xAD7E] = 0xDEF4 ^ 0xAD7E;
+        kotakbaz.rain.module.modules.hud.C.C[0x8AE3 ^ 0x8AFE] = 0x8AB4 ^ 0x8AFE;
+        kotakbaz.rain.module.modules.hud.C.C[0x9D29 ^ 0x9C4D] = 0xF2F7 ^ 0x9C4D;
+        kotakbaz.rain.module.modules.hud.C.C[0x7182 ^ 0x71D1] = 0x719C ^ 0x71D1;
+        kotakbaz.rain.module.modules.hud.C.C[0x7F72 ^ 0x7FBD] = 0x7FAE ^ 0x7FBD;
+        kotakbaz.rain.module.modules.hud.C.C[0x585D ^ 0x59DE] = 0xFFFFB1E2 ^ 0x59DE;
+        kotakbaz.rain.module.modules.hud.C.C[0x4D1F ^ 0x4DB8] = 0x62BE ^ 0x4DB8;
+        kotakbaz.rain.module.modules.hud.C.C[0x698E ^ 0x6923] = 0x6928 ^ 0x6923;
+        kotakbaz.rain.module.modules.hud.C.C[0xF83E ^ 0xF8B8] = 0xF8E2 ^ 0xF8B8;
+        kotakbaz.rain.module.modules.hud.C.C[0xCBB9 ^ 0xCA9A] = 0x5160 ^ 0xCA9A;
+        kotakbaz.rain.module.modules.hud.C.C[0xD7C9 ^ 0xD6E7] = 0xD6E7 ^ 0xD6E7;
+        kotakbaz.rain.module.modules.hud.C.C[0xD32D ^ 0xD22E] = 0x2887 ^ 0xD22E;
+        kotakbaz.rain.module.modules.hud.C.C[0x1A18 ^ 0x1A51] = 0xFFFFE5B8 ^ 0x1A51;
+        kotakbaz.rain.module.modules.hud.C.C[0x9170 ^ 0x9117] = 0xFFFF6EB8 ^ 0x9117;
+        kotakbaz.rain.module.modules.hud.C.C[0x7D11 ^ 0x7D33] = 0xFFFF828D ^ 0x7D33;
+        kotakbaz.rain.module.modules.hud.C.C[0x10D3A ^ 0x10D2A] = 0x10D1E ^ 0x10D2A;
+        kotakbaz.rain.module.modules.hud.C.C[0x10600 ^ 0x1060D] = 0x10619 ^ 0x1060D;
+        kotakbaz.rain.module.modules.hud.C.C[0x2FD2 ^ 0x2F67] = 0x2F79 ^ 0x2F67;
+        kotakbaz.rain.module.modules.hud.C.C[0xF889 ^ 0xF832] = 0xF84C ^ 0xF832;
+        kotakbaz.rain.module.modules.hud.C.C[0xA8B7 ^ 0xA9AE] = 0xA7BF ^ 0xA9AE;
+        kotakbaz.rain.module.modules.hud.C.C[0x2249 ^ 0x2360] = 0x17C8 ^ 0x2360;
+        kotakbaz.rain.module.modules.hud.C.C[0xBBF ^ 0xAAB] = 0xD67F ^ 0xAAB;
+        kotakbaz.rain.module.modules.hud.C.C[0xBE7C ^ 0xBE89] = 0xAB0A ^ 0xBE89;
+        kotakbaz.rain.module.modules.hud.C.C[0x8CD2 ^ 0x8DEB] = 0x1792 ^ 0x8DEB;
+        kotakbaz.rain.module.modules.hud.C.C[0x1076D ^ 0x107F0] = 0x107F2 ^ 0x107F0;
+        kotakbaz.rain.module.modules.hud.C.C[0x7479 ^ 0x7542] = 0xFFFF10CC ^ 0x7542;
+        kotakbaz.rain.module.modules.hud.C.C[0xD8CE ^ 0xD856] = 0xFFFF2787 ^ 0xD856;
+        kotakbaz.rain.module.modules.hud.C.C[0x10C06 ^ 0x10D55] = 0x15AFF ^ 0x10D55;
+        kotakbaz.rain.module.modules.hud.C.C[0x1FAB ^ 0x1FCF] = 0xFFFFE044 ^ 0x1FCF;
+        kotakbaz.rain.module.modules.hud.C.C[0x67D9 ^ 0x66D6] = 0x813E ^ 0x66D6;
+        kotakbaz.rain.module.modules.hud.C.C[0xFE ^ 0x70] = 0xFFFFFFFD ^ 0x70;
+        kotakbaz.rain.module.modules.hud.C.C[0x7038 ^ 0x704E] = 0x7068 ^ 0x704E;
+        kotakbaz.rain.module.modules.hud.C.C[0x98BD ^ 0x9882] = 0xFFFF6701 ^ 0x9882;
+        kotakbaz.rain.module.modules.hud.C.C[0xC9E9 ^ 0xC8AF] = 0x1CD57 ^ 0xC8AF;
+        kotakbaz.rain.module.modules.hud.C.C[0x9ADE ^ 0x9AF4] = 0x9AD1 ^ 0x9AF4;
+        kotakbaz.rain.module.modules.hud.C.C[0x712B ^ 0x71D2] = 0x72DE ^ 0x71D2;
+        kotakbaz.rain.module.modules.hud.C.C[0xD7D ^ 0xC37] = 0xA244 ^ 0xC37;
+        kotakbaz.rain.module.modules.hud.C.C[0x1E1 ^ 0xB1] = 0x98A ^ 0xB1;
+        kotakbaz.rain.module.modules.hud.C.C[0x2ECE ^ 0x2EEA] = 0xFFFFD13C ^ 0x2EEA;
+        kotakbaz.rain.module.modules.hud.C.C[0x24F0 ^ 0x24EF] = 0xFFFFDB5C ^ 0x24EF;
+        kotakbaz.rain.module.modules.hud.C.C[0x8D9A ^ 0x8DCA] = 0x8DB0 ^ 0x8DCA;
+        kotakbaz.rain.module.modules.hud.C.C[0x755C ^ 0x7594] = 0xFFFF8AE9 ^ 0x7594;
+        kotakbaz.rain.module.modules.hud.C.C[0x376E ^ 0x37C2] = 0x37C2 ^ 0x37C2;
+        kotakbaz.rain.module.modules.hud.C.C[0x8061 ^ 0x816B] = 0xF37D ^ 0x816B;
+        kotakbaz.rain.module.modules.hud.C.C[0xB6D3 ^ 0xB6FE] = 0xB6C1 ^ 0xB6FE;
+        kotakbaz.rain.module.modules.hud.C.C[0x1FD3 ^ 0x1E85] = 0xAA50 ^ 0x1E85;
+        kotakbaz.rain.module.modules.hud.C.C[0x16AF ^ 0x16ED] = 0xFFFFE960 ^ 0x16ED;
+        kotakbaz.rain.module.modules.hud.C.C[0xC557 ^ 0xC4D9] = 0xB673 ^ 0xC4D9;
+        kotakbaz.rain.module.modules.hud.C.C[0x3B99 ^ 0x3B2D] = 0xFFFFC487 ^ 0x3B2D;
+        kotakbaz.rain.module.modules.hud.C.C[0x7716 ^ 0x77CD] = 0x77EF ^ 0x77CD;
+        kotakbaz.rain.module.modules.hud.C.C[0x868E ^ 0x8702] = 0xB9A2 ^ 0x8702;
+        kotakbaz.rain.module.modules.hud.C.C[0x5AB1 ^ 0x5A51] = 0xFFFFA587 ^ 0x5A51;
+        kotakbaz.rain.module.modules.hud.C.C[0xE566 ^ 0xE403] = 0xAD04 ^ 0xE403;
+        kotakbaz.rain.module.modules.hud.C.C[0x87ED ^ 0x8751] = 0xFFFF78C6 ^ 0x8751;
+        kotakbaz.rain.module.modules.hud.C.C[0x68EC ^ 0x69F9] = 0xB505 ^ 0x69F9;
+        kotakbaz.rain.module.modules.hud.C.C[0x9421 ^ 0x9548] = 0xB23D ^ 0x9548;
+        kotakbaz.rain.module.modules.hud.C.C[0xE92F ^ 0xE839] = 0xE62D ^ 0xE839;
+        kotakbaz.rain.module.modules.hud.C.C[0xEDE6 ^ 0xECC2] = 0x7776 ^ 0xECC2;
+        kotakbaz.rain.module.modules.hud.C.C[0x32C1 ^ 0x3237] = 0x3137 ^ 0x3237;
+        kotakbaz.rain.module.modules.hud.C.C[0xB455 ^ 0xB522] = 0x9B7F ^ 0xB522;
+        kotakbaz.rain.module.modules.hud.C.C[0x10CF9 ^ 0x10CA2] = 0x10CD4 ^ 0x10CA2;
+        kotakbaz.rain.module.modules.hud.C.C[0x2D85 ^ 0x2D8A] = 0x2DB0 ^ 0x2D8A;
+        kotakbaz.rain.module.modules.hud.C.C[0x739F ^ 0x73EF] = 0xFFFF8C26 ^ 0x73EF;
+        kotakbaz.rain.module.modules.hud.C.C[0x2B95 ^ 0x2B64] = 0x95C0 ^ 0x2B64;
+        kotakbaz.rain.module.modules.hud.C.C[0x95E3 ^ 0x94B9] = 0x9816 ^ 0x94B9;
+        kotakbaz.rain.module.modules.hud.C.C[0x1B78 ^ 0x1A7F] = 0x52A2 ^ 0x1A7F;
+        kotakbaz.rain.module.modules.hud.C.C[0xCD41 ^ 0xCD97] = 0xFFFF3230 ^ 0xCD97;
+        kotakbaz.rain.module.modules.hud.C.C[0x8865 ^ 0x8902] = 0xFFFF3FEE ^ 0x8902;
+        kotakbaz.rain.module.modules.hud.C.C[0xDFD1 ^ 0xDE9A] = 0xFFFF8F75 ^ 0xDE9A;
+        kotakbaz.rain.module.modules.hud.C.C[0xF8BD ^ 0xF9E0] = 0x504 ^ 0xF9E0;
+        kotakbaz.rain.module.modules.hud.C.C[0x632E ^ 0x621C] = 0x9F52 ^ 0x621C;
+        kotakbaz.rain.module.modules.hud.C.C[0x10146 ^ 0x1014A] = 0xFFFEFE92 ^ 0x1014A;
+        kotakbaz.rain.module.modules.hud.C.C[0x3B2D ^ 0x3B58] = 0xFFFFC4F8 ^ 0x3B58;
+        kotakbaz.rain.module.modules.hud.C.C[0x55BF ^ 0x54CD] = 0x8CA5 ^ 0x54CD;
+        kotakbaz.rain.module.modules.hud.C.C[0xC8E1 ^ 0xC8D8] = 0xFFFF371E ^ 0xC8D8;
+        kotakbaz.rain.module.modules.hud.C.C[0xC04D ^ 0xC101] = 0x6F72 ^ 0xC101;
+        kotakbaz.rain.module.modules.hud.C.C[0xD6B ^ 0xD07] = 0xD28 ^ 0xD07;
+        kotakbaz.rain.module.modules.hud.C.C[0xE1B5 ^ 0xE10D] = 0xE15A ^ 0xE10D;
+        kotakbaz.rain.module.modules.hud.C.C[0x3886 ^ 0x39B8] = 0x280A ^ 0x39B8;
+        kotakbaz.rain.module.modules.hud.C.C[0xF28A ^ 0xF3F6] = 0x914F ^ 0xF3F6;
+        kotakbaz.rain.module.modules.hud.C.C[0xB61A ^ 0xB63A] = 0xFFFF49BB ^ 0xB63A;
+        kotakbaz.rain.module.modules.hud.C.C[0xE2E4 ^ 0xE389] = 0x1A8F ^ 0xE389;
+        kotakbaz.rain.module.modules.hud.C.C[0xBE0E ^ 0xBEC2] = 0xBEBA ^ 0xBEC2;
+        kotakbaz.rain.module.modules.hud.C.C[0x4A45 ^ 0x4B1C] = 0x47B7 ^ 0x4B1C;
+        kotakbaz.rain.module.modules.hud.C.C[0x6926 ^ 0x6944] = 0xFFFF96EE ^ 0x6944;
+        kotakbaz.rain.module.modules.hud.C.C[0xFDC ^ 0xF8B] = 0xF57 ^ 0xF8B;
+        kotakbaz.rain.module.modules.hud.C.C[0x4B2A ^ 0x4B3D] = 0xFFFFB48C ^ 0x4B3D;
+        kotakbaz.rain.module.modules.hud.C.C[0x992B ^ 0x9960] = 0x990E ^ 0x9960;
+        kotakbaz.rain.module.modules.hud.C.C[0xAAD9 ^ 0xAA2A] = 0xBFA9 ^ 0xAA2A;
+        kotakbaz.rain.module.modules.hud.C.C[0x550D ^ 0x55BC] = 0x559D ^ 0x55BC;
+        kotakbaz.rain.module.modules.hud.C.C[0xCF6A ^ 0xCF20] = 0xFFFF3082 ^ 0xCF20;
+        kotakbaz.rain.module.modules.hud.C.C[0xFF01 ^ 0xFE54] = 0x4A9E ^ 0xFE54;
+        kotakbaz.rain.module.modules.hud.C.C[0x3432 ^ 0x3411] = 0x340E ^ 0x3411;
+        kotakbaz.rain.module.modules.hud.C.C[0xDB66 ^ 0xDBA3] = 0xDBF4 ^ 0xDBA3;
+        kotakbaz.rain.module.modules.hud.C.C[0xFFF4 ^ 0xFE79] = 0x8CC2 ^ 0xFE79;
+        kotakbaz.rain.module.modules.hud.C.C[0x636D ^ 0x6371] = 0xFFFF9CE7 ^ 0x6371;
+        kotakbaz.rain.module.modules.hud.C.C[0x1DA1 ^ 0x1CF0] = 0x4B34 ^ 0x1CF0;
+        kotakbaz.rain.module.modules.hud.C.C[0x1088B ^ 0x10891] = 0x108EF ^ 0x10891;
+        kotakbaz.rain.module.modules.hud.C.C[0xABA7 ^ 0xAB49] = 0x15E5 ^ 0xAB49;
+        kotakbaz.rain.module.modules.hud.C.C[0xDBD7 ^ 0xDBD9] = 0xFFFF241D ^ 0xDBD9;
+        kotakbaz.rain.module.modules.hud.C.C[0x988D ^ 0x99ED] = 0x651E ^ 0x99ED;
+        kotakbaz.rain.module.modules.hud.C.C[0x61DF ^ 0x605F] = 0xEB3E ^ 0x605F;
+        kotakbaz.rain.module.modules.hud.C.C[0xF5F1 ^ 0xF4CD] = 0x6EA9 ^ 0xF4CD;
+        kotakbaz.rain.module.modules.hud.C.C[0x5267 ^ 0x52F4] = 0xFFFFAD6F ^ 0x52F4;
+        kotakbaz.rain.module.modules.hud.C.C[0x25E5 ^ 0x2532] = 0x250A ^ 0x2532;
+        kotakbaz.rain.module.modules.hud.C.C[0x64E ^ 0x65D] = 0xFFFFF9F0 ^ 0x65D;
+        kotakbaz.rain.module.modules.hud.C.C[0xC8EB ^ 0xC880] = 0xC8F9 ^ 0xC880;
+        kotakbaz.rain.module.modules.hud.C.C[0xE2B1 ^ 0xE2DC] = 0xE2E7 ^ 0xE2DC;
+        kotakbaz.rain.module.modules.hud.C.C[0xB037 ^ 0xB115] = 0x2AE0 ^ 0xB115;
+        kotakbaz.rain.module.modules.hud.C.C[0x350E ^ 0x35E1] = 0x8B45 ^ 0x35E1;
+        kotakbaz.rain.module.modules.hud.C.C[0xDF1 ^ 0xD8B] = 0xFFFFF22B ^ 0xD8B;
+        kotakbaz.rain.module.modules.hud.C.C[0x7480 ^ 0x759A] = 0xCB4 ^ 0x759A;
+        kotakbaz.rain.module.modules.hud.C.C[0xAE9A ^ 0xAE2C] = 0xFFFF517A ^ 0xAE2C;
+        kotakbaz.rain.module.modules.hud.C.C[0x5DFF ^ 0x5D12] = 0xB98C ^ 0x5D12;
+        kotakbaz.rain.module.modules.hud.C.C[0x101CD ^ 0x101BC] = 0x101CA ^ 0x101BC;
+        kotakbaz.rain.module.modules.hud.C.C[0x5490 ^ 0x5453] = 0xFFFFABBE ^ 0x5453;
+        kotakbaz.rain.module.modules.hud.C.C[0xEB63 ^ 0xEB7D] = 0xFFFF14A4 ^ 0xEB7D;
+        kotakbaz.rain.module.modules.hud.C.C[0x10AAC ^ 0x10A15] = 0xFFFEF573 ^ 0x10A15;
+        kotakbaz.rain.module.modules.hud.C.C[0xD661 ^ 0xD752] = 0xFFFFD58D ^ 0xD752;
+        kotakbaz.rain.module.modules.hud.C.C[0xE864 ^ 0xE8FD] = 0xE8FE ^ 0xE8FD;
+        kotakbaz.rain.module.modules.hud.C.C[0xE5A2 ^ 0xE509] = 0xF605 ^ 0xE509;
+        kotakbaz.rain.module.modules.hud.C.C[0x15BA ^ 0x157B] = 0xFFFFEADB ^ 0x157B;
+        kotakbaz.rain.module.modules.hud.C.C[0x916E ^ 0x91A4] = 0xFFFF6E31 ^ 0x91A4;
+        kotakbaz.rain.module.modules.hud.C.C[0x2C1F ^ 0x2D9A] = 0x257C ^ 0x2D9A;
+        kotakbaz.rain.module.modules.hud.C.C[0x5A3A ^ 0x5A5A] = 0xFFFFA5F2 ^ 0x5A5A;
+        kotakbaz.rain.module.modules.hud.C.C[0xB8DA ^ 0xB9B2] = 0xF0BE ^ 0xB9B2;
+        kotakbaz.rain.module.modules.hud.C.C[0xE32C ^ 0xE204] = 0xD6FF ^ 0xE204;
+        kotakbaz.rain.module.modules.hud.C.C[0x6DD8 ^ 0x6CFD] = 0xF707 ^ 0x6CFD;
+        kotakbaz.rain.module.modules.hud.C.C[0x6085 ^ 0x6010] = 0x604E ^ 0x6010;
+        kotakbaz.rain.module.modules.hud.C.C[0xE9E1 ^ 0xE8F3] = 0x340B ^ 0xE8F3;
+        kotakbaz.rain.module.modules.hud.C.C[0xA810 ^ 0xA97B] = 0xFFFF71D3 ^ 0xA97B;
+        kotakbaz.rain.module.modules.hud.C.C[0x380F ^ 0x38AF] = 0x39F7 ^ 0x38AF;
+        kotakbaz.rain.module.modules.hud.C.C[0x9FD4 ^ 0x9E91] = 0x19B69 ^ 0x9E91;
+        kotakbaz.rain.module.modules.hud.C.C[0x3050 ^ 0x307B] = 0xFFFFCFBF ^ 0x307B;
+        kotakbaz.rain.module.modules.hud.C.C[0x5024 ^ 0x505F] = 0x505B ^ 0x505F;
+        kotakbaz.rain.module.modules.hud.C.C[0x5250 ^ 0x529D] = 0xFFFFAD5E ^ 0x529D;
+        kotakbaz.rain.module.modules.hud.C.C[0x10DD8 ^ 0x10D97] = 0x10DE4 ^ 0x10D97;
+        kotakbaz.rain.module.modules.hud.C.C[0xBF86 ^ 0xBF23] = 0x4DD7 ^ 0xBF23;
+        kotakbaz.rain.module.modules.hud.C.C[0xC1EE ^ 0xC0E2] = 0xB2E3 ^ 0xC0E2;
+        kotakbaz.rain.module.modules.hud.C.C[0xD160 ^ 0xD01F] = 0xFFFFA48E ^ 0xD01F;
+        kotakbaz.rain.module.modules.hud.C.C[0x99D2 ^ 0x9978] = 0x2972 ^ 0x9978;
+        kotakbaz.rain.module.modules.hud.C.C[0x67C0 ^ 0x67D8] = 0xFFFF9813 ^ 0x67D8;
+        kotakbaz.rain.module.modules.hud.C.C[0x8EF ^ 0x806] = 0x807 ^ 0x806;
+        kotakbaz.rain.module.modules.hud.C.C[0x333D ^ 0x325C] = 0x5CE9 ^ 0x325C;
+        kotakbaz.rain.module.modules.hud.C.C[0xEB56 ^ 0xEB24] = 0xFFFF14E2 ^ 0xEB24;
+        kotakbaz.rain.module.modules.hud.C.C[0x6D8D ^ 0x6DB3] = 0xFFFF9223 ^ 0x6DB3;
+        kotakbaz.rain.module.modules.hud.C.C[0x3231 ^ 0x32BC] = 0xFFFFCD1E ^ 0x32BC;
+        kotakbaz.rain.module.modules.hud.C.C[0xF755 ^ 0xF797] = 0xFFFF086D ^ 0xF797;
+        kotakbaz.rain.module.modules.hud.C.C[0x9F6 ^ 0x92B] = 0x92B ^ 0x92B;
+        kotakbaz.rain.module.modules.hud.C.C[0xFDE4 ^ 0xFD16] = 0xE89B ^ 0xFD16;
+        kotakbaz.rain.module.modules.hud.C.C[0x24C1 ^ 0x2440] = 0x2460 ^ 0x2440;
+        kotakbaz.rain.module.modules.hud.C.C[0x1E9C ^ 0x1F94] = 0x5731 ^ 0x1F94;
+        kotakbaz.rain.module.modules.hud.C.C[0xD952 ^ 0xD913] = 0xD95C ^ 0xD913;
+        kotakbaz.rain.module.modules.hud.C.C[0xA02C ^ 0xA046] = 0xFFFF5FBC ^ 0xA046;
+        kotakbaz.rain.module.modules.hud.C.C[0x70F0 ^ 0x7078] = 0x700B ^ 0x7078;
+        kotakbaz.rain.module.modules.hud.C.C[0xF1AB ^ 0xF0B3] = 0xFEFA ^ 0xF0B3;
+        kotakbaz.rain.module.modules.hud.C.C[0x10EB1 ^ 0x10E80] = 0xFFFEF11A ^ 0x10E80;
+        kotakbaz.rain.module.modules.hud.C.C[0x4958 ^ 0x4958] = 0xFFFFB697 ^ 0x4958;
+        kotakbaz.rain.module.modules.hud.C.C[0xA64D ^ 0xA750] = 0xDE7E ^ 0xA750;
+        kotakbaz.rain.module.modules.hud.C.C[0xE3E4 ^ 0xE307] = 0xE31A ^ 0xE307;
+        kotakbaz.rain.module.modules.hud.C.C[0x60A0 ^ 0x61BE] = 0xE2FF ^ 0x61BE;
+        kotakbaz.rain.module.modules.hud.C.C[0x1C30 ^ 0x1D49] = 0x7FF7 ^ 0x1D49;
+        kotakbaz.rain.module.modules.hud.C.C[0x97EE ^ 0x96EC] = 0x6C48 ^ 0x96EC;
+        kotakbaz.rain.module.modules.hud.C.C[0xE9D ^ 0xE56] = 0xE63 ^ 0xE56;
+        kotakbaz.rain.module.modules.hud.C.C[0x64B0 ^ 0x65AB] = 0x1C85 ^ 0x65AB;
+        kotakbaz.rain.module.modules.hud.C.C[0x46D0 ^ 0x4787] = 0xF338 ^ 0x4787;
+        kotakbaz.rain.module.modules.hud.C.C[0xF280 ^ 0xF2B4] = 0xFFFF0D32 ^ 0xF2B4;
+        kotakbaz.rain.module.modules.hud.C.C[0x1737 ^ 0x1761] = 0x1702 ^ 0x1761;
+        kotakbaz.rain.module.modules.hud.C.C[0x65CD ^ 0x65FA] = 0xFFFF9A3C ^ 0x65FA;
+        kotakbaz.rain.module.modules.hud.C.C[0xB40B ^ 0xB48F] = 0xB4C6 ^ 0xB48F;
+        kotakbaz.rain.module.modules.hud.C.C[0x83D ^ 0x88D] = 0x8C3 ^ 0x88D;
+        kotakbaz.rain.module.modules.hud.C.C[0x1031C ^ 0x1026D] = 0x1DA1E ^ 0x1026D;
+        kotakbaz.rain.module.modules.hud.C.C[0x65BF ^ 0x64CA] = 0x4AAD ^ 0x64CA;
+        kotakbaz.rain.module.modules.hud.C.C[0xA164 ^ 0xA1F8] = 0xA1F8 ^ 0xA1F8;
+        kotakbaz.rain.module.modules.hud.C.C[0xF386 ^ 0xF209] = 0x80E7 ^ 0xF209;
+        kotakbaz.rain.module.modules.hud.C.C[0xFA44 ^ 0xFAC7] = 0xFFFF0514 ^ 0xFAC7;
+        kotakbaz.rain.module.modules.hud.C.C[0x84D2 ^ 0x85F3] = 0x6B8 ^ 0x85F3;
+        kotakbaz.rain.module.modules.hud.C.C[0x2B31 ^ 0x2BAB] = 0x2BAB ^ 0x2BAB;
+        kotakbaz.rain.module.modules.hud.C.C[0x8F6D ^ 0x8F0E] = 0x8FB6 ^ 0x8F0E;
+        kotakbaz.rain.module.modules.hud.C.C[0x3C53 ^ 0x3CDF] = 0xFFFFC348 ^ 0x3CDF;
+        kotakbaz.rain.module.modules.hud.C.C[0xA8CE ^ 0xA9C8] = 0xE116 ^ 0xA9C8;
+        kotakbaz.rain.module.modules.hud.C.C[0xAD3D ^ 0xAC74] = 0x206 ^ 0xAC74;
+        kotakbaz.rain.module.modules.hud.C.C[0xD59B ^ 0xD570] = 0xD570 ^ 0xD570;
+        kotakbaz.rain.module.modules.hud.C.C[0x5DC9 ^ 0x5CBA] = 0xFFFF7B28 ^ 0x5CBA;
+        kotakbaz.rain.module.modules.hud.C.C[0x175B ^ 0x1707] = 0xFFFFE8C3 ^ 0x1707;
+        kotakbaz.rain.module.modules.hud.C.C[0x7805 ^ 0x78D6] = 0xFFFF877B ^ 0x78D6;
+        kotakbaz.rain.module.modules.hud.C.C[0x7B01 ^ 0x7A2B] = 0xFE85 ^ 0x7A2B;
+        kotakbaz.rain.module.modules.hud.C.C[0xC2F2 ^ 0xC21A] = 0xC21A ^ 0xC21A;
+        kotakbaz.rain.module.modules.hud.C.C[0x899D ^ 0x89A6] = 0xFFFF767C ^ 0x89A6;
+        kotakbaz.rain.module.modules.hud.C.C[0x60B8 ^ 0x605A] = 0x6030 ^ 0x605A;
+        kotakbaz.rain.module.modules.hud.C.C[0xD9CA ^ 0xD9F9] = 0xFFFF2660 ^ 0xD9F9;
+        kotakbaz.rain.module.modules.hud.C.C[0xDDDD ^ 0xDDAA] = 0xFFFF226E ^ 0xDDAA;
+        kotakbaz.rain.module.modules.hud.C.C[0x8226 ^ 0x82B1] = 0xFFFF7D3F ^ 0x82B1;
+        kotakbaz.rain.module.modules.hud.C.C[0x1567 ^ 0x1521] = 0x1501 ^ 0x1521;
+        kotakbaz.rain.module.modules.hud.C.C[0xCA79 ^ 0xCA3E] = 0xFFFF35C9 ^ 0xCA3E;
+        kotakbaz.rain.module.modules.hud.C.C[0x7377 ^ 0x722F] = 0xC6FA ^ 0x722F;
+        kotakbaz.rain.module.modules.hud.C.C[0x2E21 ^ 0x2E79] = 0xFFFFD1E4 ^ 0x2E79;
+        kotakbaz.rain.module.modules.hud.C.C[0xB3C9 ^ 0xB2CD] = 0xFFFFB78D ^ 0xB2CD;
+        kotakbaz.rain.module.modules.hud.C.C[0x9E76 ^ 0x9E08] = 0x9E09 ^ 0x9E08;
+        kotakbaz.rain.module.modules.hud.C.C[0xCB0D ^ 0xCBE9] = 0xCBEF ^ 0xCBE9;
+        kotakbaz.rain.module.modules.hud.C.C[0x8CE2 ^ 0x8CBB] = 0xFFFF7378 ^ 0x8CBB;
+        kotakbaz.rain.module.modules.hud.C.C[0x596C ^ 0x5929] = 0x594C ^ 0x5929;
+        kotakbaz.rain.module.modules.hud.C.C[0x52E ^ 0x512] = 0xFFFFFA69 ^ 0x512;
+        kotakbaz.rain.module.modules.hud.C.C[0x107C1 ^ 0x107EF] = 0x107CE ^ 0x107EF;
+        kotakbaz.rain.module.modules.hud.C.C[0xDDC9 ^ 0xDCC2] = 0xAED3 ^ 0xDCC2;
+        kotakbaz.rain.module.modules.hud.C.C[0xAD9B ^ 0xAC10] = 0x92FD ^ 0xAC10;
+        kotakbaz.rain.module.modules.hud.C.C[0x79E0 ^ 0x798F] = 0x7924 ^ 0x798F;
+        kotakbaz.rain.module.modules.hud.C.C[0xB8B ^ 0xBBE] = 0xFFFFF44B ^ 0xBBE;
+        kotakbaz.rain.module.modules.hud.C.C[0xBAA5 ^ 0xBAE5] = 0xBA8F ^ 0xBAE5;
+        kotakbaz.rain.module.modules.hud.C.C[0x45FF ^ 0x44C8] = 0xFFFFF731 ^ 0x44C8;
+        kotakbaz.rain.module.modules.hud.C.C[0x93BE ^ 0x92DD] = 0xFFFF03C4 ^ 0x92DD;
+        kotakbaz.rain.module.modules.hud.C.C[0xD998 ^ 0xD99A] = 0xD9F5 ^ 0xD99A;
+        kotakbaz.rain.module.modules.hud.C.C[0xB1B6 ^ 0xB10B] = 0xFFFF4ED6 ^ 0xB10B;
+        kotakbaz.rain.module.modules.hud.C.C[0xB512 ^ 0xB5D6] = 0xB5E1 ^ 0xB5D6;
+        kotakbaz.rain.module.modules.hud.C.C[0xD1FD ^ 0xD1C5] = 0xFFFF2E64 ^ 0xD1C5;
+        kotakbaz.rain.module.modules.hud.C.C[0x3E62 ^ 0x3E67] = 0xFFFFC1D2 ^ 0x3E67;
+        kotakbaz.rain.module.modules.hud.C.C[0xFCF6 ^ 0xFD9C] = 0xDAE0 ^ 0xFD9C;
+        kotakbaz.rain.module.modules.hud.C.C[0x10C77 ^ 0x10CA8] = 0x10CCF ^ 0x10CA8;
+        kotakbaz.rain.module.modules.hud.C.C[0xFB2D ^ 0xFB77] = 0xFB2D ^ 0xFB77;
+        kotakbaz.rain.module.modules.hud.C.C[0x2CF3 ^ 0x2DAD] = 0xD15E ^ 0x2DAD;
+        kotakbaz.rain.module.modules.hud.C.C[0x108C0 ^ 0x109C5] = 0x1F36C ^ 0x109C5;
+        kotakbaz.rain.module.modules.hud.C.C[0x31D3 ^ 0x30DE] = 0x42CF ^ 0x30DE;
+        kotakbaz.rain.module.modules.hud.C.C[0xDD04 ^ 0xDD0F] = 0xFFFF22C7 ^ 0xDD0F;
+        kotakbaz.rain.module.modules.hud.C.C[0x78B ^ 0x71D] = 0x7DC ^ 0x71D;
+        kotakbaz.rain.module.modules.hud.C.C[0xF2F3 ^ 0xF37B] = 0xFB87 ^ 0xF37B;
+        kotakbaz.rain.module.modules.hud.C.C[0xCDF7 ^ 0xCCE4] = 0x1018 ^ 0xCCE4;
+        kotakbaz.rain.module.modules.hud.C.C[0x5240 ^ 0x520D] = 0xFFFFADEE ^ 0x520D;
+        kotakbaz.rain.module.modules.hud.C.C[0x378 ^ 0x3A1] = 0xFFFFFC47 ^ 0x3A1;
+    }
+}
+

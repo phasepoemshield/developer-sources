@@ -1,0 +1,80 @@
+plugins {
+    id 'fabric-loom' version "${loom_version}"
+    id 'maven-publish'
+    id 'org.jetbrains.kotlin.jvm' version '2.1.10'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    maven { url 'https://maven.fabricmc.net/' }
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compileOnly 'org.jetbrains:annotations:24.1.0'
+
+    // Named (yarn) classes + remapped mixin method names. Kept in a jar for macOS case-sensitivity.
+    implementation files('libs/rain-visuals-classes.jar')
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/rain.accesswidener")
+    runs {
+        client {
+            vmArg '-Dmixin.checks=false'
+        }
+    }
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            setSrcDirs(['src/entrypoint'])
+        }
+    }
+}
+
+tasks.named('compileJava').configure {
+    options.release = 21
+}
+
+tasks.named('runClient').configure {
+    doFirst {
+        def mods = file('run/mods')
+        if (mods.exists()) {
+            mods.listFiles()?.findAll { it.name.contains('rain') }?.each { it.delete() }
+        }
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "21"
+    }
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}

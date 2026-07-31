@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\O0000O0O00OOO0.java:13: error: incompatible 
+types: MultiPhase cannot be converted to O0000O0O00OOO0
+      return (O0000O0O00OOO0)multiPhase;
+                             ^
+
+  ru\metaculture\protection\O0000O0O00OOO0.java:13: error: incompatible 
+types: MultiPhase cannot be converted to O0000O0O00OOO0
+        return (O0000O0O00OOO0)multiPhase;
+                               ^

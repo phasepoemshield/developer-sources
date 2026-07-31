@@ -1,0 +1,46 @@
+package fun.wonderful.mixin;
+
+import fun.wonderful.api.storages.implement.helpertstorages.enumvar.ModuleClass;
+import fun.wonderful.api.utils.color.ColorUtils;
+import fun.wonderful.client.modules.impl.render.Removals;
+import fun.wonderful.client.modules.impl.render.WorldTweaks;
+import net.minecraft.entity.Entity;
+import net.minecraft.client.render.Camera;
+import net.minecraft.client.render.FogShape;
+import net.minecraft.client.render.BackgroundRenderer;
+import net.minecraft.client.render.Fog;
+import org.joml.Vector4f;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+@Mixin(value={BackgroundRenderer.class})
+public class BackgroundRendererMixin {
+    @Inject(method={"getFogModifier"}, at={@At(value="HEAD")}, cancellable=true)
+    private static void wonderful$getFogModifier(Entity entity, float tickDelta, CallbackInfoReturnable<Object> cir) {
+        if (ModuleClass.INSTANCE == null) {
+            return;
+        }
+        Removals removals = ModuleClass.removals;
+        if (removals != null && removals.isBadEffectsDisabled()) {
+            cir.setReturnValue(null);
+        }
+    }
+
+    @Inject(method={"applyFog"}, at={@At(value="RETURN")}, cancellable=true)
+    private static void wonderful$applyFog(Camera camera, BackgroundRenderer.class_4596 fogType, Vector4f color, float viewDistance, boolean thickenFog, float tickDelta, CallbackInfoReturnable<Fog> cir) {
+        if (ModuleClass.INSTANCE == null) {
+            return;
+        }
+        WorldTweaks tweaks = ModuleClass.worldTweaks;
+        if (tweaks == null || !tweaks.isFogEnabled()) {
+            return;
+        }
+        float fogDistance = Math.max(12.0f, tweaks.getFogDistance());
+        float fogEnd = Math.min(viewDistance, fogDistance);
+        float fogStart = Math.max(0.0f, fogEnd * 0.05f);
+        int color1 = tweaks.getFogColor();
+        cir.setReturnValue((Object)new Fog(fogStart, fogEnd, FogShape.SPHERE, ColorUtils.redf(color1), ColorUtils.greenf(color1), ColorUtils.bluef(color1), 1.0f));
+    }
+}

@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\O00000OOO0000.java:163: error: incompatible 
+types: int cannot be converted to boolean
+                     return (boolean)var14;
+                                     ^
+
+  ru\metaculture\protection\O00000OOO0000.java:163: error: incompatible 
+types: int cannot be converted to boolean
+                       return (boolean)var14;
+                                       ^

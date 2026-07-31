@@ -1,0 +1,68 @@
+package fun.wonderful.api.utils.combat;
+
+import fun.wonderful.api.QClient;
+import fun.wonderful.api.utils.rotate.Rotation;
+import java.util.Objects;
+import java.util.function.Predicate;
+import lombok.Generated;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.projectile.ProjectileUtil;
+import net.minecraft.util.math.Box;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.RaycastContext;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.hit.EntityHitResult;
+import net.minecraft.client.world.ClientWorld;
+
+public final class RaytracingUtil
+implements QClient {
+    public static BlockHitResult raycast(double range, Rotation angle, boolean includeFluids) {
+        return RaytracingUtil.raycast(Objects.requireNonNull(RaytracingUtil.mc.player).getCameraPosVec(1.0f), range, angle, includeFluids);
+    }
+
+    public static BlockHitResult raycast(Vec3d vec, double range, Rotation angle, boolean includeFluids) {
+        Entity entity = RaytracingUtil.mc.cameraEntity;
+        if (entity == null) {
+            return null;
+        }
+        Vec3d rotationVec = angle.toVector();
+        Vec3d end = vec.add(rotationVec.x * range, rotationVec.y * range, rotationVec.z * range);
+        ClientWorld world = RaytracingUtil.mc.world;
+        if (world == null) {
+            return null;
+        }
+        RaycastContext.class_242 fluidHandling = includeFluids ? RaycastContext.class_242.ANY : RaycastContext.class_242.NONE;
+        RaycastContext context = new RaycastContext(vec, end, RaycastContext.class_3960.OUTLINE, fluidHandling, entity);
+        return world.raycast(context);
+    }
+
+    public static BlockHitResult raycast(Vec3d start, Vec3d end, RaycastContext.class_3960 shapeType) {
+        return RaytracingUtil.raycast(start, end, shapeType, (Entity)RaytracingUtil.mc.player);
+    }
+
+    public static BlockHitResult raycast(Vec3d start, Vec3d end, RaycastContext.class_3960 shapeType, Entity entity) {
+        return RaytracingUtil.mc.world.raycast(new RaycastContext(start, end, shapeType, RaycastContext.class_242.NONE, entity));
+    }
+
+    public static EntityHitResult raytraceEntity(double range, Rotation angle, Predicate<Entity> filter) {
+        Entity entity = RaytracingUtil.mc.cameraEntity;
+        if (entity == null) {
+            return null;
+        }
+        Vec3d cameraVec = entity.getCameraPosVec(1.0f);
+        Vec3d rotationVec = angle.toVector();
+        Vec3d vec3d3 = cameraVec.add(rotationVec.x * range, rotationVec.y * range, rotationVec.z * range);
+        Box box = entity.getBoundingBox().stretch(rotationVec.multiply(range)).expand(1.0, 1.0, 1.0);
+        return ProjectileUtil.raycast((Entity)entity, (Vec3d)cameraVec, (Vec3d)vec3d3, (Box)box, e2 -> !e2.isSpectator() && filter.test((Entity)e2), (double)(range * range));
+    }
+
+    public static boolean rayTrace(Vec3d clientVec, double range, Box box) {
+        Vec3d cameraVec = Objects.requireNonNull(RaytracingUtil.mc.player).getEyePos();
+        return box.contains(cameraVec) || box.raycast(cameraVec, cameraVec.add(clientVec.multiply(range))).isPresent();
+    }
+
+    @Generated
+    private RaytracingUtil() {
+        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+    }
+}

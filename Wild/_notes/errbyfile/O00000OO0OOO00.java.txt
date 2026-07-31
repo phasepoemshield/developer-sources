@@ -1,0 +1,45 @@
+﻿ru\metaculture\protection\O00000OO0OOO00.java:782: error: reference to 
+schedule is ambiguous
+         this.O00000000OOOOO = O00000000000.schedule(this::O000000000000, 0L, TimeUnit.MILLISECONDS);
+                                           ^
+  both method schedule(Runnable,long,TimeUnit) in ScheduledExecutorService and method 
+<V>schedule(Callable<V>,long,TimeUnit) in ScheduledExecutorService match
+  where V is a type-variable:
+    V extends Object declared in method <V>schedule(Callable<V>,long,TimeUnit)
+
+ru\metaculture\protection\O00000OO0OOO00.java:796: error: reference to 
+schedule is ambiguous
+      this.O00000000OOOOO = O00000000000.schedule(this::O000000000000, l, TimeUnit.MILLISECONDS);
+                                        ^
+  both method schedule(Runnable,long,TimeUnit) in ScheduledExecutorService and method 
+<V>schedule(Callable<V>,long,TimeUnit) in ScheduledExecutorService match
+  where V is a type-variable:
+    V extends Object declared in method <V>schedule(Callable<V>,long,TimeUnit)
+
+ru\metaculture\protection\O00000OO0OOO00.java:2889: error: incompatible 
+types: Object cannot be converted to String
+         for (String var7 : var3) {
+                            ^
+
+  ru\metaculture\protection\O00000OO0OOO00.java:782: error: reference to 
+schedule is ambiguous
+           this.O00000000OOOOO = O00000000000.schedule(this::O000000000000, 0L, TimeUnit.MILLISECONDS);
+                                             ^
+    both method schedule(Runnable,long,TimeUnit) in ScheduledExecutorService and method 
+<V>schedule(Callable<V>,long,TimeUnit) in ScheduledExecutorService match
+    where V is a type-variable:
+      V extends Object declared in method <V>schedule(Callable<V>,long,TimeUnit)
+
+  ru\metaculture\protection\O00000OO0OOO00.java:796: error: reference to 
+schedule is ambiguous
+        this.O00000000OOOOO = O00000000000.schedule(this::O000000000000, l, TimeUnit.MILLISECONDS);
+                                          ^
+    both method schedule(Runnable,long,TimeUnit) in ScheduledExecutorService and method 
+<V>schedule(Callable<V>,long,TimeUnit) in ScheduledExecutorService match
+    where V is a type-variable:
+      V extends Object declared in method <V>schedule(Callable<V>,long,TimeUnit)
+
+  ru\metaculture\protection\O00000OO0OOO00.java:2889: error: incompatible 
+types: Object cannot be converted to String
+           for (String var7 : var3) {
+                              ^

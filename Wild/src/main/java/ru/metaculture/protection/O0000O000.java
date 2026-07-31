@@ -1,0 +1,120 @@
+package ru.metaculture.protection;
+
+import lombok.Generated;
+import net.minecraft.client.MinecraftClient;
+
+public final class O0000O000 {
+   private final O0000O0000 O00000000;
+
+   public O0000O00000 O00000000(MinecraftClient minecraftClient, O0000O000O0O0 o0000O000O0O0, O00000OOOOOOOO o00000OOOOOOOO) {
+      O0000O00000 var4 = O0000O00000.O00000000(minecraftClient, this.O00000000);
+      if (minecraftClient != null && minecraftClient.getWindow() != null) {
+         float var5 = minecraftClient.getWindow().getFramebufferWidth();
+         float var6 = minecraftClient.getWindow().getFramebufferHeight();
+         if (!(var5 <= 0.0F) && !(var6 <= 0.0F)) {
+            o0000O000O0O0.O00000000(var4, var5, var6);
+            o0000O000O0O0.O000000000(var4, var5, var6);
+            this.O00000000(var4, o0000O000O0O0, o00000OOOOOOOO);
+            return var4;
+         } else {
+            this.O00000000(var4, o0000O000O0O0, o00000OOOOOOOO);
+            return var4;
+         }
+      } else {
+         this.O00000000(var4, o0000O000O0O0, o00000OOOOOOOO);
+         return var4;
+      }
+   }
+
+   public O0000O00000 O00000000(float f, float g, O0000O000O0O0 o0000O000O0O0, O00000OOOOOOOO o00000OOOOOOOO) {
+      O0000O00000 var5 = O0000O00000.O00000000(f, g, 1.0F, this.O00000000);
+      if (!(f <= 0.0F) && !(g <= 0.0F)) {
+         o0000O000O0O0.O00000000(var5, f, g);
+         o0000O000O0O0.O000000000(var5, f, g);
+         this.O00000000(var5, o0000O000O0O0, o00000OOOOOOOO);
+         return var5;
+      } else {
+         this.O00000000(var5, o0000O000O0O0, o00000OOOOOOOO);
+         return var5;
+      }
+   }
+
+   public O0000O00000 O00000000(MinecraftClient minecraftClient, float f, float g, O0000O000O0O0 o0000O000O0O0, O00000OOOOOOOO o00000OOOOOOOO) {
+      O0000O00000 var6 = minecraftClient == null ? O0000O00000.O00000000(f, g, this.O00000000) : O0000O00000.O00000000(minecraftClient, this.O00000000);
+      if (!(f <= 0.0F) && !(g <= 0.0F)) {
+         o0000O000O0O0.O00000000(var6, f, g);
+         o0000O000O0O0.O000000000(var6, f, g);
+         this.O00000000(var6, o0000O000O0O0, o00000OOOOOOOO);
+         return var6;
+      } else {
+         this.O00000000(var6, o0000O000O0O0, o00000OOOOOOOO);
+         return var6;
+      }
+   }
+
+   public void O00000000(O0000O00000 o0000O00000, O0000O000O0O0 o0000O000O0O0, O00000OOOOOOOO o00000OOOOOOOO) {
+      this.O000000000(o0000O00000, o0000O000O0O0, o00000OOOOOOOO);
+      this.O0000000000(o0000O00000, o0000O000O0O0, o00000OOOOOOOO);
+   }
+
+   private void O000000000(O0000O00000 o0000O00000, O0000O000O0O0 o0000O000O0O0, O00000OOOOOOOO o00000OOOOOOOO) {
+      float var4 = this.O00000000(o0000O000O0O0.O0000000O00());
+      float var5 = this.O00000000(o0000O000O0O0.O0000000O000());
+      float var6 = this.O00000000(var4, o0000O00000.O00000000000());
+      float var7 = this.O00000000(var4 + o0000O00000.O0000000000000());
+      float var8 = this.O00000000(var5 + o0000O00000.O0000000000000());
+      float var9 = this.O00000000(var7, o0000O00000.O00000000000O());
+      float var10 = this.O00000000(var7 + var9 + o0000O00000.O000000000000O());
+      float var12 = Math.max(0.0F, this.O00000000(var4 + var6 - o0000O00000.O0000000000000()) - var10);
+      float var13 = Math.max(0.0F, this.O00000000(var5 + o0000O00000.O000000000000() - o0000O00000.O0000000000000()) - var8);
+      float var14 = this.O00000000(var8, o0000O00000.O0000000000O());
+      float var15 = this.O00000000(0.0F, o0000O00000.O0000000000O0());
+      float var16 = Math.max(0.0F, this.O00000000(var12 - var15 - o0000O00000.O000000000000O()));
+      float var17 = this.O00000000(var10 + var16 + o0000O00000.O000000000000O());
+      float var18 = this.O00000000(var8 + var14 + o0000O00000.O000000000000O());
+      float var19 = Math.max(0.0F, this.O00000000(var8 + var13) - var18);
+      float var20 = this.O00000000(var10 + o0000O00000.O0000000000O0O());
+      float var21 = this.O00000000(var18 + o0000O00000.O0000000000O0O());
+      o00000OOOOOOOO.O00000000(var4);
+      o00000OOOOOOOO.O000000000(var5);
+      o00000OOOOOOOO.O0000000000(var7);
+      o00000OOOOOOOO.O00000000000(var8);
+      o00000OOOOOOOO.O000000000000(var10);
+      o00000OOOOOOOO.O0000000000000(var8);
+      o00000OOOOOOOO.O000000000000O(var10);
+      o00000OOOOOOOO.O00000000000O(var8);
+      o00000OOOOOOOO.O00000000000O0(var16);
+      o00000OOOOOOOO.O00000000000OO(var17);
+      o00000OOOOOOOO.O0000000000O(var10);
+      o00000OOOOOOOO.O0000000000O0(var18);
+      o00000OOOOOOOO.O0000000000O00(var12);
+      o00000OOOOOOOO.O0000000000O0O(var19);
+      o00000OOOOOOOO.O0000000000OO(var20);
+      o00000OOOOOOOO.O0000000000OO0(var21);
+      o00000OOOOOOOO.O0000000000OOO(Math.max(0.0F, this.O00000000(var10 + var12 - o0000O00000.O0000000000O0O()) - var20));
+      o00000OOOOOOOO.O000000000O(Math.max(0.0F, this.O00000000(var18 + var19 - o0000O00000.O0000000000O0O()) - var21));
+      o00000OOOOOOOO.O000000000O0(o00000OOOOOOOO.O0000000000OO());
+      o00000OOOOOOOO.O000000000O00(this.O00000000(o00000OOOOOOOO.O000000000O0() + o0000O00000.O0000000000OO() + o0000O00000.O000000000000O()));
+      o00000OOOOOOOO.O000000000O000(this.O00000000(o00000OOOOOOOO.O000000000O00() + o0000O00000.O0000000000OO() + o0000O00000.O000000000000O()));
+   }
+
+   private void O0000000000(O0000O00000 o0000O00000, O0000O000O0O0 o0000O000O0O0, O00000OOOOOOOO o00000OOOOOOOO) {
+      o00000OOOOOOOO.O000000000O00O(this.O00000000(o0000O000O0O0.O0000000O0000()));
+      o00000OOOOOOOO.O000000000O0O(this.O00000000(o0000O000O0O0.O0000000O00000()));
+      o00000OOOOOOOO.O000000000O0O0(this.O00000000(o00000OOOOOOOO.O000000000O00O() + o0000O00000.O000000000(7.0F)));
+      o00000OOOOOOOO.O000000000O0OO(this.O00000000(o00000OOOOOOOO.O000000000O0O() + o0000O00000.O000000000(63.0F)));
+   }
+
+   private float O00000000(float f) {
+      return Math.round(f);
+   }
+
+   private float O00000000(float f, float g) {
+      return Math.max(0.0F, this.O00000000(f + g) - this.O00000000(f));
+   }
+
+   @Generated
+   public O0000O000(O0000O0000 o0000O0000) {
+      this.O00000000 = o0000O0000;
+   }
+}

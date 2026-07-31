@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "skycore",
+  "version": "${version}",
+  "name": "Skycore",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/skycore/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "sky.core.util.client.SkycoreDataGenerator"
+    ],
+    "client": [
+      "sky.core.util.client.SkycoreClient"
+    ],
+    "main": [
+      "sky.core.Skycore"
+    ]
+  },
+  "mixins": [
+    "skycore.mixins.json",
+    {
+      "config": "skycore.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

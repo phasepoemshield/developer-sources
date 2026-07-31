@@ -1,0 +1,70 @@
+﻿ru\metaculture\protection\O0000O0O0000.java:20: error: 
+unexpected type
+At line:3 char:1
++ & ".\gradlew.bat" compileJava --console=plain --no-daemon 2>&1 | Out- ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\grego\...unexpected type:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+      return 1.0 - var1 = double_ - 1.0 * var1 * var1 * var1;
+                 ^
+  required: variable
+  found:    value
+
+ru\metaculture\protection\O0000O0O0000.java:24: error: unexpected type
+      return double_ < 0.5 ? 8.0 * double_ * double_ * double_ * double_ : 1.0 - 8.0 * var1 = double_ - 1.0 * var1 * 
+var1 * var1;
+                           ^
+  required: variable
+  found:    value
+
+ru\metaculture\protection\O0000O0O0000.java:29: error: unexpected type
+      return 1.0 + var1 = double_ - 1.0 * var1 * var1 * var1 * var1;
+                 ^
+  required: variable
+  found:    value
+
+ru\metaculture\protection\O0000O0O0000.java:33: error: unexpected type
+      return double_ < 0.5 ? 16.0 * double_ * double_ * double_ * double_ * double_ : 1.0 + 16.0 * var1 = double_ - 
+1.0 * var1 * var1 * var1 * var1;
+                           ^
+  required: variable
+  found:    value
+
+ru\metaculture\protection\O0000O0O0000.java:48: error: unexpected type
+      return Math.sqrt(1.0 - var1 = double_ - 1.0 * var1);
+                           ^
+  required: variable
+  found:    value
+
+  ru\metaculture\protection\O0000O0O0000.java:20: error: unexpected type
+        return 1.0 - var1 = double_ - 1.0 * var1 * var1 * var1;
+                   ^
+    required: variable
+    found:    value
+
+  ru\metaculture\protection\O0000O0O0000.java:24: error: unexpected type
+        return double_ < 0.5 ? 8.0 * double_ * double_ * double_ * double_ : 1.0 - 8.0 * var1 = double_ - 1.0 * var1 * 
+var1 * var1;
+                             ^
+    required: variable
+    found:    value
+
+  ru\metaculture\protection\O0000O0O0000.java:29: error: unexpected type
+        return 1.0 + var1 = double_ - 1.0 * var1 * var1 * var1 * var1;
+                   ^
+    required: variable
+    found:    value
+
+  ru\metaculture\protection\O0000O0O0000.java:33: error: unexpected type
+        return double_ < 0.5 ? 16.0 * double_ * double_ * double_ * double_ * double_ : 1.0 + 16.0 * var1 = double_ - 
+1.0 * var1 * var1 * var1 * var1;
+                             ^
+    required: variable
+    found:    value
+
+  ru\metaculture\protection\O0000O0O0000.java:48: error: unexpected type
+        return Math.sqrt(1.0 - var1 = double_ - 1.0 * var1);
+                             ^
+    required: variable
+    found:    value

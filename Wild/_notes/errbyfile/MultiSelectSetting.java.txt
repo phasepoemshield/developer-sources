@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\MultiSelectSetting.java:56: error: incompatible 
+types: Object cannot be converted to String
+            for (String var4 : var1) {
+                               ^
+
+  ru\metaculture\protection\MultiSelectSetting.java:56: error: 
+incompatible types: Object cannot be converted to String
+              for (String var4 : var1) {
+                                 ^

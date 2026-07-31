@@ -1,0 +1,13 @@
+﻿ru\metaculture\protection\O0000000OOO00.java:11: error: reference to 
+O000000000 is ambiguous
+   private final O0000000OOOO00 O00000000000 = new O0000000OOOO00("Сброс настроек", 0, () -> "До 
+заводских").O000000000(this::O000000000);
+                                                                                                            ^
+  both method O000000000(Runnable) in O0000000OOOO00 and method O000000000(Supplier<Boolean>) in O0000000OOOO00 match
+
+  ru\metaculture\protection\O0000000OOO00.java:11: error: reference to 
+O000000000 is ambiguous
+     private final O0000000OOOO00 O00000000000 = new O0000000OOOO00("Сброс настроек", 0, () -> "До 
+заводских").O000000000(this::O000000000);
+                                                                                                              ^
+    both method O000000000(Runnable) in O0000000OOOO00 and method O000000000(Supplier<Boolean>) in O0000000OOOO00 match

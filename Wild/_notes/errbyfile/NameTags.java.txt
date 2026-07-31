@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\NameTags.java:511: error: incompatible types: 
+Object cannot be converted to ItemStack
+         for (ItemStack var49 : var41) {
+                                ^
+
+  ru\metaculture\protection\NameTags.java:511: error: incompatible types: 
+Object cannot be converted to ItemStack
+           for (ItemStack var49 : var41) {
+                                  ^

@@ -1,0 +1,109 @@
+---- Minecraft Crash Report ----
+// On the bright side, I bought you a teddy bear!
+
+Time: 7/1/26, 4:08 PM
+Description: Unexpected error
+
+java.lang.NullPointerException: Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null
+	at java.base/java.util.regex.Matcher.getTextLength(Matcher.java:1806)
+	at java.base/java.util.regex.Matcher.reset(Matcher.java:459)
+	at java.base/java.util.regex.Matcher.<init>(Matcher.java:255)
+	at java.base/java.util.regex.Pattern.matcher(Pattern.java:1181)
+	at net.minecraft.util.text.TextFormatting.strip(SourceFile:102)
+	at native0.ZZVv1cysQCWrzx9eaQ4oRr9yibA1cL5VfYzrZLOIMyyVSlMmBOFEWRSjODNd8bgaEgcx.V9coiO2GZzeejY28egQzV77QNfYYgp4Qh3fehaCcbi3Au6cdvwvYIZ8JO3r5u6Ic5QxN(SourceFile:101)
+	at native0.A6FXalnJZ3F9uCXNkwAnCzSU62EZnN2JuNTaZi8sBOyCmW0sT2Mn3v1TdsY5tVgi0UFJ.D5nC3y8NZzjCqqCwFC5sqc2DIrr60j9lEYFYtBUyiHjC4sJiqwuq0sd9IABIiC4RaKcq(SourceFile:82)
+	at native0.A6FXalnJZ3F9uCXNkwAnCzSU62EZnN2JuNTaZi8sBOyCmW0sT2Mn3v1TdsY5tVgi0UFJ$MVQbK7yu5oDWeOXplX56JIEza0qrfgp7gDEe2RNGyiLpMEjVy0tVHYzh0RNZ4q5JH87o.execute(SourceFile:601)
+	at native0.A6FXalnJZ3F9uCXNkwAnCzSU62EZnN2JuNTaZi8sBOyCmW0sT2Mn3v1TdsY5tVgi0UFJ.D5nC3y8NZzjCqqCwFC5sqc2DIrr60j9lEYFYtBUyiHjC4sJiqwuq0sd9IABIiC4RaKcq(SourceFile:590)
+	at native0.A6FXalnJZ3F9uCXNkwAnCzSU62EZnN2JuNTaZi8sBOyCmW0sT2Mn3v1TdsY5tVgi0UFJ.fljBxFG2UGEnSBWVDf7JAl7K5W9OHB1791ayULn3mGtn2rj6qMxv75zaYijgecWhJ9i9(SourceFile:237)
+	at native0.RSesouHuJNHNVN03WOfLyRg1SFSFMmEbHxYMofttgdtHsmVvPZLOlxfNjg1FqdpulEKZ.D5nC3y8NZzjCqqCwFC5sqc2DIrr60j9lEYFYtBUyiHjC4sJiqwuq0sd9IABIiC4RaKcq(SourceFile:110)
+	at native0.RSesouHuJNHNVN03WOfLyRg1SFSFMmEbHxYMofttgdtHsmVvPZLOlxfNjg1FqdpulEKZ.D5nC3y8NZzjCqqCwFC5sqc2DIrr60j9lEYFYtBUyiHjC4sJiqwuq0sd9IABIiC4RaKcq(SourceFile:89)
+	at native0.RSesouHuJNHNVN03WOfLyRg1SFSFMmEbHxYMofttgdtHsmVvPZLOlxfNjg1FqdpulEKZ.Ycm9IaaaXATplEP7HalTd1jpvrzBgygHGZ44p8oNFqADBxHp3e4NbeGwDML7n02XkchF(SourceFile:74)
+	at native0.AYaNeouAkp5sMkDGXQbTR3MEUIRb3H3qOJnB3ueu5z8P4KgOGrt3UU8GYSG7prYm7uUj.render(SourceFile:141)
+	at native0.QVz1khznrFOqC25fCIkSxaoqREEPFV44n4NJxNm4EmOBVm36JuJbTQFGdaet44ybuhd.D5nC3y8NZzjCqqCwFC5sqc2DIrr60j9lEYFYtBUyiHjC4sJiqwuq0sd9IABIiC4RaKcq(SourceFile:62)
+	at native0.mvv0fYofymmxmVTlrCsud3wNqD86RrQjFAvHevoBlqiecTk22VIBvo3zBBVDFIXD01co.BdJZ4Rh06rJQXmB0cxdipCZC8dN2RwuFFRlCK4a9SVRpRlrk5jUBfWZNvZ0rbnxw64vC(SourceFile:76)
+	at native0.hxXAYNRCrD0czHnqR08Zwmrg8wdKaOwJPINnnOMLYjyWaPqFq1JyaRk5bsGzAuTg5SlK.Lw6zKuiOhcfbsH915WzhGrtlASY1NPRUVl0RAiIMxc9OAX5r9WTJqckFj3EzUWpUzsGt(SourceFile:98)
+	at native0.bhcfi41xFzuCkykx9nbokm7YiGaLehunxDkAJteFarOxwwA7HsMZgRhY2ic3XnOGsxO.WUlj0DK1aK6GybzRyQdWDoNA6mhukaUnIvSN3e7xMLwCK7Ycu96f8mW5Se275uqMM6Js(SourceFile:10)
+	at net.minecraft.client.renderer.GameRenderer.updateCameraAndRender(SourceFile:717)
+	at net.minecraft.client.Minecraft.runGameLoop(SourceFile:852)
+	at net.minecraft.client.Minecraft.run(SourceFile:506)
+	at ru.kotopushka.Launcher.start(SourceFile:141)
+	at ru.kotopushka.Launcher.start(SourceFile:94)
+	at start.Start.main(SourceFile:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Main
+Stacktrace:
+	at java.base/java.util.regex.Matcher.getTextLength(Matcher.java:1806)
+	at java.base/java.util.regex.Matcher.reset(Matcher.java:459)
+	at java.base/java.util.regex.Matcher.<init>(Matcher.java:255)
+	at java.base/java.util.regex.Pattern.matcher(Pattern.java:1181)
+	at net.minecraft.util.text.TextFormatting.strip(SourceFile:102)
+	at native0.ZZVv1cysQCWrzx9eaQ4oRr9yibA1cL5VfYzrZLOIMyyVSlMmBOFEWRSjODNd8bgaEgcx.V9coiO2GZzeejY28egQzV77QNfYYgp4Qh3fehaCcbi3Au6cdvwvYIZ8JO3r5u6Ic5QxN(SourceFile:101)
+	at native0.A6FXalnJZ3F9uCXNkwAnCzSU62EZnN2JuNTaZi8sBOyCmW0sT2Mn3v1TdsY5tVgi0UFJ.D5nC3y8NZzjCqqCwFC5sqc2DIrr60j9lEYFYtBUyiHjC4sJiqwuq0sd9IABIiC4RaKcq(SourceFile:82)
+	at native0.A6FXalnJZ3F9uCXNkwAnCzSU62EZnN2JuNTaZi8sBOyCmW0sT2Mn3v1TdsY5tVgi0UFJ$MVQbK7yu5oDWeOXplX56JIEza0qrfgp7gDEe2RNGyiLpMEjVy0tVHYzh0RNZ4q5JH87o.execute(SourceFile:601)
+	at native0.A6FXalnJZ3F9uCXNkwAnCzSU62EZnN2JuNTaZi8sBOyCmW0sT2Mn3v1TdsY5tVgi0UFJ.D5nC3y8NZzjCqqCwFC5sqc2DIrr60j9lEYFYtBUyiHjC4sJiqwuq0sd9IABIiC4RaKcq(SourceFile:590)
+	at native0.A6FXalnJZ3F9uCXNkwAnCzSU62EZnN2JuNTaZi8sBOyCmW0sT2Mn3v1TdsY5tVgi0UFJ.fljBxFG2UGEnSBWVDf7JAl7K5W9OHB1791ayULn3mGtn2rj6qMxv75zaYijgecWhJ9i9(SourceFile:237)
+	at native0.RSesouHuJNHNVN03WOfLyRg1SFSFMmEbHxYMofttgdtHsmVvPZLOlxfNjg1FqdpulEKZ.D5nC3y8NZzjCqqCwFC5sqc2DIrr60j9lEYFYtBUyiHjC4sJiqwuq0sd9IABIiC4RaKcq(SourceFile:110)
+	at native0.RSesouHuJNHNVN03WOfLyRg1SFSFMmEbHxYMofttgdtHsmVvPZLOlxfNjg1FqdpulEKZ.D5nC3y8NZzjCqqCwFC5sqc2DIrr60j9lEYFYtBUyiHjC4sJiqwuq0sd9IABIiC4RaKcq(SourceFile:89)
+	at native0.RSesouHuJNHNVN03WOfLyRg1SFSFMmEbHxYMofttgdtHsmVvPZLOlxfNjg1FqdpulEKZ.Ycm9IaaaXATplEP7HalTd1jpvrzBgygHGZ44p8oNFqADBxHp3e4NbeGwDML7n02XkchF(SourceFile:74)
+	at native0.AYaNeouAkp5sMkDGXQbTR3MEUIRb3H3qOJnB3ueu5z8P4KgOGrt3UU8GYSG7prYm7uUj.render(SourceFile:141)
+	at native0.QVz1khznrFOqC25fCIkSxaoqREEPFV44n4NJxNm4EmOBVm36JuJbTQFGdaet44ybuhd.D5nC3y8NZzjCqqCwFC5sqc2DIrr60j9lEYFYtBUyiHjC4sJiqwuq0sd9IABIiC4RaKcq(SourceFile:62)
+	at native0.mvv0fYofymmxmVTlrCsud3wNqD86RrQjFAvHevoBlqiecTk22VIBvo3zBBVDFIXD01co.BdJZ4Rh06rJQXmB0cxdipCZC8dN2RwuFFRlCK4a9SVRpRlrk5jUBfWZNvZ0rbnxw64vC(SourceFile:76)
+	at native0.hxXAYNRCrD0czHnqR08Zwmrg8wdKaOwJPINnnOMLYjyWaPqFq1JyaRk5bsGzAuTg5SlK.Lw6zKuiOhcfbsH915WzhGrtlASY1NPRUVl0RAiIMxc9OAX5r9WTJqckFj3EzUWpUzsGt(SourceFile:98)
+	at native0.bhcfi41xFzuCkykx9nbokm7YiGaLehunxDkAJteFarOxwwA7HsMZgRhY2ic3XnOGsxO.WUlj0DK1aK6GybzRyQdWDoNA6mhukaUnIvSN3e7xMLwCK7Ycu96f8mW5Se275uqMM6Js(SourceFile:10)
+
+-- Affected level --
+Details:
+	All players: 1 total; [ClientPlayerEntity['RealoSmokin'/110, l='ClientLevel', x=25.20, y=64.00, z=57.04]]
+	Chunk stats: Client Chunk Cache: 441, 272
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,66,10), Chunk: (at 0,4,10 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 4679 game time, 4679 day time
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.world.ClientWorld.fillCrashReport(SourceFile:496)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(SourceFile:1862)
+	at net.minecraft.client.Minecraft.run(SourceFile:525)
+	at ru.kotopushka.Launcher.start(SourceFile:141)
+	at ru.kotopushka.Launcher.start(SourceFile:94)
+	at start.Start.main(SourceFile:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Mac OS X (aarch64) version 26.5.1
+	Java Version: 25.0.3, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Azul Systems, Inc.
+	Memory: 177370744 bytes (169 MB) / 671088640 bytes (640 MB) up to 17179869184 bytes (16384 MB)
+	CPUs: 10
+	JVM Flags: 1 total; -Xverify:none
+	Launched Version: 1.16.5
+	Backend library: LWJGL version 3.3.4+7
+	Backend API: Apple M1 Max GL version 2.1 Metal - 90.5, Apple
+	GL Caps: Using framebuffer using ARB_framebuffer_object extension
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	GPU Warnings: version: 2.1
+	Graphics mode: fancy
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 10x Apple M1 Max
+	OptiFine Version: OptiFine_1.16.5_HD_U_G8
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 2.1 Metal - 90.5
+	OpenGlRenderer: Apple M1 Max
+	OpenGlVendor: Apple
+	CpuCount: 10

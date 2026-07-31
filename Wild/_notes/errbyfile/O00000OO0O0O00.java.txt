@@ -1,0 +1,21 @@
+﻿ru\metaculture\protection\O00000OO0O0O00.java:40: error: incompatible 
+types: inference variable T has incompatible bounds
+      this.O0000000000OO0 = Objects.requireNonNull(o00000OO0OO0, "valueAccessor");
+                                                  ^
+    upper bounds: O00000OO0OO0<Boolean>,Object
+    lower bounds: O00000OO0OO0<CAP#1>
+  where T is a type-variable:
+    T extends Object declared in method <T>requireNonNull(T,String)
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+
+  ru\metaculture\protection\O00000OO0O0O00.java:40: error: incompatible 
+types: inference variable T has incompatible bounds
+        this.O0000000000OO0 = Objects.requireNonNull(o00000OO0OO0, "valueAccessor");
+                                                    ^
+      upper bounds: O00000OO0OO0<Boolean>,Object
+      lower bounds: O00000OO0OO0<CAP#1>
+    where T is a type-variable:
+      T extends Object declared in method <T>requireNonNull(T,String)
+    where CAP#1 is a fresh type-variable:
+      CAP#1 extends Object from capture of ?

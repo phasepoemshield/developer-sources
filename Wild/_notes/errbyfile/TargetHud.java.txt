@@ -1,0 +1,47 @@
+﻿ru\metaculture\protection\TargetHud.java:216: error: cannot find symbol
+            float var12 = Math.max(1.0F, Math.max(var6.getMaxHealth(), var99));
+                                                      ^
+  symbol:   method getMaxHealth()
+  location: variable var6 of type Object
+
+ru\metaculture\protection\TargetHud.java:224: error: cannot find symbol
+            if (O00000000OO000 != var6.getId()) {
+                                      ^
+  symbol:   method getId()
+  location: variable var6 of type Object
+
+ru\metaculture\protection\TargetHud.java:225: error: cannot find symbol
+               O00000000OO000 = var6.getId();
+                                    ^
+  symbol:   method getId()
+  location: variable var6 of type Object
+
+ru\metaculture\protection\TargetHud.java:246: error: cannot find symbol
+            String var21 = var6.getName().getString();
+                               ^
+  symbol:   method getName()
+  location: variable var6 of type Object
+
+  ru\metaculture\protection\TargetHud.java:216: error: cannot find symbol
+              float var12 = Math.max(1.0F, Math.max(var6.getMaxHealth(), var99));
+                                                        ^
+    symbol:   method getMaxHealth()
+    location: variable var6 of type Object
+
+  ru\metaculture\protection\TargetHud.java:224: error: cannot find symbol
+              if (O00000000OO000 != var6.getId()) {
+                                        ^
+    symbol:   method getId()
+    location: variable var6 of type Object
+
+  ru\metaculture\protection\TargetHud.java:225: error: cannot find symbol
+                 O00000000OO000 = var6.getId();
+                                      ^
+    symbol:   method getId()
+    location: variable var6 of type Object
+
+  ru\metaculture\protection\TargetHud.java:246: error: cannot find symbol
+              String var21 = var6.getName().getString();
+                                 ^
+    symbol:   method getName()
+    location: variable var6 of type Object

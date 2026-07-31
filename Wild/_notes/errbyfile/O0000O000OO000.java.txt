@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\O0000O000OO000.java:413: error: W353 is not 
+abstract and does not override abstract method compareTo(Delayed) in Comparable
+   static class W353 implements Delayed {
+          ^
+
+  ru\metaculture\protection\O0000O000OO000.java:413: error: W353 is not 
+abstract and does not override abstract method compareTo(Delayed) in Comparable
+     static class W353 implements Delayed {
+            ^

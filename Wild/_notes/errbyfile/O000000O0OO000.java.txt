@@ -1,0 +1,19 @@
+﻿ru\metaculture\protection\O000000O0OO000.java:149: error: cannot assign a 
+value to static final variable O0000000000
+            O0000000000 = a_.player.getYaw();
+            ^
+
+ru\metaculture\protection\O000000O0OO000.java:150: error: cannot assign a 
+value to static final variable O00000000000
+            O00000000000 = a_.player.getPitch();
+            ^
+
+  ru\metaculture\protection\O000000O0OO000.java:149: error: cannot assign 
+a value to static final variable O0000000000
+              O0000000000 = a_.player.getYaw();
+              ^
+
+  ru\metaculture\protection\O000000O0OO000.java:150: error: cannot assign 
+a value to static final variable O00000000000
+              O00000000000 = a_.player.getPitch();
+              ^

@@ -1,0 +1,1550 @@
+plugins {
+    id "fabric-loom" version "1.10.5"
+    id "maven-publish"
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+def runtimeJavaVersion = JavaLanguageVersion.of(21)
+def isWindows = System.getProperty("os.name").toLowerCase().contains("windows")
+def toJavac = { String javaPath ->
+    if (javaPath.endsWith("java.exe")) return javaPath.replace("java.exe", "javac.exe")
+    if (javaPath.endsWith("/java") || javaPath.endsWith("\\java")) return javaPath[0..-5] + "javac"
+    return javaPath.replace("java", "javac")
+}
+def javaCmd = { Object... args ->
+    def list = args.collect { it as String }
+    return isWindows ? (["cmd", "/c"] + list) : list
+}
+
+loom {
+    runs {
+        client {
+            client()
+            setConfigName("Minecraft Client")
+            ideConfigGenerated = true
+            runDir "run"
+        }
+    }
+}
+
+configurations {
+    precompiledClasses
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modImplementation "io.github.llamalad7:mixinextras-fabric:${project.mixinextras_version}"
+
+    compileOnly files(".precompiled")
+    precompiledClasses files(".precompiled")
+}
+
+sourceSets {
+    main {
+        java.srcDirs = ["src/main/java"]
+        // Exclude source mixins that have precompiled .class equivalents (use precompiled to avoid decompiler artifacts)
+        java.exclude "**/AbstractSoundInstanceAccessor.java"
+        java.exclude "**/ActiveRenderInfoMixin.java"
+        java.exclude "**/ArmorFeatureRendererMixin.java"
+        java.exclude "**/BetterMinecraftChatScreenMixin.java"
+        java.exclude "**/BetterMinecraftHandledScreenMixin.java"
+        java.exclude "**/BetterMinecraftPlayerListHudMixin.java"
+        java.exclude "**/BossBarHudAccessor.java"
+        java.exclude "**/BosslineMixin.java"
+        java.exclude "**/CapeFeatureRendererMixin.java"
+        java.exclude "**/ChatHudAccessor.java"
+        java.exclude "**/ChatHudMixin.java"
+        java.exclude "**/ClickableWidgetMixin.java"
+        java.exclude "**/ClientBossBarAccessor.java"
+        java.exclude "**/ClientPlayerEntityMixin.java"
+        java.exclude "**/ClientPlayNetworkHandlerMixin.java"
+        java.exclude "**/ClientWorldMixin.java"
+        java.exclude "**/ControlsKeyBindingEntryMixin.java"
+        java.exclude "**/CreativeInventoryScreenCreativeSlotAccessor.java"
+        java.exclude "**/DrawContextAccessor.java"
+        java.exclude "**/ElytraFeatureRendererMixin.java"
+        java.exclude "**/EntityMixin.java"
+        java.exclude "**/EntityRenderDispatcherMixin.java"
+        java.exclude "**/EntryListWidgetMixin.java"
+        java.exclude "**/FBAccessor.java"
+        java.exclude "**/FrustumMixin.java"
+        java.exclude "**/GameOptionsMixin.java"
+        java.exclude "**/GameRendererAccessor.java"
+        java.exclude "**/HeldItemFeatureRendererCustomModelMixin.java"
+        java.exclude "**/IngameMenuScreenMixin.java"
+        java.exclude "**/InGameOverlayRendererMixin.java"
+        java.exclude "**/InventoryScreenMixin.java"
+        java.exclude "**/ItemEntityRendererMixin.java"
+        java.exclude "**/ItemRenderStateAccessor.java"
+        java.exclude "**/KeybindingAccessor.java"
+        java.exclude "**/KeyboardMixin.java"
+        java.exclude "**/LayerRenderStateAccessor.java"
+        java.exclude "**/LightmapTextureManagerMixin.java"
+        java.exclude "**/LightningEntityRendererMixin.java"
+        java.exclude "**/LightningEntityRenderStateMixin.java"
+        java.exclude "**/LivingEntityMixin.java"
+        java.exclude "**/LivingEntityRendererAccessor.java"
+        java.exclude "**/LivingEntityRendererCustomModelMixin.java"
+        java.exclude "**/LivingEntityRendererGhostMixin.java"
+        java.exclude "**/LivingEntityRendererHitColorMixin.java"
+        java.exclude "**/MinecraftAccessor.java"
+        java.exclude "**/MixinCooldownTracker.java"
+        java.exclude "**/MouseMixin.java"
+        java.exclude "**/OptimizedItemDrawContextMixin.java"
+        java.exclude "**/PlayerControllerMixin.java"
+        java.exclude "**/PlayerEntityRendererMixin.java"
+        java.exclude "**/PlayerInteractEntityC2SPacketAccessor.java"
+        java.exclude "**/PlayerListHudMixin.java"
+        java.exclude "**/PlayerTabOverlayGuiAccessor.java"
+        java.exclude "**/ScreenMixin.java"
+        // ScrollableWidgetMixin is excluded from compilation (Cyrillic variables in source).
+        // It exists only in .precompiled. PatchShadowMethodNames with isUniqueByArgs check
+        // prevents duplicate method renames for methods with same args signature.
+        java.exclude "**/ScrollableWidgetMixin.java"
+        java.exclude "**/SelfNametagMixin.java"
+        java.exclude "**/SkinTexturesMixin.java"
+        java.exclude "**/SliderWidgetMixin.java"
+        java.exclude "**/SoundManagerMixin.java"
+        java.exclude "**/TabButtonWidgetMixin.java"
+        java.exclude "**/TabNavigationWidgetMixin.java"
+        java.exclude "**/TextFieldWidgetMixin.java"
+        java.exclude "**/TextVisitFactoryMixin.java"
+        java.exclude "**/TextWidgetMixin.java"
+        java.exclude "**/WorldMixin.java"
+        java.exclude "**/WorldRendererMixin.java"
+        // WorldRendererSkyShaderMixin compiled from src (shader sky cancel+render fix)
+        java.exclude "**/PressableWidgetMixin.java"
+        java.exclude "**/EntityMixin.java"
+        java.exclude "**/LivingEntityMixin.java"
+        java.exclude "**/MinecraftClientMixin.java"
+        java.exclude "**/IngameGuiMixin.java"
+        java.exclude "**/ContainerScreenMixin.java"
+        java.exclude "**/CreateWorldScreenMixin.java"
+        java.exclude "**/DebugOverlayEventMixin.java"
+        java.exclude "**/DebugColorPickerMixin.java"
+        java.exclude "**/DebugScoreboardMixin.java"
+        java.exclude "**/NotificationsHudModuleMixin.java"
+        java.exclude "**/InGameHudMixin.java"
+        java.exclude "**/TitleScreenMixin.java"
+        java.exclude "**/OptionsScreenMixin.java"
+        java.exclude "**/HeldItemRendererMixin.java"
+        java.exclude "**/ChatScreenMixin.java"
+        java.exclude "**/LanguageEntryMixin.java"
+        java.exclude "**/PlayerInventoryMixin.java"
+        java.exclude "**/FogRendererMixin.java"
+        java.exclude "**/SoundManagerMixin.java"
+        java.exclude "**/CheckboxClickMixin.java"
+        java.exclude "**/KeybindClickMixin.java"
+        java.exclude "**/ModuleButtonClickMixin.java"
+        java.exclude "**/SliderClickMixin.java"
+        java.exclude "**/TextInputFieldClickMixin.java"
+        java.exclude "**/SelfNametagMixin.java"
+        java.exclude "**/ContainerScreenMixin*.java"
+        java.exclude "**/LivingEntityRendererCustomModelMixin*.java"
+        resources.srcDirs = ["src/main/resources"]
+        compileClasspath += files(".precompiled")
+        runtimeClasspath += files(".precompiled")
+    }
+}
+
+tasks.register("fixCCS2") {
+    dependsOn("patchBrokenPrecompiledClasses")
+    doLast {
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "FixChatCommandSender2", ".precompiled/ru/destra/misc/ChatCommandSender2.class")
+        }
+    }
+}
+
+tasks.register("syncPrecompiledClasses", Copy) {
+    dependsOn("fixCCS2")
+    from(".precompiled")
+    into(layout.buildDirectory.dir("classes/java/main"))
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    exclude { FileTreeElement details -> details.relativePath && details.relativePath.toString().replace('\\', '/') == 'sg/mx/GameRendererMixin.class' }
+    doLast {
+        def grm = file("build/classes/java/main/sg/mx/GameRendererMixin.class")
+        if (grm.exists()) {
+            grm.delete()
+            logger.lifecycle("syncPrecompiledClasses: deleted stale precompiled GameRendererMixin from build/classes (will be recompiled from source)")
+        }
+    }
+}
+
+tasks.register("forceCopySgEc") {
+    dependsOn("patchBrokenPrecompiledClasses")
+    doLast {
+        def src = file(".precompiled/sg/ec")
+        def dst = file("build/classes/java/main/sg/ec")
+        if (src.exists()) {
+            dst.mkdirs()
+            int count = 0
+            src.eachFile { f ->
+                if (f.name.endsWith(".class")) {
+                    def target = new File(dst, f.name)
+                    if (!target.exists()) {
+                        target.bytes = f.bytes
+                        count++
+                    }
+                }
+            }
+            logger.lifecycle("forceCopySgEc: copied ${count} files")
+        }
+    }
+}
+
+tasks.register("forceCopyMixins") {
+    dependsOn("patchBrokenPrecompiledClasses")
+    doLast {
+        def srcDir = file(".precompiled/sg/mx")
+        def dstDir = file("build/classes/java/main/sg/mx")
+        if (srcDir.exists()) {
+            dstDir.mkdirs()
+            int count = 0
+            // Copy all .class files, but SKIP ones already compiled by Loom (they have refmap)
+            def skipIfCompiled = ["OverlayTextureMixin.class", "ModuleHelper.class", "EquipmentRendererMixin.class", "LivingEntityRendererChamsMixin.class", "NetworkManagerMixin.class", "ChamsRenderer.class", "KeybindElement.class", "ScoreboardHudModule.class", "TextRenderCallback.class", "ClickGuiElement.class", "GuiInputElement.class", "Account.class", "FakePlayerModule.class", "GameRendererMixin.class", "WorldRendererSkyShaderMixin.class"]
+            srcDir.eachFile { f ->
+                if (f.name.endsWith(".class")) {
+                    def target = new File(dstDir, f.name)
+                    if (skipIfCompiled.contains(f.name) && target.exists()) {
+                        // Skip - Loom already compiled this with refmap
+                        logger.lifecycle("forceCopyMixins: skipping ${f.name} (already compiled by Loom)")
+                    } else {
+                        target.bytes = f.bytes
+                        count++
+                    }
+                }
+            }
+            // Copy ModuleHelper.class to ru/destra/misc (skip if Loom compiled it from src/main/java)
+            def mhSrc = file(".precompiled/ru/destra/misc/ModuleHelper.class")
+            def mhDst = file("build/classes/java/main/ru/destra/misc/ModuleHelper.class")
+            if (mhSrc.exists() && !mhDst.exists()) {
+                mhDst.parentFile.mkdirs()
+                mhDst.bytes = mhSrc.bytes
+                logger.lifecycle("forceCopyMixins: copied ModuleHelper.class (${mhSrc.length()} bytes)")
+            } else if (mhDst.exists()) {
+                logger.lifecycle("forceCopyMixins: skipping ModuleHelper.class (compiled from src/main/java)")
+            }
+            logger.lifecycle("forceCopyMixins: copied ${count} files total")
+        }
+    }
+}
+
+tasks.named("syncPrecompiledClasses") {
+    finalizedBy("forceCopySgEc")
+    finalizedBy("forceCopyMixins")
+    finalizedBy("fixCCS2Stdout")
+    finalizedBy("fixDeltaTime")
+    finalizedBy("fixPlayerHeadFeature")
+    finalizedBy("fixPublicMethods")
+    finalizedBy("fixModuleInit")
+    finalizedBy("recomputeFramesAfterFixes")
+}
+
+tasks.register("recomputeFramesAfterFixes") {
+    dependsOn("patchBrokenPrecompiledClasses")
+    doLast {
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        // Recompute frames AFTER fixPublicMethods/fixModuleInit/fixDeltaTime/fixPlayerHeadFeature
+        // rewrote bytecode in .precompiled (those patches add/remove instructions but don't emit
+        // Recompute frames AFTER fixPublicMethods/fixModuleInit/fixDeltaTime/fixPlayerHeadFeature
+        // rewrote bytecode in .precompiled (those patches add/remove instructions but don't emit
+        // StackMapTable, causing VerifyError on tableswitch/branches in Java 21 classes).
+        // Pass minecraft intermediary jar so getCommonSuperClass can resolve net/minecraft/class_*
+        // hierarchy (needed for correct LCA in frame computation).
+        def mcIntermediaryJar = file("${System.getProperty('user.home')}/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/minecraft-merged-intermediary/1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2/minecraft-merged-intermediary-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar")
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-Dextra.classpath=${mcIntermediaryJar.absolutePath}", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "RecomputeAllFrames")
+        }
+    }
+}
+
+tasks.register("fixPublicMethods") {
+    dependsOn("patchBrokenPrecompiledClasses")
+    doLast {
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        def buildOut = "build/classes/java/main"
+        // Make ALL methods+fields public across entire ru/destra tree — fixes all IllegalAccessError
+        // in dev env (production jar allows same-module private access, dev env does not).
+        def cmd = [javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                   "PatchBatchPublic", "--build", buildOut, ".precompiled/ru/destra"]
+        exec {
+            commandLine(cmd)
+        }
+        // Patch WorldParticlesModule.getTextureId with hardcoded texture paths (obfuscated strings are null)
+        def wp = file(".precompiled/ru/destra/module/WorldParticlesModule.class")
+        def tmpWp = File.createTempFile("wpTex", ".class")
+        def procWP = javaCmd(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchWorldParticlesStdout", wp.absolutePath).execute(null, file("."))
+        def errWP = Thread.start { procWP.err.text }
+        tmpWp.bytes = procWP.in.readAllBytes()
+        procWP.waitFor()
+        errWP.join()
+        wp.bytes = tmpWp.bytes
+        file("${buildOut}/ru/destra/module/WorldParticlesModule.class").bytes = tmpWp.bytes
+        tmpWp.delete()
+        // Patch WorldParticlesModule setting names with real Cyrillic labels (obfuscated static
+        // strings are null in production -> safeName falls back to "Boolean"/"Number" -> every
+        // mode toggle shows "boolean" instead of the real label). Run after the texture patch.
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchWorldParticlesModeNames", wp.absolutePath)
+        }
+        file("${buildOut}/ru/destra/module/WorldParticlesModule.class").bytes = wp.bytes
+        // Fix null setting-name fields across ALL modules. The decompiler mangled obfuscated
+        // Cyrillic field names differently in <clinit> (PUTSTATIC) vs <init> (GETSTATIC) —
+        // homoglyphs like И vs Й, х vs с. The clinit writes to one field, the constructor reads
+        // a different (look-alike) field -> null at runtime -> safeName falls back to "Boolean".
+        // This matches null-read fields to the most-similar clinit-written field (homoglyph match)
+        // and injects the value as LDC. For readable-named constants the decompiler forgot to
+        // initialize (AUTO_SEARCH_SETTING_NAME etc.), derives a label from the field name.
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "FixNullSettingNames", ".precompiled/ru/destra")
+        }
+        logger.lifecycle("fixPublicMethods: all classes patched public + WorldParticles textures + mode names + null setting names")
+    }
+}
+
+tasks.register("fixModuleInit") {
+    dependsOn("patchBrokenPrecompiledClasses")
+    doLast {
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        // PatchClickGuiColorSupplier — constructor body stripped, AnimatedColor fields null -> NPE crash
+        def cgs = file(".precompiled/ru/destra/gui/ClickGuiColorSupplier.class")
+        if (cgs.exists()) {
+            def tmp = File.createTempFile("cgsPatched", ".class")
+            def proc = javaCmd(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchClickGuiColorSupplier", cgs.absolutePath, tmp.absolutePath).execute(null, file("."))
+            def errT = Thread.start { proc.err.text }
+            proc.waitFor()
+            errT.join()
+            if (tmp.length() > 100) {
+                cgs.bytes = tmp.bytes
+                file("build/classes/java/main/ru/destra/gui").mkdirs()
+                file("build/classes/java/main/ru/destra/gui/ClickGuiColorSupplier.class").bytes = tmp.bytes
+            }
+            tmp.delete()
+        }
+        logger.lifecycle("fixModuleInit: ClickGuiColorSupplier (AnimatedColor init)")
+
+        // Patch CrosshairModule.<clinit> — crosshairPixels static field never initialized -> null
+        // matrix -> NPE when opening crosshair settings (11x11 grid editor). Inject resetToDefaultMatrix()
+        // call before <clinit> RETURN. Backstop for CrosshairModuleInitMixin (mixin is primary fix).
+        def cm = file(".precompiled/ru/destra/module/CrosshairModule.class")
+        if (cm.exists()) {
+            def tmpM = File.createTempFile("cmPatched", ".class")
+            def procM = javaCmd(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchCrosshairMatrixInit", cm.absolutePath, tmpM.absolutePath).execute(null, file("."))
+            def errM = Thread.start { procM.err.text }
+            procM.waitFor()
+            errM.join()
+            if (tmpM.length() > 100) {
+                cm.bytes = tmpM.bytes
+                file("build/classes/java/main/ru/destra/module").mkdirs()
+                file("build/classes/java/main/ru/destra/module/CrosshairModule.class").bytes = tmpM.bytes
+            }
+            tmpM.delete()
+        }
+        logger.lifecycle("fixModuleInit: CrosshairModule (crosshairPixels matrix init)")
+    }
+}
+
+tasks.register("fixPlayerHeadFeature") {
+    dependsOn("patchBrokenPrecompiledClasses")
+    doLast {
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        def phPrecomp = file(".precompiled/ru/destra/render/PlayerHeadFeatureRenderer.class")
+        // In 1.21.4 FeatureRenderer.getContextModel() returns null -> NPE in render.
+        // Replace with context.getModel() (FeatureRendererContext.getModel).
+        def tmp = File.createTempFile("phfr", ".class")
+        def proc = javaCmd(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchPlayerHeadFeatureStdout", phPrecomp.absolutePath).execute(null, file("."))
+        def errT = Thread.start { proc.err.text }
+        tmp.bytes = proc.in.readAllBytes()
+        proc.waitFor()
+        errT.join()
+        phPrecomp.bytes = tmp.bytes
+        file("build/classes/java/main/ru/destra/render").mkdirs()
+        file("build/classes/java/main/ru/destra/render/PlayerHeadFeatureRenderer.class").bytes = tmp.bytes
+        tmp.delete()
+        logger.lifecycle("fixPlayerHeadFeature: getContextModel -> context.getModel()")
+    }
+}
+
+tasks.register("fixDeltaTime") {
+    dependsOn("patchBrokenPrecompiledClasses")
+    doLast {
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        def interpPrecomp = file(".precompiled/ru/destra/animation/Interpolation.class")
+        def iuPrecomp = file(".precompiled/ru/destra/animation/InterpolationUtil.class")
+        // Patch getDeltaTime()/6() to return stable 0.05 (1 tick) — fixes animation jitter
+        // caused by unstable RenderTickCounter.getLastDuration() in dev env.
+        def tmp1 = File.createTempFile("interp", ".class")
+        def p1 = javaCmd(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchDeltaTimeStdout", interpPrecomp.absolutePath).execute(null, file("."))
+        def err1 = Thread.start { p1.err.text }
+        tmp1.bytes = p1.in.readAllBytes()
+        p1.waitFor()
+        err1.join()
+        interpPrecomp.bytes = tmp1.bytes
+        file("build/classes/java/main/ru/destra/animation").mkdirs()
+        file("build/classes/java/main/ru/destra/animation/Interpolation.class").bytes = tmp1.bytes
+        def tmp2 = File.createTempFile("interpUtil", ".class")
+        def p2 = javaCmd(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchDeltaTimeStdout", iuPrecomp.absolutePath).execute(null, file("."))
+        def err2 = Thread.start { p2.err.text }
+        tmp2.bytes = p2.in.readAllBytes()
+        p2.waitFor()
+        err2.join()
+        iuPrecomp.bytes = tmp2.bytes
+        file("build/classes/java/main/ru/destra/animation/InterpolationUtil.class").bytes = tmp2.bytes
+        tmp1.delete(); tmp2.delete()
+        logger.lifecycle("fixDeltaTime: patched Interpolation + InterpolationUtil getDeltaTime() -> 0.05")
+    }
+}
+
+tasks.register("fixCCS2Stdout") {
+    dependsOn("patchBrokenPrecompiledClasses")
+    doLast {
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        def ccs2Precomp = file(".precompiled/ru/destra/misc/ChatCommandSender2.class")
+        def ccs2Build = file("build/classes/java/main/ru/destra/misc/ChatCommandSender2.class")
+        file(".precompiled/ru/destra/misc").mkdirs()
+        file("build/classes/java/main/ru/destra/misc").mkdirs()
+        // Patch CCS2 via stdout (sandbox bypass): field = public static (0x9, no FINAL),
+        // clinit/init emptied, refs -> CCS2 (not Holder). DestraClient sets mc via putstatic.
+        def tmp = File.createTempFile("ccs2fix", ".class")
+        def proc = javaCmd(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "FixCCS2Stdout", ccs2Precomp.absolutePath).execute(null, file("."))
+        def errT = Thread.start { proc.err.text }
+        tmp.bytes = proc.in.readAllBytes()
+        proc.waitFor()
+        errT.join()
+        ccs2Precomp.bytes = tmp.bytes
+        if (ccs2Build.exists()) ccs2Build.bytes = tmp.bytes
+        tmp.delete()
+        logger.lifecycle("fixCCS2Stdout: patched CCS2 (field=0x9, no FINAL) -> precompiled + build/classes")
+    }
+}
+
+tasks.register("patchBrokenPrecompiledClasses") {
+    doLast {
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = runtimeJavaVersion
+        }.get().executablePath.asFile.absolutePath
+
+        def javacExec = toJavac(javaExec)
+
+        exec {
+            commandLine(
+                javacExec,
+                "-cp", "tools_out/asm-all.jar",
+                "-d", "tools_out",
+                "tools/PatchAllElements.java",
+                "tools/PatchPartyMarker.java",
+                "tools/PatchPublicFields.java",
+                "tools/PatchTextRenderCallback.java",
+                "tools/PatchAnimationStubs.java",
+                "tools/PatchHudModuleStubs.java",
+                "tools/PatchFakePlayerFinals.java",
+                "tools/PatchWaypointAccessors.java",
+                "tools/PatchBabyModFields.java",
+                "tools/PatchHudModuleAlpha.java",
+                "tools/PatchHudVisibility.java",
+                "tools/PatchTargetInfoHudPortrait.java",
+                "tools/PatchBlockOverlay.java",
+                "tools/PatchCustomServerListClinit.java",
+                "tools/PatchTargetEspClinit.java",
+                "tools/PatchRoundedRectClass.java",
+                "tools/PatchTargetEspStrings.java",
+                "tools/PatchAllSgEcClasses.java",
+                "tools/GenStubClasses.java",
+                "tools/PatchKeybindMouseDispatch.java",
+                "tools/GenModuleClasses.java",
+                "tools/FixSettingClass.java",
+                "tools/PrepareMixinForCompile.java",
+                "tools/PatchAllToIntermediary.java",
+                "tools/PatchAllToNamed.java",
+                "tools/RecomputeAllFrames.java",
+                "tools/CleanTimedAnimation.java",
+                "tools/FixCCS2Stdout.java",
+                "tools/GenHolderStdout.java",
+                "tools/PatchDestraOnGuiInitStdout.java",
+                "tools/PatchDeltaTimeStdout.java",
+                "tools/PatchPlayerHeadFeatureStdout.java",
+                "tools/PatchPublicMethodsStdout.java",
+                "tools/PatchWorldParticlesStdout.java",
+                "tools/PatchWorldParticlesModeNames.java",
+                "tools/FixNullSettingNames.java",
+                "tools/PatchChamsRendererUniforms.java",
+                "tools/PatchChamsMixinClinit.java",
+                "tools/PatchClickGuiColorState.java",
+                "tools/PatchSoundManager.java",
+                "tools/PatchOptionsScreenMixin.java",
+                "tools/PatchChinaHatClinit.java",
+                "tools/PatchBatchPublic.java",
+                "tools/PatchSubscribeAnnotations.java",
+                "tools/PatchShaderProgram.java",
+                "tools/PatchTotemPopEvent.java",
+                "tools/PatchOverlayTextureDefault.java",
+                "tools/FixOrphanedStringFields.java",
+                "tools/FixFtTrapClasses.java",
+                "tools/GenerateRefmap.java",
+                "tools/ConvertMixinsToYarn.java",
+                "tools/VerifyMixins.java",
+                "tools/PatchMixinAnnotationsToIntermediary.java",
+                "tools/FixScoreboardAndKeybind.java",
+                "tools/PatchScreenMixinInit.java",
+                "tools/PatchHudBlurFlicker.java",
+                "tools/PatchShadowFieldNames.java",
+                "tools/FixChatCommandSender2.java",
+                "tools/InjectRefmap.java",
+                "tools/FixCCS2Field.java",
+                "tools/GenApiException.java",
+                "tools/BumpClassVersions.java",
+                "tools/PatchStaticFinalFields.java",
+                "tools/PatchClassAttributes.java",
+                "tools/PatchCheckcastReturns.java",
+                "tools/PatchShadowMethodNames.java",
+                "tools/PatchNetworkManagerMixin.java",
+                "tools/PatchRequireZero.java",
+                "tools/PatchStaleInjectTargets.java",
+                "tools/FixInvokerSelfRecursion.java",
+                "tools/FixRemoveInaccessibleInterface.java",
+                "tools/FixRenderableInterface.java",
+                "tools/FixBogusInnerClasses.java",
+                "tools/FixAspectRatioSetEnabled.java",
+                "tools/FixInGameHudMixinAtTarget.java",
+                "tools/PatchScoreboardSingleplayer.java",
+                "tools/PatchTrailsFirstPerson.java",
+                "tools/PatchCrosshairMatrixInit.java",
+                "tools/PatchModuleLifecycle.java",
+                "tools/PatchLifecycleCallbacks.java",
+                "tools/PatchCollapsedModeSettings.java",
+                "tools/PatchWorldCustomizer.java",
+                "tools/PatchBlockOverlayRestore.java",
+                "tools/PatchCapeAndLightning.java",
+                "tools/PatchCosmeticModels.java",
+                "tools/PatchGuiTextInputSettingField.java",
+                "tools/FixChinaHatSetEnabled.java",
+                "tools/ScanCollapsedModeSettings.java",
+                "tools/PatchPhase2ModeSettings.java",
+                "tools/PatchInGameHudRender2DAt.java",
+                "tools/PatchNopChatScreenHudClick.java",
+                "tools/PatchUniqueHudElementKeys.java"
+            )
+        }
+
+        // Generate stub for ApiException (referenced by ProfileAPI.create, not in precompiled).
+        // Must run before jar task so the stub is included in the jar via from(".precompiled").
+        // Define mcIntermediaryJar3 early so all patch tools can use it
+        def mcIntermediaryJar3 = file("${System.getProperty('user.home')}/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/minecraft-merged-intermediary/1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2/minecraft-merged-intermediary-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar")
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchShadowFieldNames"
+            )
+        }
+        exec {
+             commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-Dmc.jar=${mcIntermediaryJar3.absolutePath}",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchShadowMethodNames"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp",
+                "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "FixScoreboardAndKeybind"
+            )
+        }
+
+        // Skip ScoreboardHudModule rendering in singleplayer (avoids AbstractMethodError crash in lambda)
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp",
+                "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchScoreboardSingleplayer"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "tools/PatchKeybindSettingElement.java",
+                ".precompiled/ru/destra/gui/KeybindSettingElement.class"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchShadowFieldNames"
+            )
+        }
+
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchCustomServerListClinit"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchScreenMixinInit"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchHudBlurFlicker"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchShadowAliases"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchTargetEspClinit"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchChinaHatClinit"
+            )
+        }
+
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchSubscribeAnnotations", ".precompiled/ru/destra")
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchShaderProgram"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchTotemPopEvent"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchOverlayTextureDefault"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchTargetEspStrings"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchPartyMarker"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchAllElements"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "CleanTimedAnimation",
+                ".precompiled/ru/destra/animation/TimedAnimation.class",
+                ".precompiled/ru/destra/animation/AccelerateAnimation.class",
+                ".precompiled/ru/destra/animation/DirectionalAnimation.class"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchAnimationTimer",
+                ".precompiled/ru/destra/animation/AccelerateAnimation.class",
+                ".precompiled/ru/destra/animation/DirectionalAnimation.class",
+                ".precompiled/ru/destra/animation/TimedAnimation.class"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchAnimationStubs"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchPublicFields"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchTextRenderCallback"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchFriendsListScreenFinals"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchFakePlayerFinals"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchWaypointAccessors"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchHudModuleStubs"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchBabyModFields"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchHudModuleAlpha"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchTargetInfoHudPortrait"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchHudVisibility"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchBlockOverlay"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchRoundedRectClass"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchAllSgEcClasses"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "GenStubClasses"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchKeybindMouseDispatch"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "GenStubClasses"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "FixSettingClass"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out",
+                "PrepareMixinForCompile"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "GenStubClasses"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchChamsRendererUniforms",
+                ".precompiled/ru/destra/render/ChamsRenderer.class"
+            )
+        }
+
+        def chamsOut = new ByteArrayOutputStream()
+        def chamsErr = new ByteArrayOutputStream()
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchChamsMixinClinit",
+                ".precompiled/sg/mx/LivingEntityRendererChamsMixin.class",
+                ".precompiled/sg/mx/EquipmentRendererMixin.class"
+            )
+            ignoreExitValue = true
+            standardOutput = chamsOut
+            errorOutput = chamsErr
+        }
+        logger.lifecycle("PatchChamsMixinClinit STDOUT:\n" + chamsOut.toString("UTF-8"))
+        logger.lifecycle("PatchChamsMixinClinit STDERR:\n" + chamsErr.toString("UTF-8"))
+
+        def orphanOut = new ByteArrayOutputStream()
+        def orphanErr = new ByteArrayOutputStream()
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "FixOrphanedStringFields"
+            )
+            ignoreExitValue = true
+            standardOutput = orphanOut
+            errorOutput = orphanErr
+        }
+        logger.lifecycle("FixOrphanedStringFields STDOUT:\n" + orphanOut.toString("UTF-8"))
+        logger.lifecycle("FixOrphanedStringFields STDERR:\n" + orphanErr.toString("UTF-8"))
+
+        def ftTrapOut = new ByteArrayOutputStream()
+        def ftTrapErr = new ByteArrayOutputStream()
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "FixFtTrapClasses"
+            )
+            ignoreExitValue = true
+            standardOutput = ftTrapOut
+            errorOutput = ftTrapErr
+        }
+        logger.lifecycle("FixFtTrapClasses STDOUT:\n" + ftTrapOut.toString("UTF-8"))
+        logger.lifecycle("FixFtTrapClasses STDERR:\n" + ftTrapErr.toString("UTF-8"))
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchClickGuiColorState",
+                ".precompiled/ru/destra/gui/ClickGuiColorState.class"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchSoundManager",
+                ".precompiled/ru/destra/misc/SoundManager.class",
+                ".precompiled/ru/destra/misc/SoundManager.class"
+            )
+        }
+
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchOptionsScreenMixin",
+                ".precompiled/sg/mx/OptionsScreenMixin.class"
+            )
+        }
+
+        // Bump all precompiled class versions to Java 21 (major 65). Many recovered classes have
+        // major version 50 (Java 6) but use Java 8+ bytecode (invokestatic on interface static
+        // methods, etc.) which the JVM verifier rejects with VerifyError.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "BumpClassVersions"
+            )
+        }
+
+        // Remove ACC_FINAL from static fields that are written via putstatic outside <clinit>.
+        // Decompiled code often writes "static final" fields in init()/helper methods, which
+        // the production JVM (JLS 13.1) rejects with IllegalAccessError.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchStaticFinalFields"
+            )
+        }
+
+        // Strip broken NestMembers/NestHost attributes (wrong-package refs cause
+        // IncompatibleClassChangeError), clean InnerClasses entries with invalid names
+        // (ClassFormatError), and fix invalid access flag combinations (ClassFormatError).
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchClassAttributes"
+            )
+        }
+
+        // Convert Renderable from abstract class back to interface (decompiler artifact).
+        // Must run AFTER PatchClassAttributes which would otherwise strip ACC_INTERFACE.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "FixRenderableInterface"
+            )
+        }
+
+        // Clear bogus InnerClasses entries from top-level classes (decompiler artifact).
+        // Also remove `implements Predicate` from classes that lack a `test` method — Fabric's
+        // runtime transformer adds ACC_INTERFACE to these classes, causing ClassFormatError.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "FixBogusInnerClasses"
+            )
+        }
+
+        // Fix AspectRatioModule.setEnabled(boolean) — decompiler always calls Module.disable(boolean)
+        // regardless of the boolean parameter. Should branch: enable when true, disable when false.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "FixAspectRatioSetEnabled",
+                ".precompiled"
+            )
+        }
+
+        // Fix TrailsModule "first person only" inverted logic. The setting (default = true,
+        // name "Только от F5") should show trails ONLY in first person, but the decompiled
+        // bytecode clears/skips in first person. Flip if_acmpne -> if_acmpeq in onRender2D,
+        // onMotionTick, onWorldRender so trails render in first person by default.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchTrailsFirstPerson",
+                ".precompiled"
+            )
+        }
+
+        // HUD Render2D inject: do NOT hardcode intermediary LayeredDrawer target — that soft-fails
+        // under Loom named mappings (defaultRequire=0) and kills all HUD. Use @At(RETURN) instead.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchInGameHudRender2DAt"
+            )
+        }
+
+        // Disable ChatScreenMixin.click body — HashMap-first-wins steals clicks from stacked
+        // HUD elements and fights DestraHudChatInputMixin (smallest-hitbox picker + RMB settings).
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchNopChatScreenHudClick"
+            )
+        }
+
+        // Target/Armor/Binds/Potions/Inventory all used map key "Hud Element" → only one survived.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchUniqueHudElementKeys"
+            )
+        }
+
+        // Insert checkcast before areturn in methods returning a reference type. Decompiled code
+        // reuses local slots for different types on different branches, causing the merged stack
+        // type to be Object where the method signature expects a specific type (VerifyError:
+        // Bad return type). checkcast forces the verifier to accept the cast at runtime.
+        // Must run BEFORE recomputeFramesAfterFixes since inserting instructions shifts offsets.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchCheckcastReturns"
+            )
+        }
+
+        // Rename @Shadow methods to intermediary names (method_XXXX) from refmap. Mixin 0.15.5
+        // doesn't apply refmap to @Shadow method names in production, so the method isn't found
+        // in the target class. Renaming + updating internal calls fixes this (same approach as
+        // PatchShadowFieldNames for fields). For @Shadow methods without refmap mapping, finds
+        // the correct method by argument signature in the target class.
+        def mcJar3 = file("${System.getProperty('user.home')}/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/minecraft-merged-intermediary/1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2/minecraft-merged-intermediary-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar")
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-Dmc.jar=${mcJar3.absolutePath}",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchShadowMethodNames"
+            )
+        }
+
+        // Patch NetworkManagerMixin.send @Inject handler to match 1.21.4 send(Packet,PacketCallbacks,boolean)
+        // signature (decompiled as send(Packet,CallbackInfo) — 2 missing params).
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchNetworkManagerMixin"
+            )
+        }
+
+        // Fix stale @Inject target method names FIRST (renamed in 1.21.4) by finding the correct
+        // method in the target class by argument signature. Updates the annotation so the inject
+        // actually hooks the right method.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-Dmc.jar=${mcJar3.absolutePath}",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchStaleInjectTargets"
+            )
+        }
+
+        // THEN add/remove require=0. After stale targets are fixed, methods that exist won't get
+        // require=0. Methods that genuinely don't exist (removed in 1.21.4) get require=0 so Mixin
+        // skips them instead of crashing. Also removes erroneously-added require=0 for methods that
+        // now exist after stale target fix.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-Dmc.jar=${mcIntermediaryJar3.absolutePath}",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchRequireZero"
+            )
+        }
+
+        // Remove inaccessible nested interface (EnchantmentHelper$ContextAwareConsumer) from
+        // CustomHandShaderRenderer — decompiler artifact that causes IllegalAccessError in prod.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "FixRemoveInaccessibleInterface"
+            )
+        }
+
+        // --- Visuals recovery: lifecycle, ModeSetting labels, Cape/KillEffect/ChinaHat/Cosmetic ---
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchLifecycleCallbacks")
+        }
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchModuleLifecycle")
+        }
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchCollapsedModeSettings")
+        }
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchWorldCustomizer")
+        }
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchBlockOverlayRestore")
+        }
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchCapeAndLightning")
+        }
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchCosmeticModels")
+        }
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchGuiTextInputSettingField")
+        }
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "FixChinaHatSetEnabled")
+        }
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "FixAspectRatioSetEnabled", ".precompiled")
+        }
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchPhase2ModeSettings")
+        }
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "ScanCollapsedModeSettings")
+        }
+    }
+}
+
+tasks.register("patchMixinsToIntermediary") {
+    dependsOn("patchBrokenPrecompiledClasses")
+    doLast {
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        def mcIntermediaryJar2 = file("${System.getProperty('user.home')}/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/minecraft-merged-intermediary/1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2/minecraft-merged-intermediary-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar")
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-Dextra.classpath=${mcIntermediaryJar2.absolutePath}", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "RecomputeAllFrames")
+        }
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchAllToIntermediary")
+        }
+        // Remap mixin targets back to named (yarn) so they resolve in the Loom dev environment (runClient).
+        // PatchAllToIntermediary converts @Mixin targets to intermediary (class_XXX) which only works in
+        // the production remapped jar. For runClient (named mappings), targets must be yarn names.
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchAllToNamed")
+        }
+    }
+}
+
+tasks.named("compileJava") {
+    dependsOn("patchMixinsToIntermediary")
+    mustRunAfter("syncPrecompiledClasses")
+}
+
+tasks.register("generateMixinRefmap") {
+    dependsOn("compileJava")
+    doLast {
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "GenerateRefmap"
+            )
+        }
+        // Copy refmap to resources/main so jar includes it and remapJar can use it
+        def refmap = file("build/classes/java/main/destra-recovered-refmap.json")
+        def resDir = file("build/resources/main")
+        resDir.mkdirs()
+        if (refmap.exists()) {
+            def dst = new File(resDir, "destra-recovered-refmap.json")
+            dst.text = refmap.text
+            logger.lifecycle("Copied refmap to ${dst} (${refmap.length()} bytes)")
+            // Also save backup
+            file("build/refmap-merged.json").text = refmap.text
+        }
+        // Rename @Shadow fields to intermediary names using the freshly generated refmap (covers clean
+        // builds where patchBrokenPrecompiledClasses ran before any refmap existed). Patches both
+        // .precompiled and build/classes/java/main/sg/mx so remapJar picks up the renamed fields.
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "PatchShadowFieldNames"
+            )
+        }
+    }
+}
+
+tasks.named("classes") {
+    dependsOn("syncPrecompiledClasses")
+    dependsOn("generateMixinRefmap")
+}
+
+tasks.named("remapJar") {
+    dependsOn("generateMixinRefmap")
+    dependsOn("forceCopyMixins")
+    dependsOn("forceCopySgEc")
+    finalizedBy("injectRefmap")
+    doFirst {
+        // Ensure ALL precompiled sg/mx classes are in build/classes before remapJar
+        def srcDir = file(".precompiled/sg/mx")
+        def dstDir = file("build/classes/java/main/sg/mx")
+        def skipIfCompiled = ["OverlayTextureMixin.class", "ModuleHelper.class", "EquipmentRendererMixin.class", "LivingEntityRendererChamsMixin.class", "NetworkManagerMixin.class", "ChamsRenderer.class", "KeybindElement.class", "ScoreboardHudModule.class", "GameRendererMixin.class"]
+        if (srcDir.exists()) {
+            dstDir.mkdirs()
+            srcDir.eachFile { f ->
+                if (f.name.endsWith(".class")) {
+                    def target = new File(dstDir, f.name)
+                    if (!skipIfCompiled.contains(f.name) || !target.exists()) {
+                        target.bytes = f.bytes
+                    }
+                }
+            }
+            logger.lifecycle("Pre-remapJar: copied sg/mx classes to build/classes")
+        }
+        // Patch build/classes/java/main/sg/mx mixins to Intermediary for production jar
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchAllToIntermediary", "build/classes/java/main/sg/mx")
+        }
+        logger.lifecycle("Pre-remapJar: patched build/classes/java/main/sg/mx to Intermediary")
+    }
+    doLast {
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchAllToNamed", "build/classes/java/main/sg/mx")
+        }
+        logger.lifecycle("Post-remapJar: restored build/classes/java/main/sg/mx to Named format")
+    }
+}
+
+tasks.named("runClient") {
+    doFirst {
+        def srcDir = file(".precompiled/sg/mx")
+        def dstDir = file("build/classes/java/main/sg/mx")
+        def skipIfCompiled = ["OverlayTextureMixin.class", "ModuleHelper.class", "EquipmentRendererMixin.class", "LivingEntityRendererChamsMixin.class", "NetworkManagerMixin.class", "ChamsRenderer.class", "KeybindElement.class", "ScoreboardHudModule.class", "GameRendererMixin.class"]
+        if (srcDir.exists()) {
+            dstDir.mkdirs()
+            srcDir.eachFile { f ->
+                if (f.name.endsWith(".class")) {
+                    def target = new File(dstDir, f.name)
+                    if (!skipIfCompiled.contains(f.name) || !target.exists()) {
+                        target.bytes = f.bytes
+                    }
+                }
+            }
+        }
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        exec {
+            commandLine(javaExec, "-Dfile.encoding=UTF-8", "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar", "PatchAllToNamed", "build/classes/java/main/sg/mx")
+        }
+        logger.lifecycle("runClient doFirst: refreshed build/classes/java/main/sg/mx to Named format")
+    }
+}
+
+tasks.register("injectRefmap") {
+    doLast {
+        def refmapFile = file("build/refmap-merged.json")
+        def jarFile = file("build/libs/${project.archives_base_name}-${project.mod_version}.jar")
+        if (!refmapFile.exists()) {
+            logger.warn("Refmap not found: ${refmapFile}")
+            return
+        }
+        if (!jarFile.exists()) {
+            logger.warn("JAR not found: ${jarFile}")
+            return
+        }
+        def javaExec = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(21)
+        }.get().executablePath.asFile.absolutePath
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "InjectRefmap",
+                refmapFile.absolutePath,
+                jarFile.absolutePath,
+                ".precompiled"
+            )
+            ignoreExitValue = true
+        }
+        // Fix ChatCommandSender2 access flags (remapJar strips ACC_ABSTRACT from interfaces)
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "FixChatCommandSender2",
+                jarFile.absolutePath
+            )
+            ignoreExitValue = false
+        }
+        // FixCCS2Field: removes the illegal 0x9 (public+static, no final) mc field from the CCS2
+        // interface and moves it to ChatCommandSender2Fields holder. Uses Files.newOutputStream
+        // to write the jar (Files.copy with REPLACE_EXISTING is virtualized on this machine).
+        exec {
+            commandLine(
+                javaExec,
+                "-Dfile.encoding=UTF-8",
+                "-cp", "tools_out${File.pathSeparator}tools_out/asm-all.jar",
+                "FixCCS2Field"
+            )
+            ignoreExitValue = false
+        }
+        // Note: do NOT delete ChatCommandSender2 — ~110 classes still reference it (method calls,
+        // implements). FixChatCommandSender2 already removed the illegal 0x9 field, making CCS2
+        // a valid interface (no fields). Deleting it would cause NoClassDefFoundError.
+    }
+}
+
+tasks.named("syncPrecompiledClasses") {
+    dependsOn("patchBrokenPrecompiledClasses")
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+    options.release = 21
+    options.compilerArgs += ["-Xlint:none"]
+}
+
+tasks.withType(JavaExec).configureEach {
+    javaLauncher = javaToolchains.launcherFor {
+        languageVersion = runtimeJavaVersion
+    }
+    jvmArgs("-noverify")
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.register("restoreProdResources", Copy) {
+    dependsOn("processResources")
+    from("src/main/resources")
+    into(layout.buildDirectory.dir("resources/main"))
+}
+
+tasks.named("runClient") {
+    dependsOn("restoreProdResources")
+    finalizedBy("collectDiagnostics")
+}
+
+tasks.register("collectDiagnostics") {
+    group = "verification"
+    description = "Collects the latest client logs, crash reports, and recovery audit."
+
+    doLast {
+        def diagnosticsDir = layout.buildDirectory.dir("diagnostics").get().asFile
+        diagnosticsDir.mkdirs()
+
+        def latestLog = file("run/logs/latest.log")
+        def stdoutLog = file("build/interactive-client.out.log")
+        def stderrLog = file("build/interactive-client.err.log")
+        def auditLog = file("build/recovery-bytecode-audit.txt")
+        def crashDir = file("run/crash-reports")
+        def latestCrash = crashDir.exists()
+            ? crashDir.listFiles()
+                .findAll { it.isFile() && it.name.endsWith(".txt") }
+                .sort { a, b -> b.lastModified() <=> a.lastModified() }
+                .find()
+            : null
+
+        def report = new StringBuilder()
+        report.append("Destra diagnostic report\n")
+        report.append("Generated: ${new Date().format("yyyy-MM-dd HH:mm:ss Z")}\n")
+        report.append("Minecraft: ${project.minecraft_version}\n")
+        report.append("Java target: 21\n\n")
+
+        def appendFile = { String title, File source ->
+            report.append("===== ${title} =====\n")
+            if (source != null && source.exists()) {
+                report.append(source.getText("UTF-8"))
+            } else {
+                report.append("<not available>\n")
+            }
+            report.append("\n\n")
+        }
+
+        appendFile("LATEST LOG", latestLog)
+        appendFile("LATEST CRASH REPORT", latestCrash)
+        appendFile("GRADLE STDOUT", stdoutLog)
+        appendFile("GRADLE STDERR", stderrLog)
+        appendFile("BYTECODE AUDIT", auditLog)
+
+        def reportFile = new File(diagnosticsDir, "latest-report.txt")
+        reportFile.setText(report.toString(), "UTF-8")
+
+        def errorSummary = new File(diagnosticsDir, "error-summary.txt")
+        def summaryLines = report.toString()
+            .readLines()
+            .findAll {
+                it.contains("/ERROR]")
+                    || it.contains("/WARN]")
+                    || it.contains("Exception")
+                    || it.contains("Error:")
+                    || it.startsWith("Caused by:")
+            }
+        errorSummary.setText(summaryLines.join(System.lineSeparator()), "UTF-8")
+
+        logger.lifecycle("Diagnostics written to ${reportFile}")
+    }
+}
+
+tasks.jar {
+    dependsOn("restoreProdResources")
+    dependsOn("forceCopyMixins")
+    dependsOn("forceCopySgEc")
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from(".precompiled")
+}
+
+publishing {
+    publications {
+        create("mavenJava", MavenPublication) {
+            artifactId = project.archives_base_name
+            from components.java
+        }
+    }
+}

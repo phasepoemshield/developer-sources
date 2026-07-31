@@ -1,0 +1,21 @@
+{
+	"name": "RANA! ❤",
+	"description": "U now a Rana omg >w<",
+	"authors": [
+	"Original model by Dock",
+	"Figura by 64j",
+	"Tweaks by MECHAIDEATION"
+	],
+	"color": "#1bd96a",
+	"customizations": {
+		"models.rana.root.Head.RanaHat": {"smooth": true},
+		"models.rana.root.Head.RanaHead": {"smooth": true},
+		"models.rana.root.Body.RanaBody": {"smooth": true},
+		"models.rana.root.RightArm.RanaArmR": {"smooth": true},
+		"models.rana.root.RightArmFirstPerson.RanaArmR": {"smooth": true},
+		"models.rana.root.LeftArm.RanaArmL": {"smooth": true},
+		"models.rana.root.LeftArmFirstPerson.RanaArmL": {"smooth": true},
+		"models.rana.root.LeftLeg.RanaLegL": {"smooth": true},
+		"models.rana.root.RightLeg.RanaLegR": {"smooth": true}
+	}
+}

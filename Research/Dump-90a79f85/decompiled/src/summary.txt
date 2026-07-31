@@ -1,0 +1,150 @@
+Summary for rain-classes.jar
+Decompiled with CFR 0.152
+
+
+kotakbaz.rain.client.listener.listeners.b
+----------------------------
+
+onKey(kotakbaz.rain.event.events.G )
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.liteapi.A
+----------------------------
+
+receive(java.lang.String )
+  Unable to fully structure code
+  Could not resolve type clashes
+normalizeFeature(java.lang.String )
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.render.main.vertex.format.uploader.A
+----------------------------
+
+<init>()
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.render.main.vertex.format.uploader.b_0
+----------------------------
+
+createFormatUploader()
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.render.texture.utils.gif.gif.B
+----------------------------
+
+getImageTypes(int )
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.util.other.d_0
+----------------------------
+
+formatKeyLabel(java.lang.String )
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.waypoint.c_0
+----------------------------
+
+sanitizeName(java.lang.String )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+kotakbaz.rain.config.a_0
+----------------------------
+
+setSelectedConfigName(java.lang.String )
+  Unable to fully structure code
+readAuthor(java.nio.file.Path )
+  Unable to fully structure code
+readSelectedConfigName()
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+kotakbaz.rain.module.modules.hud.H
+----------------------------
+
+renderHud(boolean )
+  Unable to fully structure code
+
+
+kotakbaz.rain.module.modules.player.P
+----------------------------
+
+translateCommandToken(java.lang.String )
+  Unable to fully structure code
+
+
+kotakbaz.rain.module.modules.player.a_0
+----------------------------
+
+maintainEating(net.minecraft.class_746 )
+  Unable to fully structure code
+
+
+kotakbaz.rain.module.modules.player.l_0
+----------------------------
+
+onRender3D(kotakbaz.rain.event.events.B )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+kotakbaz.rain.module.modules.render.b_0
+----------------------------
+
+updateState()
+  Unable to fully structure code
+
+
+kotakbaz.rain.module.modules.render.o_0
+----------------------------
+
+extractEventName(java.lang.String java.lang.String )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+kotakbaz.rain.ui.menu.CategoryComponent
+----------------------------
+
+filteredModules()
+  Unable to fully structure code
+
+
+kotakbaz.rain.ui.menu.FriendsCategoryComponent
+----------------------------
+
+isAllowedFriendNameKey(java.lang.String )
+  Unable to fully structure code
+isValidFriendName(java.lang.String )
+  Unable to fully structure code
+
+
+kotakbaz.rain.ui.menu.MenuScreen
+----------------------------
+
+render(int int float )
+  Unable to fully structure code
+renderAvatarPopupGuiScaleSetting(float float float kotakbaz.rain.ui.menu.MenuScreen$AvatarPopupMetrics float int int )
+  Unable to fully structure code
+renderAvatarPopupHudScaleSetting(float float float kotakbaz.rain.ui.menu.MenuScreen$AvatarPopupMetrics float int int )
+  Unable to fully structure code
+
+
+kotakbaz.rain.ui.menu.PointsCategoryComponent
+----------------------------
+
+appendKeyName(kotakbaz.rain.ui.menu.PointsCategoryComponent$InputField java.lang.String )
+  Unable to fully structure code
+isAllowedWaypointNameKey(java.lang.String )
+  Unable to fully structure code
+filteredWayPoints()
+  Unable to fully structure code
+  Could not resolve type clashes

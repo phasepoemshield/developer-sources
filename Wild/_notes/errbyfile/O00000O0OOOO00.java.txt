@@ -1,0 +1,11 @@
+﻿ru\metaculture\protection\O00000O0OOOO00.java:215: error: incompatible 
+types: Object[] cannot be converted to W200[]
+               : new O00000O0OOOO0.W199(var1[0], var1[1], var1[2], var2[0], var2[1], var2[2], var5, var24.toArray(new 
+O00000O0OOOO0.W200[0]));
+                                                                                                                 ^
+
+  ru\metaculture\protection\O00000O0OOOO00.java:215: error: incompatible 
+types: Object[] cannot be converted to W200[]
+                 : new O00000O0OOOO0.W199(var1[0], var1[1], var1[2], var2[0], var2[1], var2[2], var5, 
+var24.toArray(new O00000O0OOOO0.W200[0]));
+                                                                                                                   ^

@@ -1,0 +1,201 @@
+﻿ru\metaculture\protection\AutoAncientBot.java:719: error: reference to 
+O00000000 is ambiguous
+         BlockPos var4 = this.O0000000O0OOO0 == null ? this.O00000000(var3) : this.O0000000O0OOO0;
+                                                           ^
+  both method O00000000(Collection<Setting>) in O0000000OOO000 and method O00000000(List<BlockPos>) in AutoAncientBot 
+match
+
+ru\metaculture\protection\AutoAncientBot.java:719: error: incompatible 
+types: bad type in conditional expression
+         BlockPos var4 = this.O0000000O0OOO0 == null ? this.O00000000(var3) : this.O0000000O0OOO0;
+                                                                     ^
+    void cannot be converted to BlockPos
+
+ru\metaculture\protection\AutoAncientBot.java:770: error: incompatible 
+types: Object cannot be converted to BlockPos
+         boolean var3 = !O0000000000.world.getBlockState(blockPos).isOf(Blocks.ANCIENT_DEBRIS);
+                                                         ^
+
+ru\metaculture\protection\AutoAncientBot.java:772: error: no suitable 
+method found for O00000000(Object)
+            o00000O000OOOO.O00000000(blockPos);
+                          ^
+    method O0000000OOO000.O00000000(Setting...) is not applicable
+      (varargs mismatch; Object cannot be converted to Setting)
+    method O0000000OOO000.O00000000(Collection<Setting>) is not applicable
+      (argument mismatch; Object cannot be converted to Collection<Setting>)
+    method Module.O00000000(JsonObject) is not applicable
+      (argument mismatch; Object cannot be converted to JsonObject)
+    method Module.O00000000(boolean) is not applicable
+      (argument mismatch; Object cannot be converted to boolean)
+    method Module.O00000000(O0000000OO0OOO) is not applicable
+      (argument mismatch; Object cannot be converted to O0000000OO0OOO)
+    method Module.O00000000(O0000000OO0OOO...) is not applicable
+      (varargs mismatch; Object cannot be converted to O0000000OO0OOO)
+    method AncientXray.O00000000(O0000000O00O00) is not applicable
+      (argument mismatch; Object cannot be converted to O0000000O00O00)
+    method AncientXray.O00000000(BlockPos) is not applicable
+      (argument mismatch; Object cannot be converted to BlockPos)
+    method AncientXray.O00000000(O0000000O000OO) is not applicable
+      (argument mismatch; Object cannot be converted to O0000000O000OO)
+    method AncientXray.O00000000(O0000000OO0000) is not applicable
+      (argument mismatch; Object cannot be converted to O0000000OO0000)
+
+ru\metaculture\protection\AutoAncientBot.java:775: error: no suitable 
+method found for O000000000O(Object)
+         if (!var3 && !this.O0000000O0O0O.contains(blockPos) && this.O000000000O(blockPos)) {
+                                                                    ^
+    method AutoAncientBot.O000000000O(IBaritone) is not applicable
+      (argument mismatch; Object cannot be converted to IBaritone)
+    method AutoAncientBot.O000000000O(BlockPos) is not applicable
+      (argument mismatch; Object cannot be converted to BlockPos)
+
+ru\metaculture\protection\AutoAncientBot.java:776: error: cannot find 
+symbol
+            this.O0000000O0O0O.add(blockPos.toImmutable());
+                                           ^
+  symbol:   method toImmutable()
+  location: variable blockPos of type Object
+
+ru\metaculture\protection\AutoAncientBot.java:777: error: no suitable 
+method found for O00000000(Object)
+            o00000O000OOOO.O00000000(blockPos);
+                          ^
+    method O0000000OOO000.O00000000(Setting...) is not applicable
+      (varargs mismatch; Object cannot be converted to Setting)
+    method O0000000OOO000.O00000000(Collection<Setting>) is not applicable
+      (argument mismatch; Object cannot be converted to Collection<Setting>)
+    method Module.O00000000(JsonObject) is not applicable
+      (argument mismatch; Object cannot be converted to JsonObject)
+    method Module.O00000000(boolean) is not applicable
+      (argument mismatch; Object cannot be converted to boolean)
+    method Module.O00000000(O0000000OO0OOO) is not applicable
+      (argument mismatch; Object cannot be converted to O0000000OO0OOO)
+    method Module.O00000000(O0000000OO0OOO...) is not applicable
+      (varargs mismatch; Object cannot be converted to O0000000OO0OOO)
+    method AncientXray.O00000000(O0000000O00O00) is not applicable
+      (argument mismatch; Object cannot be converted to O0000000O00O00)
+    method AncientXray.O00000000(BlockPos) is not applicable
+      (argument mismatch; Object cannot be converted to BlockPos)
+    method AncientXray.O00000000(O0000000O000OO) is not applicable
+      (argument mismatch; Object cannot be converted to O0000000O000OO)
+    method AncientXray.O00000000(O0000000OO0000) is not applicable
+      (argument mismatch; Object cannot be converted to O0000000OO0000)
+
+ru\metaculture\protection\AutoAncientBot.java:778: error: cannot find 
+symbol
+            this.O000000000("Пропускаю обломок " + blockPos.toShortString() + " — замурован в лаве, не подойти");
+                                                           ^
+  symbol:   method toShortString()
+  location: variable blockPos of type Object
+
+ru\metaculture\protection\AutoAncientBot.java:2146: error: incompatible 
+types: List<Object> cannot be converted to List<Block>
+      this.O0000000OO00OO = (List<Block>)(var2 == null ? List.of() : new ArrayList<>(var2));
+                                         ^
+
+ru\metaculture\protection\AutoAncientBot.java:2148: error: incompatible 
+types: List<Object> cannot be converted to List<Item>
+      this.O0000000OO0O = (List<Item>)(var3 == null ? List.of() : new ArrayList<>(var3));
+                                      ^
+
+  ru\metaculture\protection\AutoAncientBot.java:772: error: no suitable 
+method found for O00000000(Object)
+              o00000O000OOOO.O00000000(blockPos);
+                            ^
+      method O0000000OOO000.O00000000(Setting...) is not applicable
+        (varargs mismatch; Object cannot be converted to Setting)
+      method O0000000OOO000.O00000000(Collection<Setting>) is not applicable
+        (argument mismatch; Object cannot be converted to Collection<Setting>)
+      method Module.O00000000(JsonObject) is not applicable
+        (argument mismatch; Object cannot be converted to JsonObject)
+      method Module.O00000000(boolean) is not applicable
+        (argument mismatch; Object cannot be converted to boolean)
+      method Module.O00000000(O0000000OO0OOO) is not applicable
+        (argument mismatch; Object cannot be converted to O0000000OO0OOO)
+      method Module.O00000000(O0000000OO0OOO...) is not applicable
+        (varargs mismatch; Object cannot be converted to O0000000OO0OOO)
+      method AncientXray.O00000000(O0000000O00O00) is not applicable
+        (argument mismatch; Object cannot be converted to O0000000O00O00)
+      method AncientXray.O00000000(BlockPos) is not applicable
+        (argument mismatch; Object cannot be converted to BlockPos)
+      method AncientXray.O00000000(O0000000O000OO) is not applicable
+        (argument mismatch; Object cannot be converted to O0000000O000OO)
+      method AncientXray.O00000000(O0000000OO0000) is not applicable
+        (argument mismatch; Object cannot be converted to O0000000OO0000)
+
+  ru\metaculture\protection\AutoAncientBot.java:775: error: no suitable 
+method found for O000000000O(Object)
+           if (!var3 && !this.O0000000O0O0O.contains(blockPos) && this.O000000000O(blockPos)) {
+                                                                      ^
+      method AutoAncientBot.O000000000O(IBaritone) is not applicable
+        (argument mismatch; Object cannot be converted to IBaritone)
+      method AutoAncientBot.O000000000O(BlockPos) is not applicable
+        (argument mismatch; Object cannot be converted to BlockPos)
+
+  ru\metaculture\protection\AutoAncientBot.java:777: error: no suitable 
+method found for O00000000(Object)
+              o00000O000OOOO.O00000000(blockPos);
+                            ^
+      method O0000000OOO000.O00000000(Setting...) is not applicable
+        (varargs mismatch; Object cannot be converted to Setting)
+      method O0000000OOO000.O00000000(Collection<Setting>) is not applicable
+        (argument mismatch; Object cannot be converted to Collection<Setting>)
+      method Module.O00000000(JsonObject) is not applicable
+        (argument mismatch; Object cannot be converted to JsonObject)
+      method Module.O00000000(boolean) is not applicable
+        (argument mismatch; Object cannot be converted to boolean)
+      method Module.O00000000(O0000000OO0OOO) is not applicable
+        (argument mismatch; Object cannot be converted to O0000000OO0OOO)
+      method Module.O00000000(O0000000OO0OOO...) is not applicable
+        (varargs mismatch; Object cannot be converted to O0000000OO0OOO)
+      method AncientXray.O00000000(O0000000O00O00) is not applicable
+        (argument mismatch; Object cannot be converted to O0000000O00O00)
+      method AncientXray.O00000000(BlockPos) is not applicable
+        (argument mismatch; Object cannot be converted to BlockPos)
+      method AncientXray.O00000000(O0000000O000OO) is not applicable
+        (argument mismatch; Object cannot be converted to O0000000O000OO)
+      method AncientXray.O00000000(O0000000OO0000) is not applicable
+        (argument mismatch; Object cannot be converted to O0000000OO0000)
+
+  ru\metaculture\protection\AutoAncientBot.java:776: error: cannot find 
+symbol
+              this.O0000000O0O0O.add(blockPos.toImmutable());
+                                             ^
+    symbol:   method toImmutable()
+    location: variable blockPos of type Object
+
+  ru\metaculture\protection\AutoAncientBot.java:778: error: cannot find 
+symbol
+              this.O000000000("Пропускаю обломок " + blockPos.toShortString() + " — замурован в лаве, не подойти");
+                                                             ^
+    symbol:   method toShortString()
+    location: variable blockPos of type Object
+
+  ru\metaculture\protection\AutoAncientBot.java:719: error: reference to 
+O00000000 is ambiguous
+           BlockPos var4 = this.O0000000O0OOO0 == null ? this.O00000000(var3) : this.O0000000O0OOO0;
+                                                             ^
+    both method O00000000(Collection<Setting>) in O0000000OOO000 and method O00000000(List<BlockPos>) in 
+AutoAncientBot match
+
+  ru\metaculture\protection\AutoAncientBot.java:719: error: incompatible 
+types: bad type in conditional expression
+           BlockPos var4 = this.O0000000O0OOO0 == null ? this.O00000000(var3) : this.O0000000O0OOO0;
+                                                                       ^
+      void cannot be converted to BlockPos
+
+  ru\metaculture\protection\AutoAncientBot.java:770: error: incompatible 
+types: Object cannot be converted to BlockPos
+           boolean var3 = !O0000000000.world.getBlockState(blockPos).isOf(Blocks.ANCIENT_DEBRIS);
+                                                           ^
+
+  ru\metaculture\protection\AutoAncientBot.java:2146: error: incompatible 
+types: List<Object> cannot be converted to List<Block>
+        this.O0000000OO00OO = (List<Block>)(var2 == null ? List.of() : new ArrayList<>(var2));
+                                           ^
+
+  ru\metaculture\protection\AutoAncientBot.java:2148: error: incompatible 
+types: List<Object> cannot be converted to List<Item>
+        this.O0000000OO0O = (List<Item>)(var3 == null ? List.of() : new ArrayList<>(var3));
+                                        ^

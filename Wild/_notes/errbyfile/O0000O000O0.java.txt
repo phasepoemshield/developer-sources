@@ -1,0 +1,105 @@
+﻿ru\metaculture\protection\O0000O000O0.java:326: error: reference to 
+O00000000 is ambiguous
+                        o0000O000O0O0x.O00000000(null);
+                                      ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0.java:418: error: reference to 
+O00000000 is ambiguous
+            o0000O000O0O0.O00000000(null);
+                         ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0.java:436: error: reference to 
+O00000000 is ambiguous
+               o0000O000O0O0.O00000000(null);
+                            ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0.java:451: error: reference to 
+O00000000 is ambiguous
+                  o0000O000O0O0.O00000000(null);
+                               ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0.java:3333: error: reference to 
+O00000000 is ambiguous
+                  o0000O000O0O0.O00000000(null);
+                               ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0.java:3399: error: reference to 
+O00000000 is ambiguous
+                           o0000O000O0O0x.O00000000(null);
+                                         ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0.java:3765: error: reference to 
+O00000000 is ambiguous
+                     o0000O000O0O0.O00000000(null);
+                                  ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O0.java:3902: error: incompatible 
+types: Object cannot be converted to W335
+         for (O0000O000O0.W335 var7 : var3) {
+                                      ^
+
+ru\metaculture\protection\O0000O000O0.java:4118: error: reference to 
+O00000000 is ambiguous
+         o0000O000O0O0.O00000000(null);
+                      ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0.java:326: error: reference to 
+O00000000 is ambiguous
+                          o0000O000O0O0x.O00000000(null);
+                                        ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0.java:418: error: reference to 
+O00000000 is ambiguous
+              o0000O000O0O0.O00000000(null);
+                           ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0.java:436: error: reference to 
+O00000000 is ambiguous
+                 o0000O000O0O0.O00000000(null);
+                              ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0.java:451: error: reference to 
+O00000000 is ambiguous
+                    o0000O000O0O0.O00000000(null);
+                                 ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0.java:3333: error: reference to 
+O00000000 is ambiguous
+                    o0000O000O0O0.O00000000(null);
+                                 ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0.java:3399: error: reference to 
+O00000000 is ambiguous
+                             o0000O000O0O0x.O00000000(null);
+                                           ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0.java:3765: error: reference to 
+O00000000 is ambiguous
+                       o0000O000O0O0.O00000000(null);
+                                    ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0.java:4118: error: reference to 
+O00000000 is ambiguous
+           o0000O000O0O0.O00000000(null);
+                        ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O0.java:3902: error: incompatible 
+types: Object cannot be converted to W335
+           for (O0000O000O0.W335 var7 : var3) {
+                                        ^

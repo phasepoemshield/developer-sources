@@ -1,0 +1,17 @@
+# Build / runtime artifacts
+.gradle/
+build/
+run/
+node_modules/
+.tmp-probe/
+.precompiled/
+.DS_Store
+
+# Omne runtime noise
+logs/
+*.log
+out.jar
+out.jar.bak*
+
+# GitHub hard limit (>100MB)
+Omne/jaba/lib/modules

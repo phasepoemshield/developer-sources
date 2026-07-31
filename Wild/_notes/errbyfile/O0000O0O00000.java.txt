@@ -1,0 +1,83 @@
+﻿ru\metaculture\protection\O0000O0O00000.java:9: error: incompatible 
+types: int cannot be converted to T
+         return (T)(int)Math.round(var8);
+                   ^
+  where T is a type-variable:
+    T extends Number declared in method <T>O00000000(T,T,double)
+
+ru\metaculture\protection\O0000O0O00000.java:11: error: incompatible 
+types: double cannot be converted to T
+         return (T)var8;
+                   ^
+  where T is a type-variable:
+    T extends Number declared in method <T>O00000000(T,T,double)
+
+ru\metaculture\protection\O0000O0O00000.java:13: error: incompatible 
+types: float cannot be converted to T
+         return (T)(float)var8;
+                   ^
+  where T is a type-variable:
+    T extends Number declared in method <T>O00000000(T,T,double)
+
+ru\metaculture\protection\O0000O0O00000.java:15: error: incompatible 
+types: long cannot be converted to T
+         return (T)Math.round(var8);
+                             ^
+  where T is a type-variable:
+    T extends Number declared in method <T>O00000000(T,T,double)
+
+ru\metaculture\protection\O0000O0O00000.java:17: error: incompatible 
+types: short cannot be converted to T
+         return (T)(short)Math.round(var8);
+                   ^
+  where T is a type-variable:
+    T extends Number declared in method <T>O00000000(T,T,double)
+
+ru\metaculture\protection\O0000O0O00000.java:19: error: incompatible 
+types: byte cannot be converted to T
+         return (T)(byte)Math.round(var8);
+                   ^
+  where T is a type-variable:
+    T extends Number declared in method <T>O00000000(T,T,double)
+
+  ru\metaculture\protection\O0000O0O00000.java:9: error: incompatible 
+types: int cannot be converted to T
+           return (T)(int)Math.round(var8);
+                     ^
+    where T is a type-variable:
+      T extends Number declared in method <T>O00000000(T,T,double)
+
+  ru\metaculture\protection\O0000O0O00000.java:11: error: incompatible 
+types: double cannot be converted to T
+           return (T)var8;
+                     ^
+    where T is a type-variable:
+      T extends Number declared in method <T>O00000000(T,T,double)
+
+  ru\metaculture\protection\O0000O0O00000.java:13: error: incompatible 
+types: float cannot be converted to T
+           return (T)(float)var8;
+                     ^
+    where T is a type-variable:
+      T extends Number declared in method <T>O00000000(T,T,double)
+
+  ru\metaculture\protection\O0000O0O00000.java:15: error: incompatible 
+types: long cannot be converted to T
+           return (T)Math.round(var8);
+                               ^
+    where T is a type-variable:
+      T extends Number declared in method <T>O00000000(T,T,double)
+
+  ru\metaculture\protection\O0000O0O00000.java:17: error: incompatible 
+types: short cannot be converted to T
+           return (T)(short)Math.round(var8);
+                     ^
+    where T is a type-variable:
+      T extends Number declared in method <T>O00000000(T,T,double)
+
+  ru\metaculture\protection\O0000O0O00000.java:19: error: incompatible 
+types: byte cannot be converted to T
+           return (T)(byte)Math.round(var8);
+                     ^
+    where T is a type-variable:
+      T extends Number declared in method <T>O00000000(T,T,double)

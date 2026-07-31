@@ -1,0 +1,25 @@
+﻿ru\metaculture\protection\O00000OO0O00O.java:16: error: <anonymous 
+ru.metaculture.protection.O00000OO0O00O$1> is not abstract and does not override abstract method 
+O00000000(O00000OO0O00) in W233
+      O00000OO0OO0 var3 = O00000000(o00000OO0O00, var2, new O00000OO0O0000.W233<Set<String>>() {
+                                                                                               ^
+
+ru\metaculture\protection\O00000OO0O00O.java:39: error: for-each not 
+applicable to expression type
+               for (Object var8 : var4) {
+                                  ^
+  required: array or java.lang.Iterable
+  found:    Object
+
+  ru\metaculture\protection\O00000OO0O00O.java:39: error: for-each not 
+applicable to expression type
+                 for (Object var8 : var4) {
+                                    ^
+    required: array or java.lang.Iterable
+    found:    Object
+
+  ru\metaculture\protection\O00000OO0O00O.java:16: error: <anonymous 
+ru.metaculture.protection.O00000OO0O00O$1> is not abstract and does not override abstract method 
+O00000000(O00000OO0O00) in W233
+        O00000OO0OO0 var3 = O00000000(o00000OO0O00, var2, new O00000OO0O0000.W233<Set<String>>() {
+                                                                                                 ^

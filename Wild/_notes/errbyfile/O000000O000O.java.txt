@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\O000000O000O.java:193: error: incompatible 
+types: Object cannot be converted to String
+            for (String var26 : var2) {
+                                ^
+
+  ru\metaculture\protection\O000000O000O.java:193: error: incompatible 
+types: Object cannot be converted to String
+              for (String var26 : var2) {
+                                  ^

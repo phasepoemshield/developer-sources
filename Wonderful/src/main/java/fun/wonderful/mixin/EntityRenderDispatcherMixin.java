@@ -1,0 +1,27 @@
+package fun.wonderful.mixin;
+
+import fun.wonderful.api.storages.implement.helpertstorages.enumvar.ModuleClass;
+import fun.wonderful.client.modules.impl.render.Removals;
+import net.minecraft.client.render.entity.state.EntityRenderState;
+import net.minecraft.world.WorldView;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+@Mixin(value={EntityRenderDispatcher.class})
+public class EntityRenderDispatcherMixin {
+    @Inject(method={"renderShadow"}, at={@At(value="HEAD")}, cancellable=true)
+    private static void wonderful$renderShadow(MatrixStack matrices, VertexConsumerProvider vertexConsumers, EntityRenderState renderState, float opacity, float tickDelta, WorldView world, float radius, CallbackInfo ci) {
+        if (ModuleClass.INSTANCE == null) {
+            return;
+        }
+        Removals removals = ModuleClass.removals;
+        if (removals != null && removals.isShadowsDisabled()) {
+            ci.cancel();
+        }
+    }
+}

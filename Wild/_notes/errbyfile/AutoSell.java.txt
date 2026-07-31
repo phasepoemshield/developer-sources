@@ -1,0 +1,19 @@
+﻿ru\metaculture\protection\AutoSell.java:96: error: method does not 
+override or implement a method from a supertype
+   @Override
+   ^
+
+ru\metaculture\protection\AutoSell.java:126: error: method does not 
+override or implement a method from a supertype
+   @Override
+   ^
+
+  ru\metaculture\protection\AutoSell.java:96: error: method does not 
+override or implement a method from a supertype
+     @Override
+     ^
+
+  ru\metaculture\protection\AutoSell.java:126: error: method does not 
+override or implement a method from a supertype
+     @Override
+     ^

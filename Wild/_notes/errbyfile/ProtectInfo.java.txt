@@ -1,0 +1,31 @@
+﻿ru\metaculture\protection\ProtectInfo.java:351: error: incompatible 
+types: Object cannot be converted to String
+         for (String var6 : var4) {
+                            ^
+
+ru\metaculture\protection\ProtectInfo.java:504: error: 'void' type not 
+allowed here
+         return new ProtectInfo.W186(var4, O00000000(var4), true);
+                                                    ^
+
+ru\metaculture\protection\ProtectInfo.java:504: error: reference to 
+O00000000 is ambiguous
+         return new ProtectInfo.W186(var4, O00000000(var4), true);
+                                           ^
+  both method O00000000(Collection<Setting>) in O0000000OOO000 and method O00000000(List<W187>) in ProtectInfo match
+
+  ru\metaculture\protection\ProtectInfo.java:504: error: reference to 
+O00000000 is ambiguous
+           return new ProtectInfo.W186(var4, O00000000(var4), true);
+                                             ^
+    both method O00000000(Collection<Setting>) in O0000000OOO000 and method O00000000(List<W187>) in ProtectInfo match
+
+  ru\metaculture\protection\ProtectInfo.java:504: error: 'void' type not 
+allowed here
+           return new ProtectInfo.W186(var4, O00000000(var4), true);
+                                                      ^
+
+  ru\metaculture\protection\ProtectInfo.java:351: error: incompatible 
+types: Object cannot be converted to String
+           for (String var6 : var4) {
+                              ^

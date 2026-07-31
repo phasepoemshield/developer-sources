@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\O00000OO0OOO.java:78: error: incompatible 
+types: Object cannot be converted to W246
+         for (O00000OO0OOO.W246 var11 : var4) {
+                                        ^
+
+  ru\metaculture\protection\O00000OO0OOO.java:78: error: incompatible 
+types: Object cannot be converted to W246
+           for (O00000OO0OOO.W246 var11 : var4) {
+                                          ^

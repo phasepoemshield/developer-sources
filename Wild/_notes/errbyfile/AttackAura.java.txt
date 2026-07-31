@@ -1,0 +1,43 @@
+﻿ru\metaculture\protection\AttackAura.java:998: error: reference to 
+O00000000 is ambiguous
+         float var1 = O00000000(null) + O000000000O0.O0000000000() + O00000000O0OOO.O0000000000() + 2.0F;
+                      ^
+  both method O00000000(O0000000O0O00) in AttackAura and method O00000000(BlockPos) in AttackAura match
+
+ru\metaculture\protection\AttackAura.java:998: error: 'void' type not 
+allowed here
+         float var1 = O00000000(null) + O000000000O0.O0000000000() + O00000000O0OOO.O0000000000() + 2.0F;
+                               ^
+
+ru\metaculture\protection\AttackAura.java:999: error: reference to 
+O00000000 is ambiguous
+         double var2 = O00000000(null) + O000000000O0.O0000000000() + 1.5;
+                       ^
+  both method O00000000(O0000000O0O00) in AttackAura and method O00000000(BlockPos) in AttackAura match
+
+ru\metaculture\protection\AttackAura.java:999: error: 'void' type not 
+allowed here
+         double var2 = O00000000(null) + O000000000O0.O0000000000() + 1.5;
+                                ^
+
+  ru\metaculture\protection\AttackAura.java:998: error: reference to 
+O00000000 is ambiguous
+           float var1 = O00000000(null) + O000000000O0.O0000000000() + O00000000O0OOO.O0000000000() + 2.0F;
+                        ^
+    both method O00000000(O0000000O0O00) in AttackAura and method O00000000(BlockPos) in AttackAura match
+
+  ru\metaculture\protection\AttackAura.java:999: error: reference to 
+O00000000 is ambiguous
+           double var2 = O00000000(null) + O000000000O0.O0000000000() + 1.5;
+                         ^
+    both method O00000000(O0000000O0O00) in AttackAura and method O00000000(BlockPos) in AttackAura match
+
+  ru\metaculture\protection\AttackAura.java:998: error: 'void' type not 
+allowed here
+           float var1 = O00000000(null) + O000000000O0.O0000000000() + O00000000O0OOO.O0000000000() + 2.0F;
+                                 ^
+
+  ru\metaculture\protection\AttackAura.java:999: error: 'void' type not 
+allowed here
+           double var2 = O00000000(null) + O000000000O0.O0000000000() + 1.5;
+                                  ^
