@@ -1,0 +1,52 @@
+export OPENROUTER_API_KEY=***REDACTED***
+# Added by Antigravity
+export PATH="/Users/tim/.antigravity/antigravity/bin:$PATH"
+
+export PATH="$HOME/.local/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+alias free-claude="~/free-claude.sh"
+
+
+# NPM global bin (added by Qwen Code installer)
+export PATH="$HOME/.npm-global/bin:$PATH"
+
+# opencode
+export PATH=/Users/tim/.opencode/bin:$PATH
+export OPENROUTER_API_KEY=***REDACTED***
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/tim/.lmstudio/bin"
+# End of LM Studio CLI section
+
+export CLOUDFLARE_ACCOUNT_ID=***REDACTED***
+export BAILIAN_CODING_PLAN_API_KEY=***REDACTED***
+export BAILIAN_CODING_PLAN_API_KEY=***REDACTED***
+
+# Added by Windsurf
+export PATH="/Users/tim/.codeium/windsurf/bin:$PATH"
+
+export PATH=$PATH:/Users/tim/.spicetify
+
+export VIP_J3GB_API_KEY=***REDACTED***
+export LEёTAIDO_ZIPDIFF_TOKEN=***REDACTED***
+
+
+
+
+
+
+
+
+
+# >>> grok installer >>>
+export PATH="$HOME/.grok/bin:$PATH"
+fpath=(~/.grok/completions/zsh $fpath)
+autoload -Uz compinit && compinit -C
+# <<< grok installer <<<

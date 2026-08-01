@@ -1,0 +1,27 @@
+# Project remotes snapshot
+
+## FluxVisuals
+origin	git@github.com:phasepoemshield/FluxVisuals-dev.git (fetch)
+origin	git@github.com:phasepoemshield/FluxVisuals-dev.git (push)
+## main...origin/main
+?? .claude/settings.local.json
+c2ce6d0 Remove dead cosmetics husks and unused fonts; document catalog cleanup rules.
+
+## figmapro
+origin	https://github.com/phasepoemshield/figmapro.git (fetch)
+origin	https://github.com/phasepoemshield/figmapro.git (push)
+## main...origin/main
+c52c863 Initial Figmapro project scaffold
+
+## CodexPro
+origin	https://github.com/rebel0789/codexpro.git (fetch)
+origin	https://github.com/rebel0789/codexpro.git (push)
+## main...origin/main [behind 61]
+1480790 harden handoff loop automation (#31)
+
+## developer-sources
+origin	https://github.com/phasepoemshield/developer-sources.git (fetch)
+origin	https://github.com/phasepoemshield/developer-sources.git (push)
+## main
+?? handoff-tim-profile-2026-08-01/
+c7753fd0 Slim archive: drop dumps, jars, mirrors, and caches.
