@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\RenderManager.java:1843: error: incompatible 
+types: boolean cannot be converted to int
+            int var2 = true;
+                       ^
+
+  ru\metaculture\protection\RenderManager.java:1843: error: incompatible 
+types: boolean cannot be converted to int
+              int var2 = true;
+                         ^

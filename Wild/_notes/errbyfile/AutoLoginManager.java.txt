@@ -1,0 +1,37 @@
+﻿ru\metaculture\protection\AutoLoginManager.java:29: error: cannot find 
+symbol
+               .filter(o00000000 -> o00000000.id().equals(var2))
+                                             ^
+  symbol:   method id()
+  location: variable o00000000 of type Object
+
+ru\metaculture\protection\AutoLoginManager.java:33: error: cannot find 
+symbol
+                     .filter(o00000000 -> o00000000.lastUsedAt() > 0L)
+                                                   ^
+  symbol:   method lastUsedAt()
+  location: variable o00000000 of type Object
+
+ru\metaculture\protection\AutoLoginManager.java:31: error: incompatible 
+types: Object cannot be converted to W246
+               .orElseGet(
+                         ^
+
+  ru\metaculture\protection\AutoLoginManager.java:29: error: cannot find 
+symbol
+                 .filter(o00000000 -> o00000000.id().equals(var2))
+                                               ^
+    symbol:   method id()
+    location: variable o00000000 of type Object
+
+  ru\metaculture\protection\AutoLoginManager.java:33: error: cannot find 
+symbol
+                       .filter(o00000000 -> o00000000.lastUsedAt() > 0L)
+                                                     ^
+    symbol:   method lastUsedAt()
+    location: variable o00000000 of type Object
+
+  ru\metaculture\protection\AutoLoginManager.java:31: error: incompatible 
+types: Object cannot be converted to W246
+                 .orElseGet(
+                           ^

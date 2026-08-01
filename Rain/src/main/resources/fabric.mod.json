@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "rain-visuals",
+  "version": "${version}",
+  "name": "Rain Visuals",
+  "description": "Эталон визуальных модов.",
+  "authors": ["ra1nderyy"],
+  "license": "CC0-1.0",
+  "icon": "assets/rain/icon.jpg",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "kotakbaz.rain.RainClientEntrypoint"
+    ]
+  },
+  "mixins": ["rain.mixins.json", "rain_guard.mixins.json"],
+  "accessWidener": "rain.accesswidener",
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "~1.21.8",
+    "java": ">=21",
+    "fabric-api": "*",
+    "fabric-language-kotlin": "*"
+  }
+}

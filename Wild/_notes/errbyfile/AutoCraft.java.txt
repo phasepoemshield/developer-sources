@@ -1,0 +1,47 @@
+﻿ru\metaculture\protection\AutoCraft.java:354: error: bad operand types 
+for binary operator '+'
+            var2.put(var6, var2.getOrDefault(var6, 0) + 1);
+                                                      ^
+  first type:  Object
+  second type: int
+
+ru\metaculture\protection\AutoCraft.java:358: error: incompatible types: 
+Object cannot be converted to Entry
+      for (Entry var8 : var2.entrySet()) {
+                                     ^
+
+ru\metaculture\protection\AutoCraft.java:387: error: bad operand types 
+for binary operator '+'
+            var2.put(var7, var2.getOrDefault(var7, 0) + 1);
+                                                      ^
+  first type:  Object
+  second type: int
+
+ru\metaculture\protection\AutoCraft.java:397: error: incompatible types: 
+Object cannot be converted to Entry
+      for (Entry var11 : var2.entrySet()) {
+                                      ^
+
+  ru\metaculture\protection\AutoCraft.java:358: error: incompatible 
+types: Object cannot be converted to Entry
+        for (Entry var8 : var2.entrySet()) {
+                                       ^
+
+  ru\metaculture\protection\AutoCraft.java:397: error: incompatible 
+types: Object cannot be converted to Entry
+        for (Entry var11 : var2.entrySet()) {
+                                        ^
+
+  ru\metaculture\protection\AutoCraft.java:354: error: bad operand types 
+for binary operator '+'
+              var2.put(var6, var2.getOrDefault(var6, 0) + 1);
+                                                        ^
+    first type:  Object
+    second type: int
+
+  ru\metaculture\protection\AutoCraft.java:387: error: bad operand types 
+for binary operator '+'
+              var2.put(var7, var2.getOrDefault(var7, 0) + 1);
+                                                        ^
+    first type:  Object
+    second type: int

@@ -1,0 +1,11 @@
+﻿ru\metaculture\protection\O0000O00O00OOO.java:170: error: <anonymous 
+ru.metaculture.protection.O0000O00O00OOO$1> is not abstract and does not override abstract method 
+initChannel(SocketChannel) in ChannelInitializer
+               .handler(new ChannelInitializer<SocketChannel>() {
+                                                                ^
+
+  ru\metaculture\protection\O0000O00O00OOO.java:170: error: <anonymous 
+ru.metaculture.protection.O0000O00O00OOO$1> is not abstract and does not override abstract method 
+initChannel(SocketChannel) in ChannelInitializer
+                 .handler(new ChannelInitializer<SocketChannel>() {
+                                                                  ^

@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\WatermarkHud.java:100: error: incompatible 
+types: Object cannot be converted to W164
+            for (WatermarkHud.W164 var22 : var18) {
+                                           ^
+
+  ru\metaculture\protection\WatermarkHud.java:100: error: incompatible 
+types: Object cannot be converted to W164
+              for (WatermarkHud.W164 var22 : var18) {
+                                             ^

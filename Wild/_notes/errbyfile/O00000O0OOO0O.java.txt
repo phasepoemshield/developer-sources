@@ -1,0 +1,21 @@
+﻿ru\metaculture\protection\O00000O0OOO0O.java:129: error: reference to 
+O00000000 is ambiguous
+            o00000O0OOO00O.O00000000(null);
+                          ^
+  both method O00000000(String) in O00000O0OOO00O and method O00000000(O00000O0OOOO) in O00000O0OOO00O match
+
+ru\metaculture\protection\O00000O0OOO0O.java:247: error: incompatible 
+types: Object cannot be converted to File
+         for (File var3 : var1) {
+                          ^
+
+  ru\metaculture\protection\O00000O0OOO0O.java:129: error: reference to 
+O00000000 is ambiguous
+              o00000O0OOO00O.O00000000(null);
+                            ^
+    both method O00000000(String) in O00000O0OOO00O and method O00000000(O00000O0OOOO) in O00000O0OOO00O match
+
+  ru\metaculture\protection\O00000O0OOO0O.java:247: error: incompatible 
+types: Object cannot be converted to File
+           for (File var3 : var1) {
+                            ^

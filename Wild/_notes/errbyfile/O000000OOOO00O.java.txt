@@ -1,0 +1,29 @@
+﻿ru\metaculture\protection\O000000OOOO00O.java:160: error: cannot find 
+symbol
+            String var5 = ((RegistryEntry)var4.getKey()).getKey().map(registryKey -> 
+registryKey.getValue().toString()).orElse("");
+                                                                                                ^
+  symbol:   method getValue()
+  location: variable registryKey of type Object
+
+ru\metaculture\protection\O000000OOOO00O.java:160: error: incompatible 
+types: Object cannot be converted to String
+            String var5 = ((RegistryEntry)var4.getKey()).getKey().map(registryKey -> 
+registryKey.getValue().toString()).orElse("");
+                                                                                                                       
+       ^
+
+  ru\metaculture\protection\O000000OOOO00O.java:160: error: cannot find 
+symbol
+              String var5 = ((RegistryEntry)var4.getKey()).getKey().map(registryKey -> 
+registryKey.getValue().toString()).orElse("");
+                                                                                                  ^
+    symbol:   method getValue()
+    location: variable registryKey of type Object
+
+  ru\metaculture\protection\O000000OOOO00O.java:160: error: incompatible 
+types: Object cannot be converted to String
+              String var5 = ((RegistryEntry)var4.getKey()).getKey().map(registryKey -> 
+registryKey.getValue().toString()).orElse("");
+                                                                                                                       
+         ^

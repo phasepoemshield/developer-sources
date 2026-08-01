@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\O000000OOOO.java:267: error: incompatible 
+types: Object cannot be converted to RegistryEntry<Enchantment>
+            var4.getOptional(var7).ifPresent(reference -> var5.add(reference, var8));
+                                                                   ^
+
+  ru\metaculture\protection\O000000OOOO.java:267: error: incompatible 
+types: Object cannot be converted to RegistryEntry<Enchantment>
+              var4.getOptional(var7).ifPresent(reference -> var5.add(reference, var8));
+                                                                     ^

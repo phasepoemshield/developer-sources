@@ -1,0 +1,25 @@
+﻿ru\metaculture\protection\Predictions.java:511: error: 'void' type not 
+allowed here
+            return new Predictions.W185(string, this.O00000000(var17), var16, this.O00000000(var19), var37, var18, 
+var20, var19, string2, identifier, bl2);
+                                                              ^
+
+ru\metaculture\protection\Predictions.java:511: error: reference to 
+O00000000 is ambiguous
+            return new Predictions.W185(string, this.O00000000(var17), var16, this.O00000000(var19), var37, var18, 
+var20, var19, string2, identifier, bl2);
+                                                    ^
+  both method O00000000(Collection<Setting>) in O0000000OOO000 and method O00000000(List<Vec3d>) in Predictions match
+
+  ru\metaculture\protection\Predictions.java:511: error: reference to 
+O00000000 is ambiguous
+              return new Predictions.W185(string, this.O00000000(var17), var16, this.O00000000(var19), var37, var18, 
+var20, var19, string2, identifier, bl2);
+                                                      ^
+    both method O00000000(Collection<Setting>) in O0000000OOO000 and method O00000000(List<Vec3d>) in Predictions match
+
+  ru\metaculture\protection\Predictions.java:511: error: 'void' type not 
+allowed here
+              return new Predictions.W185(string, this.O00000000(var17), var16, this.O00000000(var19), var37, var18, 
+var20, var19, string2, identifier, bl2);
+                                                                ^

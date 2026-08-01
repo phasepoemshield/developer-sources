@@ -1,0 +1,19 @@
+﻿ru\metaculture\protection\AutoClan.java:121: error: incompatible types: 
+Object cannot be converted to PlayerListEntry
+         for (PlayerListEntry var6 : var3) {
+                                     ^
+
+ru\metaculture\protection\AutoClan.java:129: error: incompatible types: 
+Object cannot be converted to String
+         for (String var7 : var2) {
+                            ^
+
+  ru\metaculture\protection\AutoClan.java:121: error: incompatible types: 
+Object cannot be converted to PlayerListEntry
+           for (PlayerListEntry var6 : var3) {
+                                       ^
+
+  ru\metaculture\protection\AutoClan.java:129: error: incompatible types: 
+Object cannot be converted to String
+           for (String var7 : var2) {
+                              ^

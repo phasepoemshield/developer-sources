@@ -1,0 +1,5 @@
+accessWidener	v1	named
+accessible	method	net/minecraft/client/render/ProjectionMatrix2	getMatrix	(FF)Lorg/joml/Matrix4f;
+accessible	method	net/minecraft/client/render/GameRenderer	getFov	(Lnet/minecraft/client/render/Camera;FZ)F
+accessible	field	net/minecraft/client/gl/GlGpuBuffer	id	I
+accessible	method	net/minecraft/client/network/PlayerListEntry	texturesSupplier	(Lcom/mojang/authlib/GameProfile;)Ljava/util/function/Supplier;

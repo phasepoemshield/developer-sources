@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\O000000OOOO00.java:134: error: incompatible 
+types: Object cannot be converted to StatusEffectInstance
+            for (StatusEffectInstance var8 : var3) {
+                                             ^
+
+  ru\metaculture\protection\O000000OOOO00.java:134: error: incompatible 
+types: Object cannot be converted to StatusEffectInstance
+              for (StatusEffectInstance var8 : var3) {
+                                               ^

@@ -1,0 +1,53 @@
+﻿ru\metaculture\protection\ShaderSourceBuilder.java:59: error: 
+incompatible types: Object cannot be converted to O00000OOO0OO0O
+         for (O00000OOO0OO0O var15 : var7) {
+                                     ^
+
+ru\metaculture\protection\ShaderSourceBuilder.java:122: error: 
+incompatible types: Object cannot be converted to int
+            int var9 = var4.getOrDefault(var8, 0);
+                                        ^
+
+ru\metaculture\protection\ShaderSourceBuilder.java:213: error: 
+incompatible types: Object cannot be converted to Entry
+      for (Entry var6 : var2.entrySet()) {
+                                     ^
+
+ru\metaculture\protection\ShaderSourceBuilder.java:228: error: for-each 
+not applicable to expression type
+         for (String var9 : var3.getOrDefault(var16, List.of())) {
+                                             ^
+  required: array or java.lang.Iterable
+  found:    Object
+
+ru\metaculture\protection\ShaderSourceBuilder.java:242: error: 
+incompatible types: Object cannot be converted to O00000OOO0OO0O
+         for (O00000OOO0OO0O var19 : var15) {
+                                     ^
+
+  ru\metaculture\protection\ShaderSourceBuilder.java:228: error: for-each 
+not applicable to expression type
+           for (String var9 : var3.getOrDefault(var16, List.of())) {
+                                               ^
+    required: array or java.lang.Iterable
+    found:    Object
+
+  ru\metaculture\protection\ShaderSourceBuilder.java:59: error: 
+incompatible types: Object cannot be converted to O00000OOO0OO0O
+           for (O00000OOO0OO0O var15 : var7) {
+                                       ^
+
+  ru\metaculture\protection\ShaderSourceBuilder.java:122: error: 
+incompatible types: Object cannot be converted to int
+              int var9 = var4.getOrDefault(var8, 0);
+                                          ^
+
+  ru\metaculture\protection\ShaderSourceBuilder.java:213: error: 
+incompatible types: Object cannot be converted to Entry
+        for (Entry var6 : var2.entrySet()) {
+                                       ^
+
+  ru\metaculture\protection\ShaderSourceBuilder.java:242: error: 
+incompatible types: Object cannot be converted to O00000OOO0OO0O
+           for (O00000OOO0OO0O var19 : var15) {
+                                       ^

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "zenith",
+  "version": "1.0-SNAPSHOT",
+  "name": "ZenithDLC",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/zenith/icons/avatar.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "zenith.zov.init.ZenithInitializer"
+    ]
+  },
+  "mixins": [
+    "zenithdlc.mixins.json"
+  ],
+  "accessWidener": "zenith.accesswidener",
+
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "fabric": "*",
+    "minecraft": "1.21.4"
+  }
+}

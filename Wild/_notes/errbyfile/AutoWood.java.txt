@@ -1,0 +1,19 @@
+﻿ru\metaculture\protection\AutoWood.java:276: error: incompatible types: 
+Object cannot be converted to BlockPos
+               for (BlockPos var11 : var8) {
+                                     ^
+
+ru\metaculture\protection\AutoWood.java:330: error: incompatible types: 
+Object cannot be converted to BlockPos
+            for (BlockPos var5 : var3) {
+                                 ^
+
+  ru\metaculture\protection\AutoWood.java:276: error: incompatible types: 
+Object cannot be converted to BlockPos
+                 for (BlockPos var11 : var8) {
+                                       ^
+
+  ru\metaculture\protection\AutoWood.java:330: error: incompatible types: 
+Object cannot be converted to BlockPos
+              for (BlockPos var5 : var3) {
+                                   ^

@@ -1,0 +1,41 @@
+﻿ru\metaculture\protection\O000000O00.java:67: error: incompatible types: 
+Object cannot be converted to String
+         for (String var4 : var1) {
+                            ^
+
+ru\metaculture\protection\O000000O00.java:76: error: incompatible types: 
+Object cannot be converted to String
+            int var2x = O0000000000000(string);
+                                       ^
+
+ru\metaculture\protection\O000000O00.java:77: error: incompatible types: 
+Object cannot be converted to String
+            int var3 = O0000000000000(string2);
+                                      ^
+
+ru\metaculture\protection\O000000O00.java:78: error: cannot find symbol
+            return var2x != var3 ? Integer.compare(var2x, var3) : string.compareToIgnoreCase(string2);
+                                                                        ^
+  symbol:   method compareToIgnoreCase(Object)
+  location: variable string of type Object
+
+  ru\metaculture\protection\O000000O00.java:78: error: cannot find symbol
+              return var2x != var3 ? Integer.compare(var2x, var3) : string.compareToIgnoreCase(string2);
+                                                                          ^
+    symbol:   method compareToIgnoreCase(Object)
+    location: variable string of type Object
+
+  ru\metaculture\protection\O000000O00.java:67: error: incompatible 
+types: Object cannot be converted to String
+           for (String var4 : var1) {
+                              ^
+
+  ru\metaculture\protection\O000000O00.java:76: error: incompatible 
+types: Object cannot be converted to String
+              int var2x = O0000000000000(string);
+                                         ^
+
+  ru\metaculture\protection\O000000O00.java:77: error: incompatible 
+types: Object cannot be converted to String
+              int var3 = O0000000000000(string2);
+                                        ^

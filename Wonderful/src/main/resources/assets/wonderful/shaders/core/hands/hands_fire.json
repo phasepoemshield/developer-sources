@@ -1,0 +1,25 @@
+{
+  "vertex": "wonderful:core/hands/hands_fire",
+  "fragment": "wonderful:core/hands/hands_fire",
+  "samplers": [
+    { "name": "Sampler0" },
+    { "name": "Sampler1" },
+    { "name": "Sampler2" }
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0] },
+    { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0] },
+    { "name": "screenSize", "type": "float", "count": 2, "values": [1920.0, 1080.0] },
+    { "name": "time", "type": "float", "count": 1, "values": [0.0] },
+    { "name": "baseColor", "type": "float", "count": 4, "values": [1.0, 0.55, 0.2, 1.0] },
+    { "name": "motionVec", "type": "float", "count": 2, "values": [0.0, 0.0] },
+    { "name": "effectAlpha", "type": "float", "count": 1, "values": [0.75] },
+    { "name": "flameSpeed", "type": "float", "count": 1, "values": [1.2] },
+    { "name": "flameRadius", "type": "float", "count": 1, "values": [9.0] },
+    { "name": "driftScale", "type": "float", "count": 1, "values": [1.1] },
+    { "name": "trailDecay", "type": "float", "count": 1, "values": [0.88] },
+    { "name": "trailStrength", "type": "float", "count": 1, "values": [0.9] },
+    { "name": "fireOnItem", "type": "float", "count": 1, "values": [0.0] },
+    { "name": "composeMode", "type": "float", "count": 1, "values": [0.0] }
+  ]
+}

@@ -1,0 +1,10 @@
+﻿ru\metaculture\protection\Hands.java:75: error: method does not override 
+or implement a method from a supertype
+   @Override
+   ^
+
+  ru\metaculture\protection\Hands.java:75: error: method does not 
+override or implement a method from a supertype
+     @Override
+     ^
+  Note: Some input files use unchecked or unsafe operations.

@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\O0000O000O0O0O.java:1409: error: incompatible 
+types: Object cannot be converted to O00000O0OOO00O
+         for (O00000O0OOO00O var5 : var1) {
+                                    ^
+
+  ru\metaculture\protection\O0000O000O0O0O.java:1409: error: incompatible 
+types: Object cannot be converted to O00000O0OOO00O
+           for (O00000O0OOO00O var5 : var1) {
+                                      ^

@@ -1,0 +1,21 @@
+﻿ru\metaculture\protection\O000000O0O000.java:155: error: no suitable 
+method found for O00000000(Vec3d,Object)
+               var12.sort(Comparator.comparing(vec3d2 -> O00000000(var14, vec3d2)));
+                                                         ^
+    method O000000O0O000.O00000000(ClientPlayerEntity,Vec3d) is not applicable
+      (argument mismatch; Vec3d cannot be converted to ClientPlayerEntity)
+    method O000000O0O000.O00000000(Vec3d,Vec3d) is not applicable
+      (argument mismatch; Object cannot be converted to Vec3d)
+    method O000000O0O000.O00000000(Box,boolean) is not applicable
+      (argument mismatch; Vec3d cannot be converted to Box)
+
+  ru\metaculture\protection\O000000O0O000.java:155: error: no suitable 
+method found for O00000000(Vec3d,Object)
+                 var12.sort(Comparator.comparing(vec3d2 -> O00000000(var14, vec3d2)));
+                                                           ^
+      method O000000O0O000.O00000000(ClientPlayerEntity,Vec3d) is not applicable
+        (argument mismatch; Vec3d cannot be converted to ClientPlayerEntity)
+      method O000000O0O000.O00000000(Vec3d,Vec3d) is not applicable
+        (argument mismatch; Object cannot be converted to Vec3d)
+      method O000000O0O000.O00000000(Box,boolean) is not applicable
+        (argument mismatch; Vec3d cannot be converted to Box)

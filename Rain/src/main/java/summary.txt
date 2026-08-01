@@ -1,0 +1,161 @@
+Summary for /Users/tim/Downloads/90a79f85 copy/rain-yarn.jar
+Decompiled with CFR 0.152
+
+
+kotakbaz.rain.client.render.texture.utils.gif.gif.b_0
+----------------------------
+
+getImageTypes(int )
+  Unable to fully structure code
+
+
+kotakbaz.rain.module.modules.hud.MediaPlayerInfoModule
+----------------------------
+
+renderHud(boolean )
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.render.main.vertex.format.uploader.A
+----------------------------
+
+<init>()
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.render.main.vertex.format.uploader.b_0
+----------------------------
+
+createFormatUploader()
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.listener.listeners.InputListener
+----------------------------
+
+onKey(kotakbaz.rain.event.events.KeyEvent )
+  Unable to fully structure code
+
+
+kotakbaz.rain.ui.menu.PointsCategoryComponent
+----------------------------
+
+appendKeyName(kotakbaz.rain.ui.menu.PointsCategoryComponent$InputField java.lang.String )
+  Unable to fully structure code
+isAllowedWaypointNameKey(java.lang.String )
+  Unable to fully structure code
+filteredWayPoints()
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+kotakbaz.rain.module.modules.player.FuntimeHelperModule
+----------------------------
+
+onRender3D(kotakbaz.rain.event.events.Render3DEvent )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+kotakbaz.rain.module.modules.player.CommandFixModule
+----------------------------
+
+translateCommandToken(java.lang.String )
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.liteapi.HolyWorldFeatureControl
+----------------------------
+
+receive(java.lang.String )
+  Unable to fully structure code
+  Could not resolve type clashes
+normalizeFeature(java.lang.String )
+  Unable to fully structure code
+
+
+kotakbaz.rain.ui.menu.MenuScreen
+----------------------------
+
+render(int int float )
+  Unable to fully structure code
+renderAvatarPopupGuiScaleSetting(float float float kotakbaz.rain.ui.menu.MenuScreen$AvatarPopupMetrics float int int )
+  Unable to fully structure code
+renderAvatarPopupHudScaleSetting(float float float kotakbaz.rain.ui.menu.MenuScreen$AvatarPopupMetrics float int int )
+  Unable to fully structure code
+
+
+kotakbaz.rain.module.modules.player.AutoEatModule
+----------------------------
+
+maintainEating(net.minecraft.client.network.ClientPlayerEntity )
+  Unable to fully structure code
+
+
+kotakbaz.rain.module.modules.render.WayPointModule
+----------------------------
+
+extractEventName(java.lang.String java.lang.String )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+kotakbaz.rain.module.modules.render.ZoomModule
+----------------------------
+
+updateState()
+  Unable to fully structure code
+
+
+kotakbaz.rain.config.ConfigManager
+----------------------------
+
+setSelectedConfigName(java.lang.String )
+  Unable to fully structure code
+readAuthor(java.nio.file.Path )
+  Unable to fully structure code
+serializeSettingValue(kotakbaz.rain.module.setting.Setting )
+  Ignored method signature, as it can't be verified against descriptor
+applySettingValue(kotakbaz.rain.module.setting.Setting com.google.gson.JsonElement )
+  Ignored method signature, as it can't be verified against descriptor
+readSelectedConfigName()
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+kotakbaz.rain.ui.menu.CategoryComponent
+----------------------------
+
+filteredModules()
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.waypoint.WayPointManager
+----------------------------
+
+sanitizeName(java.lang.String )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+kotakbaz.rain.client.util.other.KeyMappings
+----------------------------
+
+formatKeyLabel(java.lang.String )
+  Unable to fully structure code
+
+
+kotakbaz.rain.ui.menu.settings.ModuleSettingFactory
+----------------------------
+
+create(kotakbaz.rain.module.setting.Setting )
+  Ignored method signature, as it can't be verified against descriptor
+
+
+kotakbaz.rain.ui.menu.FriendsCategoryComponent
+----------------------------
+
+isAllowedFriendNameKey(java.lang.String )
+  Unable to fully structure code
+isValidFriendName(java.lang.String )
+  Unable to fully structure code

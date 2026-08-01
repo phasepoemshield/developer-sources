@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\WardenFarm.java:668: error: double cannot be 
+dereferenced
+      if (O0000000000.player != null && o0000000O000OO.O000000000000() == O0000000O000OO.W24.RECEIVE) {
+                                                                                        ^
+
+  ru\metaculture\protection\WardenFarm.java:668: error: double cannot be 
+dereferenced
+        if (O0000000000.player != null && o0000000O000OO.O000000000000() == O0000000O000OO.W24.RECEIVE) {
+                                                                                          ^

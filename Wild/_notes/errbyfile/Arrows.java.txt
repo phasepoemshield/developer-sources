@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\Arrows.java:94: error: incompatible types: 
+Object cannot be converted to String
+            for (String var21 : var16) {
+                                ^
+
+  ru\metaculture\protection\Arrows.java:94: error: incompatible types: 
+Object cannot be converted to String
+              for (String var21 : var16) {
+                                  ^

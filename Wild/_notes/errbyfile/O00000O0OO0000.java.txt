@@ -1,0 +1,11 @@
+﻿ru\metaculture\protection\O00000O0OO0000.java:235: error: W193 is not 
+abstract and does not override abstract method 
+createParticle(SimpleParticleType,ClientWorld,double,double,double,double,double,double) in ParticleFactory
+   public static final class W193 implements ParticleFactory<SimpleParticleType> {
+                       ^
+
+  ru\metaculture\protection\O00000O0OO0000.java:235: error: W193 is not 
+abstract and does not override abstract method 
+createParticle(SimpleParticleType,ClientWorld,double,double,double,double,double,double) in ParticleFactory
+     public static final class W193 implements ParticleFactory<SimpleParticleType> {
+                         ^

@@ -1,0 +1,69 @@
+﻿org\wild\mixin\MixinLivingEntityRenderer.java:146: error: incompatible 
+types: EntityModel<LivingEntityRenderState> cannot be converted to PlayerEntityModel
+            if (livingEntityRenderState instanceof PlayerEntityRenderState var19 && entityModel instanceof 
+PlayerEntityModel var21) {
+                                                                                    ^
+
+org\wild\mixin\MixinLivingEntityRenderer.java:153: error: incompatible 
+types: EntityModel<LivingEntityRenderState> cannot be converted to PlayerEntityModel
+            if (livingEntityRenderState instanceof PlayerEntityRenderState var13 && entityModel instanceof 
+PlayerEntityModel var14) {
+                                                                                    ^
+
+org\wild\mixin\MixinLivingEntityRenderer.java:191: error: no suitable 
+method found for render(MatrixStack,VertexConsumerProvider,int,EntityRenderState,float,float)
+         featureRenderer.render(matrixStack, vertexConsumerProvider, i, entityRenderState, f, g);
+                        ^
+    method FeatureRenderer.<S>render(EntityModel<S>,Identifier,MatrixStack,VertexConsumerProvider,int,S,int) is not 
+applicable
+      (cannot infer type-variable(s) S
+        (actual and formal argument lists differ in length))
+    method FeatureRenderer.render(MatrixStack,VertexConsumerProvider,int,CAP#1,float,float) is not applicable
+      (argument mismatch; EntityRenderState cannot be converted to CAP#1)
+  where S is a type-variable:
+    S extends LivingEntityRenderState declared in method 
+<S>render(EntityModel<S>,Identifier,MatrixStack,VertexConsumerProvider,int,S,int)
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends EntityRenderState from capture of ?
+
+org\wild\mixin\MixinLivingEntityRenderer.java:217: error: incompatible 
+types: EntityModel<CAP#1> cannot be converted to PlayerEntityModel
+         if (!(this.model instanceof PlayerEntityModel var9)) {
+                   ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends EntityRenderState super: LivingEntityRenderState from capture of ? super LivingEntityRenderState
+
+  org\wild\mixin\MixinLivingEntityRenderer.java:191: error: no suitable 
+method found for render(MatrixStack,VertexConsumerProvider,int,EntityRenderState,float,float)
+           featureRenderer.render(matrixStack, vertexConsumerProvider, i, entityRenderState, f, g);
+                          ^
+      method FeatureRenderer.<S>render(EntityModel<S>,Identifier,MatrixStack,VertexConsumerProvider,int,S,int) is not 
+applicable
+        (cannot infer type-variable(s) S
+          (actual and formal argument lists differ in length))
+      method FeatureRenderer.render(MatrixStack,VertexConsumerProvider,int,CAP#1,float,float) is not applicable
+        (argument mismatch; EntityRenderState cannot be converted to CAP#1)
+    where S is a type-variable:
+      S extends LivingEntityRenderState declared in method 
+<S>render(EntityModel<S>,Identifier,MatrixStack,VertexConsumerProvider,int,S,int)
+    where CAP#1 is a fresh type-variable:
+      CAP#1 extends EntityRenderState from capture of ?
+
+  org\wild\mixin\MixinLivingEntityRenderer.java:146: error: incompatible 
+types: EntityModel<LivingEntityRenderState> cannot be converted to PlayerEntityModel
+              if (livingEntityRenderState instanceof PlayerEntityRenderState var19 && entityModel instanceof 
+PlayerEntityModel var21) {
+                                                                                      ^
+
+  org\wild\mixin\MixinLivingEntityRenderer.java:153: error: incompatible 
+types: EntityModel<LivingEntityRenderState> cannot be converted to PlayerEntityModel
+              if (livingEntityRenderState instanceof PlayerEntityRenderState var13 && entityModel instanceof 
+PlayerEntityModel var14) {
+                                                                                      ^
+
+  org\wild\mixin\MixinLivingEntityRenderer.java:217: error: incompatible 
+types: EntityModel<CAP#1> cannot be converted to PlayerEntityModel
+           if (!(this.model instanceof PlayerEntityModel var9)) {
+                     ^
+    where CAP#1 is a fresh type-variable:
+      CAP#1 extends EntityRenderState super: LivingEntityRenderState from capture of ? super LivingEntityRenderState

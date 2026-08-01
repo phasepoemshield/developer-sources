@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\Speed.java:76: error: incompatible types: 
+Object cannot be converted to Entity
+         for (Entity var8 : var4) {
+                            ^
+
+  ru\metaculture\protection\Speed.java:76: error: incompatible types: 
+Object cannot be converted to Entity
+           for (Entity var8 : var4) {
+                              ^

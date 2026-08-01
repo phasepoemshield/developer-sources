@@ -1,0 +1,21 @@
+﻿ru\metaculture\protection\O00000O0O0.java:131: error: incompatible types: 
+Object cannot be converted to W154
+                  for (O00000O0O0.W154 var23 : var20) {
+                                               ^
+
+ru\metaculture\protection\O00000O0O0.java:297: error: cannot find symbol
+               var6.visit((style, stringx) -> {
+                   ^
+  symbol:   method visit((style,str[...](); },Style)
+  location: variable var6 of type Object
+
+  ru\metaculture\protection\O00000O0O0.java:297: error: cannot find symbol
+                 var6.visit((style, stringx) -> {
+                     ^
+    symbol:   method visit((style,str[...](); },Style)
+    location: variable var6 of type Object
+
+  ru\metaculture\protection\O00000O0O0.java:131: error: incompatible 
+types: Object cannot be converted to W154
+                    for (O00000O0O0.W154 var23 : var20) {
+                                                 ^

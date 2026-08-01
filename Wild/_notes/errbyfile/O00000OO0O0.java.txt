@@ -1,0 +1,23 @@
+﻿ru\metaculture\protection\O00000OO0O0.java:310: error: for-each not 
+applicable to expression type
+         for (Object var5 : var2) {
+                            ^
+  required: array or java.lang.Iterable
+  found:    Object
+
+ru\metaculture\protection\O00000OO0O0.java:326: error: incompatible 
+types: Object cannot be converted to String
+      for (String var10 : var7) {
+                          ^
+
+  ru\metaculture\protection\O00000OO0O0.java:310: error: for-each not 
+applicable to expression type
+           for (Object var5 : var2) {
+                              ^
+    required: array or java.lang.Iterable
+    found:    Object
+
+  ru\metaculture\protection\O00000OO0O0.java:326: error: incompatible 
+types: Object cannot be converted to String
+        for (String var10 : var7) {
+                            ^

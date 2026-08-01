@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\HudModule.java:57: error: incompatible types: 
+Object[] cannot be converted to BooleanSetting[]
+      return var0.toArray(BooleanSetting[]::new);
+                         ^
+
+  ru\metaculture\protection\HudModule.java:57: error: incompatible types: 
+Object[] cannot be converted to BooleanSetting[]
+        return var0.toArray(BooleanSetting[]::new);
+                           ^

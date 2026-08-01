@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\O0000O000OOOO.java:147: error: incompatible 
+types: Object cannot be converted to ClientBossBar
+         for (ClientBossBar var2 : var0.values()) {
+                                              ^
+
+  ru\metaculture\protection\O0000O000OOOO.java:147: error: incompatible 
+types: Object cannot be converted to ClientBossBar
+           for (ClientBossBar var2 : var0.values()) {
+                                                ^

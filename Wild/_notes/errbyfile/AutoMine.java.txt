@@ -1,0 +1,63 @@
+﻿ru\metaculture\protection\AutoMine.java:153: error: incompatible types: 
+List<Object> cannot be converted to List<Block>
+         this.O00000000OO00 = (List<Block>)(var1 == null ? List.of() : new ArrayList<>(var1));
+                                           ^
+
+ru\metaculture\protection\AutoMine.java:182: error: incompatible types: 
+Object cannot be converted to Block
+            for (Block var5 : var2) {
+                              ^
+
+ru\metaculture\protection\AutoMine.java:971: error: method does not 
+override or implement a method from a supertype
+   @Override
+   ^
+
+ru\metaculture\protection\AutoMine.java:1083: error: incompatible types: 
+Object cannot be converted to BlockPos
+            .orElse(var6);
+                   ^
+
+ru\metaculture\protection\AutoMine.java:1105: error: incompatible types: 
+Object cannot be converted to Vec3i
+         var2.sort(Comparator.comparingDouble(blockPosx -> 
+O0000000000.player.getPos().squaredDistanceTo(Vec3d.ofCenter(blockPosx))));
+                                                                                                                       
+ ^
+
+ru\metaculture\protection\AutoMine.java:1108: error: incompatible types: 
+Object cannot be converted to BlockPos
+         for (BlockPos var9 : var2) {
+                              ^
+
+  ru\metaculture\protection\AutoMine.java:971: error: method does not 
+override or implement a method from a supertype
+     @Override
+     ^
+
+  ru\metaculture\protection\AutoMine.java:153: error: incompatible types: 
+List<Object> cannot be converted to List<Block>
+           this.O00000000OO00 = (List<Block>)(var1 == null ? List.of() : new ArrayList<>(var1));
+                                             ^
+
+  ru\metaculture\protection\AutoMine.java:182: error: incompatible types: 
+Object cannot be converted to Block
+              for (Block var5 : var2) {
+                                ^
+
+  ru\metaculture\protection\AutoMine.java:1083: error: incompatible 
+types: Object cannot be converted to BlockPos
+              .orElse(var6);
+                     ^
+
+  ru\metaculture\protection\AutoMine.java:1105: error: incompatible 
+types: Object cannot be converted to Vec3i
+           var2.sort(Comparator.comparingDouble(blockPosx -> 
+O0000000000.player.getPos().squaredDistanceTo(Vec3d.ofCenter(blockPosx))));
+                                                                                                                       
+   ^
+
+  ru\metaculture\protection\AutoMine.java:1108: error: incompatible 
+types: Object cannot be converted to BlockPos
+           for (BlockPos var9 : var2) {
+                                ^

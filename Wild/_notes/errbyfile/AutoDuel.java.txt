@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\AutoDuel.java:67: error: incompatible types: 
+Object cannot be converted to String
+            for (String var6 : var2) {
+                               ^
+
+  ru\metaculture\protection\AutoDuel.java:67: error: incompatible types: 
+Object cannot be converted to String
+              for (String var6 : var2) {
+                                 ^

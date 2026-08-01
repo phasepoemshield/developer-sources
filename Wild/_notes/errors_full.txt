@@ -1,0 +1,1072 @@
+﻿gradlew.bat : ru\metaculture\protection\O0000O0O0000.java:20: error: 
+ru\metaculture\protection\O0000O0O0000.java:24: error: unexpected type
+ru\metaculture\protection\O0000O0O0000.java:29: error: unexpected type
+ru\metaculture\protection\O0000O0O0000.java:33: error: unexpected type
+ru\metaculture\protection\O0000O0O0000.java:48: error: unexpected type
+org\wild\mixin\ChatHudMixin.java:63: error: incompatible types: Object 
+org\wild\mixin\ChatHudMixin.java:134: error: incompatible types: 
+org\wild\mixin\ChestScreenMixin.java:40: error: incompatible types: 
+org\wild\mixin\ChestScreenMixin.java:66: error: incompatible types: 
+org\wild\mixin\ChestScreenMixin.java:87: error: incompatible types: 
+ru\metaculture\protection\AutoBuy.java:519: error: incompatible types: 
+ru\metaculture\protection\AutoBuy.java:536: error: incompatible types: 
+ru\metaculture\protection\O000000OOOO000.java:845: error: incompatible 
+ru\metaculture\protection\O000000OOOO000.java:940: error: incompatible 
+org\wild\mixin\ClientPlayerEntityMixin.java:66: error: incompatible 
+org\wild\mixin\ClientPlayerEntityMixin.java:80: error: incompatible 
+org\wild\mixin\ClientPlayerEntityMixin.java:143: error: incompatible 
+org\wild\mixin\ClientPlayerEntityMixin.java:174: error: incompatible 
+org\wild\mixin\ConnectScreenMixin.java:35: error: incompatible types: 
+org\wild\mixin\EntityMixin.java:28: error: incompatible types: 
+org\wild\mixin\EntityMixin.java:49: error: incompatible types: 
+org\wild\mixin\HandledScreenMixin.java:77: error: incompatible types: 
+org\wild\mixin\HandledScreenMixin.java:176: error: incompatible types: 
+org\wild\mixin\HandledScreenMixin.java:193: error: incompatible types: 
+org\wild\mixin\HandledScreenMixin.java:208: error: incompatible types: 
+org\wild\mixin\HandledScreenMixin.java:220: error: incompatible types: 
+org\wild\mixin\HandledScreenMixin.java:261: error: incompatible types: 
+org\wild\mixin\HandledScreenMixin.java:295: error: incompatible types: 
+org\wild\mixin\HandledScreenMixin.java:375: error: incompatible types: 
+org\wild\mixin\HandledScreenMixin.java:479: error: incompatible types: 
+ru\metaculture\protection\RenderManager.java:1843: error: incompatible 
+org\wild\mixin\InventoryScreenMixin.java:27: error: incompatible types: 
+org\wild\mixin\KeyboardInputMixin.java:33: error: incompatible types: 
+org\wild\mixin\KeyboardInputMixin.java:62: error: incompatible types: 
+org\wild\mixin\LevelLoadingScreenMixin.java:38: error: incompatible 
+org\wild\mixin\LivingEntityMixin.java:49: error: incompatible types: 
+org\wild\mixin\LivingEntityMixin.java:61: error: incompatible types: 
+org\wild\mixin\LivingEntityMixin.java:73: error: incompatible types: 
+org\wild\mixin\LivingEntityMixin.java:85: error: incompatible types: 
+org\wild\mixin\LivingEntityMixin.java:127: error: incompatible types: 
+org\wild\mixin\LivingEntityMixin.java:146: error: incompatible types: 
+org\wild\mixin\MinecraftClientMixin.java:85: error: incompatible types: 
+org\wild\mixin\MinecraftClientMixin.java:108: error: incompatible types: 
+org\wild\mixin\MinecraftClientMixin.java:142: error: incompatible types: 
+org\wild\mixin\MinecraftClientMixin.java:155: error: incompatible types: 
+org\wild\mixin\MinecraftClientMixin.java:179: error: incompatible types: 
+org\wild\mixin\MinecraftClientMixin.java:181: error: incompatible types: 
+org\wild\mixin\MinecraftClientMixin.java:227: error: incompatible types: 
+org\wild\mixin\MinecraftClientMixin.java:242: error: incompatible types: 
+org\wild\mixin\MinecraftClientMixin.java:243: error: incompatible types: 
+org\wild\mixin\MinecraftClientMixin.java:281: error: incompatible types: 
+org\wild\mixin\MixinEntity.java:22: error: incompatible types: 
+org\wild\mixin\MixinLivingEntityRenderer.java:146: error: incompatible 
+org\wild\mixin\MixinLivingEntityRenderer.java:153: error: incompatible 
+org\wild\mixin\MixinLivingEntityRenderer.java:191: error: no suitable 
+org\wild\mixin\MixinLivingEntityRenderer.java:217: error: incompatible 
+org\wild\mixin\RecipeBookScreenMixin.java:28: error: incompatible types: 
+org\wild\mixin\RenderLayerMultiPhaseMixin.java:28: error: incompatible 
+ru\metaculture\protection\O0000O0O00OOO0.java:13: error: incompatible 
+org\wild\mixin\ScreenMixin.java:61: error: incompatible types: 
+org\wild\mixin\ScreenMixin.java:75: error: incompatible types: 
+org\wild\mixin\ScreenMixin.java:84: error: incompatible types: 
+org\wild\mixin\ScreenMixin.java:113: error: incompatible types: 
+org\wild\mixin\ScreenMixin.java:128: error: incompatible types: 
+org\wild\mixin\ScreenMixin.java:147: error: incompatible types: 
+org\wild\mixin\ScreenMixin.java:153: error: incompatible types: 
+org\wild\mixin\ScreenMixin.java:155: error: incompatible types: 
+org\wild\mixin\ScreenMixin.java:158: error: incompatible types: 
+org\wild\mixin\WorldRendererMixin.java:120: error: incompatible types: 
+ru\metaculture\protection\O0000000OOO00.java:11: error: reference to 
+ru\metaculture\protection\AncientXray.java:78: error: method does not 
+ru\metaculture\protection\AntiBot.java:149: error: reference to O00000000 
+ru\metaculture\protection\AntiBot.java:149: error: 'void' type not 
+ru\metaculture\protection\Arrows.java:94: error: incompatible types: 
+ru\metaculture\protection\AttackAura.java:998: error: reference to 
+ru\metaculture\protection\AttackAura.java:998: error: 'void' type not 
+ru\metaculture\protection\AttackAura.java:999: error: reference to 
+ru\metaculture\protection\AttackAura.java:999: error: 'void' type not 
+ru\metaculture\protection\AutoAccept.java:114: error: incompatible types: 
+ru\metaculture\protection\AutoAncientBot.java:719: error: reference to 
+ru\metaculture\protection\AutoAncientBot.java:719: error: incompatible 
+ru\metaculture\protection\AutoAncientBot.java:770: error: incompatible 
+ru\metaculture\protection\AutoAncientBot.java:772: error: no suitable 
+ru\metaculture\protection\AutoAncientBot.java:775: error: no suitable 
+ru\metaculture\protection\AutoAncientBot.java:776: error: cannot find 
+  symbol:   method toImmutable()
+  location: variable blockPos of type Object
+ru\metaculture\protection\AutoAncientBot.java:777: error: no suitable 
+ru\metaculture\protection\AutoAncientBot.java:778: error: cannot find 
+  symbol:   method toShortString()
+  location: variable blockPos of type Object
+ru\metaculture\protection\AutoAncientBot.java:2146: error: incompatible 
+ru\metaculture\protection\AutoAncientBot.java:2148: error: incompatible 
+ru\metaculture\protection\AutoClan.java:121: error: incompatible types: 
+ru\metaculture\protection\AutoClan.java:129: error: incompatible types: 
+ru\metaculture\protection\AutoCraft.java:354: error: bad operand types 
+ru\metaculture\protection\AutoCraft.java:358: error: incompatible types: 
+ru\metaculture\protection\AutoCraft.java:387: error: bad operand types 
+ru\metaculture\protection\AutoCraft.java:397: error: incompatible types: 
+ru\metaculture\protection\AutoDuel.java:67: error: incompatible types: 
+ru\metaculture\protection\AutoLoginManager.java:29: error: cannot find 
+  symbol:   method id()
+  location: variable o00000000 of type Object
+ru\metaculture\protection\AutoLoginManager.java:33: error: cannot find 
+  symbol:   method lastUsedAt()
+  location: variable o00000000 of type Object
+ru\metaculture\protection\AutoLoginManager.java:31: error: incompatible 
+ru\metaculture\protection\AutoMine.java:153: error: incompatible types: 
+ru\metaculture\protection\AutoMine.java:182: error: incompatible types: 
+ru\metaculture\protection\AutoMine.java:971: error: method does not 
+ru\metaculture\protection\AutoMine.java:1083: error: incompatible types: 
+ru\metaculture\protection\AutoMine.java:1105: error: incompatible types: 
+ru\metaculture\protection\AutoMine.java:1108: error: incompatible types: 
+ru\metaculture\protection\AutoPottBot.java:635: error: bad operand types 
+ru\metaculture\protection\AutoPottBot.java:636: error: bad operand types 
+ru\metaculture\protection\AutoPottBot.java:637: error: bad operand types 
+ru\metaculture\protection\AutoPottBot.java:905: error: cannot find symbol
+  symbol:   method progress()
+  location: variable o00000000000002 of type Object
+ru\metaculture\protection\AutoPottBot.java:905: error: cannot find symbol
+  symbol:   method progress()
+  location: variable o0000000000000 of type Object
+ru\metaculture\protection\AutoPottBot.java:934: error: bad operand types 
+ru\metaculture\protection\AutoPottBot.java:937: error: incompatible 
+ru\metaculture\protection\AutoPottBot.java:938: error: bad operand types 
+ru\metaculture\protection\AutoPottBot.java:939: error: bad operand types 
+ru\metaculture\protection\AutoPottBot.java:962: error: bad operand types 
+ru\metaculture\protection\AutoPottBot.java:966: error: incompatible 
+ru\metaculture\protection\AutoPottBot.java:967: error: bad operand types 
+ru\metaculture\protection\AutoPottBot.java:971: error: bad operand types 
+ru\metaculture\protection\AutoSell.java:96: error: method does not 
+ru\metaculture\protection\AutoSell.java:126: error: method does not 
+ru\metaculture\protection\AutoVillageTrade.java:1338: error: cannot find 
+  symbol:   variable O0000000000O
+  location: variable o0000000000 of type Object
+ru\metaculture\protection\AutoVillageTrade.java:1338: error: cannot find 
+  symbol:   variable O0000000000000
+  location: variable o0000000000 of type Object
+ru\metaculture\protection\AutoWood.java:276: error: incompatible types: 
+ru\metaculture\protection\AutoWood.java:330: error: incompatible types: 
+ru\metaculture\protection\MultiSelectSetting.java:56: error: incompatible 
+ru\metaculture\protection\O000000O00.java:67: error: incompatible types: 
+ru\metaculture\protection\O000000O00.java:76: error: incompatible types: 
+ru\metaculture\protection\O000000O00.java:77: error: incompatible types: 
+ru\metaculture\protection\O000000O00.java:78: error: cannot find symbol
+  symbol:   method compareToIgnoreCase(Object)
+  location: variable string of type Object
+ru\metaculture\protection\ChorusFarm.java:899: error: reference to 
+ru\metaculture\protection\ChorusFarm.java:899: error: incompatible types: 
+ru\metaculture\protection\ChorusFarm.java:902: error: incompatible types: 
+ru\metaculture\protection\ChorusFarm.java:911: error: incompatible types: 
+ru\metaculture\protection\ChorusFarm.java:1172: error: incompatible 
+ru\metaculture\protection\ClickGui.java:691: error: incompatible types: 
+ru\metaculture\protection\ClickGui.java:728: error: incompatible types: 
+ru\metaculture\protection\ClickGui.java:763: error: incompatible types: 
+ru\metaculture\protection\O0000O000O0O0.java:265: error: reference to 
+ru\metaculture\protection\O0000O000O0O0.java:286: error: reference to 
+ru\metaculture\protection\O0000O000O0O0.java:306: error: reference to 
+ru\metaculture\protection\O0000O000O0O0.java:337: error: reference to 
+ru\metaculture\protection\O0000O000O0O0.java:589: error: reference to 
+ru\metaculture\protection\O0000O000O0O0.java:920: error: reference to 
+ru\metaculture\protection\O0000O000O0O0.java:1001: error: reference to 
+ru\metaculture\protection\O0000O000O0O0.java:1022: error: reference to 
+ru\metaculture\protection\O0000O000O0O0.java:1048: error: reference to 
+ru\metaculture\protection\O0000O000O0O0.java:1103: error: reference to 
+ru\metaculture\protection\O00000OOOOOOO0.java:6: error: reference to 
+ru\metaculture\protection\O00000OOOOOO0.java:133: error: reference to 
+ru\metaculture\protection\O00000OOOOOO0.java:152: error: reference to 
+ru\metaculture\protection\O00000OOOOOO0.java:275: error: reference to 
+ru\metaculture\protection\O00000OOOOOO0.java:667: error: reference to 
+ru\metaculture\protection\O00000OOOOOO0.java:695: error: reference to 
+ru\metaculture\protection\O00000OOOOOO0O.java:30: error: reference to 
+ru\metaculture\protection\O00000OOOOOO0O.java:36: error: reference to 
+ru\metaculture\protection\O00000OOOOOO0O.java:42: error: reference to 
+ru\metaculture\protection\O00000OOOOOO0O.java:69: error: reference to 
+ru\metaculture\protection\O00000OOOOOO0O.java:131: error: reference to 
+ru\metaculture\protection\O00000OOOOOO0O.java:132: error: reference to 
+ru\metaculture\protection\O00000OOO000OO.java:1600: error: incompatible 
+ru\metaculture\protection\O00000OOO000OO.java:2167: error: incompatible 
+ru\metaculture\protection\O00000OOO000OO.java:3271: error: incompatible 
+ru\metaculture\protection\O00000OOO000OO.java:3601: error: incompatible 
+ru\metaculture\protection\O00000OOO000OO.java:4329: error: cannot find 
+  symbol:   method O00000000()
+  location: variable o00000OOO0OO0O of type Object
+ru\metaculture\protection\O00000OOO000OO.java:4331: error: incompatible 
+ru\metaculture\protection\O00000OOO000OO.java:5425: error: incompatible 
+ru\metaculture\protection\O00000OOO000OO.java:5461: error: reference to 
+ru\metaculture\protection\O00000OOO000OO.java:5461: error: incompatible 
+ru\metaculture\protection\O0000O000O0O0O.java:1409: error: incompatible 
+ru\metaculture\protection\ModuleListRenderer.java:599: error: 
+ru\metaculture\protection\ShaderSourceBuilder.java:59: error: 
+ru\metaculture\protection\ShaderSourceBuilder.java:122: error: 
+ru\metaculture\protection\ShaderSourceBuilder.java:213: error: 
+ru\metaculture\protection\ShaderSourceBuilder.java:228: error: for-each 
+ru\metaculture\protection\ShaderSourceBuilder.java:242: error: 
+ru\metaculture\protection\O00000OOO00O.java:251: error: incompatible 
+ru\metaculture\protection\O00000OOO00O.java:265: error: reference to 
+ru\metaculture\protection\O00000OOO00O.java:265: error: incompatible 
+ru\metaculture\protection\O00000OOO00O.java:267: error: incompatible 
+ru\metaculture\protection\O00000OOO00O.java:271: error: incompatible 
+ru\metaculture\protection\O00000OOO00O.java:284: error: incompatible 
+ru\metaculture\protection\O00000OOO0OO00.java:165: error: incompatible 
+ru\metaculture\protection\O00000OOOOOO00.java:68: error: reference to 
+ru\metaculture\protection\O00000OOOOOO00.java:99: error: reference to 
+ru\metaculture\protection\O00000OOOOOO00.java:110: error: reference to 
+ru\metaculture\protection\O00000OOOOOO00.java:133: error: reference to 
+ru\metaculture\protection\O00000OOOOOO00.java:144: error: reference to 
+ru\metaculture\protection\O0000O00OOO0.java:65: error: incompatible 
+ru\metaculture\protection\O0000O00OOO0.java:67: error: incompatible 
+ru\metaculture\protection\O0000O00OOO0.java:69: error: incompatible 
+ru\metaculture\protection\O0000O00OOO0.java:71: error: incompatible 
+ru\metaculture\protection\O0000O00OOO0.java:73: error: incompatible 
+ru\metaculture\protection\O0000O00OOO0.java:75: error: incompatible 
+ru\metaculture\protection\CocoaFarm.java:828: error: incompatible types: 
+ru\metaculture\protection\CreeperFarm.java:193: error: incompatible 
+ru\metaculture\protection\CreeperFarm.java:212: error: incompatible 
+ru\metaculture\protection\ESP.java:84: error: incompatible types: Object 
+ru\metaculture\protection\FullBright.java:167: error: method does not 
+ru\metaculture\protection\NameTags.java:511: error: incompatible types: 
+ru\metaculture\protection\O00000O0O00OOO.java:131: error: incompatible 
+ru\metaculture\protection\O00000O0O00OOO.java:1098: error: incompatible 
+ru\metaculture\protection\O00000O0O00OOO.java:1106: error: incompatible 
+ru\metaculture\protection\GlowESP.java:126: error: method does not 
+ru\metaculture\protection\O0000O0O000O0O.java:202: error: incompatible 
+ru\metaculture\protection\O0000O0O000O0O.java:216: error: incompatible 
+ru\metaculture\protection\Hands.java:75: error: method does not override 
+ru\metaculture\protection\HudModule.java:57: error: incompatible types: 
+ru\metaculture\protection\MusicPlayerHud.java:439: error: incompatible 
+ru\metaculture\protection\MusicPlayerHud.java:586: error: invalid 
+ru\metaculture\protection\O00000000000O0.java:75: error: incompatible 
+ru\metaculture\protection\O00000000000O0.java:86: error: incompatible 
+ru\metaculture\protection\O0000000000OO0.java:16: error: illegal forward 
+ru\metaculture\protection\O0000000000OO0.java:16: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:54: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:138: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:142: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:144: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:144: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:204: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:215: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:218: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:231: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:233: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:233: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:235: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:237: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:240: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:252: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:252: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:255: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:255: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:267: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:269: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:272: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:284: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:286: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:307: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:378: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:391: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:455: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:459: error: float cannot be 
+ru\metaculture\protection\O0000000000OO0.java:459: error: float cannot be 
+ru\metaculture\protection\O000000O000000.java:193: error: incompatible 
+ru\metaculture\protection\O000000O000O.java:193: error: incompatible 
+ru\metaculture\protection\O000000O0O00.java:30: error: incompatible 
+ru\metaculture\protection\O000000O0O00.java:34: error: incompatible 
+ru\metaculture\protection\O000000O0O000.java:155: error: no suitable 
+ru\metaculture\protection\O000000O0O0O00.java:273: error: incompatible 
+ru\metaculture\protection\O000000O0O0O00.java:353: error: incompatible 
+ru\metaculture\protection\O000000O0O0O00.java:354: error: incompatible 
+ru\metaculture\protection\O000000O0O0O00.java:824: error: incompatible 
+ru\metaculture\protection\O000000O0O0O00.java:838: error: incompatible 
+ru\metaculture\protection\O000000O0O0O00.java:875: error: incompatible 
+ru\metaculture\protection\O000000O0O0O00.java:1417: error: incompatible 
+ru\metaculture\protection\O000000O0O0O00.java:1417: error: cannot find 
+  symbol:   method getFileName()
+  location: variable path of type Object
+ru\metaculture\protection\O000000O0O0O00.java:1418: error: cannot find 
+  symbol:   method getFileName()
+  location: variable path of type Object
+ru\metaculture\protection\O000000O0O0O00.java:1424: error: incompatible 
+ru\metaculture\protection\O000000O0OO000.java:149: error: cannot assign a 
+ru\metaculture\protection\O000000O0OO000.java:150: error: cannot assign a 
+ru\metaculture\protection\O000000O0OO00O.java:140: error: cannot assign a 
+ru\metaculture\protection\O000000O0OO00O.java:141: error: cannot assign a 
+ru\metaculture\protection\O000000OO0000.java:127: error: incompatible 
+ru\metaculture\protection\O000000OO0000.java:127: error: cannot find 
+  symbol:   method getFileName()
+  location: variable path of type Object
+ru\metaculture\protection\O000000OO0000.java:130: error: incompatible 
+ru\metaculture\protection\O000000OO0000.java:144: error: incompatible 
+ru\metaculture\protection\O000000OO0000.java:144: error: cannot find 
+  symbol:   method getFileName()
+  location: variable path of type Object
+ru\metaculture\protection\O000000OO0000.java:144: error: incompatible 
+ru\metaculture\protection\O000000OOOO.java:267: error: incompatible 
+ru\metaculture\protection\O000000OOOO00.java:134: error: incompatible 
+ru\metaculture\protection\O000000OOOO00O.java:160: error: cannot find 
+  symbol:   method getValue()
+  location: variable registryKey of type Object
+ru\metaculture\protection\O000000OOOO00O.java:160: error: incompatible 
+ru\metaculture\protection\O00000O0O0.java:131: error: incompatible types: 
+ru\metaculture\protection\O00000O0O0.java:297: error: cannot find symbol
+  symbol:   method visit((style,str[...](); },Style)
+  location: variable var6 of type Object
+ru\metaculture\protection\O00000O0OO000.java:281: error: W192 is not 
+ru\metaculture\protection\O00000O0OO0000.java:235: error: W193 is not 
+ru\metaculture\protection\O00000O0OOO0O.java:129: error: reference to 
+ru\metaculture\protection\O00000O0OOO0O.java:247: error: incompatible 
+ru\metaculture\protection\O00000O0OOOO00.java:215: error: incompatible 
+ru\metaculture\protection\O00000OO00000.java:385: error: cannot find 
+  symbol:   variable O00000000000
+  location: variable module of type Object
+ru\metaculture\protection\O00000OO00000.java:385: error: cannot find 
+  symbol:   variable O00000000000
+  location: variable module of type Object
+ru\metaculture\protection\O00000OO00000.java:391: error: cannot find 
+  symbol:   variable O00000000000
+  location: variable module of type Object
+ru\metaculture\protection\O00000OO00000.java:392: error: incompatible 
+ru\metaculture\protection\O00000OO000000.java:74: error: incompatible 
+ru\metaculture\protection\O00000OO000000.java:89: error: incompatible 
+ru\metaculture\protection\O00000OO000000.java:152: error: incompatible 
+ru\metaculture\protection\O00000OO000000.java:228: error: cannot find 
+  symbol:   variable O00000000000
+  location: variable module of type Object
+ru\metaculture\protection\O00000OO000000.java:228: error: cannot find 
+  symbol:   variable O00000000000
+  location: variable module of type Object
+ru\metaculture\protection\O00000OO00OO.java:31: error: incompatible 
+ru\metaculture\protection\O00000OO00OOO.java:80: error: incompatible 
+ru\metaculture\protection\O00000OO00OOO.java:134: error: incompatible 
+ru\metaculture\protection\O00000OO0O0.java:310: error: for-each not 
+ru\metaculture\protection\O00000OO0O0.java:326: error: incompatible 
+ru\metaculture\protection\O00000OO0O00.java:352: error: reference to 
+ru\metaculture\protection\O00000OO0O00.java:354: error: reference to 
+ru\metaculture\protection\O00000OO0OO0.java:21: error: <anonymous 
+ru\metaculture\protection\O00000OO0OO0.java:42: error: <anonymous 
+ru\metaculture\protection\O00000OO0OO0.java:63: error: <anonymous 
+ru\metaculture\protection\O00000OO0OO0.java:88: error: <anonymous 
+ru\metaculture\protection\O00000OO0OO0.java:111: error: <anonymous 
+ru\metaculture\protection\O00000OO0O000O.java:12: error: <anonymous 
+ru\metaculture\protection\O00000OO0O00O.java:16: error: <anonymous 
+ru\metaculture\protection\O00000OO0O00O.java:39: error: for-each not 
+ru\metaculture\protection\O00000OO0O00OO.java:12: error: <anonymous 
+ru\metaculture\protection\O00000OO0O0O.java:12: error: <anonymous 
+ru\metaculture\protection\O00000OO0O0O00.java:40: error: incompatible 
+ru\metaculture\protection\O00000OO0OOO.java:78: error: incompatible 
+ru\metaculture\protection\O00000OO0OOO00.java:782: error: reference to 
+ru\metaculture\protection\O00000OO0OOO00.java:796: error: reference to 
+ru\metaculture\protection\O00000OO0OOO00.java:2889: error: incompatible 
+ru\metaculture\protection\O00000OOO0000.java:163: error: incompatible 
+ru\metaculture\protection\O00000OOO00O00.java:229: error: incompatible 
+ru\metaculture\protection\O00000OOO00O00.java:242: error: reference to 
+ru\metaculture\protection\O00000OOO00O00.java:242: error: incompatible 
+ru\metaculture\protection\O00000OOO00O00.java:247: error: incompatible 
+ru\metaculture\protection\O00000OOO00O00.java:257: error: incompatible 
+ru\metaculture\protection\O00000OOOOO000.java:74: error: incompatible 
+ru\metaculture\protection\O00000OOOOO000.java:87: error: cannot find 
+  symbol:   method O0000000000O()
+  location: variable o00000OOOOO002 of type Object
+ru\metaculture\protection\O00000OOOOO000.java:87: error: cannot find 
+  symbol:   method O0000000000O()
+  location: variable o00000OOOOO00 of type Object
+ru\metaculture\protection\O00000OOOOO000.java:103: error: cannot find 
+  symbol:   method O0000000000O()
+  location: variable o00000OOOOO002 of type Object
+ru\metaculture\protection\O00000OOOOO000.java:103: error: cannot find 
+  symbol:   method O0000000000O()
+  location: variable o00000OOOOO00 of type Object
+ru\metaculture\protection\O00000OOOOO000.java:244: error: cannot find 
+  symbol:   method lastModified()
+  location: variable file2 of type Object
+ru\metaculture\protection\O00000OOOOO000.java:244: error: cannot find 
+  symbol:   method lastModified()
+  location: variable file of type Object
+ru\metaculture\protection\O0000O000O0.java:326: error: reference to 
+ru\metaculture\protection\O0000O000O0.java:418: error: reference to 
+ru\metaculture\protection\O0000O000O0.java:436: error: reference to 
+ru\metaculture\protection\O0000O000O0.java:451: error: reference to 
+ru\metaculture\protection\O0000O000O0.java:3333: error: reference to 
+ru\metaculture\protection\O0000O000O0.java:3399: error: reference to 
+ru\metaculture\protection\O0000O000O0.java:3765: error: reference to 
+ru\metaculture\protection\O0000O000O0.java:3902: error: incompatible 
+ru\metaculture\protection\O0000O000O0.java:4118: error: reference to 
+ru\metaculture\protection\O0000O000O00.java:204: error: reference to 
+ru\metaculture\protection\O0000O000O00.java:325: error: reference to 
+ru\metaculture\protection\O0000O000OO000.java:413: error: W353 is not 
+ru\metaculture\protection\O0000O000OOOO.java:147: error: incompatible 
+ru\metaculture\protection\O0000O00O00OOO.java:170: error: <anonymous 
+ru\metaculture\protection\O0000O0O00000.java:9: error: incompatible 
+ru\metaculture\protection\O0000O0O00000.java:11: error: incompatible 
+ru\metaculture\protection\O0000O0O00000.java:13: error: incompatible 
+ru\metaculture\protection\O0000O0O00000.java:15: error: incompatible 
+ru\metaculture\protection\O0000O0O00000.java:17: error: incompatible 
+ru\metaculture\protection\O0000O0O00000.java:19: error: incompatible 
+ru\metaculture\protection\PlayerHelper.java:601: error: incompatible 
+ru\metaculture\protection\Predictions.java:511: error: 'void' type not 
+ru\metaculture\protection\Predictions.java:511: error: reference to 
+ru\metaculture\protection\ProtectInfo.java:351: error: incompatible 
+ru\metaculture\protection\ProtectInfo.java:504: error: 'void' type not 
+ru\metaculture\protection\ProtectInfo.java:504: error: reference to 
+ru\metaculture\protection\PvPSafe.java:131: error: incompatible types: 
+ru\metaculture\protection\ReconnectCommand.java:311: error: incompatible 
+ru\metaculture\protection\ReconnectCommand.java:318: error: incompatible 
+ru\metaculture\protection\Removals.java:187: error: incompatible types: 
+ru\metaculture\protection\Removals.java:189: error: incompatible types: 
+ru\metaculture\protection\RotationBuilderScreen.java:528: error: 
+ru\metaculture\protection\ServerHelperHud.java:142: error: incompatible 
+ru\metaculture\protection\ServerHelperHud.java:179: error: incompatible 
+ru\metaculture\protection\ServerHelperHud.java:232: error: incompatible 
+ru\metaculture\protection\Speed.java:76: error: incompatible types: 
+ru\metaculture\protection\TargetHud.java:216: error: cannot find symbol
+  symbol:   method getMaxHealth()
+  location: variable var6 of type Object
+ru\metaculture\protection\TargetHud.java:224: error: cannot find symbol
+  symbol:   method getId()
+  location: variable var6 of type Object
+ru\metaculture\protection\TargetHud.java:225: error: cannot find symbol
+  symbol:   method getId()
+  location: variable var6 of type Object
+ru\metaculture\protection\TargetHud.java:246: error: cannot find symbol
+  symbol:   method getName()
+  location: variable var6 of type Object
+ru\metaculture\protection\Trails.java:747: error: incompatible types: 
+ru\metaculture\protection\UnHook.java:90: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:91: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:92: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:93: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:94: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:95: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:96: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:97: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:98: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:99: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:100: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:101: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:102: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:103: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:104: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:105: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:106: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:107: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:108: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:109: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:110: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:111: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:112: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:113: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:114: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:115: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:116: error: cannot find symbol
+  symbol:   method contains(String)
+  location: variable string of type Object
+ru\metaculture\protection\UnHook.java:117: error: incompatible types: 
+ru\metaculture\protection\UseTracker.java:170: error: incompatible types: 
+ru\metaculture\protection\UseTracker.java:239: error: incompatible types: 
+ru\metaculture\protection\WardenFarm.java:668: error: double cannot be 
+ru\metaculture\protection\WatermarkHud.java:100: error: incompatible 
+ru\metaculture\protection\WildClient.java:159: error: reference to 
+ru\metaculture\protection\WildClient.java:159: error: incompatible types: 
+ru\metaculture\protection\WildClient.java:163: error: reference to 
+ru\metaculture\protection\WildClient.java:163: error: incompatible types: 
+ru\metaculture\protection\WildClient.java:167: error: reference to 
+ru\metaculture\protection\WildClient.java:167: error: incompatible types: 
+ru\metaculture\protection\WildClient.java:190: error: invalid method 
+    symbol:   method O00000000()
+    location: class boolean
+ru\metaculture\protection\WildClient.java:200: error: reference to 
+ru\metaculture\protection\WildClient.java:200: error: incompatible types: 
+ru\metaculture\protection\WildClient.java:251: error: incompatible types: 
+ru\metaculture\protection\WildClient.java:253: error: incompatible types: 
+ru\metaculture\protection\WildClient.java:261: error: no suitable method 
+ru\metaculture\protection\WildClient.java:300: error: <anonymous 
+ru\metaculture\protection\WildClient.java:330: error: <anonymous 
+ru\metaculture\protection\WildClient.java:436: error: reference to 
+ru\metaculture\protection\WildClient.java:436: error: incompatible types: 
+ru\metaculture\protection\WildClient.java:445: error: invalid method 
+    symbol:   method O0000000000()
+    location: class File
+ru\metaculture\protection\WildClient.java:446: error: reference to 
+ru\metaculture\protection\WildClient.java:446: error: incompatible types: 
+ru\metaculture\protection\WildClient.java:448: error: reference to 
+ru\metaculture\protection\WildClient.java:448: error: incompatible types: 
+  ru\metaculture\protection\ShaderSourceBuilder.java:228: error: for-each 
+  ru\metaculture\protection\O00000OO0O0.java:310: error: for-each not 
+  ru\metaculture\protection\O00000OO0O00O.java:39: error: for-each not 
+  org\wild\mixin\MixinLivingEntityRenderer.java:191: error: no suitable 
+  ru\metaculture\protection\AutoAncientBot.java:772: error: no suitable 
+  ru\metaculture\protection\AutoAncientBot.java:775: error: no suitable 
+  ru\metaculture\protection\AutoAncientBot.java:777: error: no suitable 
+  ru\metaculture\protection\O000000O0O000.java:155: error: no suitable 
+  ru\metaculture\protection\WildClient.java:261: error: no suitable 
+  ru\metaculture\protection\O000000O0OO000.java:149: error: cannot assign 
+  ru\metaculture\protection\O000000O0OO000.java:150: error: cannot assign 
+  ru\metaculture\protection\O000000O0OO00O.java:140: error: cannot assign 
+  ru\metaculture\protection\O000000O0OO00O.java:141: error: cannot assign 
+  ru\metaculture\protection\O0000000000OO0.java:16: error: illegal 
+  ru\metaculture\protection\WildClient.java:190: error: invalid method 
+      symbol:   method O00000000()
+      location: class boolean
+  ru\metaculture\protection\WildClient.java:445: error: invalid method 
+      symbol:   method O0000000000()
+      location: class File
+  ru\metaculture\protection\AutoVillageTrade.java:1338: error: cannot 
+    symbol:   variable O0000000000O
+    location: variable o0000000000 of type Object
+  ru\metaculture\protection\AutoVillageTrade.java:1338: error: cannot 
+    symbol:   variable O0000000000000
+    location: variable o0000000000 of type Object
+  ru\metaculture\protection\O00000OO00000.java:385: error: cannot find 
+    symbol:   variable O00000000000
+    location: variable module of type Object
+  ru\metaculture\protection\O00000OO00000.java:385: error: cannot find 
+    symbol:   variable O00000000000
+    location: variable module of type Object
+  ru\metaculture\protection\O00000OO00000.java:391: error: cannot find 
+    symbol:   variable O00000000000
+    location: variable module of type Object
+  ru\metaculture\protection\O00000OO000000.java:228: error: cannot find 
+    symbol:   variable O00000000000
+    location: variable module of type Object
+  ru\metaculture\protection\O00000OO000000.java:228: error: cannot find 
+    symbol:   variable O00000000000
+    location: variable module of type Object
+  ru\metaculture\protection\AncientXray.java:78: error: method does not 
+  ru\metaculture\protection\AutoMine.java:971: error: method does not 
+  ru\metaculture\protection\AutoSell.java:96: error: method does not 
+  ru\metaculture\protection\AutoSell.java:126: error: method does not 
+  ru\metaculture\protection\FullBright.java:167: error: method does not 
+  ru\metaculture\protection\GlowESP.java:126: error: method does not 
+  ru\metaculture\protection\Hands.java:75: error: method does not 
+  ru\metaculture\protection\AutoAncientBot.java:776: error: cannot find 
+    symbol:   method toImmutable()
+    location: variable blockPos of type Object
+  ru\metaculture\protection\AutoAncientBot.java:778: error: cannot find 
+    symbol:   method toShortString()
+    location: variable blockPos of type Object
+  ru\metaculture\protection\AutoLoginManager.java:29: error: cannot find 
+    symbol:   method id()
+    location: variable o00000000 of type Object
+  ru\metaculture\protection\AutoLoginManager.java:33: error: cannot find 
+    symbol:   method lastUsedAt()
+    location: variable o00000000 of type Object
+  ru\metaculture\protection\AutoPottBot.java:905: error: cannot find 
+    symbol:   method progress()
+    location: variable o00000000000002 of type Object
+  ru\metaculture\protection\AutoPottBot.java:905: error: cannot find 
+    symbol:   method progress()
+    location: variable o0000000000000 of type Object
+  ru\metaculture\protection\O000000O00.java:78: error: cannot find symbol
+    symbol:   method compareToIgnoreCase(Object)
+    location: variable string of type Object
+  ru\metaculture\protection\O00000OOO000OO.java:4329: error: cannot find 
+    symbol:   method O00000000()
+    location: variable o00000OOO0OO0O of type Object
+  ru\metaculture\protection\O000000O0O0O00.java:1417: error: cannot find 
+    symbol:   method getFileName()
+    location: variable path of type Object
+  ru\metaculture\protection\O000000O0O0O00.java:1418: error: cannot find 
+    symbol:   method getFileName()
+    location: variable path of type Object
+  ru\metaculture\protection\O000000OO0000.java:127: error: cannot find 
+    symbol:   method getFileName()
+    location: variable path of type Object
+  ru\metaculture\protection\O000000OO0000.java:144: error: cannot find 
+    symbol:   method getFileName()
+    location: variable path of type Object
+  ru\metaculture\protection\O000000OOOO00O.java:160: error: cannot find 
+    symbol:   method getValue()
+    location: variable registryKey of type Object
+  ru\metaculture\protection\O00000O0O0.java:297: error: cannot find symbol
+    symbol:   method visit((style,str[...](); },Style)
+    location: variable var6 of type Object
+  ru\metaculture\protection\O00000OOOOO000.java:87: error: cannot find 
+    symbol:   method O0000000000O()
+    location: variable o00000OOOOO002 of type Object
+  ru\metaculture\protection\O00000OOOOO000.java:87: error: cannot find 
+    symbol:   method O0000000000O()
+    location: variable o00000OOOOO00 of type Object
+  ru\metaculture\protection\O00000OOOOO000.java:103: error: cannot find 
+    symbol:   method O0000000000O()
+    location: variable o00000OOOOO002 of type Object
+  ru\metaculture\protection\O00000OOOOO000.java:103: error: cannot find 
+    symbol:   method O0000000000O()
+    location: variable o00000OOOOO00 of type Object
+  ru\metaculture\protection\O00000OOOOO000.java:244: error: cannot find 
+    symbol:   method lastModified()
+    location: variable file2 of type Object
+  ru\metaculture\protection\O00000OOOOO000.java:244: error: cannot find 
+    symbol:   method lastModified()
+    location: variable file of type Object
+  ru\metaculture\protection\TargetHud.java:216: error: cannot find symbol
+    symbol:   method getMaxHealth()
+    location: variable var6 of type Object
+  ru\metaculture\protection\TargetHud.java:224: error: cannot find symbol
+    symbol:   method getId()
+    location: variable var6 of type Object
+  ru\metaculture\protection\TargetHud.java:225: error: cannot find symbol
+    symbol:   method getId()
+    location: variable var6 of type Object
+  ru\metaculture\protection\TargetHud.java:246: error: cannot find symbol
+    symbol:   method getName()
+    location: variable var6 of type Object
+  ru\metaculture\protection\UnHook.java:90: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:91: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:92: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:93: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:94: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:95: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:96: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:97: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:98: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:99: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:100: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:101: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:102: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:103: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:104: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:105: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:106: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:107: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:108: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:109: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:110: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:111: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:112: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:113: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:114: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:115: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\UnHook.java:116: error: cannot find symbol
+    symbol:   method contains(String)
+    location: variable string of type Object
+  ru\metaculture\protection\O0000000OOO00.java:11: error: reference to 
+  ru\metaculture\protection\AntiBot.java:149: error: reference to 
+  ru\metaculture\protection\AttackAura.java:998: error: reference to 
+  ru\metaculture\protection\AttackAura.java:999: error: reference to 
+  ru\metaculture\protection\AutoAncientBot.java:719: error: reference to 
+  ru\metaculture\protection\ChorusFarm.java:899: error: reference to 
+  ru\metaculture\protection\O0000O000O0O0.java:265: error: reference to 
+  ru\metaculture\protection\O0000O000O0O0.java:286: error: reference to 
+  ru\metaculture\protection\O0000O000O0O0.java:306: error: reference to 
+  ru\metaculture\protection\O0000O000O0O0.java:337: error: reference to 
+  ru\metaculture\protection\O0000O000O0O0.java:589: error: reference to 
+  ru\metaculture\protection\O0000O000O0O0.java:920: error: reference to 
+  ru\metaculture\protection\O0000O000O0O0.java:1001: error: reference to 
+  ru\metaculture\protection\O0000O000O0O0.java:1022: error: reference to 
+  ru\metaculture\protection\O0000O000O0O0.java:1048: error: reference to 
+  ru\metaculture\protection\O0000O000O0O0.java:1103: error: reference to 
+  ru\metaculture\protection\O00000OOOOOOO0.java:6: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO0.java:133: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO0.java:152: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO0.java:275: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO0.java:667: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO0.java:695: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO0O.java:30: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO0O.java:36: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO0O.java:42: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO0O.java:69: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO0O.java:131: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO0O.java:132: error: reference to 
+  ru\metaculture\protection\O00000OOO000OO.java:5461: error: reference to 
+  ru\metaculture\protection\O00000OOO00O.java:265: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO00.java:68: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO00.java:99: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO00.java:110: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO00.java:133: error: reference to 
+  ru\metaculture\protection\O00000OOOOOO00.java:144: error: reference to 
+  ru\metaculture\protection\O00000O0OOO0O.java:129: error: reference to 
+  ru\metaculture\protection\O00000OO0O00.java:352: error: reference to 
+  ru\metaculture\protection\O00000OO0O00.java:354: error: reference to 
+  ru\metaculture\protection\O00000OO0OOO00.java:782: error: reference to 
+  ru\metaculture\protection\O00000OO0OOO00.java:796: error: reference to 
+  ru\metaculture\protection\O00000OOO00O00.java:242: error: reference to 
+  ru\metaculture\protection\O0000O000O0.java:326: error: reference to 
+  ru\metaculture\protection\O0000O000O0.java:418: error: reference to 
+  ru\metaculture\protection\O0000O000O0.java:436: error: reference to 
+  ru\metaculture\protection\O0000O000O0.java:451: error: reference to 
+  ru\metaculture\protection\O0000O000O0.java:3333: error: reference to 
+  ru\metaculture\protection\O0000O000O0.java:3399: error: reference to 
+  ru\metaculture\protection\O0000O000O0.java:3765: error: reference to 
+  ru\metaculture\protection\O0000O000O0.java:4118: error: reference to 
+  ru\metaculture\protection\O0000O000O00.java:204: error: reference to 
+  ru\metaculture\protection\O0000O000O00.java:325: error: reference to 
+  ru\metaculture\protection\Predictions.java:511: error: reference to 
+  ru\metaculture\protection\ProtectInfo.java:504: error: reference to 
+  ru\metaculture\protection\WildClient.java:159: error: reference to 
+  ru\metaculture\protection\WildClient.java:163: error: reference to 
+  ru\metaculture\protection\WildClient.java:167: error: reference to 
+  ru\metaculture\protection\WildClient.java:200: error: reference to 
+  ru\metaculture\protection\WildClient.java:436: error: reference to 
+  ru\metaculture\protection\WildClient.java:446: error: reference to 
+  ru\metaculture\protection\WildClient.java:448: error: reference to 
+  ru\metaculture\protection\MusicPlayerHud.java:586: error: invalid 
+  ru\metaculture\protection\O0000O0O0000.java:20: error: unexpected type
+  ru\metaculture\protection\O0000O0O0000.java:24: error: unexpected type
+  ru\metaculture\protection\O0000O0O0000.java:29: error: unexpected type
+  ru\metaculture\protection\O0000O0O0000.java:33: error: unexpected type
+  ru\metaculture\protection\O0000O0O0000.java:48: error: unexpected type
+  ru\metaculture\protection\AntiBot.java:149: error: 'void' type not 
+  ru\metaculture\protection\AttackAura.java:998: error: 'void' type not 
+  ru\metaculture\protection\AttackAura.java:999: error: 'void' type not 
+  ru\metaculture\protection\Predictions.java:511: error: 'void' type not 
+  ru\metaculture\protection\ProtectInfo.java:504: error: 'void' type not 
+  ru\metaculture\protection\O00000O0OO000.java:281: error: W192 is not 
+  ru\metaculture\protection\O00000O0OO0000.java:235: error: W193 is not 
+  ru\metaculture\protection\O00000OO0OO0.java:21: error: <anonymous 
+  ru\metaculture\protection\O00000OO0OO0.java:42: error: <anonymous 
+  ru\metaculture\protection\O00000OO0OO0.java:63: error: <anonymous 
+  ru\metaculture\protection\O00000OO0OO0.java:88: error: <anonymous 
+  ru\metaculture\protection\O00000OO0OO0.java:111: error: <anonymous 
+  ru\metaculture\protection\O00000OO0O000O.java:12: error: <anonymous 
+  ru\metaculture\protection\O00000OO0O00O.java:16: error: <anonymous 
+  ru\metaculture\protection\O00000OO0O00OO.java:12: error: <anonymous 
+  ru\metaculture\protection\O00000OO0O0O.java:12: error: <anonymous 
+  ru\metaculture\protection\O0000O000OO000.java:413: error: W353 is not 
+  ru\metaculture\protection\O0000O00O00OOO.java:170: error: <anonymous 
+  ru\metaculture\protection\WildClient.java:300: error: <anonymous 
+  ru\metaculture\protection\WildClient.java:330: error: <anonymous 
+  org\wild\mixin\ChatHudMixin.java:63: error: incompatible types: Object 
+  org\wild\mixin\ChatHudMixin.java:134: error: incompatible types: 
+  org\wild\mixin\ChestScreenMixin.java:40: error: incompatible types: 
+  org\wild\mixin\ChestScreenMixin.java:66: error: incompatible types: 
+  org\wild\mixin\ChestScreenMixin.java:87: error: incompatible types: 
+  ru\metaculture\protection\AutoBuy.java:519: error: incompatible types: 
+  ru\metaculture\protection\AutoBuy.java:536: error: incompatible types: 
+  ru\metaculture\protection\O000000OOOO000.java:845: error: incompatible 
+  ru\metaculture\protection\O000000OOOO000.java:940: error: incompatible 
+  org\wild\mixin\ClientPlayerEntityMixin.java:66: error: incompatible 
+  org\wild\mixin\ClientPlayerEntityMixin.java:80: error: incompatible 
+  org\wild\mixin\ClientPlayerEntityMixin.java:143: error: incompatible 
+  org\wild\mixin\ClientPlayerEntityMixin.java:174: error: incompatible 
+  org\wild\mixin\ConnectScreenMixin.java:35: error: incompatible types: 
+  org\wild\mixin\EntityMixin.java:28: error: incompatible types: 
+  org\wild\mixin\EntityMixin.java:49: error: incompatible types: 
+  org\wild\mixin\HandledScreenMixin.java:77: error: incompatible types: 
+  org\wild\mixin\HandledScreenMixin.java:176: error: incompatible types: 
+  org\wild\mixin\HandledScreenMixin.java:193: error: incompatible types: 
+  org\wild\mixin\HandledScreenMixin.java:208: error: incompatible types: 
+  org\wild\mixin\HandledScreenMixin.java:220: error: incompatible types: 
+  org\wild\mixin\HandledScreenMixin.java:261: error: incompatible types: 
+  org\wild\mixin\HandledScreenMixin.java:295: error: incompatible types: 
+  org\wild\mixin\HandledScreenMixin.java:375: error: incompatible types: 
+  org\wild\mixin\HandledScreenMixin.java:479: error: incompatible types: 
+  ru\metaculture\protection\RenderManager.java:1843: error: incompatible 
+  org\wild\mixin\InventoryScreenMixin.java:27: error: incompatible types: 
+  org\wild\mixin\KeyboardInputMixin.java:33: error: incompatible types: 
+  org\wild\mixin\KeyboardInputMixin.java:62: error: incompatible types: 
+  org\wild\mixin\LevelLoadingScreenMixin.java:38: error: incompatible 
+  org\wild\mixin\LivingEntityMixin.java:49: error: incompatible types: 
+  org\wild\mixin\LivingEntityMixin.java:61: error: incompatible types: 
+  org\wild\mixin\LivingEntityMixin.java:73: error: incompatible types: 
+  org\wild\mixin\LivingEntityMixin.java:85: error: incompatible types: 
+  org\wild\mixin\LivingEntityMixin.java:127: error: incompatible types: 
+  org\wild\mixin\LivingEntityMixin.java:146: error: incompatible types: 
+  org\wild\mixin\MinecraftClientMixin.java:85: error: incompatible types: 
+  org\wild\mixin\MinecraftClientMixin.java:108: error: incompatible 
+  org\wild\mixin\MinecraftClientMixin.java:142: error: incompatible 
+  org\wild\mixin\MinecraftClientMixin.java:155: error: incompatible 
+  org\wild\mixin\MinecraftClientMixin.java:179: error: incompatible 
+  org\wild\mixin\MinecraftClientMixin.java:181: error: incompatible 
+  org\wild\mixin\MinecraftClientMixin.java:227: error: incompatible 
+  org\wild\mixin\MinecraftClientMixin.java:242: error: incompatible 
+  org\wild\mixin\MinecraftClientMixin.java:243: error: incompatible 
+  org\wild\mixin\MinecraftClientMixin.java:281: error: incompatible 
+  org\wild\mixin\MixinEntity.java:22: error: incompatible types: 
+  org\wild\mixin\MixinLivingEntityRenderer.java:146: error: incompatible 
+  org\wild\mixin\MixinLivingEntityRenderer.java:153: error: incompatible 
+  org\wild\mixin\MixinLivingEntityRenderer.java:217: error: incompatible 
+  org\wild\mixin\RecipeBookScreenMixin.java:28: error: incompatible 
+  org\wild\mixin\RenderLayerMultiPhaseMixin.java:28: error: incompatible 
+  ru\metaculture\protection\O0000O0O00OOO0.java:13: error: incompatible 
+  org\wild\mixin\ScreenMixin.java:61: error: incompatible types: 
+  org\wild\mixin\ScreenMixin.java:75: error: incompatible types: 
+  org\wild\mixin\ScreenMixin.java:84: error: incompatible types: 
+  org\wild\mixin\ScreenMixin.java:113: error: incompatible types: 
+  org\wild\mixin\ScreenMixin.java:128: error: incompatible types: 
+  org\wild\mixin\ScreenMixin.java:147: error: incompatible types: 
+  org\wild\mixin\ScreenMixin.java:153: error: incompatible types: 
+  org\wild\mixin\ScreenMixin.java:155: error: incompatible types: 
+  org\wild\mixin\ScreenMixin.java:158: error: incompatible types: 
+  org\wild\mixin\WorldRendererMixin.java:120: error: incompatible types: 
+  ru\metaculture\protection\Arrows.java:94: error: incompatible types: 
+  ru\metaculture\protection\AutoAccept.java:114: error: incompatible 
+  ru\metaculture\protection\AutoAncientBot.java:719: error: incompatible 
+  ru\metaculture\protection\AutoAncientBot.java:770: error: incompatible 
+  ru\metaculture\protection\AutoAncientBot.java:2146: error: incompatible 
+  ru\metaculture\protection\AutoAncientBot.java:2148: error: incompatible 
+  ru\metaculture\protection\AutoClan.java:121: error: incompatible types: 
+  ru\metaculture\protection\AutoClan.java:129: error: incompatible types: 
+  ru\metaculture\protection\AutoCraft.java:358: error: incompatible 
+  ru\metaculture\protection\AutoCraft.java:397: error: incompatible 
+  ru\metaculture\protection\AutoDuel.java:67: error: incompatible types: 
+  ru\metaculture\protection\AutoLoginManager.java:31: error: incompatible 
+  ru\metaculture\protection\AutoMine.java:153: error: incompatible types: 
+  ru\metaculture\protection\AutoMine.java:182: error: incompatible types: 
+  ru\metaculture\protection\AutoMine.java:1083: error: incompatible 
+  ru\metaculture\protection\AutoMine.java:1105: error: incompatible 
+  ru\metaculture\protection\AutoMine.java:1108: error: incompatible 
+  ru\metaculture\protection\AutoPottBot.java:937: error: incompatible 
+  ru\metaculture\protection\AutoPottBot.java:966: error: incompatible 
+  ru\metaculture\protection\AutoWood.java:276: error: incompatible types: 
+  ru\metaculture\protection\AutoWood.java:330: error: incompatible types: 
+  ru\metaculture\protection\MultiSelectSetting.java:56: error: 
+  ru\metaculture\protection\O000000O00.java:67: error: incompatible 
+  ru\metaculture\protection\O000000O00.java:76: error: incompatible 
+  ru\metaculture\protection\O000000O00.java:77: error: incompatible 
+  ru\metaculture\protection\ChorusFarm.java:899: error: incompatible 
+  ru\metaculture\protection\ChorusFarm.java:902: error: incompatible 
+  ru\metaculture\protection\ChorusFarm.java:911: error: incompatible 
+  ru\metaculture\protection\ChorusFarm.java:1172: error: incompatible 
+  ru\metaculture\protection\ClickGui.java:691: error: incompatible types: 
+  ru\metaculture\protection\ClickGui.java:728: error: incompatible types: 
+  ru\metaculture\protection\ClickGui.java:763: error: incompatible types: 
+  ru\metaculture\protection\O00000OOO000OO.java:1600: error: incompatible 
+  ru\metaculture\protection\O00000OOO000OO.java:2167: error: incompatible 
+  ru\metaculture\protection\O00000OOO000OO.java:3271: error: incompatible 
+  ru\metaculture\protection\O00000OOO000OO.java:3601: error: incompatible 
+  ru\metaculture\protection\O00000OOO000OO.java:4331: error: incompatible 
+  ru\metaculture\protection\O00000OOO000OO.java:5425: error: incompatible 
+  ru\metaculture\protection\O00000OOO000OO.java:5461: error: incompatible 
+  ru\metaculture\protection\O0000O000O0O0O.java:1409: error: incompatible 
+  ru\metaculture\protection\ModuleListRenderer.java:599: error: 
+  ru\metaculture\protection\ShaderSourceBuilder.java:59: error: 
+  ru\metaculture\protection\ShaderSourceBuilder.java:122: error: 
+  ru\metaculture\protection\ShaderSourceBuilder.java:213: error: 
+  ru\metaculture\protection\ShaderSourceBuilder.java:242: error: 
+  ru\metaculture\protection\O00000OOO00O.java:251: error: incompatible 
+  ru\metaculture\protection\O00000OOO00O.java:265: error: incompatible 
+  ru\metaculture\protection\O00000OOO00O.java:267: error: incompatible 
+  ru\metaculture\protection\O00000OOO00O.java:271: error: incompatible 
+  ru\metaculture\protection\O00000OOO00O.java:284: error: incompatible 
+  ru\metaculture\protection\O00000OOO0OO00.java:165: error: incompatible 
+  ru\metaculture\protection\O0000O00OOO0.java:65: error: incompatible 
+  ru\metaculture\protection\O0000O00OOO0.java:67: error: incompatible 
+  ru\metaculture\protection\O0000O00OOO0.java:69: error: incompatible 
+  ru\metaculture\protection\O0000O00OOO0.java:71: error: incompatible 
+  ru\metaculture\protection\O0000O00OOO0.java:73: error: incompatible 
+  ru\metaculture\protection\O0000O00OOO0.java:75: error: incompatible 
+  ru\metaculture\protection\CocoaFarm.java:828: error: incompatible 
+  ru\metaculture\protection\CreeperFarm.java:193: error: incompatible 
+  ru\metaculture\protection\CreeperFarm.java:212: error: incompatible 
+  ru\metaculture\protection\ESP.java:84: error: incompatible types: 
+  ru\metaculture\protection\NameTags.java:511: error: incompatible types: 
+  ru\metaculture\protection\O00000O0O00OOO.java:131: error: incompatible 
+  ru\metaculture\protection\O00000O0O00OOO.java:1098: error: incompatible 
+  ru\metaculture\protection\O00000O0O00OOO.java:1106: error: incompatible 
+  ru\metaculture\protection\O0000O0O000O0O.java:202: error: incompatible 
+  ru\metaculture\protection\O0000O0O000O0O.java:216: error: incompatible 
+  ru\metaculture\protection\HudModule.java:57: error: incompatible types: 
+  ru\metaculture\protection\MusicPlayerHud.java:439: error: incompatible 
+  ru\metaculture\protection\O00000000000O0.java:75: error: incompatible 
+  ru\metaculture\protection\O00000000000O0.java:86: error: incompatible 
+  ru\metaculture\protection\O000000O000000.java:193: error: incompatible 
+  ru\metaculture\protection\O000000O000O.java:193: error: incompatible 
+  ru\metaculture\protection\O000000O0O00.java:30: error: incompatible 
+  ru\metaculture\protection\O000000O0O00.java:34: error: incompatible 
+  ru\metaculture\protection\O000000O0O0O00.java:273: error: incompatible 
+  ru\metaculture\protection\O000000O0O0O00.java:353: error: incompatible 
+  ru\metaculture\protection\O000000O0O0O00.java:354: error: incompatible 
+  ru\metaculture\protection\O000000O0O0O00.java:824: error: incompatible 
+  ru\metaculture\protection\O000000O0O0O00.java:838: error: incompatible 
+  ru\metaculture\protection\O000000O0O0O00.java:875: error: incompatible 
+  ru\metaculture\protection\O000000O0O0O00.java:1417: error: incompatible 
+  ru\metaculture\protection\O000000O0O0O00.java:1424: error: incompatible 
+  ru\metaculture\protection\O000000OO0000.java:127: error: incompatible 
+  ru\metaculture\protection\O000000OO0000.java:130: error: incompatible 
+  ru\metaculture\protection\O000000OO0000.java:144: error: incompatible 
+  ru\metaculture\protection\O000000OO0000.java:144: error: incompatible 
+  ru\metaculture\protection\O000000OOOO.java:267: error: incompatible 
+  ru\metaculture\protection\O000000OOOO00.java:134: error: incompatible 
+  ru\metaculture\protection\O000000OOOO00O.java:160: error: incompatible 
+  ru\metaculture\protection\O00000O0O0.java:131: error: incompatible 
+  ru\metaculture\protection\O00000O0OOO0O.java:247: error: incompatible 
+  ru\metaculture\protection\O00000O0OOOO00.java:215: error: incompatible 
+  ru\metaculture\protection\O00000OO00000.java:392: error: incompatible 
+  ru\metaculture\protection\O00000OO000000.java:74: error: incompatible 
+  ru\metaculture\protection\O00000OO000000.java:89: error: incompatible 
+  ru\metaculture\protection\O00000OO000000.java:152: error: incompatible 
+  ru\metaculture\protection\O00000OO00OO.java:31: error: incompatible 
+  ru\metaculture\protection\O00000OO00OOO.java:80: error: incompatible 
+  ru\metaculture\protection\O00000OO00OOO.java:134: error: incompatible 
+  ru\metaculture\protection\O00000OO0O0.java:326: error: incompatible 
+  ru\metaculture\protection\O00000OO0O0O00.java:40: error: incompatible 
+  ru\metaculture\protection\O00000OO0OOO.java:78: error: incompatible 
+  ru\metaculture\protection\O00000OO0OOO00.java:2889: error: incompatible 
+  ru\metaculture\protection\O00000OOO0000.java:163: error: incompatible 
+  ru\metaculture\protection\O00000OOO00O00.java:229: error: incompatible 
+  ru\metaculture\protection\O00000OOO00O00.java:242: error: incompatible 
+  ru\metaculture\protection\O00000OOO00O00.java:247: error: incompatible 
+  ru\metaculture\protection\O00000OOO00O00.java:257: error: incompatible 
+  ru\metaculture\protection\O00000OOOOO000.java:74: error: incompatible 
+  ru\metaculture\protection\O0000O000O0.java:3902: error: incompatible 
+  ru\metaculture\protection\O0000O000OOOO.java:147: error: incompatible 
+  ru\metaculture\protection\O0000O0O00000.java:9: error: incompatible 
+  ru\metaculture\protection\O0000O0O00000.java:11: error: incompatible 
+  ru\metaculture\protection\O0000O0O00000.java:13: error: incompatible 
+  ru\metaculture\protection\O0000O0O00000.java:15: error: incompatible 
+  ru\metaculture\protection\O0000O0O00000.java:17: error: incompatible 
+  ru\metaculture\protection\O0000O0O00000.java:19: error: incompatible 
+  ru\metaculture\protection\PlayerHelper.java:601: error: incompatible 
+  ru\metaculture\protection\ProtectInfo.java:351: error: incompatible 
+  ru\metaculture\protection\PvPSafe.java:131: error: incompatible types: 
+  ru\metaculture\protection\ReconnectCommand.java:311: error: 
+  ru\metaculture\protection\ReconnectCommand.java:318: error: 
+  ru\metaculture\protection\Removals.java:187: error: incompatible types: 
+  ru\metaculture\protection\Removals.java:189: error: incompatible types: 
+  ru\metaculture\protection\RotationBuilderScreen.java:528: error: 
+  ru\metaculture\protection\ServerHelperHud.java:142: error: incompatible 
+  ru\metaculture\protection\ServerHelperHud.java:179: error: incompatible 
+  ru\metaculture\protection\ServerHelperHud.java:232: error: incompatible 
+  ru\metaculture\protection\Speed.java:76: error: incompatible types: 
+  ru\metaculture\protection\Trails.java:747: error: incompatible types: 
+  ru\metaculture\protection\UnHook.java:117: error: incompatible types: 
+  ru\metaculture\protection\UseTracker.java:170: error: incompatible 
+  ru\metaculture\protection\UseTracker.java:239: error: incompatible 
+  ru\metaculture\protection\WatermarkHud.java:100: error: incompatible 
+  ru\metaculture\protection\WildClient.java:159: error: incompatible 
+  ru\metaculture\protection\WildClient.java:163: error: incompatible 
+  ru\metaculture\protection\WildClient.java:167: error: incompatible 
+  ru\metaculture\protection\WildClient.java:200: error: incompatible 
+  ru\metaculture\protection\WildClient.java:251: error: incompatible 
+  ru\metaculture\protection\WildClient.java:253: error: incompatible 
+  ru\metaculture\protection\WildClient.java:436: error: incompatible 
+  ru\metaculture\protection\WildClient.java:446: error: incompatible 
+  ru\metaculture\protection\WildClient.java:448: error: incompatible 
+  ru\metaculture\protection\O0000000000OO0.java:16: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:54: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:138: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:142: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:144: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:144: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:204: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:215: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:218: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:231: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:233: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:233: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:235: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:237: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:240: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:252: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:252: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:255: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:255: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:267: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:269: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:272: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:284: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:286: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:307: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:378: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:391: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:455: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:459: error: float cannot 
+  ru\metaculture\protection\O0000000000OO0.java:459: error: float cannot 
+  ru\metaculture\protection\WardenFarm.java:668: error: double cannot be 
+  ru\metaculture\protection\AutoCraft.java:354: error: bad operand types 
+  ru\metaculture\protection\AutoCraft.java:387: error: bad operand types 
+  ru\metaculture\protection\AutoPottBot.java:635: error: bad operand 
+  ru\metaculture\protection\AutoPottBot.java:636: error: bad operand 
+  ru\metaculture\protection\AutoPottBot.java:637: error: bad operand 
+  ru\metaculture\protection\AutoPottBot.java:934: error: bad operand 
+  ru\metaculture\protection\AutoPottBot.java:938: error: bad operand 
+  ru\metaculture\protection\AutoPottBot.java:939: error: bad operand 
+  ru\metaculture\protection\AutoPottBot.java:962: error: bad operand 
+  ru\metaculture\protection\AutoPottBot.java:967: error: bad operand 
+  ru\metaculture\protection\AutoPottBot.java:971: error: bad operand 

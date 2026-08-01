@@ -1,0 +1,89 @@
+﻿ru\metaculture\protection\O000000OO0000.java:127: error: incompatible 
+types: Object cannot be converted to Path
+                  List var9 = var8.filter(path -> Files.isRegularFile(path) && 
+path.getFileName().toString().endsWith(".json")).toList();
+                                                                      ^
+
+ru\metaculture\protection\O000000OO0000.java:127: error: cannot find 
+symbol
+                  List var9 = var8.filter(path -> Files.isRegularFile(path) && 
+path.getFileName().toString().endsWith(".json")).toList();
+                                                                                   ^
+  symbol:   method getFileName()
+  location: variable path of type Object
+
+ru\metaculture\protection\O000000OO0000.java:130: error: incompatible 
+types: Object cannot be converted to Path
+                  for (Path var11 : var9) {
+                                    ^
+
+ru\metaculture\protection\O000000OO0000.java:144: error: incompatible 
+types: Object cannot be converted to Path
+                  var18.filter(path -> Files.isRegularFile(path) && 
+path.getFileName().toString().endsWith(".json")).forEach(this::O000000000);
+                                                           ^
+
+ru\metaculture\protection\O000000OO0000.java:144: error: cannot find 
+symbol
+                  var18.filter(path -> Files.isRegularFile(path) && 
+path.getFileName().toString().endsWith(".json")).forEach(this::O000000000);
+                                                                        ^
+  symbol:   method getFileName()
+  location: variable path of type Object
+
+ru\metaculture\protection\O000000OO0000.java:144: error: incompatible 
+types: invalid method reference
+                  var18.filter(path -> Files.isRegularFile(path) && 
+path.getFileName().toString().endsWith(".json")).forEach(this::O000000000);
+                                                                                                                       
+      ^
+    no suitable method found for O000000000(Object)
+        method O000000OO0000.O000000000(String) is not applicable
+          (argument mismatch; Object cannot be converted to String)
+        method O000000OO0000.O000000000(Path) is not applicable
+          (argument mismatch; Object cannot be converted to Path)
+
+  ru\metaculture\protection\O000000OO0000.java:127: error: cannot find 
+symbol
+                    List var9 = var8.filter(path -> Files.isRegularFile(path) && 
+path.getFileName().toString().endsWith(".json")).toList();
+                                                                                     ^
+    symbol:   method getFileName()
+    location: variable path of type Object
+
+  ru\metaculture\protection\O000000OO0000.java:144: error: cannot find 
+symbol
+                    var18.filter(path -> Files.isRegularFile(path) && 
+path.getFileName().toString().endsWith(".json")).forEach(this::O000000000);
+                                                                          ^
+    symbol:   method getFileName()
+    location: variable path of type Object
+
+  ru\metaculture\protection\O000000OO0000.java:127: error: incompatible 
+types: Object cannot be converted to Path
+                    List var9 = var8.filter(path -> Files.isRegularFile(path) && 
+path.getFileName().toString().endsWith(".json")).toList();
+                                                                        ^
+
+  ru\metaculture\protection\O000000OO0000.java:130: error: incompatible 
+types: Object cannot be converted to Path
+                    for (Path var11 : var9) {
+                                      ^
+
+  ru\metaculture\protection\O000000OO0000.java:144: error: incompatible 
+types: Object cannot be converted to Path
+                    var18.filter(path -> Files.isRegularFile(path) && 
+path.getFileName().toString().endsWith(".json")).forEach(this::O000000000);
+                                                             ^
+
+  ru\metaculture\protection\O000000OO0000.java:144: error: incompatible 
+types: invalid method reference
+                    var18.filter(path -> Files.isRegularFile(path) && 
+path.getFileName().toString().endsWith(".json")).forEach(this::O000000000);
+                                                                                                                       
+        ^
+      no suitable method found for O000000000(Object)
+          method O000000OO0000.O000000000(String) is not applicable
+            (argument mismatch; Object cannot be converted to String)
+          method O000000OO0000.O000000000(Path) is not applicable
+            (argument mismatch; Object cannot be converted to Path)

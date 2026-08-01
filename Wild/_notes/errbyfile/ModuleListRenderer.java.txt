@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\ModuleListRenderer.java:599: error: 
+incompatible types: Object cannot be converted to O0000000OO0OOO
+         for (O0000000OO0OOO var26 : var14) {
+                                     ^
+
+  ru\metaculture\protection\ModuleListRenderer.java:599: error: 
+incompatible types: Object cannot be converted to O0000000OO0OOO
+           for (O0000000OO0OOO var26 : var14) {
+                                       ^

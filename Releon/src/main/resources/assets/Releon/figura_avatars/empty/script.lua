@@ -1,0 +1,5 @@
+vanilla_model.PLAYER:setVisible(true)
+vanilla_model.ARMOR:setVisible(true)
+vanilla_model.HELMET_ITEM:setVisible(true)
+vanilla_model.CAPE:setVisible(true)
+vanilla_model.ELYTRA:setVisible(true)

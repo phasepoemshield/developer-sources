@@ -1,0 +1,31 @@
+﻿ru\metaculture\protection\AutoVillageTrade.java:1338: error: cannot find 
+symbol
+            long var6 = var4.stream().filter(o0000000000 -> !o0000000000.O0000000000O && o0000000000.O0000000000000 <= 
+this.O00000000OOO0O()).count();
+                                                                        ^
+  symbol:   variable O0000000000O
+  location: variable o0000000000 of type Object
+
+ru\metaculture\protection\AutoVillageTrade.java:1338: error: cannot find 
+symbol
+            long var6 = var4.stream().filter(o0000000000 -> !o0000000000.O0000000000O && o0000000000.O0000000000000 <= 
+this.O00000000OOO0O()).count();
+                                                                                                    ^
+  symbol:   variable O0000000000000
+  location: variable o0000000000 of type Object
+
+  ru\metaculture\protection\AutoVillageTrade.java:1338: error: cannot 
+find symbol
+              long var6 = var4.stream().filter(o0000000000 -> !o0000000000.O0000000000O && o0000000000.O0000000000000 
+<= this.O00000000OOO0O()).count();
+                                                                          ^
+    symbol:   variable O0000000000O
+    location: variable o0000000000 of type Object
+
+  ru\metaculture\protection\AutoVillageTrade.java:1338: error: cannot 
+find symbol
+              long var6 = var4.stream().filter(o0000000000 -> !o0000000000.O0000000000O && o0000000000.O0000000000000 
+<= this.O00000000OOO0O()).count();
+                                                                                                      ^
+    symbol:   variable O0000000000000
+    location: variable o0000000000 of type Object

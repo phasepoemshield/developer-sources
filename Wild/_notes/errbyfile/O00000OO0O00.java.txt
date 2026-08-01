@@ -1,0 +1,27 @@
+﻿ru\metaculture\protection\O00000OO0O00.java:352: error: reference to 
+O00000000 is ambiguous
+         return O00000000(null, object, o0000000OOO00O);
+                ^
+  both method O00000000(JsonElement,Object,Setting) in O00000OO0O00 and method O00000000(Setting,Object,Object) in 
+O00000OO0O00 match
+
+ru\metaculture\protection\O00000OO0O00.java:354: error: reference to 
+O00000000 is ambiguous
+         return O00000000(null, o0000000OOO00O, object);
+                ^
+  both method O00000000(JsonElement,Setting,Object) in O00000OO0O00 and method O00000000(Setting,Object,Object) in 
+O00000OO0O00 match
+
+  ru\metaculture\protection\O00000OO0O00.java:352: error: reference to 
+O00000000 is ambiguous
+           return O00000000(null, object, o0000000OOO00O);
+                  ^
+    both method O00000000(JsonElement,Object,Setting) in O00000OO0O00 and method O00000000(Setting,Object,Object) in 
+O00000OO0O00 match
+
+  ru\metaculture\protection\O00000OO0O00.java:354: error: reference to 
+O00000000 is ambiguous
+           return O00000000(null, o0000000OOO00O, object);
+                  ^
+    both method O00000000(JsonElement,Setting,Object) in O00000OO0O00 and method O00000000(Setting,Object,Object) in 
+O00000OO0O00 match

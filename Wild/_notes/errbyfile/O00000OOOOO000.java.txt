@@ -1,0 +1,101 @@
+﻿ru\metaculture\protection\O00000OOOOO000.java:74: error: incompatible 
+types: Object cannot be converted to File
+            for (File var12 : var3) {
+                              ^
+
+ru\metaculture\protection\O00000OOOOO000.java:87: error: cannot find 
+symbol
+      var1.sort((o00000OOOOO00, o00000OOOOO002) -> Long.compare(o00000OOOOO002.O0000000000O(), 
+o00000OOOOO00.O0000000000O()));
+                                                                              ^
+  symbol:   method O0000000000O()
+  location: variable o00000OOOOO002 of type Object
+
+ru\metaculture\protection\O00000OOOOO000.java:87: error: cannot find 
+symbol
+      var1.sort((o00000OOOOO00, o00000OOOOO002) -> Long.compare(o00000OOOOO002.O0000000000O(), 
+o00000OOOOO00.O0000000000O()));
+                                                                                                            ^
+  symbol:   method O0000000000O()
+  location: variable o00000OOOOO00 of type Object
+
+ru\metaculture\protection\O00000OOOOO000.java:103: error: cannot find 
+symbol
+         var2.sort((o00000OOOOO00, o00000OOOOO002) -> Long.compare(o00000OOOOO002.O0000000000O(), 
+o00000OOOOO00.O0000000000O()));
+                                                                                 ^
+  symbol:   method O0000000000O()
+  location: variable o00000OOOOO002 of type Object
+
+ru\metaculture\protection\O00000OOOOO000.java:103: error: cannot find 
+symbol
+         var2.sort((o00000OOOOO00, o00000OOOOO002) -> Long.compare(o00000OOOOO002.O0000000000O(), 
+o00000OOOOO00.O0000000000O()));
+                                                                                                               ^
+  symbol:   method O0000000000O()
+  location: variable o00000OOOOO00 of type Object
+
+ru\metaculture\protection\O00000OOOOO000.java:244: error: cannot find 
+symbol
+         var3.sort((file, file2) -> Long.compare(file2.lastModified(), file.lastModified()));
+                                                      ^
+  symbol:   method lastModified()
+  location: variable file2 of type Object
+
+ru\metaculture\protection\O00000OOOOO000.java:244: error: cannot find 
+symbol
+         var3.sort((file, file2) -> Long.compare(file2.lastModified(), file.lastModified()));
+                                                                           ^
+  symbol:   method lastModified()
+  location: variable file of type Object
+
+  ru\metaculture\protection\O00000OOOOO000.java:87: error: cannot find 
+symbol
+        var1.sort((o00000OOOOO00, o00000OOOOO002) -> Long.compare(o00000OOOOO002.O0000000000O(), 
+o00000OOOOO00.O0000000000O()));
+                                                                                ^
+    symbol:   method O0000000000O()
+    location: variable o00000OOOOO002 of type Object
+
+  ru\metaculture\protection\O00000OOOOO000.java:87: error: cannot find 
+symbol
+        var1.sort((o00000OOOOO00, o00000OOOOO002) -> Long.compare(o00000OOOOO002.O0000000000O(), 
+o00000OOOOO00.O0000000000O()));
+                                                                                                              ^
+    symbol:   method O0000000000O()
+    location: variable o00000OOOOO00 of type Object
+
+  ru\metaculture\protection\O00000OOOOO000.java:103: error: cannot find 
+symbol
+           var2.sort((o00000OOOOO00, o00000OOOOO002) -> Long.compare(o00000OOOOO002.O0000000000O(), 
+o00000OOOOO00.O0000000000O()));
+                                                                                   ^
+    symbol:   method O0000000000O()
+    location: variable o00000OOOOO002 of type Object
+
+  ru\metaculture\protection\O00000OOOOO000.java:103: error: cannot find 
+symbol
+           var2.sort((o00000OOOOO00, o00000OOOOO002) -> Long.compare(o00000OOOOO002.O0000000000O(), 
+o00000OOOOO00.O0000000000O()));
+                                                                                                                 ^
+    symbol:   method O0000000000O()
+    location: variable o00000OOOOO00 of type Object
+
+  ru\metaculture\protection\O00000OOOOO000.java:244: error: cannot find 
+symbol
+           var3.sort((file, file2) -> Long.compare(file2.lastModified(), file.lastModified()));
+                                                        ^
+    symbol:   method lastModified()
+    location: variable file2 of type Object
+
+  ru\metaculture\protection\O00000OOOOO000.java:244: error: cannot find 
+symbol
+           var3.sort((file, file2) -> Long.compare(file2.lastModified(), file.lastModified()));
+                                                                             ^
+    symbol:   method lastModified()
+    location: variable file of type Object
+
+  ru\metaculture\protection\O00000OOOOO000.java:74: error: incompatible 
+types: Object cannot be converted to File
+              for (File var12 : var3) {
+                                ^

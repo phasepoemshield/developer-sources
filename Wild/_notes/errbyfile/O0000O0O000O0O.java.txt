@@ -1,0 +1,19 @@
+﻿ru\metaculture\protection\O0000O0O000O0O.java:202: error: incompatible 
+types: int cannot be converted to boolean
+         return (boolean)var22;
+                         ^
+
+ru\metaculture\protection\O0000O0O000O0O.java:216: error: incompatible 
+types: int cannot be converted to boolean
+      return (boolean)var21;
+                      ^
+
+  ru\metaculture\protection\O0000O0O000O0O.java:202: error: incompatible 
+types: int cannot be converted to boolean
+           return (boolean)var22;
+                           ^
+
+  ru\metaculture\protection\O0000O0O000O0O.java:216: error: incompatible 
+types: int cannot be converted to boolean
+        return (boolean)var21;
+                        ^

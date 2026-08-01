@@ -1,0 +1,29 @@
+﻿ru\metaculture\protection\O00000O0O00OOO.java:131: error: incompatible 
+types: Object cannot be converted to W175
+         for (O00000O0O00OOO.W175 var21 : var14) {
+                                          ^
+
+ru\metaculture\protection\O00000O0O00OOO.java:1098: error: incompatible 
+types: Object cannot be converted to W175
+         for (O00000O0O00OOO.W175 var6 : var3) {
+                                         ^
+
+ru\metaculture\protection\O00000O0O00OOO.java:1106: error: incompatible 
+types: Object cannot be converted to W175
+               for (O00000O0O00OOO.W175 var11 : var4) {
+                                                ^
+
+  ru\metaculture\protection\O00000O0O00OOO.java:131: error: incompatible 
+types: Object cannot be converted to W175
+           for (O00000O0O00OOO.W175 var21 : var14) {
+                                            ^
+
+  ru\metaculture\protection\O00000O0O00OOO.java:1098: error: incompatible 
+types: Object cannot be converted to W175
+           for (O00000O0O00OOO.W175 var6 : var3) {
+                                           ^
+
+  ru\metaculture\protection\O00000O0O00OOO.java:1106: error: incompatible 
+types: Object cannot be converted to W175
+                 for (O00000O0O00OOO.W175 var11 : var4) {
+                                                  ^

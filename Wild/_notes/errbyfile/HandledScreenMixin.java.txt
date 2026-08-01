@@ -1,0 +1,49 @@
+﻿org\wild\mixin\HandledScreenMixin.java:176: error: incompatible types: 
+HandledScreenMixin cannot be converted to HandledScreen<?>
+      if (AhHelper.O00000000((HandledScreen<?>)this, slot)) {
+                                               ^
+
+org\wild\mixin\HandledScreenMixin.java:193: error: incompatible types: 
+HandledScreenMixin cannot be converted to HandledScreen<?>
+      if (AhHelper.O00000000((HandledScreen<?>)this, slot)) {
+                                               ^
+
+org\wild\mixin\HandledScreenMixin.java:208: error: incompatible types: 
+HandledScreenMixin cannot be converted to HandledScreen<?>
+      if (AhHelper.O00000000((HandledScreen<?>)this, slot)) {
+                                               ^
+
+org\wild\mixin\HandledScreenMixin.java:220: error: incompatible types: 
+HandledScreenMixin cannot be converted to HandledScreen<?>
+      if (AhHelper.O00000000((HandledScreen<?>)this, var6)) {
+                                               ^
+
+org\wild\mixin\HandledScreenMixin.java:261: error: incompatible types: 
+HandledScreenMixin cannot be converted to HandledScreen<?>
+      return AhHelper.O00000000((HandledScreen<?>)this, var1);
+                                                  ^
+
+  org\wild\mixin\HandledScreenMixin.java:176: error: incompatible types: 
+HandledScreenMixin cannot be converted to HandledScreen<?>
+        if (AhHelper.O00000000((HandledScreen<?>)this, slot)) {
+                                                 ^
+
+  org\wild\mixin\HandledScreenMixin.java:193: error: incompatible types: 
+HandledScreenMixin cannot be converted to HandledScreen<?>
+        if (AhHelper.O00000000((HandledScreen<?>)this, slot)) {
+                                                 ^
+
+  org\wild\mixin\HandledScreenMixin.java:208: error: incompatible types: 
+HandledScreenMixin cannot be converted to HandledScreen<?>
+        if (AhHelper.O00000000((HandledScreen<?>)this, slot)) {
+                                                 ^
+
+  org\wild\mixin\HandledScreenMixin.java:220: error: incompatible types: 
+HandledScreenMixin cannot be converted to HandledScreen<?>
+        if (AhHelper.O00000000((HandledScreen<?>)this, var6)) {
+                                                 ^
+
+  org\wild\mixin\HandledScreenMixin.java:261: error: incompatible types: 
+HandledScreenMixin cannot be converted to HandledScreen<?>
+        return AhHelper.O00000000((HandledScreen<?>)this, var1);
+                                                    ^

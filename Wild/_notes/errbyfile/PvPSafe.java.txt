@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\PvPSafe.java:131: error: incompatible types: 
+Object cannot be converted to ClientBossBar
+         for (ClientBossBar var3 : var1.values()) {
+                                              ^
+
+  ru\metaculture\protection\PvPSafe.java:131: error: incompatible types: 
+Object cannot be converted to ClientBossBar
+           for (ClientBossBar var3 : var1.values()) {
+                                                ^

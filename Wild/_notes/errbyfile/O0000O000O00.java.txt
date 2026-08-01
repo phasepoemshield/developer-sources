@@ -1,0 +1,23 @@
+﻿ru\metaculture\protection\O0000O000O00.java:204: error: reference to 
+O00000000 is ambiguous
+                        o0000O000O0O0x.O00000000(null);
+                                      ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+ru\metaculture\protection\O0000O000O00.java:325: error: reference to 
+O00000000 is ambiguous
+            o0000O000O0O0.O00000000(null);
+                         ^
+  both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O00.java:204: error: reference to 
+O00000000 is ambiguous
+                          o0000O000O0O0x.O00000000(null);
+                                        ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match
+
+  ru\metaculture\protection\O0000O000O00.java:325: error: reference to 
+O00000000 is ambiguous
+              o0000O000O0O0.O00000000(null);
+                           ^
+    both method O00000000(List<Integer>) in O0000O000O0O0 and method O00000000(NumberSetting) in O0000O000O0O0 match

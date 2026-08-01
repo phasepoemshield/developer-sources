@@ -1,0 +1,52 @@
+﻿ru\metaculture\protection\ChorusFarm.java:899: error: reference to 
+O00000000 is ambiguous
+      Set var23 = this.O00000000(var7);
+                      ^
+  both method O00000000(Collection<Setting>) in O0000000OOO000 and method O00000000(List<BlockPos>) in ChorusFarm match
+
+ru\metaculture\protection\ChorusFarm.java:899: error: incompatible types: 
+void cannot be converted to Set
+      Set var23 = this.O00000000(var7);
+                                ^
+
+ru\metaculture\protection\ChorusFarm.java:902: error: incompatible types: 
+Object cannot be converted to BlockPos
+      for (BlockPos var27 : var8) {
+                            ^
+
+ru\metaculture\protection\ChorusFarm.java:911: error: incompatible types: 
+Object cannot be converted to BlockPos
+      for (BlockPos var30 : var7) {
+                            ^
+
+ru\metaculture\protection\ChorusFarm.java:1172: error: incompatible 
+types: Object cannot be converted to ItemEntity
+      for (ItemEntity var9 : var2) {
+                             ^
+
+  ru\metaculture\protection\ChorusFarm.java:899: error: reference to 
+O00000000 is ambiguous
+        Set var23 = this.O00000000(var7);
+                        ^
+    both method O00000000(Collection<Setting>) in O0000000OOO000 and method O00000000(List<BlockPos>) in ChorusFarm 
+match
+
+  ru\metaculture\protection\ChorusFarm.java:899: error: incompatible 
+types: void cannot be converted to Set
+        Set var23 = this.O00000000(var7);
+                                  ^
+
+  ru\metaculture\protection\ChorusFarm.java:902: error: incompatible 
+types: Object cannot be converted to BlockPos
+        for (BlockPos var27 : var8) {
+                              ^
+
+  ru\metaculture\protection\ChorusFarm.java:911: error: incompatible 
+types: Object cannot be converted to BlockPos
+        for (BlockPos var30 : var7) {
+                              ^
+
+  ru\metaculture\protection\ChorusFarm.java:1172: error: incompatible 
+types: Object cannot be converted to ItemEntity
+        for (ItemEntity var9 : var2) {
+                               ^

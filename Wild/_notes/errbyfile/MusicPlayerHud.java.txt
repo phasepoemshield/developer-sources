@@ -1,0 +1,23 @@
+﻿ru\metaculture\protection\MusicPlayerHud.java:439: error: incompatible 
+types: Object cannot be converted to IMediaSession
+         for (IMediaSession var4 : var1) {
+                                   ^
+
+ru\metaculture\protection\MusicPlayerHud.java:586: error: invalid 
+canonical constructor in record W151
+      private W151(boolean available, String title, String artist, long position, long duration, boolean playing, 
+byte[] thumbnail) {
+              ^
+  (attempting to assign stronger access privileges; was package)
+
+  ru\metaculture\protection\MusicPlayerHud.java:586: error: invalid 
+canonical constructor in record W151
+        private W151(boolean available, String title, String artist, long position, long duration, boolean playing, 
+byte[] thumbnail) {
+                ^
+    (attempting to assign stronger access privileges; was package)
+
+  ru\metaculture\protection\MusicPlayerHud.java:439: error: incompatible 
+types: Object cannot be converted to IMediaSession
+           for (IMediaSession var4 : var1) {
+                                     ^

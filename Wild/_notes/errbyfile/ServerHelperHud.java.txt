@@ -1,0 +1,29 @@
+﻿ru\metaculture\protection\ServerHelperHud.java:142: error: incompatible 
+types: Object cannot be converted to W159
+         for (ServerHelperHud.W159 var6 : var3) {
+                                          ^
+
+ru\metaculture\protection\ServerHelperHud.java:179: error: incompatible 
+types: Object cannot be converted to W159
+            for (ServerHelperHud.W159 var14 : var4) {
+                                              ^
+
+ru\metaculture\protection\ServerHelperHud.java:232: error: incompatible 
+types: Object cannot be converted to W159
+            for (ServerHelperHud.W159 var41 : var4) {
+                                              ^
+
+  ru\metaculture\protection\ServerHelperHud.java:142: error: incompatible 
+types: Object cannot be converted to W159
+           for (ServerHelperHud.W159 var6 : var3) {
+                                            ^
+
+  ru\metaculture\protection\ServerHelperHud.java:179: error: incompatible 
+types: Object cannot be converted to W159
+              for (ServerHelperHud.W159 var14 : var4) {
+                                                ^
+
+  ru\metaculture\protection\ServerHelperHud.java:232: error: incompatible 
+types: Object cannot be converted to W159
+              for (ServerHelperHud.W159 var41 : var4) {
+                                                ^

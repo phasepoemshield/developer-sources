@@ -1,0 +1,344 @@
+﻿ru\metaculture\protection\WildClient.java:159: error: reference to 
+O00000000 is ambiguous
+         O00000000(this.O0000000000O0::O00000000);
+         ^
+  both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:159: error: incompatible types: 
+cannot infer type-variable(s) T
+         O00000000(this.O0000000000O0::O00000000);
+                  ^
+    (argument mismatch; bad return type in method reference
+      void cannot be converted to T)
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:163: error: reference to 
+O00000000 is ambiguous
+         O00000000(this.O0000000000O::O00000000);
+         ^
+  both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:163: error: incompatible types: 
+cannot infer type-variable(s) T
+         O00000000(this.O0000000000O::O00000000);
+                  ^
+    (argument mismatch; bad return type in method reference
+      void cannot be converted to T)
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:167: error: reference to 
+O00000000 is ambiguous
+      O00000000(O0000O00O00OOO::O00000000);
+      ^
+  both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:167: error: incompatible types: 
+cannot infer type-variable(s) T
+      O00000000(O0000O00O00OOO::O00000000);
+               ^
+    (argument mismatch; bad return type in method reference
+      void cannot be converted to T)
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:190: error: invalid method 
+reference
+      O00000000(O000000000O0O0::O00000000);
+                ^
+  cannot find symbol
+    symbol:   method O00000000()
+    location: class boolean
+
+ru\metaculture\protection\WildClient.java:200: error: reference to 
+O00000000 is ambiguous
+      O00000000(O0000000O00000::O00000000);
+      ^
+  both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:200: error: incompatible types: 
+cannot infer type-variable(s) T
+      O00000000(O0000000O00000::O00000000);
+               ^
+    (argument mismatch; bad return type in method reference
+      void cannot be converted to T)
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:251: error: incompatible types: 
+Object cannot be converted to Path
+               Path var3 = path.relativize(path3);
+                                           ^
+
+ru\metaculture\protection\WildClient.java:253: error: incompatible types: 
+Object cannot be converted to Path
+               if (Files.isDirectory(path3)) {
+                                     ^
+
+ru\metaculture\protection\WildClient.java:261: error: no suitable method 
+found for copy(Object,Path,StandardCopyOption)
+                  Files.copy(path3, var4, StandardCopyOption.COPY_ATTRIBUTES);
+                       ^
+    method Files.copy(Path,Path,CopyOption...) is not applicable
+      (argument mismatch; Object cannot be converted to Path)
+    method Files.copy(InputStream,Path,CopyOption...) is not applicable
+      (argument mismatch; Object cannot be converted to InputStream)
+
+ru\metaculture\protection\WildClient.java:300: error: <anonymous 
+ru.metaculture.protection.WildClient$1> is not abstract and does not override abstract method getFabricId() in 
+IdentifiableResourceReloadListener
+         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new 
+IdentifiableResourceReloadListener() {
+                                                                                                                       
+           ^
+
+ru\metaculture\protection\WildClient.java:330: error: <anonymous 
+ru.metaculture.protection.WildClient$2> is not abstract and does not override abstract method getFabricId() in 
+IdentifiableResourceReloadListener
+         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new 
+IdentifiableResourceReloadListener() {
+                                                                                                                       
+           ^
+
+ru\metaculture\protection\WildClient.java:436: error: reference to 
+O00000000 is ambiguous
+         O00000000(O0000O00O00OO0::O00000000);
+         ^
+  both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:436: error: incompatible types: 
+cannot infer type-variable(s) T
+         O00000000(O0000O00O00OO0::O00000000);
+                  ^
+    (argument mismatch; bad return type in method reference
+      void cannot be converted to T)
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:445: error: invalid method 
+reference
+         O00000000(O0000000000OOO::O0000000000);
+                   ^
+  cannot find symbol
+    symbol:   method O0000000000()
+    location: class File
+
+ru\metaculture\protection\WildClient.java:446: error: reference to 
+O00000000 is ambiguous
+         O00000000(O0000O0O00OOO::O00000000);
+         ^
+  both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:446: error: incompatible types: 
+cannot infer type-variable(s) T
+         O00000000(O0000O0O00OOO::O00000000);
+                  ^
+    (argument mismatch; bad return type in method reference
+      void cannot be converted to T)
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:448: error: reference to 
+O00000000 is ambiguous
+         O00000000(O0000O000OO000::O000000000);
+         ^
+  both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+
+ru\metaculture\protection\WildClient.java:448: error: incompatible types: 
+cannot infer type-variable(s) T
+         O00000000(O0000O000OO000::O000000000);
+                  ^
+    (argument mismatch; bad return type in method reference
+      void cannot be converted to T)
+  where T is a type-variable:
+    T extends Object declared in method <T>O00000000(Supplier<T>)
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+
+  ru\metaculture\protection\WildClient.java:261: error: no suitable 
+method found for copy(Object,Path,StandardCopyOption)
+                    Files.copy(path3, var4, StandardCopyOption.COPY_ATTRIBUTES);
+                         ^
+      method Files.copy(Path,Path,CopyOption...) is not applicable
+        (argument mismatch; Object cannot be converted to Path)
+      method Files.copy(InputStream,Path,CopyOption...) is not applicable
+        (argument mismatch; Object cannot be converted to InputStream)
+
+  ru\metaculture\protection\WildClient.java:190: error: invalid method 
+reference
+        O00000000(O000000000O0O0::O00000000);
+                  ^
+    cannot find symbol
+      symbol:   method O00000000()
+      location: class boolean
+
+  ru\metaculture\protection\WildClient.java:445: error: invalid method 
+reference
+           O00000000(O0000000000OOO::O0000000000);
+                     ^
+    cannot find symbol
+      symbol:   method O0000000000()
+      location: class File
+
+  ru\metaculture\protection\WildClient.java:159: error: reference to 
+O00000000 is ambiguous
+           O00000000(this.O0000000000O0::O00000000);
+           ^
+    both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:163: error: reference to 
+O00000000 is ambiguous
+           O00000000(this.O0000000000O::O00000000);
+           ^
+    both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:167: error: reference to 
+O00000000 is ambiguous
+        O00000000(O0000O00O00OOO::O00000000);
+        ^
+    both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:200: error: reference to 
+O00000000 is ambiguous
+        O00000000(O0000000O00000::O00000000);
+        ^
+    both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:436: error: reference to 
+O00000000 is ambiguous
+           O00000000(O0000O00O00OO0::O00000000);
+           ^
+    both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:446: error: reference to 
+O00000000 is ambiguous
+           O00000000(O0000O0O00OOO::O00000000);
+           ^
+    both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:448: error: reference to 
+O00000000 is ambiguous
+           O00000000(O0000O000OO000::O000000000);
+           ^
+    both method <T>O00000000(Supplier<T>) in WildClient and method O00000000(Runnable) in WildClient match
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:300: error: <anonymous 
+ru.metaculture.protection.WildClient$1> is not abstract and does not override abstract method getFabricId() in 
+IdentifiableResourceReloadListener
+           ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new 
+IdentifiableResourceReloadListener() {
+                                                                                                                       
+             ^
+
+  ru\metaculture\protection\WildClient.java:330: error: <anonymous 
+ru.metaculture.protection.WildClient$2> is not abstract and does not override abstract method getFabricId() in 
+IdentifiableResourceReloadListener
+           ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new 
+IdentifiableResourceReloadListener() {
+                                                                                                                       
+             ^
+
+  ru\metaculture\protection\WildClient.java:159: error: incompatible 
+types: cannot infer type-variable(s) T
+           O00000000(this.O0000000000O0::O00000000);
+                    ^
+      (argument mismatch; bad return type in method reference
+        void cannot be converted to T)
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:163: error: incompatible 
+types: cannot infer type-variable(s) T
+           O00000000(this.O0000000000O::O00000000);
+                    ^
+      (argument mismatch; bad return type in method reference
+        void cannot be converted to T)
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:167: error: incompatible 
+types: cannot infer type-variable(s) T
+        O00000000(O0000O00O00OOO::O00000000);
+                 ^
+      (argument mismatch; bad return type in method reference
+        void cannot be converted to T)
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:200: error: incompatible 
+types: cannot infer type-variable(s) T
+        O00000000(O0000000O00000::O00000000);
+                 ^
+      (argument mismatch; bad return type in method reference
+        void cannot be converted to T)
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:251: error: incompatible 
+types: Object cannot be converted to Path
+                 Path var3 = path.relativize(path3);
+                                             ^
+
+  ru\metaculture\protection\WildClient.java:253: error: incompatible 
+types: Object cannot be converted to Path
+                 if (Files.isDirectory(path3)) {
+                                       ^
+
+  ru\metaculture\protection\WildClient.java:436: error: incompatible 
+types: cannot infer type-variable(s) T
+           O00000000(O0000O00O00OO0::O00000000);
+                    ^
+      (argument mismatch; bad return type in method reference
+        void cannot be converted to T)
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:446: error: incompatible 
+types: cannot infer type-variable(s) T
+           O00000000(O0000O0O00OOO::O00000000);
+                    ^
+      (argument mismatch; bad return type in method reference
+        void cannot be converted to T)
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)
+
+  ru\metaculture\protection\WildClient.java:448: error: incompatible 
+types: cannot infer type-variable(s) T
+           O00000000(O0000O000OO000::O000000000);
+                    ^
+      (argument mismatch; bad return type in method reference
+        void cannot be converted to T)
+    where T is a type-variable:
+      T extends Object declared in method <T>O00000000(Supplier<T>)

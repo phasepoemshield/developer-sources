@@ -1,0 +1,21 @@
+﻿ru\metaculture\protection\AntiBot.java:149: error: reference to O00000000 
+is ambiguous
+         if (!this.O00000000(var2) && !this.O00000000(var2, var3)) {
+                  ^
+  both method O00000000(Collection<Setting>) in O0000000OOO000 and method O00000000(List<ItemStack>) in AntiBot match
+
+ru\metaculture\protection\AntiBot.java:149: error: 'void' type not 
+allowed here
+         if (!this.O00000000(var2) && !this.O00000000(var2, var3)) {
+                            ^
+
+  ru\metaculture\protection\AntiBot.java:149: error: reference to 
+O00000000 is ambiguous
+           if (!this.O00000000(var2) && !this.O00000000(var2, var3)) {
+                    ^
+    both method O00000000(Collection<Setting>) in O0000000OOO000 and method O00000000(List<ItemStack>) in AntiBot match
+
+  ru\metaculture\protection\AntiBot.java:149: error: 'void' type not 
+allowed here
+           if (!this.O00000000(var2) && !this.O00000000(var2, var3)) {
+                              ^

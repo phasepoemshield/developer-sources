@@ -1,0 +1,333 @@
+﻿ru\metaculture\protection\UnHook.java:90: error: cannot find symbol
+            .filter(string -> !string.contains("Wild »"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:91: error: cannot find symbol
+            .filter(string -> !string.contains("[Wild]"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:92: error: cannot find symbol
+            .filter(string -> !string.contains("[Config]"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:93: error: cannot find symbol
+            .filter(string -> !string.contains("[Manager]"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:94: error: cannot find symbol
+            .filter(string -> !string.contains("[Baritone]"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:95: error: cannot find symbol
+            .filter(string -> !string.contains("baritone"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:96: error: cannot find symbol
+            .filter(string -> !string.contains("- wild"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:97: error: cannot find symbol
+            .filter(string -> !string.contains("Mod wild"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:98: error: cannot find symbol
+            .filter(string -> !string.contains("wild_mixins"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:99: error: cannot find symbol
+            .filter(string -> !string.contains("wild:"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:100: error: cannot find symbol
+            .filter(string -> !string.contains("wild/"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:101: error: cannot find symbol
+            .filter(string -> !string.contains("assets/wild"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:102: error: cannot find symbol
+            .filter(string -> !string.contains("org.wild"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:103: error: cannot find symbol
+            .filter(string -> !string.contains("org/wild"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:104: error: cannot find symbol
+            .filter(string -> !string.contains("[Client]"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:105: error: cannot find symbol
+            .filter(string -> !string.contains("[ConfigManager]"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:106: error: cannot find symbol
+            .filter(string -> !string.contains("[EventManager]"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:107: error: cannot find symbol
+            .filter(string -> !string.contains("[SoundUtil]"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:108: error: cannot find symbol
+            .filter(string -> !string.contains("[WildGuard]"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:109: error: cannot find symbol
+            .filter(string -> !string.contains("[FingerprintCrypto]"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:110: error: cannot find symbol
+            .filter(string -> !string.contains("Wild-"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:111: error: cannot find symbol
+            .filter(string -> !string.contains("Logs sanitized"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:112: error: cannot find symbol
+            .filter(string -> !string.contains("ScreenRenderDiagnostics"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:113: error: cannot find symbol
+            .filter(string -> !string.contains("[ScreenRender]"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:114: error: cannot find symbol
+            .filter(string -> !string.contains("Stardust"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:115: error: cannot find symbol
+            .filter(string -> !string.contains("Reloading ResourceManager"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:116: error: cannot find symbol
+            .filter(string -> !string.contains("black_icons"))
+                                     ^
+  symbol:   method contains(String)
+  location: variable string of type Object
+
+ru\metaculture\protection\UnHook.java:117: error: incompatible types: 
+Object cannot be converted to List
+            .collect(Collectors.toList());
+                    ^
+
+  ru\metaculture\protection\UnHook.java:90: error: cannot find symbol
+              .filter(string -> !string.contains("Wild »"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:91: error: cannot find symbol
+              .filter(string -> !string.contains("[Wild]"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:92: error: cannot find symbol
+              .filter(string -> !string.contains("[Config]"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:93: error: cannot find symbol
+              .filter(string -> !string.contains("[Manager]"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:94: error: cannot find symbol
+              .filter(string -> !string.contains("[Baritone]"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:95: error: cannot find symbol
+              .filter(string -> !string.contains("baritone"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:96: error: cannot find symbol
+              .filter(string -> !string.contains("- wild"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:97: error: cannot find symbol
+              .filter(string -> !string.contains("Mod wild"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:98: error: cannot find symbol
+              .filter(string -> !string.contains("wild_mixins"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:99: error: cannot find symbol
+              .filter(string -> !string.contains("wild:"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:100: error: cannot find symbol
+              .filter(string -> !string.contains("wild/"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:101: error: cannot find symbol
+              .filter(string -> !string.contains("assets/wild"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:102: error: cannot find symbol
+              .filter(string -> !string.contains("org.wild"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:103: error: cannot find symbol
+              .filter(string -> !string.contains("org/wild"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:104: error: cannot find symbol
+              .filter(string -> !string.contains("[Client]"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:105: error: cannot find symbol
+              .filter(string -> !string.contains("[ConfigManager]"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:106: error: cannot find symbol
+              .filter(string -> !string.contains("[EventManager]"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:107: error: cannot find symbol
+              .filter(string -> !string.contains("[SoundUtil]"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:108: error: cannot find symbol
+              .filter(string -> !string.contains("[WildGuard]"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:109: error: cannot find symbol
+              .filter(string -> !string.contains("[FingerprintCrypto]"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:110: error: cannot find symbol
+              .filter(string -> !string.contains("Wild-"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:111: error: cannot find symbol
+              .filter(string -> !string.contains("Logs sanitized"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:112: error: cannot find symbol
+              .filter(string -> !string.contains("ScreenRenderDiagnostics"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:113: error: cannot find symbol
+              .filter(string -> !string.contains("[ScreenRender]"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:114: error: cannot find symbol
+              .filter(string -> !string.contains("Stardust"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:115: error: cannot find symbol
+              .filter(string -> !string.contains("Reloading ResourceManager"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:116: error: cannot find symbol
+              .filter(string -> !string.contains("black_icons"))
+                                       ^
+    symbol:   method contains(String)
+    location: variable string of type Object
+
+  ru\metaculture\protection\UnHook.java:117: error: incompatible types: 
+Object cannot be converted to List
+              .collect(Collectors.toList());
+                      ^

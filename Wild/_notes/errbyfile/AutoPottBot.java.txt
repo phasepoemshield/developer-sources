@@ -1,0 +1,176 @@
+﻿ru\metaculture\protection\AutoPottBot.java:635: error: bad operand types 
+for binary operator '-'
+         int var6 = this.O000000000(Items.NETHER_WART) - var1.getOrDefault(Items.NETHER_WART, 0);
+                                                       ^
+  first type:  int
+  second type: Object
+
+ru\metaculture\protection\AutoPottBot.java:636: error: bad operand types 
+for binary operator '-'
+         int var7 = this.O000000000(var5.O000000000) - var1.getOrDefault(var5.O000000000, 0);
+                                                     ^
+  first type:  int
+  second type: Object
+
+ru\metaculture\protection\AutoPottBot.java:637: error: bad operand types 
+for binary operator '-'
+         int var8 = this.O000000000(var5.O0000000000) - var1.getOrDefault(var5.O0000000000, 0);
+                                                      ^
+  first type:  int
+  second type: Object
+
+ru\metaculture\protection\AutoPottBot.java:905: error: cannot find symbol
+      var6.sort((o0000000000000, o00000000000002) -> Float.compare(o00000000000002.progress(), 
+o0000000000000.progress()));
+                                                                                  ^
+  symbol:   method progress()
+  location: variable o00000000000002 of type Object
+
+ru\metaculture\protection\AutoPottBot.java:905: error: cannot find symbol
+      var6.sort((o0000000000000, o00000000000002) -> Float.compare(o00000000000002.progress(), 
+o0000000000000.progress()));
+                                                                                                             ^
+  symbol:   method progress()
+  location: variable o0000000000000 of type Object
+
+ru\metaculture\protection\AutoPottBot.java:934: error: bad operand types 
+for binary operator '-'
+         int var4 = Math.max(0, this.O000000000(Items.NETHER_WART) - var2.getOrDefault(Items.NETHER_WART, 0));
+                                                                   ^
+  first type:  int
+  second type: Object
+
+ru\metaculture\protection\AutoPottBot.java:937: error: incompatible 
+types: Object cannot be converted to W70
+         for (AutoPottBot.W70 var7 : var1) {
+                                     ^
+
+ru\metaculture\protection\AutoPottBot.java:938: error: bad operand types 
+for binary operator '-'
+            int var8 = this.O000000000(var7.O000000000) - var2.getOrDefault(var7.O000000000, 0);
+                                                        ^
+  first type:  int
+  second type: Object
+
+ru\metaculture\protection\AutoPottBot.java:939: error: bad operand types 
+for binary operator '-'
+            int var9 = this.O000000000(var7.O0000000000) - var2.getOrDefault(var7.O0000000000, 0);
+                                                         ^
+  first type:  int
+  second type: Object
+
+ru\metaculture\protection\AutoPottBot.java:962: error: bad operand types 
+for binary operator '-'
+         if (this.O000000000(Items.NETHER_WART) - var2.getOrDefault(Items.NETHER_WART, 0) < 1) {
+                                                ^
+  first type:  int
+  second type: Object
+
+ru\metaculture\protection\AutoPottBot.java:966: error: incompatible 
+types: Object cannot be converted to W70
+         for (AutoPottBot.W70 var5 : var1) {
+                                     ^
+
+ru\metaculture\protection\AutoPottBot.java:967: error: bad operand types 
+for binary operator '-'
+            if (this.O000000000(var5.O000000000) - var2.getOrDefault(var5.O000000000, 0) < 1) {
+                                                 ^
+  first type:  int
+  second type: Object
+
+ru\metaculture\protection\AutoPottBot.java:971: error: bad operand types 
+for binary operator '-'
+            if (this.O000000000(var5.O0000000000) - var2.getOrDefault(var5.O0000000000, 0) < 1) {
+                                                  ^
+  first type:  int
+  second type: Object
+
+  ru\metaculture\protection\AutoPottBot.java:905: error: cannot find 
+symbol
+        var6.sort((o0000000000000, o00000000000002) -> Float.compare(o00000000000002.progress(), 
+o0000000000000.progress()));
+                                                                                    ^
+    symbol:   method progress()
+    location: variable o00000000000002 of type Object
+
+  ru\metaculture\protection\AutoPottBot.java:905: error: cannot find 
+symbol
+        var6.sort((o0000000000000, o00000000000002) -> Float.compare(o00000000000002.progress(), 
+o0000000000000.progress()));
+                                                                                                               ^
+    symbol:   method progress()
+    location: variable o0000000000000 of type Object
+
+  ru\metaculture\protection\AutoPottBot.java:937: error: incompatible 
+types: Object cannot be converted to W70
+           for (AutoPottBot.W70 var7 : var1) {
+                                       ^
+
+  ru\metaculture\protection\AutoPottBot.java:966: error: incompatible 
+types: Object cannot be converted to W70
+           for (AutoPottBot.W70 var5 : var1) {
+                                       ^
+
+  ru\metaculture\protection\AutoPottBot.java:635: error: bad operand 
+types for binary operator '-'
+           int var6 = this.O000000000(Items.NETHER_WART) - var1.getOrDefault(Items.NETHER_WART, 0);
+                                                         ^
+    first type:  int
+    second type: Object
+
+  ru\metaculture\protection\AutoPottBot.java:636: error: bad operand 
+types for binary operator '-'
+           int var7 = this.O000000000(var5.O000000000) - var1.getOrDefault(var5.O000000000, 0);
+                                                       ^
+    first type:  int
+    second type: Object
+
+  ru\metaculture\protection\AutoPottBot.java:637: error: bad operand 
+types for binary operator '-'
+           int var8 = this.O000000000(var5.O0000000000) - var1.getOrDefault(var5.O0000000000, 0);
+                                                        ^
+    first type:  int
+    second type: Object
+
+  ru\metaculture\protection\AutoPottBot.java:934: error: bad operand 
+types for binary operator '-'
+           int var4 = Math.max(0, this.O000000000(Items.NETHER_WART) - var2.getOrDefault(Items.NETHER_WART, 0));
+                                                                     ^
+    first type:  int
+    second type: Object
+
+  ru\metaculture\protection\AutoPottBot.java:938: error: bad operand 
+types for binary operator '-'
+              int var8 = this.O000000000(var7.O000000000) - var2.getOrDefault(var7.O000000000, 0);
+                                                          ^
+    first type:  int
+    second type: Object
+
+  ru\metaculture\protection\AutoPottBot.java:939: error: bad operand 
+types for binary operator '-'
+              int var9 = this.O000000000(var7.O0000000000) - var2.getOrDefault(var7.O0000000000, 0);
+                                                           ^
+    first type:  int
+    second type: Object
+
+  ru\metaculture\protection\AutoPottBot.java:962: error: bad operand 
+types for binary operator '-'
+           if (this.O000000000(Items.NETHER_WART) - var2.getOrDefault(Items.NETHER_WART, 0) < 1) {
+                                                  ^
+    first type:  int
+    second type: Object
+
+  ru\metaculture\protection\AutoPottBot.java:967: error: bad operand 
+types for binary operator '-'
+              if (this.O000000000(var5.O000000000) - var2.getOrDefault(var5.O000000000, 0) < 1) {
+                                                   ^
+    first type:  int
+    second type: Object
+
+  ru\metaculture\protection\AutoPottBot.java:971: error: bad operand 
+types for binary operator '-'
+              if (this.O000000000(var5.O0000000000) - var2.getOrDefault(var5.O0000000000, 0) < 1) {
+                                                    ^
+    first type:  int
+    second type: Object
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output

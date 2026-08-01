@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\O000000O000000.java:193: error: incompatible 
+types: Object cannot be converted to Setting
+            for (Setting var10 : var4) {
+                                 ^
+
+  ru\metaculture\protection\O000000O000000.java:193: error: incompatible 
+types: Object cannot be converted to Setting
+              for (Setting var10 : var4) {
+                                   ^

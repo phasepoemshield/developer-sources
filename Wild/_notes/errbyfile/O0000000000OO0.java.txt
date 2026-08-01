@@ -1,0 +1,315 @@
+﻿ru\metaculture\protection\O0000000000OO0.java:16: error: illegal forward 
+reference
+   private static volatile O0000000000OO0.W6 O00000000000OO = O0000000000OO0.W6.FRAMEBUFFER_COLLAPSE;
+                                                              ^
+
+ru\metaculture\protection\O0000000000OO0.java:16: error: float cannot be 
+dereferenced
+   private static volatile O0000000000OO0.W6 O00000000000OO = O0000000000OO0.W6.FRAMEBUFFER_COLLAPSE;
+                                                                            ^
+
+ru\metaculture\protection\O0000000000OO0.java:54: error: float cannot be 
+dereferenced
+         O0000000000OO0.W6[] var1 = O0000000000OO0.W6.values();
+                                                  ^
+
+ru\metaculture\protection\O0000000000OO0.java:138: error: float cannot be 
+dereferenced
+         return O0000000000OO0.W7.IDLE;
+                              ^
+
+ru\metaculture\protection\O0000000000OO0.java:142: error: float cannot be 
+dereferenced
+            return O0000000000OO0.W7.STRIKE;
+                                 ^
+
+ru\metaculture\protection\O0000000000OO0.java:144: error: float cannot be 
+dereferenced
+            return var0 < O0000000000O00 ? O0000000000OO0.W7.COLLAPSE : O0000000000OO0.W7.DEATH;
+                                                         ^
+
+ru\metaculture\protection\O0000000000OO0.java:144: error: float cannot be 
+dereferenced
+            return var0 < O0000000000O00 ? O0000000000OO0.W7.COLLAPSE : O0000000000OO0.W7.DEATH;
+                                                                                      ^
+
+ru\metaculture\protection\O0000000000OO0.java:204: error: float cannot be 
+dereferenced
+         if (var0 == O0000000000OO0.W7.IDLE) {
+                                   ^
+
+ru\metaculture\protection\O0000000000OO0.java:215: error: float cannot be 
+dereferenced
+            if (var0 == O0000000000OO0.W7.STRIKE) {
+                                      ^
+
+ru\metaculture\protection\O0000000000OO0.java:218: error: float cannot be 
+dereferenced
+               return var0 == O0000000000OO0.W7.DEATH
+                                            ^
+
+ru\metaculture\protection\O0000000000OO0.java:231: error: float cannot be 
+dereferenced
+         if (var0 == O0000000000OO0.W7.IDLE) {
+                                   ^
+
+ru\metaculture\protection\O0000000000OO0.java:233: error: float cannot be 
+dereferenced
+         } else if (O00000000000OO == O0000000000OO0.W6.BLACK_PANEL && var0 == O0000000000OO0.W7.DEATH) {
+                                                    ^
+
+ru\metaculture\protection\O0000000000OO0.java:233: error: float cannot be 
+dereferenced
+         } else if (O00000000000OO == O0000000000OO0.W6.BLACK_PANEL && var0 == O0000000000OO0.W7.DEATH) {
+                                                                                             ^
+
+ru\metaculture\protection\O0000000000OO0.java:235: error: float cannot be 
+dereferenced
+         } else if (O00000000000OO == O0000000000OO0.W6.TERMINAL_DEATH && O000000000000O() > O0000000000O00 + 
+120000000L) {
+                                                    ^
+
+ru\metaculture\protection\O0000000000OO0.java:237: error: float cannot be 
+dereferenced
+         } else if (var0 == O0000000000OO0.W7.STRIKE) {
+                                          ^
+
+ru\metaculture\protection\O0000000000OO0.java:240: error: float cannot be 
+dereferenced
+            return var0 == O0000000000OO0.W7.DEATH
+                                         ^
+
+ru\metaculture\protection\O0000000000OO0.java:252: error: float cannot be 
+dereferenced
+         if (var0 == O0000000000OO0.W7.DEATH && O00000000000OO == O0000000000OO0.W6.BLACK_PANEL) {
+                                   ^
+
+ru\metaculture\protection\O0000000000OO0.java:252: error: float cannot be 
+dereferenced
+         if (var0 == O0000000000OO0.W7.DEATH && O00000000000OO == O0000000000OO0.W6.BLACK_PANEL) {
+                                                                                ^
+
+ru\metaculture\protection\O0000000000OO0.java:255: error: float cannot be 
+dereferenced
+            return var0 == O0000000000OO0.W7.DEATH && O00000000000OO == O0000000000OO0.W6.TERMINAL_DEATH
+                                         ^
+
+ru\metaculture\protection\O0000000000OO0.java:255: error: float cannot be 
+dereferenced
+            return var0 == O0000000000OO0.W7.DEATH && O00000000000OO == O0000000000OO0.W6.TERMINAL_DEATH
+                                                                                      ^
+
+ru\metaculture\protection\O0000000000OO0.java:267: error: float cannot be 
+dereferenced
+         if (O00000000000OO == O0000000000OO0.W6.BLACK_PANEL) {
+                                             ^
+
+ru\metaculture\protection\O0000000000OO0.java:269: error: float cannot be 
+dereferenced
+         } else if (var0 == O0000000000OO0.W7.STRIKE) {
+                                          ^
+
+ru\metaculture\protection\O0000000000OO0.java:272: error: float cannot be 
+dereferenced
+            return var0 == O0000000000OO0.W7.DEATH
+                                         ^
+
+ru\metaculture\protection\O0000000000OO0.java:284: error: float cannot be 
+dereferenced
+         if (var0 == O0000000000OO0.W7.IDLE) {
+                                   ^
+
+ru\metaculture\protection\O0000000000OO0.java:286: error: float cannot be 
+dereferenced
+         } else if (var0 == O0000000000OO0.W7.STRIKE) {
+                                          ^
+
+ru\metaculture\protection\O0000000000OO0.java:307: error: float cannot be 
+dereferenced
+         if (var0 == O0000000000OO0.W7.DEATH) {
+                                   ^
+
+ru\metaculture\protection\O0000000000OO0.java:378: error: float cannot be 
+dereferenced
+      } else if (O00000000000OO == O0000000000OO0.W6.BLACK_PANEL) {
+                                                 ^
+
+ru\metaculture\protection\O0000000000OO0.java:391: error: float cannot be 
+dereferenced
+         return var0 == O0000000000OO0.W7.STRIKE ? 1.0F + O00000000(7701, 16L) * var1 * 1.45F : 1.0F + O00000000(7702, 
+32L) * var1 * O0000000000O00();
+                                      ^
+
+ru\metaculture\protection\O0000000000OO0.java:455: error: float cannot be 
+dereferenced
+         if (O00000000000OO == O0000000000OO0.W6.BLACK_PANEL) {
+                                             ^
+
+ru\metaculture\protection\O0000000000OO0.java:459: error: float cannot be 
+dereferenced
+         if (O00000000000OO == O0000000000OO0.W6.TERMINAL_DEATH && var0 == O0000000000OO0.W7.DEATH) {
+                                             ^
+
+ru\metaculture\protection\O0000000000OO0.java:459: error: float cannot be 
+dereferenced
+         if (O00000000000OO == O0000000000OO0.W6.TERMINAL_DEATH && var0 == O0000000000OO0.W7.DEATH) {
+                                                                                         ^
+
+  ru\metaculture\protection\O0000000000OO0.java:16: error: illegal 
+forward reference
+     private static volatile O0000000000OO0.W6 O00000000000OO = O0000000000OO0.W6.FRAMEBUFFER_COLLAPSE;
+                                                                ^
+  Note: Recompile with -Xlint:deprecation for details.
+
+  ru\metaculture\protection\O0000000000OO0.java:16: error: float cannot 
+be dereferenced
+     private static volatile O0000000000OO0.W6 O00000000000OO = O0000000000OO0.W6.FRAMEBUFFER_COLLAPSE;
+                                                                              ^
+
+  ru\metaculture\protection\O0000000000OO0.java:54: error: float cannot 
+be dereferenced
+           O0000000000OO0.W6[] var1 = O0000000000OO0.W6.values();
+                                                    ^
+
+  ru\metaculture\protection\O0000000000OO0.java:138: error: float cannot 
+be dereferenced
+           return O0000000000OO0.W7.IDLE;
+                                ^
+
+  ru\metaculture\protection\O0000000000OO0.java:142: error: float cannot 
+be dereferenced
+              return O0000000000OO0.W7.STRIKE;
+                                   ^
+
+  ru\metaculture\protection\O0000000000OO0.java:144: error: float cannot 
+be dereferenced
+              return var0 < O0000000000O00 ? O0000000000OO0.W7.COLLAPSE : O0000000000OO0.W7.DEATH;
+                                                           ^
+
+  ru\metaculture\protection\O0000000000OO0.java:144: error: float cannot 
+be dereferenced
+              return var0 < O0000000000O00 ? O0000000000OO0.W7.COLLAPSE : O0000000000OO0.W7.DEATH;
+                                                                                        ^
+
+  ru\metaculture\protection\O0000000000OO0.java:204: error: float cannot 
+be dereferenced
+           if (var0 == O0000000000OO0.W7.IDLE) {
+                                     ^
+
+  ru\metaculture\protection\O0000000000OO0.java:215: error: float cannot 
+be dereferenced
+              if (var0 == O0000000000OO0.W7.STRIKE) {
+                                        ^
+
+  ru\metaculture\protection\O0000000000OO0.java:218: error: float cannot 
+be dereferenced
+                 return var0 == O0000000000OO0.W7.DEATH
+                                              ^
+
+  ru\metaculture\protection\O0000000000OO0.java:231: error: float cannot 
+be dereferenced
+           if (var0 == O0000000000OO0.W7.IDLE) {
+                                     ^
+
+  ru\metaculture\protection\O0000000000OO0.java:233: error: float cannot 
+be dereferenced
+           } else if (O00000000000OO == O0000000000OO0.W6.BLACK_PANEL && var0 == O0000000000OO0.W7.DEATH) {
+                                                      ^
+
+  ru\metaculture\protection\O0000000000OO0.java:233: error: float cannot 
+be dereferenced
+           } else if (O00000000000OO == O0000000000OO0.W6.BLACK_PANEL && var0 == O0000000000OO0.W7.DEATH) {
+                                                                                               ^
+
+  ru\metaculture\protection\O0000000000OO0.java:235: error: float cannot 
+be dereferenced
+           } else if (O00000000000OO == O0000000000OO0.W6.TERMINAL_DEATH && O000000000000O() > O0000000000O00 + 
+120000000L) {
+                                                      ^
+
+  ru\metaculture\protection\O0000000000OO0.java:237: error: float cannot 
+be dereferenced
+           } else if (var0 == O0000000000OO0.W7.STRIKE) {
+                                            ^
+
+  ru\metaculture\protection\O0000000000OO0.java:240: error: float cannot 
+be dereferenced
+              return var0 == O0000000000OO0.W7.DEATH
+                                           ^
+
+  ru\metaculture\protection\O0000000000OO0.java:252: error: float cannot 
+be dereferenced
+           if (var0 == O0000000000OO0.W7.DEATH && O00000000000OO == O0000000000OO0.W6.BLACK_PANEL) {
+                                     ^
+
+  ru\metaculture\protection\O0000000000OO0.java:252: error: float cannot 
+be dereferenced
+           if (var0 == O0000000000OO0.W7.DEATH && O00000000000OO == O0000000000OO0.W6.BLACK_PANEL) {
+                                                                                  ^
+
+  ru\metaculture\protection\O0000000000OO0.java:255: error: float cannot 
+be dereferenced
+              return var0 == O0000000000OO0.W7.DEATH && O00000000000OO == O0000000000OO0.W6.TERMINAL_DEATH
+                                           ^
+
+  ru\metaculture\protection\O0000000000OO0.java:255: error: float cannot 
+be dereferenced
+              return var0 == O0000000000OO0.W7.DEATH && O00000000000OO == O0000000000OO0.W6.TERMINAL_DEATH
+                                                                                        ^
+
+  ru\metaculture\protection\O0000000000OO0.java:267: error: float cannot 
+be dereferenced
+           if (O00000000000OO == O0000000000OO0.W6.BLACK_PANEL) {
+                                               ^
+
+  ru\metaculture\protection\O0000000000OO0.java:269: error: float cannot 
+be dereferenced
+           } else if (var0 == O0000000000OO0.W7.STRIKE) {
+                                            ^
+
+  ru\metaculture\protection\O0000000000OO0.java:272: error: float cannot 
+be dereferenced
+              return var0 == O0000000000OO0.W7.DEATH
+                                           ^
+
+  ru\metaculture\protection\O0000000000OO0.java:284: error: float cannot 
+be dereferenced
+           if (var0 == O0000000000OO0.W7.IDLE) {
+                                     ^
+
+  ru\metaculture\protection\O0000000000OO0.java:286: error: float cannot 
+be dereferenced
+           } else if (var0 == O0000000000OO0.W7.STRIKE) {
+                                            ^
+
+  ru\metaculture\protection\O0000000000OO0.java:307: error: float cannot 
+be dereferenced
+           if (var0 == O0000000000OO0.W7.DEATH) {
+                                     ^
+
+  ru\metaculture\protection\O0000000000OO0.java:378: error: float cannot 
+be dereferenced
+        } else if (O00000000000OO == O0000000000OO0.W6.BLACK_PANEL) {
+                                                   ^
+
+  ru\metaculture\protection\O0000000000OO0.java:391: error: float cannot 
+be dereferenced
+           return var0 == O0000000000OO0.W7.STRIKE ? 1.0F + O00000000(7701, 16L) * var1 * 1.45F : 1.0F + 
+O00000000(7702, 32L) * var1 * O0000000000O00();
+                                        ^
+
+  ru\metaculture\protection\O0000000000OO0.java:455: error: float cannot 
+be dereferenced
+           if (O00000000000OO == O0000000000OO0.W6.BLACK_PANEL) {
+                                               ^
+
+  ru\metaculture\protection\O0000000000OO0.java:459: error: float cannot 
+be dereferenced
+1 actionable task: 1 executed
+           if (O00000000000OO == O0000000000OO0.W6.TERMINAL_DEATH && var0 == O0000000000OO0.W7.DEATH) {
+                                               ^
+
+  ru\metaculture\protection\O0000000000OO0.java:459: error: float cannot 
+be dereferenced
+           if (O00000000000OO == O0000000000OO0.W6.TERMINAL_DEATH && var0 == O0000000000OO0.W7.DEATH) {
+                                                                                           ^

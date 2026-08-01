@@ -1,0 +1,63 @@
+﻿ru\metaculture\protection\O00000OO000000.java:74: error: incompatible 
+types: Object cannot be converted to Module
+      for (Module var19 : var16) {
+                          ^
+
+ru\metaculture\protection\O00000OO000000.java:89: error: incompatible 
+types: Object cannot be converted to Module
+      for (Module var43 : var16) {
+                          ^
+
+ru\metaculture\protection\O00000OO000000.java:152: error: incompatible 
+types: Object cannot be converted to Module
+         for (Module var12 : var9) {
+                             ^
+
+ru\metaculture\protection\O00000OO000000.java:228: error: cannot find 
+symbol
+            : var1.stream().filter(module -> module.O00000000000 != null && 
+module.O00000000000.toLowerCase().contains(var2)).toList());
+                                                   ^
+  symbol:   variable O00000000000
+  location: variable module of type Object
+
+ru\metaculture\protection\O00000OO000000.java:228: error: cannot find 
+symbol
+            : var1.stream().filter(module -> module.O00000000000 != null && 
+module.O00000000000.toLowerCase().contains(var2)).toList());
+                                                                                  ^
+  symbol:   variable O00000000000
+  location: variable module of type Object
+
+  ru\metaculture\protection\O00000OO000000.java:228: error: cannot find 
+symbol
+              : var1.stream().filter(module -> module.O00000000000 != null && 
+module.O00000000000.toLowerCase().contains(var2)).toList());
+                                                     ^
+    symbol:   variable O00000000000
+    location: variable module of type Object
+
+  ru\metaculture\protection\O00000OO000000.java:228: error: cannot find 
+symbol
+              : var1.stream().filter(module -> module.O00000000000 != null && 
+module.O00000000000.toLowerCase().contains(var2)).toList());
+                                                                                    ^
+    symbol:   variable O00000000000
+    location: variable module of type Object
+  Note: Recompile with -Xlint:unchecked for details.
+  Note: Some input files use or override a deprecated API.
+
+  ru\metaculture\protection\O00000OO000000.java:74: error: incompatible 
+types: Object cannot be converted to Module
+        for (Module var19 : var16) {
+                            ^
+
+  ru\metaculture\protection\O00000OO000000.java:89: error: incompatible 
+types: Object cannot be converted to Module
+        for (Module var43 : var16) {
+                            ^
+
+  ru\metaculture\protection\O00000OO000000.java:152: error: incompatible 
+types: Object cannot be converted to Module
+           for (Module var12 : var9) {
+                               ^

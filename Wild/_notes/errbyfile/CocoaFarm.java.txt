@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\CocoaFarm.java:828: error: incompatible types: 
+Object cannot be converted to ItemEntity
+      for (ItemEntity var9 : var2) {
+                             ^
+
+  ru\metaculture\protection\CocoaFarm.java:828: error: incompatible 
+types: Object cannot be converted to ItemEntity
+        for (ItemEntity var9 : var2) {
+                               ^

@@ -1,0 +1,1 @@
+-- scary auto script file. theres literally nothing here. why are you here? i'm curious now as there is nothing to put here, which mean you must have a reason to be poking around the files. Or maybe not. Who am i to know? --

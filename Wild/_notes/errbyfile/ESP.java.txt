@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\ESP.java:84: error: incompatible types: Object 
+cannot be converted to Entity
+               for (Entity var5 : var2) {
+                                  ^
+
+  ru\metaculture\protection\ESP.java:84: error: incompatible types: 
+Object cannot be converted to Entity
+                 for (Entity var5 : var2) {
+                                    ^

@@ -1,0 +1,54 @@
+package fun.wonderful.mixin;
+
+import fun.wonderful.api.events.EventInvoker;
+import fun.wonderful.api.events.implement.EventRotation;
+import fun.wonderful.api.storages.implement.helpertstorages.enumvar.ModuleClass;
+import fun.wonderful.client.modules.impl.render.InterpolateF5;
+import fun.wonderful.mixin.ICameraMixin;
+import java.lang.reflect.InvocationTargetException;
+import net.minecraft.entity.Entity;
+import net.minecraft.world.BlockView;
+import net.minecraft.client.render.Camera;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
+
+@Mixin(value={Camera.class})
+public abstract class CameraMixin {
+    @Redirect(method={"update"}, at=@At(value="INVOKE", target="Lnet/minecraft/Camera;setRotation(FF)V"), require = 0)
+    private void redirectSetRotation(Camera instance, float yaw, float pitch, BlockView area, Entity focusedEntity, boolean thirdPerson, boolean inverseView, float tickDelta) throws InvocationTargetException, IllegalAccessException, InstantiationException {
+        EventRotation event = new EventRotation(yaw, pitch, tickDelta);
+        EventInvoker.invoke(event);
+        float newYaw = event.getYaw();
+        float newPitch = event.getPitch();
+        if (thirdPerson && inverseView) {
+            newYaw += 180.0f;
+            newPitch = -newPitch;
+        }
+        ((ICameraMixin)instance).setCustomRotation(newYaw, newPitch);
+    }
+
+    @Redirect(method={"update"}, at=@At(value="INVOKE", target="Lnet/minecraft/Camera;clipToSpace(F)F"), require = 0)
+    private float redirectClipToSpace(Camera instance, float distance, BlockView area, Entity focusedEntity, boolean thirdPerson, boolean inverseView, float tickDelta) {
+        if (!thirdPerson) {
+            return ((ICameraMixin)instance).setClipToSpace(distance);
+        }
+        InterpolateF5 module = ModuleClass.INSTANCE != null ? ModuleClass.interpolateF5 : null;
+        if (module != null && module.isEnable()) {
+            return ((ICameraMixin)instance).setClipToSpace(module.getInterpolatedDistance(tickDelta));
+        }
+        return ((ICameraMixin)instance).setClipToSpace(distance);
+    }
+
+    @Redirect(method={"update"}, at=@At(value="INVOKE", target="Lnet/minecraft/Camera;moveBy(FFF)V"), require = 0)
+    private void redirectMoveBy(Camera instance, float x2, float y2, float z2, BlockView area, Entity focusedEntity, boolean thirdPerson, boolean inverseView, float tickDelta) {
+        float newY = y2;
+        if (thirdPerson) {
+            InterpolateF5 module = ModuleClass.INSTANCE != null ? ModuleClass.interpolateF5 : null;
+            if (module != null && module.isEnable()) {
+                newY += module.getInterpolatedHeightOffset(tickDelta);
+            }
+        }
+        ((ICameraMixin)instance).setCustomMoveBy(x2, newY, z2);
+    }
+}

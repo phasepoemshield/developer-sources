@@ -1,0 +1,33 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Gradle
+.gradle/
+build/
+bin/
+gradle/
+gradlew
+gradlew.bat
+gradle-wrapper.jar
+gradle-wrapper.properties
+
+# Minecraft
+run/
+logs/
+crash-reports/
+saves/
+screenshots/
+resourcepacks/
+server.properties
+options.txt
+usercache.json
+usernamecache.json
+launcher_profiles.json
+
+# Fabric
+fabric-api/
+mappings/

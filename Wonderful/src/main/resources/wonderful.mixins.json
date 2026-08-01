@@ -1,0 +1,44 @@
+{
+  "required": true,
+  "package": "fun.wonderful.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ClientPlayerEntityMixin",
+    "ClientConnectionMixin",
+    "ClientPlayNetworkHandlerMixin",
+    "ClientPlayerInteractionManagerMixin",
+    "ClientPlayerInteractionManagerAccessor",
+    "KeyboardInputMixin",
+    "KeyboardMixin",
+    "MouseMixin",
+    "EntityMixin",
+    "InGameGuiMixin",
+    "WorldRendererMixin",
+    "WorldRendererAccessor",
+    "CameraMixin",
+    "AbstractBlockMixin",
+    "CobwebBlockMixin",
+    "FontInitMixin",
+    "MinecraftClientMixin",
+    "HeldItemRendererInvoker",
+    "HeldItemRendererAccessor",
+    "IPlayerInputC2SPacketAccessor",
+    "IPlayerMoveC2SPacketAccessor",
+    "ICameraMixin",
+    "ChatScreenAccessor",
+    "IEntity",
+    "ItemEntityAccessor",
+    "ILivingEntity",
+    "LivingEntityRendererAccessor",
+    "SlotAccessor",
+    "IMinecraftClientAccessor",
+    "TitleScreenMixin",
+    "MultiplayerScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

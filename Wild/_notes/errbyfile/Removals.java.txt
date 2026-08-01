@@ -1,0 +1,19 @@
+﻿ru\metaculture\protection\Removals.java:187: error: incompatible types: 
+boolean cannot be converted to W95
+      new Removals.W95("Чары стола", "enchant", "nautilus").O00000000("enchanted_hit"),
+                                                                     ^
+
+ru\metaculture\protection\Removals.java:189: error: incompatible types: 
+boolean cannot be converted to W95
+      new Removals.W95("Редстоун", "dust").O00000000("falling_dust"),
+                                                    ^
+
+  ru\metaculture\protection\Removals.java:187: error: incompatible types: 
+boolean cannot be converted to W95
+        new Removals.W95("Чары стола", "enchant", "nautilus").O00000000("enchanted_hit"),
+                                                                       ^
+
+  ru\metaculture\protection\Removals.java:189: error: incompatible types: 
+boolean cannot be converted to W95
+        new Removals.W95("Редстоун", "dust").O00000000("falling_dust"),
+                                                      ^

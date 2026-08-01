@@ -1,0 +1,59 @@
+﻿ru\metaculture\protection\O00000OO0OO0.java:21: error: <anonymous 
+ru.metaculture.protection.O00000OO0OO0$1> is not abstract and does not override abstract method O000000000() in 
+O00000OO0OO0
+         return new O00000OO0OO0<Boolean>() {
+                                            ^
+
+ru\metaculture\protection\O00000OO0OO0.java:42: error: <anonymous 
+ru.metaculture.protection.O00000OO0OO0$2> is not abstract and does not override abstract method O000000000() in 
+O00000OO0OO0
+         return new O00000OO0OO0<Double>() {
+                                           ^
+
+ru\metaculture\protection\O00000OO0OO0.java:63: error: <anonymous 
+ru.metaculture.protection.O00000OO0OO0$3> is not abstract and does not override abstract method O000000000() in 
+O00000OO0OO0
+         return new O00000OO0OO0<String>() {
+                                           ^
+
+ru\metaculture\protection\O00000OO0OO0.java:88: error: <anonymous 
+ru.metaculture.protection.O00000OO0OO0$4> is not abstract and does not override abstract method O000000000() in 
+O00000OO0OO0
+         return new O00000OO0OO0<Set<String>>() {
+                                                ^
+
+ru\metaculture\protection\O00000OO0OO0.java:111: error: <anonymous 
+ru.metaculture.protection.O00000OO0OO0$5> is not abstract and does not override abstract method O000000000() in 
+O00000OO0OO0
+         return o0000000OOO00O instanceof ColorSetting var5 ? new O00000OO0OO0<O00000OO0O0OO0>() {
+                                                                                                 ^
+
+  ru\metaculture\protection\O00000OO0OO0.java:21: error: <anonymous 
+ru.metaculture.protection.O00000OO0OO0$1> is not abstract and does not override abstract method O000000000() in 
+O00000OO0OO0
+           return new O00000OO0OO0<Boolean>() {
+                                              ^
+
+  ru\metaculture\protection\O00000OO0OO0.java:42: error: <anonymous 
+ru.metaculture.protection.O00000OO0OO0$2> is not abstract and does not override abstract method O000000000() in 
+O00000OO0OO0
+           return new O00000OO0OO0<Double>() {
+                                             ^
+
+  ru\metaculture\protection\O00000OO0OO0.java:63: error: <anonymous 
+ru.metaculture.protection.O00000OO0OO0$3> is not abstract and does not override abstract method O000000000() in 
+O00000OO0OO0
+           return new O00000OO0OO0<String>() {
+                                             ^
+
+  ru\metaculture\protection\O00000OO0OO0.java:88: error: <anonymous 
+ru.metaculture.protection.O00000OO0OO0$4> is not abstract and does not override abstract method O000000000() in 
+O00000OO0OO0
+           return new O00000OO0OO0<Set<String>>() {
+                                                  ^
+
+  ru\metaculture\protection\O00000OO0OO0.java:111: error: <anonymous 
+ru.metaculture.protection.O00000OO0OO0$5> is not abstract and does not override abstract method O000000000() in 
+O00000OO0OO0
+           return o0000000OOO00O instanceof ColorSetting var5 ? new O00000OO0OO0<O00000OO0O0OO0>() {
+                                                                                                   ^

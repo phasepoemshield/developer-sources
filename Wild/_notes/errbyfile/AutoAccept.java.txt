@@ -1,0 +1,9 @@
+﻿ru\metaculture\protection\AutoAccept.java:114: error: incompatible types: 
+Object cannot be converted to Text
+            for (Text var5 : var7) {
+                             ^
+
+  ru\metaculture\protection\AutoAccept.java:114: error: incompatible 
+types: Object cannot be converted to Text
+              for (Text var5 : var7) {
+                               ^
