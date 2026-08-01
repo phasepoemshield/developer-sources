@@ -36,3 +36,28 @@ Antigravity, Sourcetree (optional), X Minecraft Launcher, Prism, Modrinth + thei
 2. Clone the three remotes above (+ pull this `developer-sources` for archive trees + this handoff).
 3. Restore SSH from `timur-handoff-backup` or regenerate.
 4. Rotate every name in `shell/SECRET-NAMES.md`.
+
+## Final scan addendum (same day)
+
+### FluxVisuals recovery branches (pushed)
+
+On `phasepoemshield/FluxVisuals-dev`:
+
+- `handoff/stash-0-menu-regression` (former stash@{0})
+- `handoff/stash-1-restore-current` (former stash@{1})
+- `handoff/untracked-leftovers` (FluxCore/MiniGolem/VoidHorns + sky_rain.frag)
+- `handoff/stash-0-backup-before-rollback` (earlier stash-branch tip)
+
+`main` remains at `c2ce6d0`.
+
+### BladeReload (found in Trash — not re-pushed)
+
+- Path at scan: `~/.Trash/Sources/BladeReload` (~296M)
+- Remote: `https://github.com/buble1234/BladeReload.git`
+- Local was dirty vs `origin/main` (mostly vendored `gradle-9.5.1/` noise + some docs/build files)
+- **Not force-pushed.** Clone from GitHub on Timur’s other machine; recover Trash copy only if needed before Empty Trash.
+
+### Runtime secrets dirs (NOT in git)
+
+`.fluxvisuals/` contained license/auth tokens — do not commit. Rotate if exposed. Filenames noted in `shell/RUNTIME-SECRET-FILES.md`.
+`.figmapro/`, `.codexpro/` contain ngrok binaries/configs — discard locally; recreate on Timur’s machine if needed.
