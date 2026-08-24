@@ -1,0 +1,447 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package jnr.constants.platform;
+
+import jnr.constants.Constant;
+import jnr.constants.platform.ConstantResolver;
+
+public final class Sysconf
+extends Enum<Sysconf>
+implements Constant {
+    public static final /* enum */ Sysconf _SC_TZNAME_MAX;
+    public static final /* enum */ Sysconf _SC_TRACE_USER_EVENT_MAX;
+    public static final /* enum */ Sysconf _SC_TIMEOUTS;
+    public static final /* enum */ Sysconf _SC_MQ_PRIO_MAX;
+    public static final /* enum */ Sysconf _SC_PRIORITY_SCHEDULING;
+    public static final /* enum */ Sysconf _SC_CPUTIME;
+    public static final /* enum */ Sysconf _SC_ASYNCHRONOUS_IO;
+    public static final /* enum */ Sysconf _SC_TRACE_INHERIT;
+    public static final /* enum */ Sysconf _SC_TRACE_EVENT_FILTER;
+    public static final /* enum */ Sysconf _SC_GETPW_R_SIZE_MAX;
+    public static final /* enum */ Sysconf _SC_ARG_MAX;
+    public static final /* enum */ Sysconf _SC_GETGR_R_SIZE_MAX;
+    public static final /* enum */ Sysconf _SC_XOPEN_UNIX;
+    public static final /* enum */ Sysconf _SC_CHILD_MAX;
+    public static final /* enum */ Sysconf _SC_THREAD_ATTR_STACKSIZE;
+    private static final /* synthetic */ Sysconf[] $VALUES;
+    public static final /* enum */ Sysconf _SC_2_PBS_ACCOUNTING;
+    public static final /* enum */ Sysconf _SC_SS_REPL_MAX;
+    public static final /* enum */ Sysconf _SC_BC_STRING_MAX;
+    public static final /* enum */ Sysconf _SC_DELAYTIMER_MAX;
+    public static final /* enum */ Sysconf _SC_V6_ILP32_OFFBIG;
+    public static final /* enum */ Sysconf _SC_2_FORT_DEV;
+    public static final /* enum */ Sysconf _SC_2_PBS_TRACK;
+    public static final /* enum */ Sysconf _SC_THREADS;
+    public static final /* enum */ Sysconf _SC_XOPEN_SHM;
+    public static final /* enum */ Sysconf _SC_SYMLOOP_MAX;
+    public static final /* enum */ Sysconf _SC_PAGESIZE;
+    public static final /* enum */ Sysconf _SC_RTSIG_MAX;
+    public static final /* enum */ Sysconf _SC_JOB_CONTROL;
+    public static final /* enum */ Sysconf _SC_MEMLOCK_RANGE;
+    public static final /* enum */ Sysconf _SC_HOST_NAME_MAX;
+    public static final /* enum */ Sysconf _SC_SEM_NSEMS_MAX;
+    public static final /* enum */ Sysconf _SC_NPROCESSORS_ONLN;
+    public static final /* enum */ Sysconf _SC_BC_SCALE_MAX;
+    public static final /* enum */ Sysconf _SC_IOV_MAX;
+    public static final /* enum */ Sysconf _SC_XOPEN_REALTIME;
+    public static final /* enum */ Sysconf _SC_AIO_MAX;
+    public static final /* enum */ Sysconf _SC_STREAM_MAX;
+    private static final ConstantResolver<Sysconf> resolver;
+    public static final /* enum */ Sysconf _SC_XOPEN_LEGACY;
+    public static final /* enum */ Sysconf _SC_THREAD_ATTR_STACKADDR;
+    public static final /* enum */ Sysconf _SC_XOPEN_VERSION;
+    public static final /* enum */ Sysconf _SC_MQ_OPEN_MAX;
+    public static final /* enum */ Sysconf _SC_TRACE_EVENT_NAME_MAX;
+    public static final /* enum */ Sysconf _SC_SAVED_IDS;
+    public static final /* enum */ Sysconf _SC_THREAD_THREADS_MAX;
+    public static final /* enum */ Sysconf _SC_XOPEN_REALTIME_THREADS;
+    public static final /* enum */ Sysconf _SC_COLL_WEIGHTS_MAX;
+    public static final /* enum */ Sysconf _SC_XOPEN_CRYPT;
+    public static final /* enum */ Sysconf _SC_XOPEN_XCU_VERSION;
+    public static final /* enum */ Sysconf _SC_THREAD_PROCESS_SHARED;
+    public static final /* enum */ Sysconf _SC_LOGIN_NAME_MAX;
+    public static final /* enum */ Sysconf _SC_2_PBS_MESSAGE;
+    public static final /* enum */ Sysconf _SC_AIO_PRIO_DELTA_MAX;
+    public static final /* enum */ Sysconf _SC_VERSION;
+    public static final /* enum */ Sysconf _SC_XBS5_ILP32_OFF32;
+    public static final /* enum */ Sysconf __UNKNOWN_CONSTANT__;
+    public static final /* enum */ Sysconf _SC_REALTIME_SIGNALS;
+    public static final /* enum */ Sysconf _SC_REGEXP;
+    public static final /* enum */ Sysconf _SC_CLK_TCK;
+    public static final /* enum */ Sysconf _SC_2_VERSION;
+    public static final /* enum */ Sysconf _SC_XBS5_ILP32_OFFBIG;
+    public static final /* enum */ Sysconf _SC_V6_LPBIG_OFFBIG;
+    public static final /* enum */ Sysconf _SC_TRACE_SYS_MAX;
+    public static final /* enum */ Sysconf _SC_2_C_DEV;
+    public static final /* enum */ Sysconf _SC_SHELL;
+    public static final /* enum */ Sysconf _SC_ADVISORY_INFO;
+    public static final /* enum */ Sysconf _SC_AIO_LISTIO_MAX;
+    public static final /* enum */ Sysconf _SC_RAW_SOCKETS;
+    public static final /* enum */ Sysconf _SC_OPEN_MAX;
+    public static final /* enum */ Sysconf _SC_TYPED_MEMORY_OBJECTS;
+    public static final /* enum */ Sysconf _SC_TIMER_MAX;
+    public static final /* enum */ Sysconf _SC_2_FORT_RUN;
+    public static final /* enum */ Sysconf _SC_THREAD_PRIO_PROTECT;
+    public static final /* enum */ Sysconf _SC_NGROUPS_MAX;
+    public static final /* enum */ Sysconf _SC_BARRIERS;
+    public static final /* enum */ Sysconf _SC_THREAD_SPORADIC_SERVER;
+    public static final /* enum */ Sysconf _SC_2_C_BIND;
+    public static final /* enum */ Sysconf _SC_TTY_NAME_MAX;
+    public static final /* enum */ Sysconf _SC_READER_WRITER_LOCKS;
+    public static final /* enum */ Sysconf _SC_2_PBS_LOCATE;
+    public static final /* enum */ Sysconf _SC_BC_DIM_MAX;
+    public static final /* enum */ Sysconf _SC_2_LOCALEDEF;
+    public static final /* enum */ Sysconf _SC_MEMLOCK;
+    public static final /* enum */ Sysconf _SC_CLOCK_SELECTION;
+    public static final /* enum */ Sysconf _SC_2_PBS;
+    public static final /* enum */ Sysconf _SC_PRIORITIZED_IO;
+    public static final /* enum */ Sysconf _SC_SYNCHRONIZED_IO;
+    public static final /* enum */ Sysconf _SC_SEMAPHORES;
+    public static final /* enum */ Sysconf _SC_MONOTONIC_CLOCK;
+    public static final /* enum */ Sysconf _SC_MAPPED_FILES;
+    public static final /* enum */ Sysconf _SC_THREAD_STACK_MIN;
+    public static final /* enum */ Sysconf _SC_THREAD_KEYS_MAX;
+    public static final /* enum */ Sysconf _SC_TRACE;
+    public static final /* enum */ Sysconf _SC_BC_BASE_MAX;
+    public static final /* enum */ Sysconf _SC_EXPR_NEST_MAX;
+    public static final /* enum */ Sysconf _SC_THREAD_DESTRUCTOR_ITERATIONS;
+    public static final /* enum */ Sysconf _SC_SIGQUEUE_MAX;
+    public static final /* enum */ Sysconf _SC_2_SW_DEV;
+    public static final /* enum */ Sysconf _SC_SPORADIC_SERVER;
+    public static final /* enum */ Sysconf _SC_TIMERS;
+    public static final /* enum */ Sysconf _SC_TRACE_LOG;
+    public static final /* enum */ Sysconf _SC_2_PBS_CHECKPOINT;
+    public static final /* enum */ Sysconf _SC_TRACE_NAME_MAX;
+    public static final /* enum */ Sysconf _SC_THREAD_SAFE_FUNCTIONS;
+    public static final /* enum */ Sysconf _SC_V6_ILP32_OFF32;
+    public static final /* enum */ Sysconf _SC_MEMORY_PROTECTION;
+    public static final /* enum */ Sysconf _SC_THREAD_PRIORITY_SCHEDULING;
+    public static final /* enum */ Sysconf _SC_FSYNC;
+    public static final /* enum */ Sysconf _SC_V6_LP64_OFF64;
+    public static final /* enum */ Sysconf _SC_XBS5_LP64_OFF64;
+    public static final /* enum */ Sysconf _SC_LINE_MAX;
+    public static final /* enum */ Sysconf _SC_SHARED_MEMORY_OBJECTS;
+    public static final /* enum */ Sysconf _SC_SEM_VALUE_MAX;
+    public static final /* enum */ Sysconf _SC_SPAWN;
+    public static final /* enum */ Sysconf _SC_XBS5_LPBIG_OFFBIG;
+    public static final /* enum */ Sysconf _SC_FILE_LOCKING;
+    public static final /* enum */ Sysconf _SC_2_UPE;
+    public static final /* enum */ Sysconf _SC_RE_DUP_MAX;
+    public static final /* enum */ Sysconf _SC_XOPEN_STREAMS;
+    public static final /* enum */ Sysconf _SC_XOPEN_ENH_I18N;
+    public static final /* enum */ Sysconf _SC_IPV6;
+    public static final /* enum */ Sysconf _SC_PASS_MAX;
+    public static final /* enum */ Sysconf _SC_PAGE_SIZE;
+    public static final /* enum */ Sysconf _SC_SPIN_LOCKS;
+    public static final /* enum */ Sysconf _SC_ATEXIT_MAX;
+    public static final /* enum */ Sysconf _SC_THREAD_CPUTIME;
+    public static final /* enum */ Sysconf _SC_MESSAGE_PASSING;
+    public static final /* enum */ Sysconf _SC_NPROCESSORS_CONF;
+    public static final /* enum */ Sysconf _SC_2_CHAR_TERM;
+    public static final /* enum */ Sysconf _SC_THREAD_PRIO_INHERIT;
+
+    public static Sysconf valueOf(long value) {
+        return resolver.valueOf(value);
+    }
+
+    public final String description() {
+        return resolver.description(this);
+    }
+
+    static {
+        _SC_ARG_MAX = new Sysconf();
+        _SC_CHILD_MAX = new Sysconf();
+        _SC_CLK_TCK = new Sysconf();
+        _SC_NGROUPS_MAX = new Sysconf();
+        _SC_OPEN_MAX = new Sysconf();
+        _SC_JOB_CONTROL = new Sysconf();
+        _SC_SAVED_IDS = new Sysconf();
+        _SC_VERSION = new Sysconf();
+        _SC_BC_BASE_MAX = new Sysconf();
+        _SC_BC_DIM_MAX = new Sysconf();
+        _SC_BC_SCALE_MAX = new Sysconf();
+        _SC_BC_STRING_MAX = new Sysconf();
+        _SC_COLL_WEIGHTS_MAX = new Sysconf();
+        _SC_EXPR_NEST_MAX = new Sysconf();
+        _SC_LINE_MAX = new Sysconf();
+        _SC_RE_DUP_MAX = new Sysconf();
+        _SC_2_VERSION = new Sysconf();
+        _SC_2_C_BIND = new Sysconf();
+        _SC_2_C_DEV = new Sysconf();
+        _SC_2_CHAR_TERM = new Sysconf();
+        _SC_2_FORT_DEV = new Sysconf();
+        _SC_2_FORT_RUN = new Sysconf();
+        _SC_2_LOCALEDEF = new Sysconf();
+        _SC_2_SW_DEV = new Sysconf();
+        _SC_2_UPE = new Sysconf();
+        _SC_STREAM_MAX = new Sysconf();
+        _SC_TZNAME_MAX = new Sysconf();
+        _SC_ASYNCHRONOUS_IO = new Sysconf();
+        _SC_PAGESIZE = new Sysconf();
+        _SC_MEMLOCK = new Sysconf();
+        _SC_MEMLOCK_RANGE = new Sysconf();
+        _SC_MEMORY_PROTECTION = new Sysconf();
+        _SC_MESSAGE_PASSING = new Sysconf();
+        _SC_PRIORITIZED_IO = new Sysconf();
+        _SC_PRIORITY_SCHEDULING = new Sysconf();
+        _SC_REALTIME_SIGNALS = new Sysconf();
+        _SC_SEMAPHORES = new Sysconf();
+        _SC_FSYNC = new Sysconf();
+        _SC_SHARED_MEMORY_OBJECTS = new Sysconf();
+        _SC_SYNCHRONIZED_IO = new Sysconf();
+        _SC_TIMERS = new Sysconf();
+        _SC_AIO_LISTIO_MAX = new Sysconf();
+        _SC_AIO_MAX = new Sysconf();
+        _SC_AIO_PRIO_DELTA_MAX = new Sysconf();
+        _SC_DELAYTIMER_MAX = new Sysconf();
+        _SC_MQ_OPEN_MAX = new Sysconf();
+        _SC_MAPPED_FILES = new Sysconf();
+        _SC_RTSIG_MAX = new Sysconf();
+        _SC_SEM_NSEMS_MAX = new Sysconf();
+        _SC_SEM_VALUE_MAX = new Sysconf();
+        _SC_SIGQUEUE_MAX = new Sysconf();
+        _SC_TIMER_MAX = new Sysconf();
+        _SC_NPROCESSORS_CONF = new Sysconf();
+        _SC_NPROCESSORS_ONLN = new Sysconf();
+        _SC_2_PBS = new Sysconf();
+        _SC_2_PBS_ACCOUNTING = new Sysconf();
+        _SC_2_PBS_CHECKPOINT = new Sysconf();
+        _SC_2_PBS_LOCATE = new Sysconf();
+        _SC_2_PBS_MESSAGE = new Sysconf();
+        _SC_2_PBS_TRACK = new Sysconf();
+        _SC_ADVISORY_INFO = new Sysconf();
+        _SC_BARRIERS = new Sysconf();
+        _SC_CLOCK_SELECTION = new Sysconf();
+        _SC_CPUTIME = new Sysconf();
+        _SC_FILE_LOCKING = new Sysconf();
+        _SC_GETGR_R_SIZE_MAX = new Sysconf();
+        _SC_GETPW_R_SIZE_MAX = new Sysconf();
+        _SC_HOST_NAME_MAX = new Sysconf();
+        _SC_LOGIN_NAME_MAX = new Sysconf();
+        _SC_MONOTONIC_CLOCK = new Sysconf();
+        _SC_MQ_PRIO_MAX = new Sysconf();
+        _SC_READER_WRITER_LOCKS = new Sysconf();
+        _SC_REGEXP = new Sysconf();
+        _SC_SHELL = new Sysconf();
+        _SC_SPAWN = new Sysconf();
+        _SC_SPIN_LOCKS = new Sysconf();
+        _SC_SPORADIC_SERVER = new Sysconf();
+        _SC_THREAD_ATTR_STACKADDR = new Sysconf();
+        _SC_THREAD_ATTR_STACKSIZE = new Sysconf();
+        _SC_THREAD_CPUTIME = new Sysconf();
+        _SC_THREAD_DESTRUCTOR_ITERATIONS = new Sysconf();
+        _SC_THREAD_KEYS_MAX = new Sysconf();
+        _SC_THREAD_PRIO_INHERIT = new Sysconf();
+        _SC_THREAD_PRIO_PROTECT = new Sysconf();
+        _SC_THREAD_PRIORITY_SCHEDULING = new Sysconf();
+        _SC_THREAD_PROCESS_SHARED = new Sysconf();
+        _SC_THREAD_SAFE_FUNCTIONS = new Sysconf();
+        _SC_THREAD_SPORADIC_SERVER = new Sysconf();
+        _SC_THREAD_STACK_MIN = new Sysconf();
+        _SC_THREAD_THREADS_MAX = new Sysconf();
+        _SC_TIMEOUTS = new Sysconf();
+        _SC_THREADS = new Sysconf();
+        _SC_TRACE = new Sysconf();
+        _SC_TRACE_EVENT_FILTER = new Sysconf();
+        _SC_TRACE_INHERIT = new Sysconf();
+        _SC_TRACE_LOG = new Sysconf();
+        _SC_TTY_NAME_MAX = new Sysconf();
+        _SC_TYPED_MEMORY_OBJECTS = new Sysconf();
+        _SC_V6_ILP32_OFF32 = new Sysconf();
+        _SC_V6_ILP32_OFFBIG = new Sysconf();
+        _SC_V6_LP64_OFF64 = new Sysconf();
+        _SC_V6_LPBIG_OFFBIG = new Sysconf();
+        _SC_IPV6 = new Sysconf();
+        _SC_RAW_SOCKETS = new Sysconf();
+        _SC_SYMLOOP_MAX = new Sysconf();
+        _SC_ATEXIT_MAX = new Sysconf();
+        _SC_IOV_MAX = new Sysconf();
+        _SC_PAGE_SIZE = new Sysconf();
+        _SC_XOPEN_CRYPT = new Sysconf();
+        _SC_XOPEN_ENH_I18N = new Sysconf();
+        _SC_XOPEN_LEGACY = new Sysconf();
+        _SC_XOPEN_REALTIME = new Sysconf();
+        _SC_XOPEN_REALTIME_THREADS = new Sysconf();
+        _SC_XOPEN_SHM = new Sysconf();
+        _SC_XOPEN_STREAMS = new Sysconf();
+        _SC_XOPEN_UNIX = new Sysconf();
+        _SC_XOPEN_VERSION = new Sysconf();
+        _SC_XOPEN_XCU_VERSION = new Sysconf();
+        _SC_XBS5_ILP32_OFF32 = new Sysconf();
+        _SC_XBS5_ILP32_OFFBIG = new Sysconf();
+        _SC_XBS5_LP64_OFF64 = new Sysconf();
+        _SC_XBS5_LPBIG_OFFBIG = new Sysconf();
+        _SC_SS_REPL_MAX = new Sysconf();
+        _SC_TRACE_EVENT_NAME_MAX = new Sysconf();
+        _SC_TRACE_NAME_MAX = new Sysconf();
+        _SC_TRACE_SYS_MAX = new Sysconf();
+        _SC_TRACE_USER_EVENT_MAX = new Sysconf();
+        _SC_PASS_MAX = new Sysconf();
+        __UNKNOWN_CONSTANT__ = new Sysconf();
+        Sysconf[] sysconfArray = new Sysconf[129];
+        sysconfArray[0] = _SC_ARG_MAX;
+        sysconfArray[1] = _SC_CHILD_MAX;
+        sysconfArray[2] = _SC_CLK_TCK;
+        sysconfArray[3] = _SC_NGROUPS_MAX;
+        sysconfArray[4] = _SC_OPEN_MAX;
+        sysconfArray[5] = _SC_JOB_CONTROL;
+        sysconfArray[6] = _SC_SAVED_IDS;
+        sysconfArray[7] = _SC_VERSION;
+        sysconfArray[8] = _SC_BC_BASE_MAX;
+        sysconfArray[9] = _SC_BC_DIM_MAX;
+        sysconfArray[10] = _SC_BC_SCALE_MAX;
+        sysconfArray[11] = _SC_BC_STRING_MAX;
+        sysconfArray[12] = _SC_COLL_WEIGHTS_MAX;
+        sysconfArray[13] = _SC_EXPR_NEST_MAX;
+        sysconfArray[14] = _SC_LINE_MAX;
+        sysconfArray[15] = _SC_RE_DUP_MAX;
+        sysconfArray[16] = _SC_2_VERSION;
+        sysconfArray[17] = _SC_2_C_BIND;
+        sysconfArray[18] = _SC_2_C_DEV;
+        sysconfArray[19] = _SC_2_CHAR_TERM;
+        sysconfArray[20] = _SC_2_FORT_DEV;
+        sysconfArray[21] = _SC_2_FORT_RUN;
+        sysconfArray[22] = _SC_2_LOCALEDEF;
+        sysconfArray[23] = _SC_2_SW_DEV;
+        sysconfArray[24] = _SC_2_UPE;
+        sysconfArray[25] = _SC_STREAM_MAX;
+        sysconfArray[26] = _SC_TZNAME_MAX;
+        sysconfArray[27] = _SC_ASYNCHRONOUS_IO;
+        sysconfArray[28] = _SC_PAGESIZE;
+        sysconfArray[29] = _SC_MEMLOCK;
+        sysconfArray[30] = _SC_MEMLOCK_RANGE;
+        sysconfArray[31] = _SC_MEMORY_PROTECTION;
+        sysconfArray[32] = _SC_MESSAGE_PASSING;
+        sysconfArray[33] = _SC_PRIORITIZED_IO;
+        sysconfArray[34] = _SC_PRIORITY_SCHEDULING;
+        sysconfArray[35] = _SC_REALTIME_SIGNALS;
+        sysconfArray[36] = _SC_SEMAPHORES;
+        sysconfArray[37] = _SC_FSYNC;
+        sysconfArray[38] = _SC_SHARED_MEMORY_OBJECTS;
+        sysconfArray[39] = _SC_SYNCHRONIZED_IO;
+        sysconfArray[40] = _SC_TIMERS;
+        sysconfArray[41] = _SC_AIO_LISTIO_MAX;
+        sysconfArray[42] = _SC_AIO_MAX;
+        sysconfArray[43] = _SC_AIO_PRIO_DELTA_MAX;
+        sysconfArray[44] = _SC_DELAYTIMER_MAX;
+        sysconfArray[45] = _SC_MQ_OPEN_MAX;
+        sysconfArray[46] = _SC_MAPPED_FILES;
+        sysconfArray[47] = _SC_RTSIG_MAX;
+        sysconfArray[48] = _SC_SEM_NSEMS_MAX;
+        sysconfArray[49] = _SC_SEM_VALUE_MAX;
+        sysconfArray[50] = _SC_SIGQUEUE_MAX;
+        sysconfArray[51] = _SC_TIMER_MAX;
+        sysconfArray[52] = _SC_NPROCESSORS_CONF;
+        sysconfArray[53] = _SC_NPROCESSORS_ONLN;
+        sysconfArray[54] = _SC_2_PBS;
+        sysconfArray[55] = _SC_2_PBS_ACCOUNTING;
+        sysconfArray[56] = _SC_2_PBS_CHECKPOINT;
+        sysconfArray[57] = _SC_2_PBS_LOCATE;
+        sysconfArray[58] = _SC_2_PBS_MESSAGE;
+        sysconfArray[59] = _SC_2_PBS_TRACK;
+        sysconfArray[60] = _SC_ADVISORY_INFO;
+        sysconfArray[61] = _SC_BARRIERS;
+        sysconfArray[62] = _SC_CLOCK_SELECTION;
+        sysconfArray[63] = _SC_CPUTIME;
+        sysconfArray[64] = _SC_FILE_LOCKING;
+        sysconfArray[65] = _SC_GETGR_R_SIZE_MAX;
+        sysconfArray[66] = _SC_GETPW_R_SIZE_MAX;
+        sysconfArray[67] = _SC_HOST_NAME_MAX;
+        sysconfArray[68] = _SC_LOGIN_NAME_MAX;
+        sysconfArray[69] = _SC_MONOTONIC_CLOCK;
+        sysconfArray[70] = _SC_MQ_PRIO_MAX;
+        sysconfArray[71] = _SC_READER_WRITER_LOCKS;
+        sysconfArray[72] = _SC_REGEXP;
+        sysconfArray[73] = _SC_SHELL;
+        sysconfArray[74] = _SC_SPAWN;
+        sysconfArray[75] = _SC_SPIN_LOCKS;
+        sysconfArray[76] = _SC_SPORADIC_SERVER;
+        sysconfArray[77] = _SC_THREAD_ATTR_STACKADDR;
+        sysconfArray[78] = _SC_THREAD_ATTR_STACKSIZE;
+        sysconfArray[79] = _SC_THREAD_CPUTIME;
+        sysconfArray[80] = _SC_THREAD_DESTRUCTOR_ITERATIONS;
+        sysconfArray[81] = _SC_THREAD_KEYS_MAX;
+        sysconfArray[82] = _SC_THREAD_PRIO_INHERIT;
+        sysconfArray[83] = _SC_THREAD_PRIO_PROTECT;
+        sysconfArray[84] = _SC_THREAD_PRIORITY_SCHEDULING;
+        sysconfArray[85] = _SC_THREAD_PROCESS_SHARED;
+        sysconfArray[86] = _SC_THREAD_SAFE_FUNCTIONS;
+        sysconfArray[87] = _SC_THREAD_SPORADIC_SERVER;
+        sysconfArray[88] = _SC_THREAD_STACK_MIN;
+        sysconfArray[89] = _SC_THREAD_THREADS_MAX;
+        sysconfArray[90] = _SC_TIMEOUTS;
+        sysconfArray[91] = _SC_THREADS;
+        sysconfArray[92] = _SC_TRACE;
+        sysconfArray[93] = _SC_TRACE_EVENT_FILTER;
+        sysconfArray[94] = _SC_TRACE_INHERIT;
+        sysconfArray[95] = _SC_TRACE_LOG;
+        sysconfArray[96] = _SC_TTY_NAME_MAX;
+        sysconfArray[97] = _SC_TYPED_MEMORY_OBJECTS;
+        sysconfArray[98] = _SC_V6_ILP32_OFF32;
+        sysconfArray[99] = _SC_V6_ILP32_OFFBIG;
+        sysconfArray[100] = _SC_V6_LP64_OFF64;
+        sysconfArray[101] = _SC_V6_LPBIG_OFFBIG;
+        sysconfArray[102] = _SC_IPV6;
+        sysconfArray[103] = _SC_RAW_SOCKETS;
+        sysconfArray[104] = _SC_SYMLOOP_MAX;
+        sysconfArray[105] = _SC_ATEXIT_MAX;
+        sysconfArray[106] = _SC_IOV_MAX;
+        sysconfArray[107] = _SC_PAGE_SIZE;
+        sysconfArray[108] = _SC_XOPEN_CRYPT;
+        sysconfArray[109] = _SC_XOPEN_ENH_I18N;
+        sysconfArray[110] = _SC_XOPEN_LEGACY;
+        sysconfArray[111] = _SC_XOPEN_REALTIME;
+        sysconfArray[112] = _SC_XOPEN_REALTIME_THREADS;
+        sysconfArray[113] = _SC_XOPEN_SHM;
+        sysconfArray[114] = _SC_XOPEN_STREAMS;
+        sysconfArray[115] = _SC_XOPEN_UNIX;
+        sysconfArray[116] = _SC_XOPEN_VERSION;
+        sysconfArray[117] = _SC_XOPEN_XCU_VERSION;
+        sysconfArray[118] = _SC_XBS5_ILP32_OFF32;
+        sysconfArray[119] = _SC_XBS5_ILP32_OFFBIG;
+        sysconfArray[120] = _SC_XBS5_LP64_OFF64;
+        sysconfArray[121] = _SC_XBS5_LPBIG_OFFBIG;
+        sysconfArray[122] = _SC_SS_REPL_MAX;
+        sysconfArray[123] = _SC_TRACE_EVENT_NAME_MAX;
+        sysconfArray[124] = _SC_TRACE_NAME_MAX;
+        sysconfArray[125] = _SC_TRACE_SYS_MAX;
+        sysconfArray[126] = _SC_TRACE_USER_EVENT_MAX;
+        sysconfArray[127] = _SC_PASS_MAX;
+        sysconfArray[128] = __UNKNOWN_CONSTANT__;
+        $VALUES = sysconfArray;
+        resolver = ConstantResolver.getResolver(Sysconf.class, 20000, 29999);
+    }
+
+    public final int value() {
+        return (int)resolver.longValue(this);
+    }
+
+    @Override
+    public final int intValue() {
+        return (int)resolver.longValue(this);
+    }
+
+    @Override
+    public final long longValue() {
+        return resolver.longValue(this);
+    }
+
+    public static Sysconf valueOf(String name) {
+        return Enum.valueOf(Sysconf.class, name);
+    }
+
+    @Override
+    public final boolean defined() {
+        return resolver.defined(this);
+    }
+
+    public static Sysconf[] values() {
+        return (Sysconf[])$VALUES.clone();
+    }
+
+    public final String toString() {
+        return this.description();
+    }
+}
+

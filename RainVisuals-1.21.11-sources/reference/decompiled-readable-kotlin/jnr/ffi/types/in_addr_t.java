@@ -1,0 +1,15 @@
+package jnr.ffi.types;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import jnr.ffi.TypeAlias;
+import jnr.ffi.annotations.TypeDefinition;
+
+// $VF: Compiled from in_addr_t.java
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.PARAMETER, ElementType.METHOD})
+@TypeDefinition(alias = TypeAlias.in_addr_t)
+public @interface in_addr_t {
+}

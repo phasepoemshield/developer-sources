@@ -1,0 +1,52 @@
+package org.zenith.base.comand.impl.args;
+
+import org.zenith.base.comand.impl.NeuroCommand;
+import org.zenith.core.BotFeatureRegistry;
+import org.zenith.core.PermissionListCodec;
+
+
+
+
+
+
+
+
+
+
+
+
+
+import com.mojang.brigadier.StringReader;
+import com.mojang.brigadier.arguments.ArgumentType;
+import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import com.mojang.brigadier.suggestion.Suggestions;
+import com.mojang.brigadier.suggestion.SuggestionsBuilder;
+import java.util.Collection;
+import java.util.concurrent.CompletableFuture;
+import net.minecraft.command.CommandSource;
+
+public class NeuroArgumentType implements ArgumentType<String> {
+   public static final Collection<String> EXAMPLES = java.util.List.of();
+
+   public NeuroArgumentType() {
+   }
+
+   public static NeuroArgumentType create() {
+      return new NeuroArgumentType();
+   }
+
+   public String parse(StringReader var1) throws CommandSyntaxException {
+      return var1.readString();
+   }
+
+   @Override
+   public <S> CompletableFuture<Suggestions> listSuggestions(CommandContext<S> var1, SuggestionsBuilder var2) {
+      return CommandSource.suggestMatching(NeuroCommand.neuroNames(), var2);
+   }
+
+   @Override
+   public Collection<String> getExamples() {
+      return EXAMPLES;
+   }
+}

@@ -107,13 +107,18 @@ public final class ModernClickGuiScreen extends Screen {
       } else if (!this.O0000000000()) {
          this.O00000000.O00000000000O();
          return true;
-      } else if (keyCode == 256 && this.O00000000.O000000000000()) {
-         this.O000000000000();
+      } else if (keyCode == 256) {
+         if (this.O00000000.O0000000000000()) {
+            this.O00000000.O00000000(keyCode);
+         } else {
+            this.O000000000000();
+         }
          return true;
       } else if (keyCode == this.O00000000000() && !this.O00000000.O0000000000000()) {
-         this.close();
+         this.O000000000000();
          return true;
-      } else if (this.O00000000.O000000000000()) {
+      } else if (this.O00000000.O0000000000000()) {
+         this.O00000000.O00000000(keyCode);
          return true;
       } else {
          return this.O00000000.O00000000(keyCode) ? true : super.keyPressed(keyCode, scanCode, modifiers);

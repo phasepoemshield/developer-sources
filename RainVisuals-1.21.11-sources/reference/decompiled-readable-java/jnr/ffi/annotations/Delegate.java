@@ -1,0 +1,17 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package jnr.ffi.annotations;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import jnr.ffi.CallingConvention;
+
+@Retention(value=RetentionPolicy.RUNTIME)
+@Target(value={ElementType.METHOD})
+public @interface Delegate {
+    public CallingConvention convention() default CallingConvention.DEFAULT;
+}
+

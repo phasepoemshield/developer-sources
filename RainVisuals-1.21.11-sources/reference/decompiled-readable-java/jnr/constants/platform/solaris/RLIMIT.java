@@ -1,0 +1,98 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package jnr.constants.platform.solaris;
+
+import java.util.EnumMap;
+import java.util.Map;
+import jnr.constants.Constant;
+
+public final class RLIMIT
+extends Enum<RLIMIT>
+implements Constant {
+    public static final /* enum */ RLIMIT RLIMIT_DATA;
+    public static final /* enum */ RLIMIT RLIMIT_FSIZE;
+    private static final /* synthetic */ RLIMIT[] $VALUES;
+    public static final /* enum */ RLIMIT RLIMIT_CPU;
+    public static final long MAX_VALUE = 6L;
+    private final long value;
+    public static final long MIN_VALUE = 0L;
+    public static final /* enum */ RLIMIT RLIMIT_NOFILE;
+    public static final /* enum */ RLIMIT RLIMIT_STACK;
+    public static final /* enum */ RLIMIT RLIMIT_AS;
+    public static final /* enum */ RLIMIT RLIMIT_CORE;
+
+    public static RLIMIT valueOf(String name) {
+        return Enum.valueOf(RLIMIT.class, name);
+    }
+
+    private RLIMIT(long value) {
+        this.value = value;
+    }
+
+    public final String toString() {
+        return StringTable.descriptions.get(this);
+    }
+
+    @Override
+    public final boolean defined() {
+        return true;
+    }
+
+    public final int value() {
+        return (int)this.value;
+    }
+
+    @Override
+    public final long longValue() {
+        return this.value;
+    }
+
+    @Override
+    public final int intValue() {
+        return (int)this.value;
+    }
+
+    static {
+        RLIMIT_AS = new RLIMIT(6L);
+        RLIMIT_CORE = new RLIMIT(4L);
+        RLIMIT_CPU = new RLIMIT(0L);
+        RLIMIT_DATA = new RLIMIT(2L);
+        RLIMIT_FSIZE = new RLIMIT(1L);
+        RLIMIT_NOFILE = new RLIMIT(5L);
+        RLIMIT_STACK = new RLIMIT(3L);
+        RLIMIT[] rLIMITArray = new RLIMIT[7];
+        rLIMITArray[0] = RLIMIT_AS;
+        rLIMITArray[1] = RLIMIT_CORE;
+        rLIMITArray[2] = RLIMIT_CPU;
+        rLIMITArray[3] = RLIMIT_DATA;
+        rLIMITArray[4] = RLIMIT_FSIZE;
+        rLIMITArray[5] = RLIMIT_NOFILE;
+        rLIMITArray[6] = RLIMIT_STACK;
+        $VALUES = rLIMITArray;
+    }
+
+    public static RLIMIT[] values() {
+        return (RLIMIT[])$VALUES.clone();
+    }
+
+    static final class StringTable {
+        public static final Map<RLIMIT, String> descriptions = StringTable.generateTable();
+
+        StringTable() {
+        }
+
+        public static final Map<RLIMIT, String> generateTable() {
+            EnumMap<RLIMIT, String> map = new EnumMap<RLIMIT, String>(RLIMIT.class);
+            map.put(RLIMIT_AS, "RLIMIT_AS");
+            map.put(RLIMIT_CORE, "RLIMIT_CORE");
+            map.put(RLIMIT_CPU, "RLIMIT_CPU");
+            map.put(RLIMIT_DATA, "RLIMIT_DATA");
+            map.put(RLIMIT_FSIZE, "RLIMIT_FSIZE");
+            map.put(RLIMIT_NOFILE, "RLIMIT_NOFILE");
+            map.put(RLIMIT_STACK, "RLIMIT_STACK");
+            return map;
+        }
+    }
+}
+

@@ -1,0 +1,44 @@
+package org.slf4j.spi;
+
+import java.util.function.Supplier;
+import org.slf4j.Marker;
+import org.slf4j.helpers.CheckReturnValue;
+
+// $VF: Compiled from LoggingEventBuilder.java
+public interface LoggingEventBuilder {
+   void log(Supplier<String> var1);
+
+   @CheckReturnValue
+   LoggingEventBuilder addArgument(Supplier<?> var1);
+
+   @CheckReturnValue
+   LoggingEventBuilder addArgument(Object var1);
+
+   void log(String var1, Object var2, Object var3);
+
+   void log(String var1);
+
+   void log(String var1, Object var2);
+
+   @CheckReturnValue
+   LoggingEventBuilder addKeyValue(String var1, Object var2);
+
+   @CheckReturnValue
+   LoggingEventBuilder setCause(Throwable var1);
+
+   void log(String var1, Object... var2);
+
+   void log();
+
+   @CheckReturnValue
+   LoggingEventBuilder addKeyValue(String var1, Supplier<Object> var2);
+
+   @CheckReturnValue
+   LoggingEventBuilder setMessage(String var1);
+
+   @CheckReturnValue
+   LoggingEventBuilder addMarker(Marker var1);
+
+   @CheckReturnValue
+   LoggingEventBuilder setMessage(Supplier<String> var1);
+}

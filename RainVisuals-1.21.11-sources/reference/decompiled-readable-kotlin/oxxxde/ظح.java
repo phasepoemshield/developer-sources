@@ -1,0 +1,28 @@
+package oxxxde;
+
+import lombok.Generated;
+
+// $VF: Compiled from heavy
+public enum ظح {
+   SHADER_STORAGE_BUFFER(37074),
+   TRANSFORM_FEEDBACK_BUFFER(35982),
+   TEXTURE_BUFFER(35882),
+   ELEMENT_ARRAY_BUFFER(34963),
+   PIXEL_PACK_BUFFER(35051),
+   COPY_READ_BUFFER(36662),
+   UNIFORM_BUFFER(35345),
+   ATOMIC_COUNTER_BUFFER(37568),
+   PARAMETER_BUFFER_ARB(33006),
+   COPY_WRITE_BUFFER(36663),
+   PIXEL_UNPACK_BUFFER(35052),
+   DRAW_INDIRECT_BUFFER(36671),
+   ARRAY_BUFFER(34962),
+   DISPATCH_INDIRECT_BUFFER(37102);
+
+   public final int glId;
+
+   @Generated
+   ظح(int glId) {
+      this.glId = glId;
+   }
+}

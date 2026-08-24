@@ -1,0 +1,17 @@
+package kotlin.collections
+
+import kotlin.jvm.internal.markers.KMappedMarker
+
+// $VF: Compiled from PrimitiveIterators.kt
+public abstract class DoubleIterator : java.util.Iterator<java.lang.Double>, KMappedMarker {
+   public operator fun next(): Double {
+      return this.nextDouble()
+   }
+
+   public abstract fun nextDouble(): Double {
+   }
+
+   override fun remove() {
+      throw UnsupportedOperationException("Operation is not supported for read-only collection")
+   }
+}

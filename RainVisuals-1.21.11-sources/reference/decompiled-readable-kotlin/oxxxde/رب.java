@@ -1,0 +1,23 @@
+package oxxxde;
+
+// $VF: Compiled from heavy
+public class رب extends جأ {
+   private static final long serialVersionUID = -4075887372988299959L;
+
+   public رب(String newShader, حآ type, String oldShader) {
+      super(
+         "Double shader addition in program builder.",
+         String.format(
+            "An attempt was made to add shader '%s' with type '%s', while shader '%s' with the same type had already been added.",
+            newShader,
+            type.name(),
+            oldShader
+         ),
+         new String[]{
+            "Your program builder has an invalid structure.",
+            "You have added a program snippet to the program builder that already adds a shader of the required type."
+         },
+         new String[]{"Check that your program builder structure is correct.", "Check the program snippets you add to the program builder."}
+      );
+   }
+}

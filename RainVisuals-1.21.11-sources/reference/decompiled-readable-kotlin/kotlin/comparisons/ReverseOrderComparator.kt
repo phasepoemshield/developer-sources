@@ -1,0 +1,14 @@
+package kotlin.comparisons
+
+import java.util.Comparator
+
+// $VF: Compiled from Comparisons.kt
+private object ReverseOrderComparator : Comparator<java.lang.Comparable<? super Object>> {
+   public open fun compare(a: Comparable<Any>, b: Comparable<Any>): Int {
+      return b.compareTo(a)
+   }
+
+   public override fun reversed(): Comparator<Comparable<Any>> {
+      return NaturalOrderComparator.INSTANCE
+   }
+}

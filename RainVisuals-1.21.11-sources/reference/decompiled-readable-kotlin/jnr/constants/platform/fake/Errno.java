@@ -1,0 +1,182 @@
+package jnr.constants.platform.fake;
+
+import jnr.constants.Constant;
+
+// $VF: Compiled from Errno.java
+public enum Errno implements Constant {
+   EOPNOTSUPP(46L),
+   EDEADLOCK(100L),
+   ENXIO(6L),
+   ENOTTY(25L),
+   ELOOP(63L),
+   ENOANO(97L),
+   ENETUNREACH(52L),
+   ENOPROTOOPT(43L),
+   ELIBMAX(114L),
+   EROFS(30L),
+   EPROGUNAVAIL(143L),
+   EBADMSG(78L),
+   EMEDIUMTYPE(127L),
+   ENOCSI(92L),
+   EBADR(95L),
+   ENOTDIR(20L),
+   ENAMETOOLONG(64L),
+   ENAVAIL(120L),
+   EINVAL(22L),
+   EMSGSIZE(41L),
+   ENODATA(80L),
+   EPROGMISMATCH(142L),
+   EREMOTE(71L),
+   EACCES(13L),
+   EPFNOSUPPORT(47L),
+   ENOSYS(73L),
+   EISNAM(121L),
+   ENOSTR(83L),
+   ESOCKTNOSUPPORT(45L),
+   ESPIPE(29L),
+   ENOLCK(72L),
+   EAGAIN(36L),
+   ELNRNG(90L),
+   EPIPE(32L),
+   EDOM(33L),
+   EBADRQC(98L),
+   EBADE(94L),
+   ENOENT(2L),
+   ECANCELED(123L),
+   ELIBSCN(113L),
+   ENOLINK(81L),
+   EUNATCH(91L),
+   EDEADLK(11L),
+   EBFONT(101L),
+   EKEYREJECTED(125L),
+   EREMOTEIO(122L),
+   ENOSPC(28L),
+   ECONNREFUSED(62L),
+   EEXIST(17L),
+   EL2HLT(93L),
+   ENOTRECOVERABLE(130L),
+   ENEEDAUTH(137L),
+   EPROTOTYPE(42L),
+   EADV(104L),
+   EUCLEAN(118L),
+   EBUSY(16L),
+   EHWPOISON(146L),
+   ESRCH(3L),
+   EISCONN(57L),
+   ENOTCONN(58L),
+   EMFILE(24L),
+   ENOEXEC(8L),
+   EL3RST(89L),
+   EPERM(1L),
+   EAUTH(133L),
+   ESRMNT(105L),
+   ENOMEM(12L),
+   EIO(5L),
+   ENFILE(23L),
+   ELIBBAD(112L),
+   ENETRESET(53L),
+   EOVERFLOW(74L),
+   EINTR(4L),
+   EPROCUNAVAIL(141L),
+   ENOTCAPABLE(148L),
+   ECHRNG(86L),
+   ENOATTR(138L),
+   EPROTONOSUPPORT(44L),
+   ETIME(85L),
+   EIDRM(75L),
+   ECAPMODE(147L),
+   EBADFD(109L),
+   ENOPKG(103L),
+   ERFKILL(132L),
+   EDOOFUS(135L),
+   EBADRPC(134L),
+   ENOTSOCK(39L),
+   EDQUOT(69L),
+   EINPROGRESS(37L),
+   ESTALE(70L),
+   ERANGE(34L),
+   ELIBEXEC(115L),
+   ENOKEY(128L),
+   ENOMSG(76L),
+   ENOTEMPTY(67L),
+   ENONET(102L),
+   EALREADY(38L),
+   ENOTUNIQ(108L),
+   ETIMEDOUT(61L),
+   EBADF(9L),
+   ERESTART(116L),
+   ECHILD(10L),
+   ENOSR(82L),
+   ENOTBLK(15L),
+   ESHUTDOWN(59L),
+   EDESTADDRREQ(40L),
+   EFTYPE(136L),
+   EXDEV(18L),
+   EKEYREVOKED(126L),
+   ECONNABORTED(54L),
+   ENOTNAM(119L),
+   EDOTDOT(107L),
+   EPROCLIM(140L),
+   ETXTBSY(26L),
+   ENOTSUP(139L),
+   ECOMM(106L),
+   EILSEQ(77L),
+   EIPSEC(145L),
+   ENOBUFS(56L),
+   EMLINK(31L),
+   ENETDOWN(51L),
+   EL3HLT(88L),
+   EADDRNOTAVAIL(50L),
+   ENODEV(19L),
+   E2BIG(7L),
+   EUSERS(68L),
+   ELIBACC(111L),
+   ESTRPIPE(117L),
+   EWOULDBLOCK(35L),
+   EAFNOSUPPORT(48L),
+   EISDIR(21L),
+   ECONNRESET(55L),
+   ERPCMISMATCH(144L),
+   EXFULL(96L),
+   EREMCHG(110L),
+   EL2NSYNC(87L),
+   EMULTIHOP(79L),
+   EBADSLT(99L),
+   EKEYEXPIRED(124L),
+   EHOSTDOWN(65L),
+   ENOMEDIUM(129L),
+   ETOOMANYREFS(60L),
+   EFAULT(14L),
+   EFBIG(27L),
+   EPROTO(84L),
+   EOWNERDEAD(131L),
+   EADDRINUSE(49L),
+   EHOSTUNREACH(66L);
+
+   private final long value;
+   public static final long MAX_VALUE = 148L;
+   public static final long MIN_VALUE = 1L;
+
+   Errno(long value) {
+      this.value = value;
+   }
+
+   @Override
+   public final int intValue() {
+      return (int)this.value;
+   }
+
+   public final int value() {
+      return (int)this.value;
+   }
+
+   @Override
+   public final boolean defined() {
+      return true;
+   }
+
+   @Override
+   public final long longValue() {
+      return this.value;
+   }
+}

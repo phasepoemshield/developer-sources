@@ -1,0 +1,104 @@
+package moscow.rockstar.util.rotations.modes;
+
+import moscow.rockstar.module.combat.Aura;
+import moscow.rockstar.util.rotations.MoveCorrection;
+import moscow.rockstar.util.rotations.Rotation;
+import moscow.rockstar.util.rotations.RotationHandler;
+import moscow.rockstar.util.rotations.RotationPriority;
+import net.minecraft.SharedConstants;
+import net.minecraft.entity.LivingEntity;
+
+public final class ReallyWorldRotationMode implements AuraRotationMode {
+   private static final int MIN_VIA_PROTOCOL = 755;
+   private static final int MAX_VIA_PROTOCOL = 765;
+
+   private Rotation rotation = Rotation.ZERO;
+   private int targetId = -1;
+   private boolean hasCustomRotation;
+   private boolean ready;
+   private boolean yawNudge;
+
+   @Override
+   public void rotate(Aura aura, RotationHandler handler, LivingEntity target, MoveCorrection moveCorrection) {
+      if (target == null || target.isDead()) {
+         this.reset();
+         return;
+      }
+
+      Rotation targetRotation = AuraRotationSupport.rotationToTarget(aura, target);
+      this.ready = this.needsCustomRotation(aura, target, targetRotation);
+      if (!this.ready) {
+         this.hasCustomRotation = false;
+         handler.rotate(targetRotation, moveCorrection, 160.0F, 160.0F, 45.0F, RotationPriority.TO_TARGET);
+         return;
+      }
+
+      if (!this.hasCustomRotation || this.targetId != target.getId() || !this.canUseTarget(aura, target)) {
+         this.prepare(target, targetRotation);
+      } else {
+         AuraRotationSupport.sendRotationPackets(this.rotation);
+      }
+
+      this.nudgeClientYaw();
+      handler.rotate(this.rotation, moveCorrection, 180.0F, 180.0F, 180.0F, RotationPriority.TO_TARGET);
+   }
+
+   private boolean needsCustomRotation(Aura aura, LivingEntity target, Rotation targetRotation) {
+      if (mc.player == null || mc.world == null) {
+         return false;
+      }
+
+      return this.isViaProtocolInRange() && !AuraRotationSupport.canTrace(aura, target, targetRotation, true);
+   }
+
+   private void prepare(LivingEntity target, Rotation targetRotation) {
+      this.rotation = targetRotation;
+      this.targetId = target.getId();
+      this.hasCustomRotation = true;
+      AuraRotationSupport.sendRotationPackets(this.rotation);
+   }
+
+   private boolean canUseTarget(Aura aura, LivingEntity target) {
+      return this.ready
+         && (AuraRotationSupport.canTrace(aura, target, this.rotation, !aura.isNoHitInvEnabled()) || !aura.isWallsEnabled());
+   }
+
+   private void nudgeClientYaw() {
+      if (mc.player == null) {
+         return;
+      }
+
+      this.yawNudge = !this.yawNudge;
+      mc.player.setYaw(mc.player.getYaw() + (this.yawNudge ? 0.1F : -0.1F));
+   }
+
+   private boolean isViaProtocolInRange() {
+      int protocol = this.currentProtocolVersion();
+      return protocol >= MIN_VIA_PROTOCOL && protocol <= MAX_VIA_PROTOCOL;
+   }
+
+   private int currentProtocolVersion() {
+      Integer viaVersion = this.viaFabricPlusProtocolVersion();
+      return viaVersion != null ? viaVersion : SharedConstants.getGameVersion().getProtocolVersion();
+   }
+
+   private Integer viaFabricPlusProtocolVersion() {
+      try {
+         Class<?> viaFabricPlus = Class.forName("com.viaversion.viafabricplus.ViaFabricPlus");
+         Object impl = viaFabricPlus.getMethod("getImpl").invoke(null);
+         Object targetVersion = impl.getClass().getMethod("getTargetVersion").invoke(impl);
+         Object version = targetVersion.getClass().getMethod("getVersion").invoke(targetVersion);
+         return version instanceof Integer value ? value : null;
+      } catch (LinkageError | ReflectiveOperationException | RuntimeException ignored) {
+         return null;
+      }
+   }
+
+   @Override
+   public void reset() {
+      this.ready = false;
+      this.hasCustomRotation = false;
+      this.targetId = -1;
+      this.rotation = Rotation.ZERO;
+   }
+}

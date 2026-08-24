@@ -1,14 +1,53 @@
-# Build / runtime artifacts
+# Operating-system metadata
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+
+# IDE and editor state
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+*.swp
+*.swo
+*~
+
+# Build outputs and dependency caches
 .gradle/
 build/
-run/
+out/
 node_modules/
+.cache/
 .tmp-probe/
 .precompiled/
-.DS_Store
+tools_out/
+*.class
 
-# Runtime noise
+# Local Minecraft/runtime state
+run/
 logs/
+crash-reports/
+saves/
+screenshots/
 *.log
+hs_err_pid*.log
+replay_pid*.log
+
+# Temporary and backup artifacts
+*.tmp
+*.temp
+*.orig
+*.rej
 out.jar
 out.jar.bak*
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+!.env.sample

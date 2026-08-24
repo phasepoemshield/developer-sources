@@ -1,0 +1,23 @@
+package jnr.a64asm;
+
+// $VF: Compiled from PREF_ENUM.java
+public enum PREF_ENUM {
+   PLIL1STRM,
+   PSTL3KEEP,
+   PLDL2STRM,
+   PSTL2KEEP,
+   PLIL3KEEP,
+   PSTL2STRM,
+   PLIL3STRM,
+   PLDL1STRM,
+   PLDL3KEEP,
+   PLDL2KEEP,
+   PSTL3STRM,
+   PLDL1KEEP,
+   PSTL1STRM,
+   PSTL1KEEP,
+   PLIL1KEEP,
+   PLIL2KEEP,
+   PLDL3STRM,
+   PLIL2STRM;
+}

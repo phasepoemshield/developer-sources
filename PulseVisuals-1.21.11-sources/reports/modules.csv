@@ -1,0 +1,87 @@
+category,name,description,class,source
+HUD,Armor HUD,Displays armor near the hotbar.,pulse.modules.hud.ArmorHud,pulse/modules/hud/ArmorHud.java
+HUD,BossbarHud,ÐÑÐ¾Ð±ÑÐ°Ð¶Ð°ÐµÑ Bossbar,pulse.modules.hud.BossbarHud,pulse/modules/hud/BossbarHud.java
+HUD,Cooldowns HUD,Displays item cooldowns on screen.,pulse.modules.hud.CooldownsHud,pulse/modules/hud/CooldownsHud.java
+HUD,Effect Notify,Notifies about status effect changes.,pulse.modules.hud.EffectNotify,pulse/modules/hud/EffectNotify.java
+HUD,Hotkeys,Displays active key bindings.,pulse.modules.hud.HotkeysHud,pulse/modules/hud/HotkeysHud.java
+HUD,Inventory HUD,Displays item inventory.,pulse.modules.hud.InventoryHud,pulse/modules/hud/InventoryHud.java
+HUD,Potions,Shows active potion effects.,pulse.modules.hud.PotionsHud,pulse/modules/hud/PotionsHud.java
+HUD,Saturation HUD,Ð£Ð´Ð¾Ð±Ð½Ð¾Ðµ Ð¾ÑÐ¾Ð±ÑÐ°Ð¶ÐµÐ½Ð¸Ðµ ÑÑÐ¾Ð²Ð½Ñ ÑÑÑÐ¾ÑÑÐ¸.,pulse.modules.hud.SaturationHud,pulse/modules/hud/SaturationHud.java
+HUD,ScoreboardHud,ÐÑÐ¾Ð±ÑÐ°Ð¶Ð°ÐµÑ Scoreboard,pulse.modules.hud.ScoreboardHud,pulse/modules/hud/ScoreboardHud.java
+HUD,Target HUD,Shows target information.,pulse.modules.hud.TargetHud,pulse/modules/hud/TargetHud.java
+HUD,TNT Timer,Shows explosion timer on TNT.,pulse.modules.hud.TntTimer,pulse/modules/hud/TntTimer.java
+HUD,Totems HUD,Ð£Ð´Ð¾Ð±Ð½Ð¾Ðµ Ð¾ÑÐ¾Ð±ÑÐ°Ð¶ÐµÐ½Ð¸Ðµ ÐºÐ¾Ð»Ð¸ÑÐµÑÑÐ²Ð° ÑÐ¾ÑÐµÐ¼Ð¾Ð².,pulse.modules.hud.TotemsHud,pulse/modules/hud/TotemsHud.java
+HUD,Watermark,Displays the client watermark,pulse.modules.hud.Watermark,pulse/modules/hud/Watermark.java
+UTILITIES,Armor Notifier,Ð£Ð²ÐµÐ´Ð¾Ð¼Ð»ÑÐµÑ Ð¾ Ð½Ð¸Ð·ÐºÐ¾Ð¹ Ð¿ÑÐ¾ÑÐ½Ð¾ÑÑÐ¸ Ð±ÑÐ¾Ð½Ð¸,pulse.modules.utilities.ArmorNotifier,pulse/modules/utilities/ArmorNotifier.java
+UTILITIES,Auc Helper,ÐÐ²ÑÐ¾Ð¼Ð°ÑÐ¸ÑÐµÑÐºÐ¾Ðµ Ð¿ÐµÑÐµÐ²ÑÑÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿ÑÐµÐ´Ð¼ÐµÑÐ¾Ð² Ð½Ð° Ð°ÑÐºÑÐ¸Ð¾Ð½Ðµ,pulse.modules.utilities.AucHelper,pulse/modules/utilities/AucHelper.java
+UTILITIES,Auto Duel,ÐÐ²ÑÐ¾Ð¼Ð°ÑÐ¸ÑÐµÑÐºÐ¸ Ð¾ÑÐ¿ÑÐ°Ð²Ð»ÑÐµÑ Ð·Ð°Ð¿ÑÐ¾ÑÑ Ð½Ð° Ð´ÑÑÐ»Ð¸ Ð¸Ð³ÑÐ¾ÐºÐ°Ð¼,pulse.modules.utilities.AutoDuel,pulse/modules/utilities/AutoDuel.java
+UTILITIES,Auto Eat,Automatically eats food at the selected hunger level.,pulse.modules.utilities.AutoEat,pulse/modules/utilities/AutoEat.java
+UTILITIES,Auto Invest,Automatically invests clan money above the configured limit.,pulse.modules.utilities.AutoInvest,pulse/modules/utilities/AutoInvest.java
+UTILITIES,Auto Leave,ÐÐ²ÑÐ¾Ð¼Ð°ÑÐ¸ÑÐµÑÐºÐ¸Ð¹ Ð²ÑÑÐ¾Ð´ Ð¿ÑÐ¸ Ð¾Ð±Ð½Ð°ÑÑÐ¶ÐµÐ½Ð¸Ð¸ Ð¸Ð³ÑÐ¾ÐºÐ¾Ð²,pulse.modules.utilities.AutoLeave,pulse/modules/utilities/AutoLeave.java
+UTILITIES,Auto Potion,ÐÐ²ÑÐ¾Ð¼Ð°ÑÐ¸ÑÐµÑÐºÐ¸ Ð¸ÑÐ¿Ð¾Ð»ÑÐ·ÑÐµÑ Ð²ÑÐ±ÑÐ°Ð½Ð½ÑÐµ Ð·ÐµÐ»ÑÑ,pulse.modules.utilities.AutoPotion,pulse/modules/utilities/AutoPotion.java
+UTILITIES,Auto Reconnect,Keeps reconnect state available for the reconnect screen.,pulse.modules.utilities.AutoReconnect,pulse/modules/utilities/AutoReconnect.java
+UTILITIES,Auto Reissue,Tracks auction reissue cooldowns.,pulse.modules.utilities.AutoReissue,pulse/modules/utilities/AutoReissue.java
+UTILITIES,Auto Respawn,ÐÐ²ÑÐ¾Ð¼Ð°ÑÐ¸ÑÐµÑÐºÐ¸ Ð²Ð¾Ð·ÑÐ¾Ð¶Ð´Ð°ÐµÑ Ð¸Ð³ÑÐ¾ÐºÐ° Ð¿Ð¾ÑÐ»Ðµ ÑÐ¼ÐµÑÑÐ¸,pulse.modules.utilities.AutoRespawn,pulse/modules/utilities/AutoRespawn.java
+UTILITIES,Chat Helper,ÐÐ¾Ð¼Ð¾ÑÐ½Ð¸Ðº Ð´Ð»Ñ ÑÐ°ÑÐ° (Ð°Ð½ÑÐ¸-ÑÐ¿Ð°Ð¼ Ð¸ ÑÐ¸ÐºÑ ÑÐ°ÑÐºÐ»Ð°Ð´ÐºÐ¸),pulse.modules.utilities.ChatHelper,pulse/modules/utilities/ChatHelper.java
+UTILITIES,Chest Sorter,ÐÑÑÑÑÐ°Ñ ÑÐ¾ÑÑÐ¸ÑÐ¾Ð²ÐºÐ° ÑÐµÑÑÑÑÐ¾Ð² Ð² ÑÑÐ½Ð´ÑÐºÐ°Ñ (ÐºÐ½Ð¾Ð¿ÐºÐ° Ñ Ð²Ð¾ÑÐ¾Ð½ÐºÐ¾Ð¹),pulse.modules.utilities.ChestSorter,pulse/modules/utilities/ChestSorter.java
+UTILITIES,Command Safe,"ÐÐ°Ð¿ÑÐµÑÐ°ÐµÑ ÑÐ»ÑÑÐ°Ð¹Ð½ÑÐ¹ Ð²Ð²Ð¾Ð´ Ð¾Ð¿Ð°ÑÐ½ÑÑ ÐºÐ¾Ð¼Ð°Ð½Ð´ /suicide, /ci, /clear",pulse.modules.utilities.CommandSafe,pulse/modules/utilities/CommandSafe.java
+UTILITIES,Cooldowns,ÐÐ¾Ð±Ð°Ð²Ð»ÑÐµÑ ÐºÐ°ÑÑÐ¾Ð¼Ð½ÑÐ¹ ÐºÑÐ»Ð´Ð°ÑÐ½ Ð½Ð° Ð·ÐµÐ»ÑÑ Ð¸ÑÑÐµÐ»ÐµÐ½Ð¸Ñ,pulse.modules.utilities.Cooldowns,pulse/modules/utilities/Cooldowns.java
+UTILITIES,Death Marker,ÐÐ²ÑÐ¾Ð¼Ð°ÑÐ¸ÑÐµÑÐºÐ¸ ÑÑÐ°Ð²Ð¸Ñ Ð¼ÐµÑÐºÑ Ð½Ð° Ð¼ÐµÑÑÐ¾ ÑÐ¼ÐµÑÑÐ¸.,pulse.modules.utilities.DeathMarker,pulse/modules/utilities/DeathMarker.java
+UTILITIES,Elytra Swap,ÐÐ²ÑÐ¾Ð¼Ð°ÑÐ¸ÑÐµÑÐºÐ¸ Ð¼ÐµÐ½ÑÐµÑ Ð½Ð°Ð³ÑÑÐ´Ð½Ð¸Ðº Ð½Ð° ÑÐ»Ð¸ÑÑÑ Ð¿ÑÐ¸ Ð¿Ð°Ð´ÐµÐ½Ð¸Ð¸,pulse.modules.utilities.ElytraSwap,pulse/modules/utilities/ElytraSwap.java
+UTILITIES,Fast EXP,ÐÐ³Ð½Ð¾Ð²ÐµÐ½Ð½Ð¾ Ð±ÑÐ¾ÑÐ°ÐµÑ Ð±ÑÑÑÐ»ÐºÐ¸ Ð¾Ð¿ÑÑÐ°,pulse.modules.utilities.FastEXP,pulse/modules/utilities/FastEXP.java
+UTILITIES,Fast Swap,ÐÑÑÑÑÑÐ¹ Ð²ÑÐ±Ð¾Ñ Ð¿ÑÐµÐ´Ð¼ÐµÑÐ¾Ð² Ð¿Ð¾ Ð½Ð°Ð¶Ð°ÑÐ¸Ñ ÐºÐ»Ð°Ð²Ð¸Ñ,pulse.modules.utilities.FastSwap,pulse/modules/utilities/FastSwap.java
+UTILITIES,FC Helper,ÐÑÐµÐ´Ð¿ÑÐ¾ÑÐ¼Ð¾ÑÑ Ð·Ð¾Ð½Ñ Ð´ÐµÐ¹ÑÑÐ²Ð¸Ñ Ð´Ð¾Ð½Ð°Ñ-Ð¿ÑÐµÐ´Ð¼ÐµÑÐ¾Ð²,pulse.modules.utilities.FcHelper,pulse/modules/utilities/FcHelper.java
+UTILITIES,Free Look,Lets the camera rotate independently from the player.,pulse.modules.utilities.FreeLook,pulse/modules/utilities/FreeLook.java
+UTILITIES,FT Helper,ÐÑÐµÐ´Ð¿ÑÐ¾ÑÐ¼Ð¾ÑÑ Ð·Ð¾Ð½Ñ Ð´ÐµÐ¹ÑÑÐ²Ð¸Ñ Ð´Ð¾Ð½Ð°Ñ-Ð¿ÑÐµÐ´Ð¼ÐµÑÐ¾Ð²,pulse.modules.utilities.FtHelper,pulse/modules/utilities/FtHelper.java
+UTILITIES,GPS Command,Local waypoints via .gps add / list / del,pulse.modules.utilities.GpsCommand,pulse/modules/utilities/GpsCommand.java
+UTILITIES,Healing Helper,ÐÐ¾Ð´ÑÐ²ÐµÑÐ¸Ð²Ð°ÐµÑ Ð¿Ð¾Ð»ÐµÐ·Ð½ÑÐµ Ð¿ÑÐµÐ´Ð¼ÐµÑÑ Ð´Ð»Ñ Ð»ÐµÑÐµÐ½Ð¸Ñ,pulse.modules.utilities.HealingHelper,pulse/modules/utilities/HealingHelper.java
+UTILITIES,HW Helper,ÐÐ¾Ð¼Ð¾ÑÐ½Ð¸Ðº Ñ ÑÐ°Ð¹Ð¼ÐµÑÐ°Ð¼Ð¸ Ð¸ ÑÑÐ°Ð¿ÐºÐ°Ð¼Ð¸ Ð´Ð»Ñ HolyWorld,pulse.modules.utilities.HwHelper,pulse/modules/utilities/HwHelper.java
+UTILITIES,Item Highliter,ÐÐ¾Ð´ÑÐ²ÐµÑÐ¸Ð²Ð°ÐµÑ ÑÐºÐ°Ð·Ð°Ð½Ð½ÑÐµ Ð¿ÑÐµÐ´Ð¼ÐµÑÑ Ð² Ð¸Ð½Ð²ÐµÐ½ÑÐ°ÑÐµ,pulse.modules.utilities.ItemHighlighter,pulse/modules/utilities/ItemHighlighter.java
+UTILITIES,Item Pickup Logger,ÐÐ¾Ð³Ð¸ÑÑÐµÑ Ð¿Ð¾Ð´Ð½ÑÑÑÐµ Ð¿ÑÐµÐ´Ð¼ÐµÑÑ Ð² ÑÐ°Ñ,pulse.modules.utilities.ItemPickupLogger,pulse/modules/utilities/ItemPickupLogger.java
+UTILITIES,Item Scroller,Quickly moves items while Shift and left mouse are held.,pulse.modules.utilities.ItemScroller,pulse/modules/utilities/ItemScroller.java
+UTILITIES,Item Swap,ÐÐ²ÑÐ¾Ð¼Ð°ÑÐ¸ÑÐµÑÐºÐ¸ Ð¼ÐµÐ½ÑÐµÑ Ð¿ÑÐµÐ´Ð¼ÐµÑ Ð² Ð»ÐµÐ²Ð¾Ð¹ ÑÑÐºÐµ Ð¿ÑÐ¸ Ð½Ð°Ð¶Ð°ÑÐ¸Ð¸ ÐºÐ»Ð°Ð²Ð¸ÑÐ¸,pulse.modules.utilities.ItemSwap,pulse/modules/utilities/ItemSwap.java
+UTILITIES,Lock Slot,ÐÐ°Ð¿ÑÐµÑÐ°ÐµÑ Ð²ÑÐ±ÑÐ°ÑÑÐ²Ð°Ð½Ð¸Ðµ Ð¿ÑÐµÐ´Ð¼ÐµÑÐ¾Ð² Ð¸Ð· Ð²ÑÐ±ÑÐ°Ð½Ð½ÑÑ ÑÐ»Ð¾ÑÐ¾Ð² ÑÐ¾ÑÐ±Ð°ÑÐ°,pulse.modules.utilities.LockSlot,pulse/modules/utilities/LockSlot.java
+UTILITIES,Mace Helper,ÐÐ¾Ð¼Ð¾ÑÐ½Ð¸Ðº Ð´Ð»Ñ Ð¸Ð³ÑÑ Ñ Ð±ÑÐ»Ð°Ð²Ð¾Ð¹.,pulse.modules.utilities.MaceHelper,pulse/modules/utilities/MaceHelper.java
+UTILITIES,Predictions,"ÐÐ¾ÐºÐ°Ð·ÑÐ²Ð°ÐµÑ ÑÑÐ°ÐµÐºÑÐ¾ÑÐ¸Ñ Ð¿Ð¾Ð»ÑÑÐ° ÑÐ½Ð°ÑÑÐ´Ð¾Ð² (Ð¶ÐµÐ¼ÑÑÐ³, ÑÑÑÐµÐ»Ñ, ÑÑÐµÐ·ÑÐ±ÐµÑ, Ð·ÐµÐ»ÑÑ Ð¸ Ð´Ñ.)",pulse.modules.utilities.Predictions,pulse/modules/utilities/Predictions.java
+UTILITIES,PVP Safe,Blocks risky commands while PvP mode is active.,pulse.modules.utilities.PvpSafe,pulse/modules/utilities/PvpSafe.java
+UTILITIES,RW Helper,ÐÐ²ÑÐ¾Ð¼Ð°ÑÐ¸ÑÐµÑÐºÐ¸ Ð·Ð°ÐºÑÑÐ²Ð°ÐµÑ Ð¼ÐµÐ½Ñ ÑÐµÑÐ²ÐµÑÐ° Ð¸Ð»Ð¸ ÑÐ¸Ð»ÑÑÑÑÐµÑ Ð·Ð°Ð¿ÑÐµÑÐµÐ½Ð½ÑÐµ ÑÐ¾Ð¾Ð±ÑÐµÐ½Ð¸Ñ Ð² ÑÐ°ÑÐµ,pulse.modules.utilities.RwHelper,pulse/modules/utilities/RwHelper.java
+UTILITIES,RW Joiner,ÐÐ²ÑÐ¾Ð¼Ð°ÑÐ¸ÑÐµÑÐºÐ¸ Ð¿Ð¾Ð´ÐºÐ»ÑÑÐ°ÐµÑÑÑ Ðº Ð²ÑÐ±ÑÐ°Ð½Ð½Ð¾Ð¼Ñ Ð³ÑÐ¸ÑÑ ReallyWorld,pulse.modules.utilities.RwJoiner,pulse/modules/utilities/RwJoiner.java
+UTILITIES,Shift Tab,Briefly sneaks while attacking.,pulse.modules.utilities.ShiftTab,pulse/modules/utilities/ShiftTab.java
+UTILITIES,Sound Controller,ÐÐ¾Ð½ÑÑÐ¾Ð»Ñ Ð³ÑÐ¾Ð¼ÐºÐ¾ÑÑÐ¸ Ð¾Ð¿ÑÐµÐ´ÐµÐ»ÑÐ½Ð½ÑÑ Ð·Ð²ÑÐºÐ¾Ð²,pulse.modules.utilities.SoundController,pulse/modules/utilities/SoundController.java
+UTILITIES,Sprint,Automatically holds the sprint key.,pulse.modules.utilities.Sprint,pulse/modules/utilities/Sprint.java
+UTILITIES,Streamer Mode,Hides player and server information.,pulse.modules.utilities.StreamerMode,pulse/modules/utilities/StreamerMode.java
+UTILITIES,Tape Mouse,ÐÐ²ÑÐ¾ÐºÐ»Ð¸ÐºÐµÑ,pulse.modules.utilities.TapeMouse,pulse/modules/utilities/TapeMouse.java
+UTILITIES,Totem Tracker,ÐÑÑÐ»ÐµÐ¶Ð¸Ð²Ð°ÐµÑ Ð¸ÑÐ¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°Ð½Ð½ÑÐµ ÑÐ¾ÑÐµÐ¼Ñ Ð¸Ð³ÑÐ¾ÐºÐ¾Ð² Ð² ÑÐ°ÑÐµ,pulse.modules.utilities.TotemTracker,pulse/modules/utilities/TotemTracker.java
+UTILITIES,Zoom,ÐÐ»Ð°Ð²Ð½ÑÐ¹ Ð·ÑÐ¼ Ñ ÑÐµÐ³ÑÐ»Ð¸ÑÐ¾Ð²ÐºÐ¾Ð¹ ÐºÐ¾Ð»ÐµÑÐ¸ÐºÐ¾Ð¼ Ð¼ÑÑÐ¸,pulse.modules.utilities.Zoom,pulse/modules/utilities/Zoom.java
+VISUALS,Animations,Interface animations,pulse.modules.visuals.Animations,pulse/modules/visuals/Animations.java
+VISUALS,Arrow Nametag,"ÐÐ¾ÐºÐ°Ð·ÑÐ²Ð°ÐµÑ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ñ ÑÑÑÐµÐ», Ð¿ÑÐ¸Ð»ÐµÑÐµÐ²ÑÐ¸Ñ Ð² Ð·ÐµÐ¼Ð»Ñ",pulse.modules.visuals.ArrowNametag,pulse/modules/visuals/ArrowNametag.java
+VISUALS,Aspect Ratio,Changes the screen aspect ratio,pulse.modules.visuals.AspectRatio,pulse/modules/visuals/AspectRatio.java
+VISUALS,Atmosphere,ÐÐ°ÑÑÑÐ¾Ð¹ÐºÐ° Ð²ÑÐµÐ¼ÐµÐ½Ð¸ ÑÑÑÐ¾Ðº Ð¸ Ð¿Ð¾Ð³Ð¾Ð´Ñ,pulse.modules.visuals.Atmosphere,pulse/modules/visuals/Atmosphere.java
+VISUALS,Block Overlay,"ÐÑÐ°ÑÐ¸Ð²Ð¾ Ð²ÑÐ´ÐµÐ»ÑÐµÑ Ð±Ð»Ð¾Ðº, Ð½Ð° ÐºÐ¾ÑÐ¾ÑÑÐ¹ Ð½Ð°Ð²ÐµÐ´ÐµÐ½ Ð¸Ð³ÑÐ¾Ðº",pulse.modules.visuals.BlockOverlay,pulse/modules/visuals/BlockOverlay.java
+VISUALS,Body Glow,Ð Ð¸ÑÑÐµÑ Ð¼ÑÐ³ÐºÐ¾Ðµ ÑÐ²ÐµÑÐµÐ½Ð¸Ðµ Ð°ÑÑÑ Ð²Ð¾ÐºÑÑÐ³ Ð¸Ð³ÑÐ¾ÐºÐ¾Ð²,pulse.modules.visuals.BodyGlow,pulse/modules/visuals/BodyGlow.java
+VISUALS,China Hat,Ð Ð¸ÑÑÐµÑ ÐºÐ¸ÑÐ°Ð¹ÑÐºÑÑ ÑÐ»ÑÐ¿Ñ Ð½Ð°Ð´ Ð³Ð¾Ð»Ð¾Ð²Ð¾Ð¹,pulse.modules.visuals.ChinaHat,pulse/modules/visuals/ChinaHat.java
+VISUALS,Client Color,ÐÐ°ÑÑÑÐ¾Ð¹ÐºÐ° Ð¾ÑÐ½Ð¾Ð²Ð½Ð¾Ð³Ð¾ ÑÐ²ÐµÑÐ° ÐºÐ»Ð¸ÐµÐ½ÑÐ°,pulse.modules.hud.ClientColor,pulse/modules/hud/ClientColor.java
+VISUALS,Crosshair,ÐÐ°ÑÑÑÐ°Ð¸Ð²Ð°ÐµÑ Ð¾ÑÐ¾Ð±ÑÐ°Ð¶ÐµÐ½Ð¸Ðµ Ð¿ÑÐ¸ÑÐµÐ»Ð°,pulse.modules.visuals.Crosshair,pulse/modules/visuals/Crosshair.java
+VISUALS,Custom Hand,Customizes first-person hands,pulse.modules.visuals.CustomHand,pulse/modules/visuals/CustomHand.java
+VISUALS,Full Bright,Increases world brightness,pulse.modules.visuals.FullBright,pulse/modules/visuals/FullBright.java
+VISUALS,Halo,Draws a halo above the player.,pulse.modules.visuals.Halo,pulse/modules/visuals/Halo.java
+VISUALS,Hit Bubble,ÐÐ¾ÐºÐ°Ð·ÑÐ²Ð°ÐµÑ Ð°Ð½Ð¸Ð¼Ð¸ÑÐ¾Ð²Ð°Ð½Ð½ÑÐµ Ð¿ÑÐ·ÑÑÐ¸ Ð¿ÑÐ¸ Ð°ÑÐ°ÐºÐµ,pulse.modules.visuals.HitBubble,pulse/modules/visuals/HitBubble.java
+VISUALS,Hit Color,ÐÐ·Ð¼ÐµÐ½ÑÐµÑ ÑÐ²ÐµÑ ÑÑÑÐ½Ð¾ÑÑÐµÐ¹ Ð¿ÑÐ¸ Ð¿Ð¾Ð»ÑÑÐµÐ½Ð¸Ð¸ ÑÑÐ¾Ð½Ð°,pulse.modules.visuals.HitColor,pulse/modules/visuals/HitColor.java
+VISUALS,Hit Range,ÐÑÐ¾Ð±ÑÐ°Ð¶Ð°ÐµÑ ÑÐ°Ð´Ð¸ÑÑ Ð´Ð¾ÑÑÐ³Ð°ÐµÐ¼Ð¾ÑÑÐ¸ Ð°ÑÐ°ÐºÐ¸ Ð²Ð¾ÐºÑÑÐ³ Ð¸Ð³ÑÐ¾ÐºÐ°,pulse.modules.visuals.HitRange,pulse/modules/visuals/HitRange.java
+VISUALS,Hit Sounds,Plays a sound when you hit a target.,pulse.modules.visuals.HitSounds,pulse/modules/visuals/HitSounds.java
+VISUALS,Hitbox Customizer,ÐÐ°ÑÑÑÐ°Ð¸Ð²Ð°ÐµÑ Ð¾ÑÐ¾Ð±ÑÐ°Ð¶ÐµÐ½Ð¸Ðµ ÑÐ¸ÑÐ±Ð¾ÐºÑÐ¾Ð² ÑÑÑÐ½Ð¾ÑÑÐµÐ¹,pulse.modules.visuals.HitboxCustomizer,pulse/modules/visuals/HitboxCustomizer.java
+VISUALS,Item Physics,Ð ÐµÐ°Ð»Ð¸ÑÑÐ¸ÑÐ½Ð¾Ðµ Ð²ÑÐ°ÑÐµÐ½Ð¸Ðµ Ð¸ ÑÐ¸Ð·Ð¸ÐºÐ° Ð¿ÑÐµÐ´Ð¼ÐµÑÐ¾Ð² Ð½Ð° Ð·ÐµÐ¼Ð»Ðµ,pulse.modules.visuals.ItemPhysics,pulse/modules/visuals/ItemPhysics.java
+VISUALS,Jump Circles,ÐÑÐ¾Ð±ÑÐ°Ð¶Ð°ÐµÑ ÐºÑÑÐ³Ð¸ Ð¿ÑÐ¸ Ð¿ÑÑÐ¶ÐºÐµ Ð¸Ð³ÑÐ¾ÐºÐ°,pulse.modules.visuals.JumpCircles,pulse/modules/visuals/JumpCircles.java
+VISUALS,Kill Effect,ÐÐ¸Ð·ÑÐ°Ð»ÑÐ½ÑÐµ ÑÑÑÐµÐºÑÑ Ð¿ÑÐ¸ ÑÐ±Ð¸Ð¹ÑÑÐ²Ðµ ÑÑÑÐµÑÑÐ²,pulse.modules.visuals.KillEffect,pulse/modules/visuals/KillEffect.java
+VISUALS,Motion Blur,ÐÐ»Ð°Ð²Ð½Ð¾Ðµ ÑÐ°Ð·Ð¼ÑÑÐ¸Ðµ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸Ñ,pulse.modules.visuals.MotionBlur,pulse/modules/visuals/MotionBlur.java
+VISUALS,Nimb,Draws a halo above the player.,pulse.modules.visuals.Nimb,pulse/modules/visuals/Nimb.java
+VISUALS,No Fluid,Disables fluid rendering,pulse.modules.visuals.NoFluid,pulse/modules/visuals/NoFluid.java
+VISUALS,Particles,Ð¡Ð¾Ð·Ð´Ð°ÑÑ ÑÐ°ÑÑÐ¸ÑÑ Ð¿ÑÐ¸ Ð²ÑÐ¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ð¸ ÑÑÐ»Ð¾Ð²Ð¸Ð¹,pulse.modules.visuals.Particles,pulse/modules/visuals/Particles.java
+VISUALS,Render Tweaks,ÐÑÐºÐ»ÑÑÐ°ÐµÑ ÑÐ°Ð·Ð»Ð¸ÑÐ½ÑÐµ ÑÐ»ÐµÐ¼ÐµÐ½ÑÑ ÑÐµÐ½Ð´ÐµÑÐ¸Ð½Ð³Ð°,pulse.modules.visuals.RenderTweaks,pulse/modules/visuals/RenderTweaks.java
+VISUALS,Self Nametag,Shows your nametag in third person.,pulse.modules.visuals.SelfNametag,pulse/modules/visuals/SelfNametag.java
+VISUALS,ShulkerPreview,ÐÑÐ¾ÑÐ¼Ð¾ÑÑ ÑÐ¾Ð´ÐµÑÐ¶Ð¸Ð¼Ð¾Ð³Ð¾ ÑÐ°Ð»ÐºÐµÑÐ¾Ð² Ð±ÐµÐ· Ð¾ÑÐºÑÑÑÐ¸Ñ (Ð² Ð¸Ð½Ð²ÐµÐ½ÑÐ°ÑÐµ Ð¿ÑÐ¸ Ð½Ð°Ð²Ð¾Ð´ÐµÐ½Ð¸Ð¸ Ð¸ ÐºÐ¾Ð³Ð´Ð° ÑÐ°Ð»ÐºÐµÑ Ð´ÑÐ¾Ð¿Ð½ÑÑ).,pulse.modules.visuals.ShulkerPreview,pulse/modules/visuals/ShulkerPreview.java
+VISUALS,Tab Customizer,ÐÐ°ÑÑÐ¾Ð¼Ð¸Ð·Ð°ÑÐ¸Ñ ÑÐ°Ð±-Ð»Ð¸ÑÑÐ° Ð¸Ð³ÑÐ¾ÐºÐ¾Ð²,pulse.modules.visuals.TabCustomizer,pulse/modules/visuals/TabCustomizer.java
+VISUALS,Target ESP,ÐÑÐ¾Ð±ÑÐ°Ð¶Ð°ÐµÑ ESP Ð²Ð¾ÐºÑÑÐ³ ÑÐµÐ»Ð¸,pulse.modules.visuals.TargetEsp,pulse/modules/visuals/TargetEsp.java
+VISUALS,Trails,ÐÑÐ¾Ð±ÑÐ°Ð¶Ð°ÐµÑ ÑÐ»ÐµÐ´ Ð¸Ð³ÑÐ¾ÐºÐ°,pulse.modules.visuals.Trails,pulse/modules/visuals/Trails.java
+VISUALS,World Customizer,ÐÐ°ÑÑÑÐ¾Ð¹ÐºÐ° Ð¼Ð¸ÑÐ°,pulse.modules.visuals.WorldCustomizer,pulse/modules/visuals/WorldCustomizer.java
+VISUALS,World Particles,ÐÐ°Ð´Ð°ÑÑÐ¸Ðµ ÑÐ°ÑÑÐ¸ÑÑ Ð² Ð¼Ð¸ÑÐµ,pulse.modules.visuals.WorldParticles,pulse/modules/visuals/WorldParticles.java

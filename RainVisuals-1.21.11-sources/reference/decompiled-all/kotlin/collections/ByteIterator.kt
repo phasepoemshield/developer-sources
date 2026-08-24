@@ -1,0 +1,17 @@
+package kotlin.collections
+
+import kotlin.jvm.internal.markers.KMappedMarker
+
+// $VF: Compiled from PrimitiveIterators.kt
+public abstract class ByteIterator : java.util.Iterator<java.lang.Byte>, KMappedMarker {
+   public operator fun next(): Byte {
+      return this.nextByte()
+   }
+
+   public abstract fun nextByte(): Byte {
+   }
+
+   override fun remove() {
+      throw UnsupportedOperationException("Operation is not supported for read-only collection")
+   }
+}

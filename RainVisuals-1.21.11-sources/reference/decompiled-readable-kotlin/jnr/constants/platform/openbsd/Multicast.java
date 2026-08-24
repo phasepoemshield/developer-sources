@@ -1,0 +1,33 @@
+package jnr.constants.platform.openbsd;
+
+import jnr.constants.Constant;
+
+// $VF: Compiled from Multicast.java
+public enum Multicast implements Constant {
+   private final long value;
+   public static final long MAX_VALUE = 0L;
+   public static final long MIN_VALUE = 0L;
+
+   @Override
+   public final boolean defined() {
+      return true;
+   }
+
+   @Override
+   public final int intValue() {
+      return (int)this.value;
+   }
+
+   public final int value() {
+      return (int)this.value;
+   }
+
+   @Override
+   public final long longValue() {
+      return this.value;
+   }
+
+   Multicast(long value) {
+      this.value = value;
+   }
+}

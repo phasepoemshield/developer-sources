@@ -1,0 +1,8 @@
+d0bfa60e0e963eefa76694e0c09af646cc9e46b056bcc65cc4ed9c7c537b691a  reference/original/rain.jar
+1c5dff7113f0daeee21d531464ffceddd508c58dfaa08919c7da7959cca7ffae  reference/rain-yarn-named.jar
+b26545f816afcd815b6365520251a4c2a89e4918a282cceaa17fb09147b078ca  reference/rain-yarn-readable.jar
+b26545f816afcd815b6365520251a4c2a89e4918a282cceaa17fb09147b078ca  libs/rain-visuals-yarn-readable.jar
+1dfcfe974395734fa467ce620661c7623d05ba83670de0529b1fbd63ff548b9d  work/vineflower-1.12.0.jar
+f686e8f3ded377d7bc87d216a90e9e9512df4156e75b06c655a16648ae8765b2  work/cfr-0.152.jar
+165c5e8d88a3a2c06d9065b7164a45ef36ea7a7c2782ff878ab41969dcf49b99  libs/rain-visuals-yarn-runtime-dev.jar
+5eff0ea81671f7f76b7dfed6e6ba6fe64567926a84d8c516909f6a2728849cd1  build/libs/rain-visuals-recovered-1.0.0-recovered.jar

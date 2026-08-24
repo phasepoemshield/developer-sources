@@ -1,0 +1,13 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "rain:font/socials-logo.png",
+      "height": 16,
+      "ascent": 11,
+      "chars": [
+        "\ue001"
+      ]
+    }
+  ]
+}

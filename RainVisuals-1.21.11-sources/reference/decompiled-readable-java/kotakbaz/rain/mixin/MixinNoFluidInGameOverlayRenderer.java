@@ -1,0 +1,34 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  net.minecraft.client.gui.hud.InGameOverlayRenderer
+ *  net.minecraft.client.network.ClientPlayerEntity
+ *  net.minecraft.fluid.Fluid
+ *  net.minecraft.registry.tag.TagKey
+ *  org.spongepowered.asm.mixin.Mixin
+ *  org.spongepowered.asm.mixin.injection.At
+ *  org.spongepowered.asm.mixin.injection.Redirect
+ */
+package kotakbaz.rain.mixin;
+
+import net.minecraft.client.gui.hud.InGameOverlayRenderer;
+import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.registry.tag.TagKey;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
+import oxxxde.\u0634\u0635;
+
+@Mixin(value={InGameOverlayRenderer.class})
+public class MixinNoFluidInGameOverlayRenderer {
+    @Redirect(method={"method_23067"}, at=@At(value="INVOKE", target="Lnet/minecraft/class_746;method_5777(Lnet/minecraft/class_6862;)Z"))
+    private boolean rain$skipUnderwaterOverlay(ClientPlayerEntity player, TagKey<Fluid> tag) {
+        if (\u0634\u0635.INSTANCE.shouldClearWaterOverlay()) {
+            return false;
+        }
+        return player.isSubmergedIn(tag);
+    }
+}
+

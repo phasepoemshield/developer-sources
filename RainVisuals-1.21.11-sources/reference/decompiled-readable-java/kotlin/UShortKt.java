@@ -1,0 +1,43 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package kotlin;
+
+import kotlin.ExperimentalUnsignedTypes;
+import kotlin.Metadata;
+import kotlin.SinceKotlin;
+import kotlin.UShort;
+import kotlin.WasExperimental;
+import kotlin.internal.InlineOnly;
+
+@Metadata(mv={1, 9, 0}, k=2, xi=48, d1={"\u0000 \n\u0002\u0010\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\n\n\u0002\b\u0002\u001a\u0014\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\u0087\b\u00a2\u0006\u0004\b\u0002\u0010\u0003\u001a\u0014\u0010\u0002\u001a\u00020\u0001*\u00020\u0004H\u0087\b\u00a2\u0006\u0004\b\u0002\u0010\u0005\u001a\u0014\u0010\u0002\u001a\u00020\u0001*\u00020\u0006H\u0087\b\u00a2\u0006\u0004\b\u0002\u0010\u0007\u001a\u0014\u0010\u0002\u001a\u00020\u0001*\u00020\bH\u0087\b\u00a2\u0006\u0004\b\u0002\u0010\t\u00a8\u0006\n"}, d2={"", "Lkotlin/UShort;", "toUShort", "(B)S", "", "(I)S", "", "(J)S", "", "(S)S", "kotlin-stdlib"})
+public final class UShortKt {
+    @InlineOnly
+    @SinceKotlin(version="1.5")
+    @WasExperimental(markerClass={ExperimentalUnsignedTypes.class})
+    private static final short toUShort(byte $this$toUShort) {
+        return UShort.constructor-impl($this$toUShort);
+    }
+
+    @WasExperimental(markerClass={ExperimentalUnsignedTypes.class})
+    @InlineOnly
+    @SinceKotlin(version="1.5")
+    private static final short toUShort(short $this$toUShort) {
+        return UShort.constructor-impl($this$toUShort);
+    }
+
+    @WasExperimental(markerClass={ExperimentalUnsignedTypes.class})
+    @SinceKotlin(version="1.5")
+    @InlineOnly
+    private static final short toUShort(long $this$toUShort) {
+        return UShort.constructor-impl((short)$this$toUShort);
+    }
+
+    @InlineOnly
+    @SinceKotlin(version="1.5")
+    @WasExperimental(markerClass={ExperimentalUnsignedTypes.class})
+    private static final short toUShort(int $this$toUShort) {
+        return UShort.constructor-impl((short)$this$toUShort);
+    }
+}
+

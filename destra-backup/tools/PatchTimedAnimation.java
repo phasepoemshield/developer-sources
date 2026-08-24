@@ -44,7 +44,6 @@ public final class PatchTimedAnimation {
                     }
                     System.out.println("Injected timer initialization in constructor");
                 }
-                }
             }
         }
 

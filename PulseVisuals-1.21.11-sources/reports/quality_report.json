@@ -1,0 +1,53 @@
+{
+  "java_files": 460,
+  "java_lines": 62324,
+  "resource_files_excluding_fonts": 143,
+  "excluded_font_files": [
+    "assets/pulse/font/500.ttf",
+    "assets/pulse/font/brands.ttf",
+    "assets/pulse/font/icons.ttf",
+    "assets/pulse/font/pulse_icons.ttf",
+    "assets/pulse/font/pulseicon.ttf",
+    "assets/pulse/font/sf-pro-display-medium.ttf",
+    "assets/pulse/font/sfprodisplay-medium-test.ttf",
+    "assets/pulse/font/sfprodisplaymedium.otf",
+    "assets/pulse/font/sfprodisplaymedium.ttf",
+    "assets/pulse/font/sfprodisplayregular.otf",
+    "assets/pulse/font/sfprodisplayregular.ttf"
+  ],
+  "annotated_modules": 86,
+  "module_counts": {
+    "HUD": 13,
+    "UTILITIES": 41,
+    "VISUALS": 32
+  },
+  "configured_mixins": 66,
+  "missing_mixin_source_files": [],
+  "remaining_intermediary_tokens": [],
+  "vineflower_failure_files": [],
+  "syntax_shaped_javac_errors": [],
+  "bytecode_remap_log": "classes=547 resources=155 failed=0 classMappings=9720 methodMappings=53406 fieldMappings=41503",
+  "bytecode_class_entries": 547,
+  "class_entries_with_source_mapping": 547,
+  "missing_class_source_mappings": [],
+  "module_registry_static_instances": 87,
+  "module_registry_registered_instances": 83,
+  "module_registry_unregistered_instances": [
+    {
+      "constant": "BOSSBAR_HUD",
+      "class": "BossbarHud"
+    },
+    {
+      "constant": "CHEST_SORTER",
+      "class": "ChestSorter"
+    },
+    {
+      "constant": "CLIENT_COLOR",
+      "class": "ClientColor"
+    },
+    {
+      "constant": "SCOREBOARD_HUD",
+      "class": "ScoreboardHud"
+    }
+  ]
+}

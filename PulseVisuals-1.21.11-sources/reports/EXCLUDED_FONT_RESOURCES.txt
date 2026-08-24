@@ -1,0 +1,11 @@
+assets/pulse/font/500.ttf
+assets/pulse/font/brands.ttf
+assets/pulse/font/icons.ttf
+assets/pulse/font/pulse_icons.ttf
+assets/pulse/font/pulseicon.ttf
+assets/pulse/font/sf-pro-display-medium.ttf
+assets/pulse/font/sfprodisplay-medium-test.ttf
+assets/pulse/font/sfprodisplaymedium.otf
+assets/pulse/font/sfprodisplaymedium.ttf
+assets/pulse/font/sfprodisplayregular.otf
+assets/pulse/font/sfprodisplayregular.ttf

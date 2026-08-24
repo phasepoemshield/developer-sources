@@ -1,0 +1,42 @@
+runtime_class	role
+oxxxde/جر	CategoryComponent: Models grid, cards, clicks and scroll
+oxxxde/ذي	CategoryComponent.ModelCard state
+oxxxde/بز	Models catalog adapter, search and animated cards
+oxxxde/ثد	Avatar entry comparator
+oxxxde/دس	Figura avatar installer and local discovery
+oxxxde/طن	FiguraAvatarInstaller.AvatarEntry
+oxxxde/خُ	Local avatar metadata record
+oxxxde/صخ	Cosmetic selection record
+oxxxde/صل	Remote Figura catalog, manifest and cache
+oxxxde/رق	Rain Social API request/response HMAC signer
+oxxxde/ثئ	Rain Social API origin and signing-key constants
+oxxxde/سد	Remote avatar manifest record
+oxxxde/زإ	Validated catalog snapshot record
+oxxxde/طق	Figura apply/remove and live preview runtime
+oxxxde/بس	Live preview state
+oxxxde/طع	Preview preparation state enum
+oxxxde/خّ	Checked render action
+oxxxde/شآ	Rendered model-preview manager
+oxxxde/ذع	Rendered preview surface
+oxxxde/سُ	Pending preview request record
+oxxxde/رط	Rendered preview disk cache
+oxxxde/ائ	Off-screen Figura render target helper
+oxxxde/ء	Off-screen render context record
+oxxxde/جّ	Custom framebuffer used by model previews
+oxxxde/ظء	Preview texture draw helper
+kotakbaz/rain/mixin/MixinFiguraActionWheel	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinFiguraAuthHandler	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinFiguraAvatarInput	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinFiguraCommandsFabric	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinFiguraConfigKeyBindImpl	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinFiguraConfigManager	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinFiguraGui	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinFiguraImmediateRendererPreview	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinFiguraKeybind	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinFiguraNetworkStuff	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinFiguraPopupMenu	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinFiguraRuntimeResources	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinGameRenderer	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinGuiRendererFiguraPreviewTarget	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinHeldItemRenderer	Figura/Models integration mixin
+kotakbaz/rain/mixin/MixinLivingEntityRendererFiguraPreview	Figura/Models integration mixin

@@ -1,0 +1,889 @@
+Summary for reference/rain-yarn-readable.jar
+Decompiled with CFR 0.152
+
+
+eu.donyka.discord.models.MessageFrame
+----------------------------
+
+parseHeader()
+  Loose catch block
+
+
+org.newsclub.net.unix.AncillaryDataSupport
+----------------------------
+
+setOutboundFileDescriptors(java.io.FileDescriptor[] )
+  Unable to fully structure code
+
+
+kotlin.sequences.SequencesKt___SequencesKt
+----------------------------
+
+invokeSuspend(java.lang.Object )
+  Unable to fully structure code
+invokeSuspend(java.lang.Object )
+  Unable to fully structure code
+invokeSuspend(java.lang.Object )
+  Unable to fully structure code
+  Could not resolve type clashes
+invokeSuspend(java.lang.Object )
+  Unable to fully structure code
+invokeSuspend(java.lang.Object )
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.NativeLibraryLoader
+----------------------------
+
+validateResourceURL(java.net.URL )
+  Loose catch block
+load()
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AFDatagramSocketImpl
+----------------------------
+
+accept0(org.newsclub.net.unix.AFDatagramSocketImpl<A> )
+  Loose catch block
+
+
+org.newsclub.net.unix.AFSocketImpl
+----------------------------
+
+accept0(java.net.SocketImpl )
+  Loose catch block
+
+
+org.freedesktop.dbus.messages.Error
+----------------------------
+
+getException()
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AFDatagramSocket
+----------------------------
+
+bind(java.net.SocketAddress )
+  Unable to fully structure code
+
+
+com.kenai.jffi.ClosureManager
+----------------------------
+
+newClosureMagazine(com.kenai.jffi.CallContext java.lang.reflect.Method )
+  Unable to fully structure code
+
+
+com.google.gson.internal.ConstructorConstructor
+----------------------------
+
+newDefaultConstructor(java.lang.Class<? super T> com.google.gson.ReflectionAccessFilter$FilterResult )
+  Unable to fully structure code
+
+
+kotlin.random.Random
+----------------------------
+
+nextDouble(double double )
+  Unable to fully structure code
+nextBytes(byte[] int int )
+  Unable to fully structure code
+
+
+kotlin.collections.ArrayDeque
+----------------------------
+
+internalStructure$kotlin_stdlib(kotlin.jvm.functions.Function2<? super java.lang.Integer, ? super java.lang.Object[], kotlin.Unit> )
+  Unable to fully structure code
+
+
+kotlin.text.StringsKt___StringsKt
+----------------------------
+
+windowed(java.lang.CharSequence int int boolean kotlin.jvm.functions.Function1<? super java.lang.CharSequence, ? extends R> )
+  Unable to fully structure code
+invoke(int )
+  Unable to fully structure code
+
+
+kotlin.KotlinVersion
+----------------------------
+
+versionOf(int int int )
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AFDatagramSocket
+----------------------------
+
+bind(java.net.SocketAddress )
+  Unable to fully structure code
+
+
+kotlin.io.path.PathRelativizer
+----------------------------
+
+tryRelativeTo(java.nio.file.Path java.nio.file.Path )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+kotlin.time.Duration
+----------------------------
+
+toString-impl(long )
+  Unable to fully structure code
+appendFractional-impl(long java.lang.StringBuilder int int int java.lang.String boolean )
+  Unable to fully structure code
+
+
+jnr.posix.WindowsPOSIX
+----------------------------
+
+rmdir(java.lang.String )
+  Unable to fully structure code
+
+
+kotlin.sequences.SequencesKt__SequencesKt
+----------------------------
+
+invokeSuspend(java.lang.Object )
+  Unable to fully structure code
+invokeSuspend(java.lang.Object )
+  Unable to fully structure code
+
+
+eu.donyka.discord.DiscordRPC
+----------------------------
+
+init(java.lang.String boolean java.lang.String )
+  Unable to fully structure code
+
+
+com.google.gson.JsonParser
+----------------------------
+
+parseReader(com.google.gson.stream.JsonReader )
+  Loose catch block
+
+
+org.freedesktop.dbus.connections.base.AbstractConnectionBase
+----------------------------
+
+sendMessageInternally(org.freedesktop.dbus.messages.Message )
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.NativeLibraryLoader
+----------------------------
+
+validateResourceURL(java.net.URL )
+  Loose catch block
+load()
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AFSocketImpl
+----------------------------
+
+accept0(java.net.SocketImpl )
+  Loose catch block
+
+
+kotlin.jvm.JvmClassMappingKt
+----------------------------
+
+getJavaObjectType(kotlin.reflect.KClass<T> )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+org.newsclub.net.unix.AFDatagramSocketImpl
+----------------------------
+
+accept0(org.newsclub.net.unix.AFDatagramSocketImpl<A> )
+  Loose catch block
+
+
+org.newsclub.net.unix.AFDatagramSocket
+----------------------------
+
+bind(java.net.SocketAddress )
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AFSocketImpl
+----------------------------
+
+accept0(java.net.SocketImpl )
+  Loose catch block
+
+
+org.newsclub.net.unix.AFDatagramSocketImpl
+----------------------------
+
+accept0(org.newsclub.net.unix.AFDatagramSocketImpl<A> )
+  Loose catch block
+accept0(org.newsclub.net.unix.AFDatagramSocketImpl<A> )
+  Loose catch block
+
+
+org.freedesktop.dbus.RemoteInvocationHandler
+----------------------------
+
+invoke(java.lang.Object java.lang.reflect.Method java.lang.Object[] )
+  Unable to fully structure code
+
+
+oxxxde.سؤ
+----------------------------
+
+fetchOnlineUUID(java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+kotakbaz.rain.Rain
+----------------------------
+
+restoreCurrentState()
+  Unable to fully structure code
+
+
+oxxxde.رِ
+----------------------------
+
+filteredWayPoints()
+  Unable to fully structure code
+appendKeyName(kotakbaz.rain.ui.menu.PointsCategoryComponent$InputField java.lang.String )
+  Unable to fully structure code
+render(int int float )
+  Unable to fully structure code
+
+
+oxxxde.شا
+----------------------------
+
+findSensitiveRanges(java.lang.String )
+  Unable to fully structure code
+
+
+oxxxde.شج
+----------------------------
+
+renderSavedCards(float float int int )
+  Unable to fully structure code
+
+
+oxxxde.سظ
+----------------------------
+
+maintainEating(net.minecraft.client.network.ClientPlayerEntity )
+  Unable to fully structure code
+
+
+jnr.posix.util.Platform
+----------------------------
+
+<clinit>()
+  Unable to fully structure code
+
+
+oxxxde.سز
+----------------------------
+
+destinations(kotakbaz.rain.ui.inventory.InventorySnapshot net.minecraft.screen.ScreenHandler )
+  Unable to fully structure code
+
+
+oxxxde.شَ
+----------------------------
+
+containsToken(java.lang.String java.lang.String )
+  Unable to fully structure code
+
+
+oxxxde.شز
+----------------------------
+
+updateState()
+  Unable to fully structure code
+
+
+kotakbaz.rain.ui.mainmenu.RainMainMenuScreen$Link
+----------------------------
+
+onRemoteNotificationClick(int int int )
+  Unable to fully structure code
+
+
+kotakbaz.rain.module.modules.render.WayPointModule
+----------------------------
+
+syncEventsApiMessage(java.lang.String java.lang.String )
+  Unable to fully structure code
+extractEventName(java.lang.String java.lang.String )
+  Unable to fully structure code
+parseEventCountdownSeconds(java.lang.String )
+  Unable to fully structure code
+
+
+oxxxde.شْ
+----------------------------
+
+categoryEntries(java.util.List<kotakbaz.rain.ui.inventory.HwAnarchyHelperController$MenuEntry> )
+  Unable to fully structure code
+findLightModeSlot(java.util.List<kotakbaz.rain.ui.inventory.HwAnarchyHelperController$MenuEntry> )
+  Unable to fully structure code
+
+
+oxxxde.خه
+----------------------------
+
+parseResponse(java.net.http.HttpRequest int java.net.http.HttpHeaders java.lang.String )
+  Unable to fully structure code
+parseCloudConfig(com.google.gson.JsonObject )
+  Unable to fully structure code
+
+
+oxxxde.خم
+----------------------------
+
+mergeDuplicates(java.util.List<kotakbaz.rain.ui.menu.FunTimeEventsApi$Candidate> )
+  Unable to fully structure code
+syncWithLiveCountdown(java.lang.Integer int )
+  Unable to fully structure code
+resolveSnapshotOrigin(java.util.Map<java.lang.Integer, java.lang.Integer> long )
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.liteapi.HolyWorldFeatureControl
+----------------------------
+
+receive(java.lang.String )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+oxxxde.خز
+----------------------------
+
+boolean(com.google.gson.JsonObject java.lang.String )
+  Unable to fully structure code
+string(com.google.gson.JsonObject java.lang.String )
+  Unable to fully structure code
+long(com.google.gson.JsonObject java.lang.String )
+  Unable to fully structure code
+
+
+oxxxde.ذئ
+----------------------------
+
+getImageTypes(int )
+  Unable to fully structure code
+
+
+oxxxde.دس
+----------------------------
+
+readMetadata(java.lang.String java.lang.String )
+  Loose catch block
+
+
+oxxxde.ذض
+----------------------------
+
+parseBulldozerLevel(java.lang.String int )
+  Unable to fully structure code
+
+
+oxxxde.رق
+----------------------------
+
+requestTarget(java.net.URI )
+  Unable to fully structure code
+
+
+oxxxde.رط
+----------------------------
+
+load(java.lang.String int int )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+
+
+oxxxde.ثك
+----------------------------
+
+onRender3D(kotakbaz.rain.event.events.Render3DEvent )
+  Unable to fully structure code
+
+
+oxxxde.تَ
+----------------------------
+
+parseOnlineUsers(java.lang.String )
+  Unable to fully structure code
+
+
+oxxxde.ثث
+----------------------------
+
+recoveryClick(net.minecraft.screen.GenericContainerScreenHandler )
+  Unable to fully structure code
+nextSort(net.minecraft.screen.GenericContainerScreenHandler net.minecraft.entity.player.PlayerEntity )
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.util.render.engine.controls.LayerControl
+----------------------------
+
+render(kotakbaz.rain.ui.menu.layout.MenuLayout float float float float float float boolean )
+  Unable to fully structure code
+
+
+oxxxde.جر
+----------------------------
+
+renderModelPreview(kotakbaz.rain.ui.menu.ContentArea kotakbaz.rain.client.figura.FiguraAvatarInstaller$AvatarEntry float )
+  Unable to fully structure code
+filteredModules()
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.discord.a
+----------------------------
+
+updateHover(int int )
+  Unable to fully structure code
+
+
+oxxxde.خا
+----------------------------
+
+getCurrentData()
+  Unable to fully structure code
+
+
+com.google.gson.stream.JsonWriter
+----------------------------
+
+value(java.lang.Number )
+  Unable to fully structure code
+
+
+kotakbaz.rain.ui.menu.ConfigEntryComponent
+----------------------------
+
+render(int int float )
+  Unable to fully structure code
+
+
+oxxxde.حل
+----------------------------
+
+onKey(kotakbaz.rain.event.events.KeyEvent )
+  Unable to fully structure code
+
+
+kotakbaz.rain.ui.menu.MenuScreen
+----------------------------
+
+synchronizeOwnedCloudConfigs$lambda$0$0(int java.lang.Throwable kotakbaz.rain.client.social.CloudConfigLibrary )
+  Unable to fully structure code
+saveConfigToCloud(java.lang.String )
+  Unable to fully structure code
+handleConfigCreateInput(int )
+  Unable to fully structure code
+loadExistingCloudKeys$lambda$1$0(int java.lang.String java.lang.Throwable java.util.List java.lang.String java.lang.String )
+  Unable to fully structure code
+handleConfigKeyInput(int )
+  Unable to fully structure code
+render(int int float )
+  Unable to fully structure code
+loadExistingCloudKeys(java.lang.String int )
+  Unable to fully structure code
+
+
+kotakbaz.rain.ui.menu.ModuleComponent
+----------------------------
+
+render(int int float )
+  Unable to fully structure code
+onMouseClick(int int int )
+  Unable to fully structure code
+
+
+org.freedesktop.dbus.bin.DBusDaemon
+----------------------------
+
+main(java.lang.String[] )
+  Unable to fully structure code
+
+
+oxxxde.ام
+----------------------------
+
+render(int int float )
+  Unable to fully structure code
+
+
+kotakbaz.rain.client.util.render.engine.dispatcher.RenderDispatcher
+----------------------------
+
+getBuilder(kotakbaz.rain.client.util.render.engine.controls.ClientRenderPipeline kotakbaz.rain.client.util.render.engine.Renderable java.lang.Object )
+  Unable to fully structure code
+
+
+kotakbaz.rain.config.ConfigManager
+----------------------------
+
+availableCloudConfigName(java.lang.String )
+  Unable to fully structure code
+markOwnedCloudConfig(java.lang.String java.lang.String java.lang.String java.lang.String int java.lang.String java.lang.Boolean )
+  Unable to fully structure code
+getSelectedVisibleConfigName()
+  Unable to fully structure code
+legacySettingIndex(kotakbaz.rain.module.Module int com.google.gson.JsonObject )
+  Unable to fully structure code
+readCloudOrigin(com.google.gson.JsonObject )
+  Unable to fully structure code
+syncReceivedCloudConfig(java.lang.String java.lang.String java.lang.String java.lang.String com.google.gson.JsonObject )
+  Unable to fully structure code
+syncOwnedCloudConfig(java.lang.String java.lang.String java.lang.String java.lang.String int boolean com.google.gson.JsonObject )
+  Unable to fully structure code
+create(java.lang.String )
+  Unable to fully structure code
+setSelectedConfigName(java.lang.String )
+  Unable to fully structure code
+findOwnedCloudOriginByName(java.lang.String )
+  Unable to fully structure code
+readSelectedConfigName()
+  Unable to fully structure code
+
+
+com.google.gson.internal.LinkedTreeMap
+----------------------------
+
+rebalance(com.google.gson.internal.LinkedTreeMap$Node<K, V> boolean )
+  Unable to fully structure code
+
+
+oxxxde.بم
+----------------------------
+
+serverCandidates(net.minecraft.screen.GenericContainerScreenHandler )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+jnr.ffi.Platform
+----------------------------
+
+locateLibrary(java.lang.String java.util.List<java.lang.String> java.util.Map<jnr.ffi.LibraryOption, java.lang.Object> )
+  Unable to fully structure code
+getMatches(java.lang.String java.util.List<java.lang.String> )
+  Unable to fully structure code
+locateLibrary(java.lang.String java.util.List<java.lang.String> )
+  Unable to fully structure code
+
+
+oxxxde.طا
+----------------------------
+
+renderSearchSection(kotakbaz.rain.ui.menu.layout.MenuLayout kotakbaz.rain.client.extensions.Category java.lang.String boolean boolean boolean boolean float float float )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+oxxxde.ضز
+----------------------------
+
+syncEntries(boolean )
+  Unable to fully structure code
+  Could not resolve type clashes
+startConfigRename(java.lang.String )
+  Unable to fully structure code
+
+
+oxxxde.طٍ
+----------------------------
+
+plan(net.minecraft.screen.ScreenHandler int int )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+oxxxde.طك
+----------------------------
+
+filteredItems()
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+oxxxde.طق
+----------------------------
+
+invokeAvatarLoad(java.lang.reflect.Method java.lang.Object[] )
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AFDatagramSocketImpl
+----------------------------
+
+accept0(org.newsclub.net.unix.AFDatagramSocketImpl<A> )
+  Loose catch block
+
+
+kotlin.collections.GroupingKt__GroupingJVMKt
+----------------------------
+
+eachCount(kotlin.collections.Grouping<T, ? extends K> )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+com.kenai.jnr.x86asm.Assembler
+----------------------------
+
+_emitRexRM(int int com.kenai.jnr.x86asm.Operand )
+  Unable to fully structure code
+
+
+kotlin.collections.SlidingWindowKt
+----------------------------
+
+invokeSuspend(java.lang.Object )
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AFDatagramSocket
+----------------------------
+
+bind(java.net.SocketAddress )
+  Unable to fully structure code
+
+
+jnr.posix.BaseNativePOSIX
+----------------------------
+
+posix_spawnp(java.lang.String java.util.Collection<? extends jnr.posix.SpawnFileAction> java.util.Collection<? extends jnr.posix.SpawnAttribute> java.lang.CharSequence[] java.lang.CharSequence[] )
+  Unable to fully structure code
+
+
+kotlinx.serialization.internal.PlatformKt
+----------------------------
+
+findObjectSerializer(java.lang.Class<T> )
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.NativeLibraryLoader
+----------------------------
+
+validateResourceURL(java.net.URL )
+  Loose catch block
+load()
+  Unable to fully structure code
+
+
+jnr.ffi.provider.jffi.AsmLibraryLoader
+----------------------------
+
+generateInterfaceImpl(jnr.ffi.provider.jffi.NativeLibrary java.lang.Class<T> java.util.Map<jnr.ffi.LibraryOption, ?> jnr.ffi.provider.jffi.AsmClassLoader )
+  Could not resolve type clashes
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AncillaryDataSupport
+----------------------------
+
+setOutboundFileDescriptors(java.io.FileDescriptor[] )
+  Unable to fully structure code
+
+
+org.freedesktop.dbus.Marshalling
+----------------------------
+
+convertParameters(java.lang.Object[] java.lang.reflect.Type[] java.lang.String[] org.freedesktop.dbus.connections.base.AbstractConnectionBase )
+  Unable to fully structure code
+  Could not resolve type clashes
+deSerializeParameter(java.lang.Object java.lang.reflect.Type org.freedesktop.dbus.connections.base.AbstractConnectionBase )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+com.google.gson.Gson
+----------------------------
+
+toJson(java.lang.Object java.lang.reflect.Type com.google.gson.stream.JsonWriter )
+  Loose catch block
+toJson(com.google.gson.JsonElement com.google.gson.stream.JsonWriter )
+  Loose catch block
+
+
+com.google.gson.internal.$Gson$Types
+----------------------------
+
+resolve(java.lang.reflect.Type java.lang.Class<?> java.lang.reflect.Type java.util.Map<java.lang.reflect.TypeVariable<?>, java.lang.reflect.Type> )
+  Unable to fully structure code
+
+
+kotlin.text.DelimitedRangesSequence
+----------------------------
+
+calcNext()
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AFSocketImpl
+----------------------------
+
+accept0(java.net.SocketImpl )
+  Loose catch block
+
+
+kotlin.io.LineReader
+----------------------------
+
+updateCharset(java.nio.charset.Charset )
+  Unable to fully structure code
+
+
+kotlin.time.DurationKt
+----------------------------
+
+parseDuration(java.lang.String boolean )
+  Unable to fully structure code
+parseOverLongIsoComponent(java.lang.String )
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AncillaryDataSupport
+----------------------------
+
+setOutboundFileDescriptors(java.io.FileDescriptor[] )
+  Unable to fully structure code
+
+
+kotlin.io.path.PathsKt__PathRecursiveFunctionsKt
+----------------------------
+
+copyToRecursively(java.nio.file.Path java.nio.file.Path kotlin.jvm.functions.Function3<? super java.nio.file.Path, ? super java.nio.file.Path, ? super java.lang.Exception, ? extends kotlin.io.path.OnErrorResult> boolean kotlin.jvm.functions.Function3<? super kotlin.io.path.CopyActionContext, ? super java.nio.file.Path, ? super java.nio.file.Path, ? extends kotlin.io.path.CopyActionResult> )
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.NativeLibraryLoader
+----------------------------
+
+validateResourceURL(java.net.URL )
+  Loose catch block
+load()
+  Unable to fully structure code
+
+
+com.google.gson.GsonBuilder
+----------------------------
+
+registerTypeAdapter(java.lang.reflect.Type java.lang.Object )
+  Unable to fully structure code
+registerTypeHierarchyAdapter(java.lang.Class<?> java.lang.Object )
+  Unable to fully structure code
+
+
+kotlin.internal.PlatformImplementations
+----------------------------
+
+<clinit>()
+  Unable to fully structure code
+
+
+kotlinx.serialization.SealedClassSerializer
+----------------------------
+
+keyOf(java.lang.Object )
+  Ignored method signature, as it can't be verified against descriptor
+
+
+org.newsclub.net.unix.NativeLibraryLoader
+----------------------------
+
+validateResourceURL(java.net.URL )
+  Loose catch block
+load()
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AFDatagramSocket
+----------------------------
+
+bind(java.net.SocketAddress )
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AFSocketImpl
+----------------------------
+
+accept0(java.net.SocketImpl )
+  Loose catch block
+
+
+kotlinx.serialization.internal.InternalHexConverter
+----------------------------
+
+parseHexBinary(java.lang.String )
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AncillaryDataSupport
+----------------------------
+
+setOutboundFileDescriptors(java.io.FileDescriptor[] )
+  Unable to fully structure code
+
+
+kotlin.jvm.internal.TypeReference
+----------------------------
+
+asString(boolean )
+  Unable to fully structure code
+
+
+kotlin.io.path.PathTreeWalk
+----------------------------
+
+invokeSuspend(java.lang.Object )
+  Unable to fully structure code
+invokeSuspend(java.lang.Object )
+  Unable to fully structure code
+
+
+com.google.gson.internal.Excluder
+----------------------------
+
+create(com.google.gson.Gson com.google.gson.reflect.TypeToken<T> )
+  Unable to fully structure code
+
+
+jnr.x86asm.Assembler
+----------------------------
+
+_emitRexRM(int int jnr.x86asm.Operand )
+  Unable to fully structure code
+
+
+org.newsclub.net.unix.AncillaryDataSupport
+----------------------------
+
+setOutboundFileDescriptors(java.io.FileDescriptor[] )
+  Unable to fully structure code
+
+
+kotlin.text.Regex
+----------------------------
+
+invoke(java.lang.Enum )
+  Ignored method signature, as it can't be verified against descriptor
+invokeSuspend(java.lang.Object )
+  Unable to fully structure code

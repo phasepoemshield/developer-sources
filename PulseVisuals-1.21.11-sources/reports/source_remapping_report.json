@@ -1,0 +1,47 @@
+{
+  "mapping_counts": {
+    "classes_full": 9720,
+    "classes_simple": 9405,
+    "members": 79393
+  },
+  "conflicts": {
+    "class_simple": {},
+    "members": {
+      "method_14452": [
+        "getCount",
+        "getPositions"
+      ],
+      "field_28867": [
+        "COBBLED_DEEPSLATE_STAIRS",
+        "sleeping"
+      ],
+      "field_28866": [
+        "DEEPSLATE",
+        "total"
+      ],
+      "field_28863": [
+        "EMPTY",
+        "POLISHED_DEEPSLATE_WALL"
+      ],
+      "field_28860": [
+        "DEEPSLATE_TILES",
+        "filterText"
+      ],
+      "field_28859": [
+        "DEEPSLATE_BRICKS",
+        "sleepManager"
+      ],
+      "field_28862": [
+        "COBBLED_DEEPSLATE_WALL",
+        "UNFILTERED"
+      ]
+    }
+  },
+  "stats": {
+    "text_files": 515,
+    "changed_text_files": 72,
+    "binary_copied": 100
+  },
+  "remaining_tokens": {},
+  "remaining_token_count": 0
+}

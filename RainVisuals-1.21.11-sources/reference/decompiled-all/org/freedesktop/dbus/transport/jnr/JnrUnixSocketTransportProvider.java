@@ -1,0 +1,38 @@
+package org.freedesktop.dbus.transport.jnr;
+
+import org.freedesktop.dbus.connections.BusAddress;
+import org.freedesktop.dbus.connections.config.TransportConfig;
+import org.freedesktop.dbus.connections.transports.AbstractTransport;
+import org.freedesktop.dbus.exceptions.TransportConfigurationException;
+import org.freedesktop.dbus.spi.transport.ITransportProvider;
+import org.freedesktop.dbus.utils.Util;
+
+// $VF: Compiled from JnrUnixSocketTransportProvider.java
+public class JnrUnixSocketTransportProvider implements ITransportProvider {
+   @Override
+   public String getSupportedBusType() {
+      return "UNIX";
+   }
+
+   @Override
+   public AbstractTransport createTransport(BusAddress _config, TransportConfig _address) throws TransportConfigurationException {
+      JnrUnixBusAddress address = null;
+      if (_address instanceof JnrUnixBusAddress ba) {
+         address = ba;
+      } else {
+         address = new JnrUnixBusAddress(_address);
+      }
+
+      return new UnixSocketTransport(address, _config);
+   }
+
+   @Override
+   public String createDynamicSessionAddress(boolean _listeningSocket) {
+      return Util.createDynamicSessionAddress(_listeningSocket, Util.isFreeBsd() || Util.isMacOs());
+   }
+
+   @Override
+   public String getTransportName() {
+      return "dbus-java-transport-jnr-unixsocket";
+   }
+}

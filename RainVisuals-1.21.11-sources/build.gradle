@@ -1,0 +1,96 @@
+plugins {
+    id 'fabric-loom' version '1.15.5'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.fabricmc.net/' }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
+
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+    withSourcesJar()
+}
+
+// Decompiled files are intentionally kept outside the compiler source set.
+// They contain normal decompiler artifacts and must be repaired incrementally.
+// The build repackages the lossless Yarn-readable bytecode recovered from the
+// original JAR, so a clean build does not pretend the decompiled text compiles.
+sourceSets {
+    main {
+        java.setSrcDirs([])
+        resources.setSrcDirs([])
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from(zipTree(layout.projectDirectory.file('libs/rain-visuals-yarn-runtime-dev.jar'))) {
+        exclude 'META-INF/*.SF', 'META-INF/*.RSA', 'META-INF/*.DSA'
+    }
+}
+
+tasks.named('sourcesJar', Jar).configure {
+    from('src/recovered-kotlin') {
+        into 'recovered-kotlin'
+    }
+    from('src/recovered-java') {
+        into 'recovered-java'
+    }
+}
+
+// Loom's source remapper cannot parse every decompiler artifact. The custom
+// sourcesJar above is already in the recovered namespace and needs no remap.
+tasks.named('remapSourcesJar').configure {
+    enabled = false
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}
+
+tasks.withType(AbstractArchiveTask).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+tasks.named('runClient').configure {
+    dependsOn tasks.named('remapJar')
+    doFirst {
+        delete fileTree(layout.projectDirectory.dir('run/mods')) {
+            include 'rain-visuals-yarn-readable-dev.jar'
+            include 'rain-visuals-recovered-*.jar'
+        }
+        copy {
+            from tasks.named('remapJar').flatMap { it.archiveFile }
+            into layout.projectDirectory.dir('run/mods')
+        }
+    }
+}
+
+publishing {
+    publications {
+        create('mavenJava', MavenPublication) {
+            artifactId = project.archives_base_name
+            from components.java
+        }
+    }
+}

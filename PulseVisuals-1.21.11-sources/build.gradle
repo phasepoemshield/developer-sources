@@ -1,0 +1,62 @@
+plugins {
+    id 'fabric-loom' version '1.16.2'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.fabricmc.net/' }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+
+    // The original mod shipped these libraries as nested JARs. They are also used
+    // as compile-time dependencies here so the recovered sources resolve locally.
+    implementation files(
+        'src/main/resources/META-INF/jars/json-20250517.jar',
+        'src/main/resources/META-INF/jars/kotlin-stdlib-1.9.22.jar',
+        'src/main/resources/META-INF/jars/okhttp-4.12.0.jar',
+        'src/main/resources/META-INF/jars/okhttp-sse-4.12.0.jar',
+        'src/main/resources/META-INF/jars/okio-jvm-3.6.0.jar',
+        'src/main/resources/META-INF/jars/zero-allocation-hashing-0.16.jar'
+    )
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+    withSourcesJar()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}
+
+tasks.withType(AbstractArchiveTask).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+publishing {
+    publications {
+        create('mavenJava', MavenPublication) {
+            artifactId = project.archives_base_name
+            from components.java
+        }
+    }
+}

@@ -1,0 +1,43 @@
+package kotlinx.serialization.internal
+
+import java.util.HashSet
+import kotlinx.serialization.KSerializer
+import kotlinx.serialization.descriptors.SerialDescriptor
+
+// $VF: Compiled from CollectionSerializers.kt
+@PublishedApi
+internal class HashSetSerializer<E>(eSerializer: KSerializer<Any>) : CollectionSerializer(eSerializer) {
+   public open val descriptor: SerialDescriptor
+
+   protected open fun HashSet<Any>.builderSize(): Int {
+      return `$this$builderSize`.size()
+   }
+
+   init {
+      this.descriptor = HashSetClassDesc(eSerializer.descriptor)
+   }
+
+   protected open fun HashSet<Any>.toResult(): Set<Any> {
+      return `$this$toResult`
+   }
+
+   protected open fun builder(): HashSet<Any> {
+      return HashSet<>()
+   }
+
+   protected open fun HashSet<Any>.insert(index: Int, element: Any) {
+      `$this$insert`.add(element)
+   }
+
+   protected open fun HashSet<Any>.checkCapacity(size: Int) {
+   }
+
+   protected open fun Set<Any>.toBuilder(): HashSet<Any> {
+      var var10000: HashSet = `$this$toBuilder` as? HashSet
+      if ((`$this$toBuilder` as? HashSet) == null) {
+         var10000 = HashSet<>(`$this$toBuilder`)
+      }
+
+      return var10000
+   }
+}

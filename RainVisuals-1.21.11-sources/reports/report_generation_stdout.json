@@ -1,0 +1,38 @@
+{
+  "original": {
+    "path": "/Users/timur/Developer/developer-sources/RainVisuals-1.21.11-sources/reference/original/rain.jar",
+    "sha256": "d0bfa60e0e963eefa76694e0c09af646cc9e46b056bcc65cc4ed9c7c537b691a",
+    "entries": 6012,
+    "class_entries": 5812,
+    "resource_entries": 200
+  },
+  "readable_jar": {
+    "sha256": "b26545f816afcd815b6365520251a4c2a89e4918a282cceaa17fb09147b078ca",
+    "primary_class_entries": 5115
+  },
+  "name_recovery": {
+    "kotlin_metadata": 211,
+    "older_version_structural": 39,
+    "accepted_total": 250
+  },
+  "sources": {
+    "vineflower_owned_and_integrations": 720,
+    "cfr_owned_and_integrations": 559
+  },
+  "decompilers": {
+    "vineflower_stderr_lines": 0,
+    "cfr_stderr_lines": 0,
+    "failure_markers": 70
+  },
+  "mixins": {
+    "configured": 92,
+    "class_present": 92,
+    "source_present": 92
+  },
+  "build": {
+    "successful": true,
+    "minecraft_launched": true,
+    "runtime_smoke_stable": true,
+    "warning": "Loom reported unresolved legacy/intermediary mixin mapping references; see gradle_build.log"
+  }
+}

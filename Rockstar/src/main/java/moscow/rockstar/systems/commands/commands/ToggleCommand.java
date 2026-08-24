@@ -1,0 +1,34 @@
+package moscow.rockstar.systems.commands.commands;
+
+import java.util.List;
+import moscow.rockstar.Rockstar;
+import moscow.rockstar.systems.commands.Command;
+import moscow.rockstar.systems.commands.CommandBuilder;
+import moscow.rockstar.systems.commands.ParameterBuilder;
+import moscow.rockstar.systems.commands.ParameterValidator;
+import moscow.rockstar.systems.localization.Localizator;
+import moscow.rockstar.module.Module;
+import moscow.rockstar.util.game.MessageUtility;
+import net.minecraft.text.Text;
+
+public class ToggleCommand {
+      public Command command() {
+            List<String> moduleNames = Rockstar.getInstance().getModuleManager().getModules().stream()
+                        .map(module -> module.getName().replace(" ", "")).toList();
+            return CommandBuilder.begin("toggle")
+                        .aliases("t")
+                        .desc("commands.toggle.description")
+                        .param("module",
+                                    p -> p.validator(
+                                                (moscow.rockstar.systems.commands.ParameterValidator) ParameterBuilder.MODULE)
+                                                .suggests(moduleNames))
+                        .handler(context -> {
+                              Module module = (Module) context.arguments().getFirst();
+                              module.toggle();
+                              MessageUtility.info(Text.of(Localizator
+                                          .translate("commands.toggle." + (module.isEnabled() ? "enabled" : "disabled"),
+                                                      module.getName())));
+                        })
+                        .build();
+      }
+}
