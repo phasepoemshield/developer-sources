@@ -1,0 +1,10 @@
+{
+  "notif": {
+    "sounds": [
+      {
+        "name": "phobia:notif",
+        "stream": false
+      }
+    ]
+  }
+}

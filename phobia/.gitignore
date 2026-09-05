@@ -1,0 +1,17 @@
+.gradle
+build/
+bin/
+run/
+out/
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+tools/
+decompiled_test/
+decompiled_vineflower/
+extracted_classes/
