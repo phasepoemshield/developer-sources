@@ -1,0 +1,117 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package minecraft;
+
+public class class03088 {
+    public static final String N = "left_fin";
+    public static final String y = "right_fin";
+    public static final String L = "top_fin";
+    public static final String u = "bottom_fin";
+    public static final String i = "tail_fin";
+    public static final String R = "left_blue_fin";
+    public static final String M = "right_blue_fin";
+    public static final String B = "left_arm";
+    public static final String Z = "right_arm";
+    public static final String z = "left_wing";
+    public static final String U = "right_wing";
+    public static final String E = "left_wing_base";
+    public static final String W = "right_wing_base";
+    public static final String m = "left_wing_tip";
+    public static final String P = "right_wing_tip";
+    public static final String s = "left_ear";
+    public static final String T = "right_ear";
+    public static final String b = "left_leg";
+    public static final String j = "right_leg";
+    public static final String v = "left_hind_leg";
+    public static final String n = "right_hind_leg";
+    public static final String t = "left_mid_leg";
+    public static final String G = "right_mid_leg";
+    public static final String l = "left_front_leg";
+    public static final String d = "right_front_leg";
+    public static final String w = "left_hind_foot";
+    public static final String k = "right_hind_foot";
+    public static final String Y = "left_front_foot";
+    public static final String Q = "right_front_foot";
+    public static final String O = "feet";
+    public static final String g = "left_hind_leg_tip";
+    public static final String I = "right_hind_leg_tip";
+    public static final String J = "left_front_leg_tip";
+    public static final String o = "right_front_leg_tip";
+    public static final String q = "left_lid";
+    public static final String K = "right_lid";
+    public static final String V = "left_chest";
+    public static final String e = "right_chest";
+    public static final String H = "left_horn";
+    public static final String c = "right_horn";
+    public static final String X = "left_eye";
+    public static final String a = "right_eye";
+    public static final String p = "jaw";
+    public static final String F = "nose";
+    public static final String A = "arms";
+    public static final String f = "tail";
+    public static final String C = "cube";
+    public static final String S = "beak";
+    public static final String x = "back_fin";
+    public static final String D = "mane";
+    public static final String h = "neck";
+    public static final String r = "mouth";
+    public static final String NN = "upper_mouth";
+    public static final String Ny = "inner_mouth";
+    public static final String NL = "lower_mouth";
+    public static final String Nu = "head";
+    public static final String Ni = "hat";
+    public static final String NR = "body";
+    public static final String NM = "upper_body";
+    public static final String NB = "inner_body";
+    public static final String NZ = "hat_rim";
+    public static final String Nz = "goggles";
+    public static final String NU = "jacket";
+    public static final String NE = "harness";
+    public static final String NW = "shell";
+    public static final String Nm = "top_gills";
+    public static final String NP = "left_gills";
+    public static final String Ns = "right_gills";
+    public static final String NT = "root";
+    public static final String Nb = "croaking_body";
+    public static final String Nj = "tongue";
+    public static final String Nv = "tongue_r1";
+    public static final String Nn = "left_hand";
+    public static final String Nt = "right_hand";
+    public static final String NG = "left_foot";
+    public static final String Nl = "right_foot";
+    public static final String Nd = "eyes";
+    public static final String Nw = "right_tendril";
+    public static final String Nk = "left_tendril";
+    public static final String NY = "right_ribcage";
+    public static final String NQ = "left_ribcage";
+    public static final String NO = "wind_body";
+    public static final String Ng = "wind_top";
+    public static final String NI = "wind_mid";
+    public static final String NJ = "wind_bottom";
+    public static final String No = "rods";
+    public static final String Nq = "mushrooms";
+    public static final String NK = "bone";
+    public static final String NV = "left_paddle";
+    public static final String Ne = "right_paddle";
+    public static final String NH = "bottom";
+    public static final String Nc = "chest_bottom";
+    public static final String NX = "chest_lid";
+    public static final String Na = "chest_lock";
+    public static final String Np = "yellow_coral";
+    public static final String NF = "yellow_coral_first";
+    public static final String NA = "yellow_coral_second";
+    public static final String Nf = "pink_coral";
+    public static final String NC = "pink_coral_second";
+    public static final String NS = "blue_coral";
+    public static final String Nx = "blue_first";
+    public static final String ND = "blue_second";
+    public static final String Nh = "red_coral";
+    public static final String Nr = "red_coral_first";
+    public static final String yN = "red_coral_second";
+
+    public static String N(int n) {
+        return "tentacle" + n;
+    }
+}
+

@@ -1,0 +1,9 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.viaversion.viafabricplus.visuals.features.r1_7_tab_list_style;
+
+public final class LegacyTabList {
+    public static int globalTablistIndex = 0;
+}
+

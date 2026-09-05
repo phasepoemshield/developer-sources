@@ -1,0 +1,23 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  minecraft.class00500
+ *  minecraft.class06889
+ *  minecraft.class07209
+ *  minecraft.class07438
+ *  org.jspecify.annotations.Nullable
+ */
+package net.fabricmc.fabric.api.entity.event.v1;
+
+import minecraft.class00500;
+import minecraft.class06889;
+import minecraft.class07209;
+import minecraft.class07438;
+import org.jspecify.annotations.Nullable;
+
+@FunctionalInterface
+public interface EntitySleepEvents$ModifyWakeUpPosition {
+    public @Nullable class06889 modifyWakeUpPosition(class07438 var1, class07209 var2, class00500 var3, @Nullable class06889 var4);
+}
+

@@ -1,0 +1,43 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.viaversion.viaversion.api.protocol.Protocol
+ *  com.viaversion.viaversion.api.type.Type
+ *  com.viaversion.viaversion.api.type.Types
+ *  com.viaversion.viaversion.protocols.v1_17_1to1_18.packet.ClientboundPackets1_18
+ *  com.viaversion.viaversion.rewriter.CommandRewriter
+ *  org.checkerframework.checker.nullness.qual.Nullable
+ */
+package com.viaversion.viabackwards.protocol.v1_18_2to1_18.rewriter;
+
+import com.viaversion.viabackwards.protocol.v1_18_2to1_18.Protocol1_18_2To1_18;
+import com.viaversion.viaversion.api.protocol.Protocol;
+import com.viaversion.viaversion.api.type.Type;
+import com.viaversion.viaversion.api.type.Types;
+import com.viaversion.viaversion.protocols.v1_17_1to1_18.packet.ClientboundPackets1_18;
+import com.viaversion.viaversion.rewriter.CommandRewriter;
+import org.checkerframework.checker.nullness.qual.Nullable;
+
+public final class CommandRewriter1_18_2
+extends CommandRewriter<ClientboundPackets1_18> {
+    public CommandRewriter1_18_2(Protocol1_18_2To1_18 protocol) {
+        super((Protocol)protocol);
+        this.parserHandlers.put("minecraft:resource", wrapper -> {
+            wrapper.read(Types.STRING);
+            wrapper.write((Type)Types.VAR_INT, (Object)1);
+        });
+        this.parserHandlers.put("minecraft:resource_or_tag", wrapper -> {
+            wrapper.read(Types.STRING);
+            wrapper.write((Type)Types.VAR_INT, (Object)1);
+        });
+    }
+
+    public @Nullable String handleArgumentType(String argumentType) {
+        if (argumentType.equals("minecraft:resource") || argumentType.equals("minecraft:resource_or_tag")) {
+            return "brigadier:string";
+        }
+        return super.handleArgumentType(argumentType);
+    }
+}
+

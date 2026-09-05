@@ -1,0 +1,16 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package de.maxhenkel.voicechat.concentus;
+
+public enum OpusBandwidth {
+    OPUS_BANDWIDTH_UNKNOWN,
+    OPUS_BANDWIDTH_AUTO,
+    OPUS_BANDWIDTH_NARROWBAND,
+    OPUS_BANDWIDTH_MEDIUMBAND,
+    OPUS_BANDWIDTH_WIDEBAND,
+    OPUS_BANDWIDTH_SUPERWIDEBAND,
+    OPUS_BANDWIDTH_FULLBAND;
+
+}
+

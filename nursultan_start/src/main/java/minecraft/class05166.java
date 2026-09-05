@@ -1,0 +1,42 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  minecraft.class07211
+ */
+package minecraft;
+
+import minecraft.class07211;
+
+class class05166 {
+    static final /* synthetic */ int[] N;
+
+    static {
+        N = new int[class07211.values().length];
+        try {
+            class05166.N[class07211.field_11043.ordinal()] = 1;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            class05166.N[class07211.field_11035.ordinal()] = 2;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            class05166.N[class07211.field_11039.ordinal()] = 3;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            class05166.N[class07211.field_11034.ordinal()] = 4;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+    }
+}
+

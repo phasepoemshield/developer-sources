@@ -1,0 +1,54 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  minecraft.class07211
+ */
+package Nursultan;
+
+import minecraft.class07211;
+
+public class class09368 {
+    public static final /* synthetic */ int[] N;
+
+    static {
+        N = new int[class07211.values().length];
+        try {
+            class09368.N[class07211.field_11033.ordinal()] = 1;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            class09368.N[class07211.field_11036.ordinal()] = 2;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            class09368.N[class07211.field_11043.ordinal()] = 3;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            class09368.N[class07211.field_11035.ordinal()] = 4;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            class09368.N[class07211.field_11039.ordinal()] = 5;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            class09368.N[class07211.field_11034.ordinal()] = 6;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+    }
+}
+

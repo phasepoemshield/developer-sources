@@ -1,0 +1,58 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  Nursultan.class10895
+ *  Nursultan.class10992
+ *  Nursultan.class11067
+ *  Nursultan.class11072
+ *  Nursultan.class11080
+ *  Nursultan.class11106
+ *  Nursultan.class11512
+ *  Nursultan.class11517
+ *  Nursultan.class11524
+ *  Nursultan.class11535
+ *  Nursultan.class11782
+ *  Nursultan.class11807
+ */
+package Nursultan;
+
+import Nursultan.class10895;
+import Nursultan.class10992;
+import Nursultan.class11067;
+import Nursultan.class11072;
+import Nursultan.class11080;
+import Nursultan.class11106;
+import Nursultan.class11512;
+import Nursultan.class11517;
+import Nursultan.class11524;
+import Nursultan.class11535;
+import Nursultan.class11782;
+import Nursultan.class11807;
+
+@class11080(L="WallClimb", y=class11072.MOVEMENT, N=class11106.BASE)
+public class WallClimb
+extends class11067 {
+    public Object L_0;
+
+    public WallClimb() {
+        this.m();
+        this.L_0 = class11524.N((class11512)this, (String)"mode", (class11535[])new class11807[]{new class10895(this, "block", true)});
+    }
+
+    private void m() {
+    }
+
+    public void y() {
+        this.m();
+        ((class11807)((class11517)this.L_0).i()).y((Object)this);
+        super.y();
+    }
+
+    @class11782
+    public void N(class10992 class109922) {
+        this.m();
+        ((class11807)((class11517)this.L_0).i()).y((Object)class109922);
+    }
+}
+

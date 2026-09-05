@@ -1,0 +1,132 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  minecraft.class00392
+ *  minecraft.class01054
+ *  org.spongepowered.asm.mixin.injection.invoke.arg.Args
+ *  org.spongepowered.asm.mixin.injection.invoke.arg.ArgumentCountException
+ *  org.spongepowered.asm.mixin.injection.invoke.arg.ArgumentIndexOutOfBoundsException
+ */
+package org.spongepowered.asm.synthetic.args;
+
+import minecraft.class00392;
+import minecraft.class01054;
+import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
+import org.spongepowered.asm.mixin.injection.invoke.arg.ArgumentCountException;
+import org.spongepowered.asm.mixin.injection.invoke.arg.ArgumentIndexOutOfBoundsException;
+
+public class Args$1
+extends Args {
+    public class00392 $1() {
+        return (class00392)this.values[1];
+    }
+
+    private Args$1(Object[] objectArray) {
+        super(objectArray);
+    }
+
+    public String toString() {
+        return "";
+    }
+
+    public static Args$1 of(class01054 class010542, class00392 class003922, int n, int n2, int n3) {
+        return new Args$1(new Object[]{class010542, class003922, n, n2, n3});
+    }
+
+    public void set(int n, Object object) {
+        Object object2;
+        block7: {
+            Integer n2;
+            block8: {
+                int n3;
+                block6: {
+                    block5: {
+                        block4: {
+                            block3: {
+                                block2: {
+                                    if (n == 0) break block2;
+                                    if (n == 1) break block3;
+                                    if (n == 2) break block4;
+                                    if (n == 3) break block5;
+                                    if (n != 4) {
+                                        throw new ArgumentIndexOutOfBoundsException(n);
+                                    }
+                                    break block6;
+                                }
+                                n3 = n;
+                                object2 = (class01054)object;
+                                break block7;
+                            }
+                            n3 = n;
+                            object2 = (class00392)object;
+                            break block7;
+                        }
+                        n3 = n;
+                        n2 = (Integer)object;
+                        break block8;
+                    }
+                    n3 = n;
+                    n2 = (Integer)object;
+                    break block8;
+                }
+                n3 = n;
+                n2 = object2 = (Integer)object;
+            }
+            if (n2 == null) {
+                throw new NullPointerException("Argument with primitive type cannot be set to NULL");
+            }
+        }
+        this.values[n3] = object2;
+    }
+
+    public void setAll(Object[] objectArray) {
+        int n = objectArray.length;
+        if (n != 5) {
+            throw new ArgumentCountException(n, 5, "(net.minecraft.class_332, net.minecraft.class_2561, int, int, int)");
+        }
+        Object[] objectArray2 = this.values;
+        this.values[0] = (class01054)objectArray[0];
+        objectArray2[1] = (class00392)objectArray[1];
+        Object[] objectArray3 = objectArray2;
+        Object[] objectArray4 = objectArray2;
+        int n2 = 2;
+        Integer n3 = (Integer)objectArray[2];
+        if (n3 != null) {
+            objectArray3[n2] = n3;
+            objectArray3 = objectArray4;
+            objectArray4 = objectArray4;
+            n2 = 3;
+            n3 = (Integer)objectArray[3];
+            if (n3 != null) {
+                objectArray3[n2] = n3;
+                objectArray3 = objectArray4;
+                objectArray4 = objectArray4;
+                n2 = 4;
+                n3 = (Integer)objectArray[4];
+                if (n3 != null) {
+                    objectArray3[n2] = n3;
+                    return;
+                }
+            }
+        }
+        throw new NullPointerException("Argument with primitive type cannot be set to NULL");
+    }
+
+    public class01054 $0() {
+        return (class01054)this.values[0];
+    }
+
+    public int $2() {
+        return (Integer)this.values[2];
+    }
+
+    public int $3() {
+        return (Integer)this.values[3];
+    }
+
+    public int $4() {
+        return (Integer)this.values[4];
+    }
+}
+

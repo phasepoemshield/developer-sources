@@ -1,0 +1,37 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  minecraft.class07050
+ *  minecraft.class07082
+ *  minecraft.class07209
+ *  minecraft.class07211
+ *  minecraft.class07299
+ *  minecraft.class08036
+ *  net.fabricmc.fabric.api.event.Event
+ *  net.fabricmc.fabric.api.event.EventFactory
+ */
+package net.fabricmc.fabric.api.event.player;
+
+import minecraft.class07050;
+import minecraft.class07082;
+import minecraft.class07209;
+import minecraft.class07211;
+import minecraft.class07299;
+import minecraft.class08036;
+import net.fabricmc.fabric.api.event.Event;
+import net.fabricmc.fabric.api.event.EventFactory;
+
+public interface AttackBlockCallback {
+    public static final Event<AttackBlockCallback> EVENT = EventFactory.createArrayBacked(AttackBlockCallback.class, attackBlockCallbackArray -> (class080362, class072992, class070502, class072092, class072112) -> {
+        for (AttackBlockCallback attackBlockCallback : attackBlockCallbackArray) {
+            class07082 class070822 = attackBlockCallback.interact(class080362, class072992, class070502, class072092, class072112);
+            if (class070822 == class07082.i) continue;
+            return class070822;
+        }
+        return class07082.i;
+    });
+
+    public class07082 interact(class08036 var1, class07299 var2, class07050 var3, class07209 var4, class07211 var5);
+}
+

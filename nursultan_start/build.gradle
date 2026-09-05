@@ -1,0 +1,96 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'ru.nursultan'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://libraries.minecraft.net/' }
+    maven { url = 'https://maven.fabricmc.net/' }
+}
+
+dependencies {
+    // Include all bundled and downloaded libraries
+    implementation fileTree(dir: 'libraries', include: ['**/*.jar'], exclude: ['**/*natives-windows*.jar'])
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs += ['-Xlint:none', '-nowarn']
+}
+
+application {
+    mainClass = 'Main'
+}
+
+// Task to run the client directly from Gradle
+tasks.register('runClient', JavaExec) {
+    group = 'application'
+    description = 'Runs the Nursultan Minecraft Client'
+    
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'Main'
+    
+    jvmArgs = [
+        '-Xmx4G',
+        '-Xss2M',
+        '-XstartOnFirstThread',
+        '-XX:+UnlockExperimentalVMOptions',
+        '-XX:+UseG1GC',
+        "-Djava.library.path=${file('natives_macos').absolutePath}",
+        "-Djna.tmpdir=${file('natives_macos').absolutePath}",
+        "-Dorg.lwjgl.system.SharedLibraryExtractPath=${file('natives_macos').absolutePath}",
+        "-Dio.netty.native.workdir=${file('natives_macos').absolutePath}",
+        '-Dminecraft.launcher.brand=nursultan',
+        '-Dminecraft.launcher.version=1.0',
+        '-DFabricMcEmu=net.minecraft.client.main.Main',
+        '-Dfabric.development=false',
+        '-Dmixin.env.remapRefMap=false',
+        '-Duser.language=en',
+        '-Dfile.encoding=UTF-8'
+    ]
+    
+    args = [
+        '--username', project.findProperty('mcUsername') ?: 'soezproject',
+        '--version', '1.21.11',
+        '--gameDir', file('game').absolutePath,
+        '--assetsDir', file('assets').absolutePath,
+        '--assetIndex', '29',
+        '--uuid', '00000000000030008000000000000000',
+        '--accessToken', '0',
+        '--clientId', '0',
+        '--xuid', '0',
+        '--userType', 'legacy',
+        '--versionType', 'release',
+        '--width', '1280',
+        '--height', '720',
+        '--login', 't.me/soezproject',
+        '--uid', '1',
+        '--subscribeTimeLeft', '999999999',
+        '--role', 'premium',
+        '--hash', '0',
+        '--apiToken', '0',
+        '--boughtProducts', 'premium',
+        '--avatar', 'none'
+    ]
+}

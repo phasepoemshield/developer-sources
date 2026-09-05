@@ -1,0 +1,32 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  Nursultan.class11067
+ *  Nursultan.class11072
+ *  Nursultan.class11080
+ *  Nursultan.class11106
+ *  Nursultan.class11938
+ */
+package Nursultan;
+
+import Nursultan.class11067;
+import Nursultan.class11072;
+import Nursultan.class11080;
+import Nursultan.class11106;
+import Nursultan.class11938;
+
+@class11080(L="DiscordActivity", y=class11072.MISC, N=class11106.CLIENT)
+public class DiscordActivity
+extends class11067 {
+    public boolean Z() {
+        class11938.R().N();
+        return super.Z();
+    }
+
+    public boolean i() {
+        class11938.R().y();
+        return super.i();
+    }
+}
+

@@ -1,0 +1,14 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.viaversion.viaversion.api.protocol.packet.ServerboundPacketType
+ */
+package com.viaversion.viaversion.protocols.v1_21_2to1_21_4.packet;
+
+import com.viaversion.viaversion.api.protocol.packet.ServerboundPacketType;
+
+public interface ServerboundPacket1_21_4
+extends ServerboundPacketType {
+}
+

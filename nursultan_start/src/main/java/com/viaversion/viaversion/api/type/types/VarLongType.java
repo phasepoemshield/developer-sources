@@ -1,0 +1,67 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.viaversion.viaversion.api.type.Type
+ *  com.viaversion.viaversion.api.type.TypeConverter
+ *  io.netty.buffer.ByteBuf
+ */
+package com.viaversion.viaversion.api.type.types;
+
+import com.viaversion.viaversion.api.type.Type;
+import com.viaversion.viaversion.api.type.TypeConverter;
+import io.netty.buffer.ByteBuf;
+
+public class VarLongType
+extends Type<Long>
+implements TypeConverter<Long> {
+    public VarLongType() {
+        super("VarLong", Long.class);
+    }
+
+    public Long from(Object o) {
+        if (o instanceof Number) {
+            Number number = (Number)o;
+            return number.longValue();
+        }
+        if (o instanceof Boolean) {
+            Boolean boo = (Boolean)o;
+            return boo != false ? 1L : 0L;
+        }
+        throw new UnsupportedOperationException();
+    }
+
+    @Deprecated
+    public void write(ByteBuf buffer, Long object) {
+        this.writePrimitive(buffer, object);
+    }
+
+    @Deprecated
+    public Long read(ByteBuf buffer) {
+        return this.readPrimitive(buffer);
+    }
+
+    public long readPrimitive(ByteBuf buffer) {
+        byte in;
+        long out = 0L;
+        int bytes = 0;
+        do {
+            in = buffer.readByte();
+            out |= (long)(in & 0x7F) << bytes++ * 7;
+            if (bytes <= 10) continue;
+            throw new RuntimeException("VarLong too big");
+        } while ((in & 0x80) == 128);
+        return out;
+    }
+
+    public void writePrimitive(ByteBuf buffer, long object) {
+        do {
+            int part = (int)(object & 0x7FL);
+            if ((object >>>= 7) != 0L) {
+                part |= 0x80;
+            }
+            buffer.writeByte(part);
+        } while (object != 0L);
+    }
+}
+

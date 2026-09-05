@@ -1,0 +1,65 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.google.common.collect.ImmutableList
+ *  com.mojang.datafixers.util.Pair
+ *  minecraft.class01019
+ *  minecraft.class01027
+ *  minecraft.class02055
+ *  minecraft.class03529
+ *  minecraft.class03556
+ *  minecraft.class04116
+ *  minecraft.class04227
+ *  minecraft.class05246
+ *  minecraft.class05248
+ *  minecraft.class05281
+ */
+package minecraft;
+
+import com.google.common.collect.ImmutableList;
+import com.mojang.datafixers.util.Pair;
+import java.util.List;
+import minecraft.class01019;
+import minecraft.class01027;
+import minecraft.class02055;
+import minecraft.class03529;
+import minecraft.class03556;
+import minecraft.class04116;
+import minecraft.class04227;
+import minecraft.class05246;
+import minecraft.class05248;
+import minecraft.class05281;
+
+public class class05076 {
+    public static void N(class04116<class05281> class041162) {
+        class02055 class020552 = class041162.N(class04227.yT);
+        class03529 class035292 = class020552.y(class01027.v);
+        class03529 class035293 = class020552.y(class01027.Q);
+        class03529 class035294 = class020552.y(class01027.j);
+        class03529 class035295 = class020552.y(class01027.O);
+        class03529 class035296 = class020552.y(class01027.Y);
+        class03529 class035297 = class041162.N(class04227.yv).y(class01019.N);
+        class01019.N(class041162, (String)"bastion/treasure/bases", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/bases/lava_basin", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/stairs", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/stairs/lower_stairs", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/bases/centers", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/bases/centers/center_0", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/bases/centers/center_1", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/bases/centers/center_2", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/bases/centers/center_3", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/brains", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/brains/center_brain", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/walls", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/lava_wall", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/entrance_wall", (class03556)class035293), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/walls/outer", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/outer/top_corner", (class03556)class035293), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/outer/mid_corner", (class03556)class035293), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/outer/bottom_corner", (class03556)class035293), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/outer/outer_wall", (class03556)class035293), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/outer/medium_outer_wall", (class03556)class035293), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/outer/tall_outer_wall", (class03556)class035293), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/walls/bottom", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/bottom/wall_0", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/bottom/wall_1", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/bottom/wall_2", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/bottom/wall_3", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/walls/mid", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/mid/wall_0", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/mid/wall_1", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/mid/wall_2", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/walls/top", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/top/main_entrance", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/top/wall_0", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/walls/top/wall_1", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/connectors", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/connectors/center_to_wall_middle", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/connectors/center_to_wall_top", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/connectors/center_to_wall_top_entrance", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/entrances", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/entrances/entrance_0", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/ramparts", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/ramparts/mid_wall_main", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/ramparts/mid_wall_side", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/ramparts/bottom_wall_0", (class03556)class035294), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/ramparts/top_wall", (class03556)class035295), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/ramparts/lava_basin_side", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/ramparts/lava_basin_main", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/corners/bottom", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/corners/bottom/corner_0", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/corners/bottom/corner_1", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/corners/edges", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/corners/edges/bottom", (class03556)class035293), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/corners/edges/middle", (class03556)class035293), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/corners/edges/top", (class03556)class035293), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/corners/middle", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/corners/middle/corner_0", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/corners/middle/corner_1", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/corners/top", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/corners/top/corner_0", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/corners/top/corner_1", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/extensions/large_pool", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/empty", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/empty", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/fire_room", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/large_bridge_0", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/large_bridge_1", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/large_bridge_2", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/large_bridge_3", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/roofed_bridge", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/empty", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/extensions/small_pool", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/empty", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/fire_room", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/empty", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/small_bridge_0", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/small_bridge_1", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/small_bridge_2", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/small_bridge_3", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/extensions/houses", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/house_0", (class03556)class035292), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/extensions/house_1", (class03556)class035292), (Object)1)), class05246.field_16687));
+        class01019.N(class041162, (String)"bastion/treasure/roofs", (class05281)new class05281((class03556)class035297, (List)ImmutableList.of((Object)Pair.of((Object)class05248.y((String)"bastion/treasure/roofs/wall_roof", (class03556)class035296), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/roofs/corner_roof", (class03556)class035296), (Object)1), (Object)Pair.of((Object)class05248.y((String)"bastion/treasure/roofs/center_roof", (class03556)class035296), (Object)1)), class05246.field_16687));
+    }
+}
+

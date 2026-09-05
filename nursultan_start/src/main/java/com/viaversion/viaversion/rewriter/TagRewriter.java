@@ -1,0 +1,285 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.viaversion.viaversion.api.data.MappingData
+ *  com.viaversion.viaversion.api.data.Mappings
+ *  com.viaversion.viaversion.api.minecraft.RegistryType
+ *  com.viaversion.viaversion.api.minecraft.TagData
+ *  com.viaversion.viaversion.api.minecraft.entities.EntityType
+ *  com.viaversion.viaversion.api.protocol.Protocol
+ *  com.viaversion.viaversion.api.protocol.packet.ClientboundPacketType
+ *  com.viaversion.viaversion.api.protocol.packet.PacketWrapper
+ *  com.viaversion.viaversion.api.protocol.remapper.PacketHandler
+ *  com.viaversion.viaversion.api.rewriter.EntityRewriter
+ *  com.viaversion.viaversion.api.rewriter.TagRewriter
+ *  com.viaversion.viaversion.api.type.Type
+ *  com.viaversion.viaversion.api.type.Types
+ *  com.viaversion.viaversion.libs.fastutil.ints.IntArrayList
+ *  com.viaversion.viaversion.rewriter.IdRewriteFunction
+ *  org.checkerframework.checker.nullness.qual.Nullable
+ */
+package com.viaversion.viaversion.rewriter;
+
+import com.viaversion.viaversion.api.data.MappingData;
+import com.viaversion.viaversion.api.data.Mappings;
+import com.viaversion.viaversion.api.minecraft.RegistryType;
+import com.viaversion.viaversion.api.minecraft.TagData;
+import com.viaversion.viaversion.api.minecraft.entities.EntityType;
+import com.viaversion.viaversion.api.protocol.Protocol;
+import com.viaversion.viaversion.api.protocol.packet.ClientboundPacketType;
+import com.viaversion.viaversion.api.protocol.packet.PacketWrapper;
+import com.viaversion.viaversion.api.protocol.remapper.PacketHandler;
+import com.viaversion.viaversion.api.rewriter.EntityRewriter;
+import com.viaversion.viaversion.api.type.Type;
+import com.viaversion.viaversion.api.type.Types;
+import com.viaversion.viaversion.libs.fastutil.ints.IntArrayList;
+import com.viaversion.viaversion.rewriter.IdRewriteFunction;
+import com.viaversion.viaversion.util.Key;
+import java.util.ArrayList;
+import java.util.EnumMap;
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import org.checkerframework.checker.nullness.qual.Nullable;
+
+public class TagRewriter<C extends ClientboundPacketType>
+implements com.viaversion.viaversion.api.rewriter.TagRewriter {
+    private static final int[] EMPTY_ARRAY = new int[0];
+    private final Map<RegistryType, List<TagData>> toAdd = new EnumMap<RegistryType, List<TagData>>(RegistryType.class);
+    private final Map<RegistryType, Map<String, String>> toRename = new EnumMap<RegistryType, Map<String, String>>(RegistryType.class);
+    private final Map<RegistryType, Set<String>> toRemove = new EnumMap<RegistryType, Set<String>>(RegistryType.class);
+    private final Set<String> toRemoveRegistries = new HashSet<String>();
+    private final Protocol<C, ?, ?, ?> protocol;
+
+    public TagRewriter(Protocol<C, ?, ?, ?> protocol) {
+        this.protocol = protocol;
+    }
+
+    public void onMappingDataLoaded() {
+        if (this.protocol.getMappingData() == null) {
+            return;
+        }
+        for (RegistryType type : RegistryType.getValues()) {
+            List tags = this.protocol.getMappingData().getTags(type);
+            if (tags == null) continue;
+            this.getOrComputeNewTags(type).addAll(tags);
+        }
+    }
+
+    public void removeTags(String registryKey) {
+        this.toRemoveRegistries.add(Key.stripMinecraftNamespace(registryKey));
+    }
+
+    public void removeTag(RegistryType type, String tagId) {
+        this.toRemove.computeIfAbsent(type, t -> new HashSet()).add(Key.stripMinecraftNamespace(tagId));
+    }
+
+    public void renameTag(RegistryType type, String tagId, String renameTo) {
+        this.toRename.computeIfAbsent(type, t -> new HashMap()).put(Key.stripMinecraftNamespace(tagId), renameTo);
+    }
+
+    public void addEmptyTag(RegistryType tagType, String tagId) {
+        this.getOrComputeNewTags(tagType).add(new TagData(tagId, EMPTY_ARRAY));
+    }
+
+    public void addEmptyTags(RegistryType tagType, String ... tagIds) {
+        List<TagData> tagList = this.getOrComputeNewTags(tagType);
+        for (String id : tagIds) {
+            tagList.add(new TagData(id, EMPTY_ARRAY));
+        }
+    }
+
+    public void addEntityTag(String tagId, EntityType ... entities) {
+        int[] ids = new int[entities.length];
+        for (int i = 0; i < entities.length; ++i) {
+            ids[i] = entities[i].getId();
+        }
+        this.addTagRaw(RegistryType.ENTITY, tagId, ids);
+    }
+
+    public void addTag(RegistryType tagType, String tagId, int ... unmappedIds) {
+        List<TagData> newTags = this.getOrComputeNewTags(tagType);
+        IdRewriteFunction rewriteFunction = this.getRewriter(tagType);
+        if (rewriteFunction != null) {
+            for (int i = 0; i < unmappedIds.length; ++i) {
+                int unmappedId = unmappedIds[i];
+                unmappedIds[i] = rewriteFunction.rewrite(unmappedId);
+            }
+        }
+        newTags.add(new TagData(tagId, unmappedIds));
+    }
+
+    public void addTagRaw(RegistryType tagType, String tagId, int ... ids) {
+        this.getOrComputeNewTags(tagType).add(new TagData(tagId, ids));
+    }
+
+    public void register(C packetType, @Nullable RegistryType readUntilType) {
+        this.protocol.registerClientbound(packetType, this.getHandler(readUntilType));
+    }
+
+    public void registerGeneric(C packetType) {
+        this.protocol.registerClientbound(packetType, this::handleGeneric);
+    }
+
+    public PacketHandler getHandler(@Nullable RegistryType readUntilType) {
+        return wrapper -> {
+            for (RegistryType type : RegistryType.getValues()) {
+                this.handle(wrapper, type);
+                if (type == readUntilType) break;
+            }
+        };
+    }
+
+    public void handleGeneric(PacketWrapper wrapper) {
+        int length;
+        int finalLength = length = ((Integer)wrapper.passthrough((Type)Types.VAR_INT)).intValue();
+        EnumSet<RegistryType> readTypes = EnumSet.noneOf(RegistryType.class);
+        for (int i = 0; i < length; ++i) {
+            String registryKey = (String)wrapper.read(Types.STRING);
+            String strippedKey = Key.stripMinecraftNamespace(registryKey);
+            if (this.shouldRemoveRegistry(strippedKey)) {
+                --finalLength;
+                int tagsSize = (Integer)wrapper.read((Type)Types.VAR_INT);
+                for (int j = 0; j < tagsSize; ++j) {
+                    wrapper.read(Types.STRING);
+                    wrapper.read(Types.VAR_INT_ARRAY_PRIMITIVE);
+                }
+                continue;
+            }
+            wrapper.write(Types.STRING, (Object)registryKey);
+            RegistryType type = RegistryType.getByKey((String)strippedKey);
+            if (type != null) {
+                this.handle(wrapper, type);
+                readTypes.add(type);
+                continue;
+            }
+            this.handle(wrapper, null, null, null, null);
+        }
+        for (Map.Entry<RegistryType, List<TagData>> entry : this.toAdd.entrySet()) {
+            if (readTypes.contains(entry.getKey())) continue;
+            wrapper.write(Types.STRING, (Object)entry.getKey().identifier());
+            this.appendNewTags(wrapper, entry.getKey());
+            ++finalLength;
+        }
+        if (length != finalLength) {
+            wrapper.set((Type)Types.VAR_INT, 0, (Object)finalLength);
+        }
+    }
+
+    public void handle(PacketWrapper wrapper, String registryKey) {
+        RegistryType type = RegistryType.getByKey((String)registryKey);
+        if (type != null) {
+            this.handle(wrapper, type);
+        } else {
+            this.handle(wrapper, null, null, null, null);
+        }
+    }
+
+    public void handle(PacketWrapper wrapper, RegistryType registryType) {
+        this.handle(wrapper, this.getRewriter(registryType), this.getNewTags(registryType), this.toRename.get(registryType), this.toRemove.get(registryType));
+    }
+
+    protected void handle(PacketWrapper wrapper, @Nullable IdRewriteFunction rewriteFunction, @Nullable List<TagData> newTags, @Nullable Map<String, String> tagsToRename, @Nullable Set<String> tagsToRemove) {
+        int tagsSize = (Integer)wrapper.read((Type)Types.VAR_INT);
+        ArrayList<TagData> tags = new ArrayList<TagData>(newTags != null ? tagsSize + newTags.size() : tagsSize);
+        HashSet<String> currentTags = new HashSet<String>(tagsSize);
+        for (int i = 0; i < tagsSize; ++i) {
+            String renamedKey;
+            String key = (String)wrapper.read(Types.STRING);
+            if (tagsToRename != null && (renamedKey = tagsToRename.get(Key.stripMinecraftNamespace(key))) != null) {
+                key = renamedKey;
+            }
+            int[] ids = (int[])wrapper.read(Types.VAR_INT_ARRAY_PRIMITIVE);
+            if (rewriteFunction != null) {
+                IntArrayList idList = new IntArrayList(ids.length);
+                for (int id : ids) {
+                    int mappedId = rewriteFunction.rewrite(id);
+                    if (mappedId == -1) continue;
+                    idList.add(mappedId);
+                }
+                ids = idList.toArray(EMPTY_ARRAY);
+            }
+            tags.add(new TagData(key, ids));
+            currentTags.add(Key.stripMinecraftNamespace(key));
+        }
+        if (tagsToRemove != null) {
+            tags.removeIf(tag -> tagsToRemove.contains(Key.stripMinecraftNamespace(tag.identifier())));
+        }
+        if (newTags != null) {
+            for (TagData tag2 : newTags) {
+                if (currentTags.contains(Key.stripMinecraftNamespace(tag2.identifier()))) continue;
+                tags.add(tag2);
+            }
+        }
+        wrapper.write((Type)Types.VAR_INT, (Object)tags.size());
+        for (TagData tag2 : tags) {
+            wrapper.write(Types.STRING, (Object)tag2.identifier());
+            wrapper.write(Types.VAR_INT_ARRAY_PRIMITIVE, (Object)tag2.entries());
+        }
+    }
+
+    public void appendNewTags(PacketWrapper wrapper, RegistryType type) {
+        List<TagData> newTags = this.getNewTags(type);
+        if (newTags != null) {
+            wrapper.write((Type)Types.VAR_INT, (Object)newTags.size());
+            for (TagData tag : newTags) {
+                wrapper.write(Types.STRING, (Object)tag.identifier());
+                wrapper.write(Types.VAR_INT_ARRAY_PRIMITIVE, (Object)((int[])tag.entries().clone()));
+            }
+        } else {
+            wrapper.write((Type)Types.VAR_INT, (Object)0);
+        }
+    }
+
+    public @Nullable List<TagData> getNewTags(RegistryType tagType) {
+        return this.toAdd.get(tagType);
+    }
+
+    public List<TagData> getOrComputeNewTags(RegistryType tagType) {
+        return this.toAdd.computeIfAbsent(tagType, type -> new ArrayList());
+    }
+
+    public boolean shouldRemoveRegistry(String registryKey) {
+        if (this.protocol.getRegistryDataRewriter() != null && this.protocol.getRegistryDataRewriter().shouldRemoveRegistry(registryKey)) {
+            return true;
+        }
+        return this.toRemoveRegistries.contains(registryKey);
+    }
+
+    public @Nullable IdRewriteFunction getRewriter(RegistryType tagType) {
+        MappingData mappingData = this.protocol.getMappingData();
+        return switch (tagType) {
+            default -> throw new IncompatibleClassChangeError();
+            case RegistryType.BLOCK -> {
+                if (mappingData != null && !Mappings.isIntIdIdentity((Mappings)mappingData.getBlockMappings())) {
+                    yield arg_0 -> ((MappingData)mappingData).getNewBlockId(arg_0);
+                }
+                yield null;
+            }
+            case RegistryType.ITEM -> {
+                if (mappingData != null && !Mappings.isIntIdIdentity((Mappings)mappingData.getItemMappings())) {
+                    yield arg_0 -> ((MappingData)mappingData).getNewItemId(arg_0);
+                }
+                yield null;
+            }
+            case RegistryType.ENCHANTMENT -> {
+                if (mappingData != null && !Mappings.isIntIdIdentity((Mappings)mappingData.getEnchantmentMappings())) {
+                    yield arg_0 -> ((Mappings)mappingData.getEnchantmentMappings()).getNewId(arg_0);
+                }
+                yield null;
+            }
+            case RegistryType.ENTITY -> {
+                if (this.protocol.getEntityRewriter() != null) {
+                    yield arg_0 -> ((EntityRewriter)this.protocol.getEntityRewriter()).newEntityId(arg_0);
+                }
+                yield null;
+            }
+            case RegistryType.FLUID, RegistryType.GAME_EVENT, RegistryType.DAMAGE_TYPE, RegistryType.BANNER_PATTERN -> null;
+        };
+    }
+}
+

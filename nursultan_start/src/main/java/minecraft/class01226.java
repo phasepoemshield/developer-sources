@@ -1,0 +1,226 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  minecraft.class01894
+ *  minecraft.class03530
+ *  minecraft.class04227
+ *  minecraft.class05946
+ *  minecraft.class06581
+ */
+package minecraft;
+
+import minecraft.class01894;
+import minecraft.class03530;
+import minecraft.class04227;
+import minecraft.class05946;
+import minecraft.class06581;
+
+public final class class01226 {
+    public static final class03530<class06581> N = class01226.N("wool");
+    public static final class03530<class06581> y = class01226.N("planks");
+    public static final class03530<class06581> L = class01226.N("stone_bricks");
+    public static final class03530<class06581> u = class01226.N("wooden_buttons");
+    public static final class03530<class06581> i = class01226.N("stone_buttons");
+    public static final class03530<class06581> R = class01226.N("buttons");
+    public static final class03530<class06581> M = class01226.N("wool_carpets");
+    public static final class03530<class06581> B = class01226.N("wooden_doors");
+    public static final class03530<class06581> Z = class01226.N("wooden_stairs");
+    public static final class03530<class06581> z = class01226.N("wooden_slabs");
+    public static final class03530<class06581> U = class01226.N("wooden_fences");
+    public static final class03530<class06581> E = class01226.N("fence_gates");
+    public static final class03530<class06581> W = class01226.N("wooden_pressure_plates");
+    public static final class03530<class06581> m = class01226.N("wooden_shelves");
+    public static final class03530<class06581> P = class01226.N("doors");
+    public static final class03530<class06581> s = class01226.N("saplings");
+    public static final class03530<class06581> T = class01226.N("bamboo_blocks");
+    public static final class03530<class06581> b = class01226.N("oak_logs");
+    public static final class03530<class06581> j = class01226.N("dark_oak_logs");
+    public static final class03530<class06581> v = class01226.N("pale_oak_logs");
+    public static final class03530<class06581> n = class01226.N("birch_logs");
+    public static final class03530<class06581> t = class01226.N("acacia_logs");
+    public static final class03530<class06581> G = class01226.N("spruce_logs");
+    public static final class03530<class06581> l = class01226.N("mangrove_logs");
+    public static final class03530<class06581> d = class01226.N("jungle_logs");
+    public static final class03530<class06581> w = class01226.N("cherry_logs");
+    public static final class03530<class06581> k = class01226.N("crimson_stems");
+    public static final class03530<class06581> Y = class01226.N("warped_stems");
+    public static final class03530<class06581> Q = class01226.N("wart_blocks");
+    public static final class03530<class06581> O = class01226.N("logs_that_burn");
+    public static final class03530<class06581> g = class01226.N("logs");
+    public static final class03530<class06581> I = class01226.N("sand");
+    public static final class03530<class06581> J = class01226.N("smelts_to_glass");
+    public static final class03530<class06581> o = class01226.N("slabs");
+    public static final class03530<class06581> q = class01226.N("walls");
+    public static final class03530<class06581> K = class01226.N("stairs");
+    public static final class03530<class06581> V = class01226.N("anvil");
+    public static final class03530<class06581> e = class01226.N("rails");
+    public static final class03530<class06581> H = class01226.N("leaves");
+    public static final class03530<class06581> c = class01226.N("wooden_trapdoors");
+    public static final class03530<class06581> X = class01226.N("trapdoors");
+    public static final class03530<class06581> a = class01226.N("small_flowers");
+    public static final class03530<class06581> p = class01226.N("flowers");
+    public static final class03530<class06581> F = class01226.N("beds");
+    public static final class03530<class06581> A = class01226.N("fences");
+    public static final class03530<class06581> f = class01226.N("soul_fire_base_blocks");
+    public static final class03530<class06581> C = class01226.N("candles");
+    public static final class03530<class06581> S = class01226.N("dampens_vibrations");
+    public static final class03530<class06581> x = class01226.N("gold_ores");
+    public static final class03530<class06581> D = class01226.N("iron_ores");
+    public static final class03530<class06581> h = class01226.N("diamond_ores");
+    public static final class03530<class06581> r = class01226.N("redstone_ores");
+    public static final class03530<class06581> NN = class01226.N("lapis_ores");
+    public static final class03530<class06581> Ny = class01226.N("coal_ores");
+    public static final class03530<class06581> NL = class01226.N("emerald_ores");
+    public static final class03530<class06581> Nu = class01226.N("copper_ores");
+    public static final class03530<class06581> Ni = class01226.N("dirt");
+    public static final class03530<class06581> NR = class01226.N("terracotta");
+    public static final class03530<class06581> NM = class01226.N("completes_find_tree_tutorial");
+    public static final class03530<class06581> NB = class01226.N("shulker_boxes");
+    public static final class03530<class06581> NZ = class01226.N("copper_chests");
+    public static final class03530<class06581> Nz = class01226.N("lightning_rods");
+    public static final class03530<class06581> NU = class01226.N("copper_golem_statues");
+    public static final class03530<class06581> NE = class01226.N("copper");
+    public static final class03530<class06581> NW = class01226.N("chains");
+    public static final class03530<class06581> Nm = class01226.N("lanterns");
+    public static final class03530<class06581> NP = class01226.N("bars");
+    public static final class03530<class06581> Ns = class01226.N("signs");
+    public static final class03530<class06581> NT = class01226.N("hanging_signs");
+    public static final class03530<class06581> Nb = class01226.N("bee_food");
+    public static final class03530<class06581> Nj = class01226.N("banners");
+    public static final class03530<class06581> Nv = class01226.N("piglin_repellents");
+    public static final class03530<class06581> Nn = class01226.N("piglin_loved");
+    public static final class03530<class06581> Nt = class01226.N("ignored_by_piglin_babies");
+    public static final class03530<class06581> NG = class01226.N("piglin_safe_armor");
+    public static final class03530<class06581> Nl = class01226.N("duplicates_allays");
+    public static final class03530<class06581> Nd = class01226.N("brewing_fuel");
+    public static final class03530<class06581> Nw = class01226.N("eggs");
+    public static final class03530<class06581> Nk = class01226.N("meat");
+    public static final class03530<class06581> NY = class01226.N("sniffer_food");
+    public static final class03530<class06581> NQ = class01226.N("piglin_food");
+    public static final class03530<class06581> NO = class01226.N("fox_food");
+    public static final class03530<class06581> Ng = class01226.N("cow_food");
+    public static final class03530<class06581> NI = class01226.N("goat_food");
+    public static final class03530<class06581> NJ = class01226.N("sheep_food");
+    public static final class03530<class06581> No = class01226.N("wolf_food");
+    public static final class03530<class06581> Nq = class01226.N("cat_food");
+    public static final class03530<class06581> NK = class01226.N("horse_food");
+    public static final class03530<class06581> NV = class01226.N("zombie_horse_food");
+    public static final class03530<class06581> Ne = class01226.N("horse_tempt_items");
+    public static final class03530<class06581> NH = class01226.N("harnesses");
+    public static final class03530<class06581> Nc = class01226.N("happy_ghast_food");
+    public static final class03530<class06581> NX = class01226.N("happy_ghast_tempt_items");
+    public static final class03530<class06581> Na = class01226.N("camel_food");
+    public static final class03530<class06581> Np = class01226.N("camel_husk_food");
+    public static final class03530<class06581> NF = class01226.N("armadillo_food");
+    public static final class03530<class06581> NA = class01226.N("chicken_food");
+    public static final class03530<class06581> Nf = class01226.N("frog_food");
+    public static final class03530<class06581> NC = class01226.N("hoglin_food");
+    public static final class03530<class06581> NS = class01226.N("llama_food");
+    public static final class03530<class06581> Nx = class01226.N("llama_tempt_items");
+    public static final class03530<class06581> ND = class01226.N("ocelot_food");
+    public static final class03530<class06581> Nh = class01226.N("panda_food");
+    public static final class03530<class06581> Nr = class01226.N("panda_eats_from_ground");
+    public static final class03530<class06581> yN = class01226.N("pig_food");
+    public static final class03530<class06581> yy = class01226.N("rabbit_food");
+    public static final class03530<class06581> yL = class01226.N("strider_food");
+    public static final class03530<class06581> yu = class01226.N("strider_tempt_items");
+    public static final class03530<class06581> yi = class01226.N("turtle_food");
+    public static final class03530<class06581> yR = class01226.N("parrot_food");
+    public static final class03530<class06581> yM = class01226.N("parrot_poisonous_food");
+    public static final class03530<class06581> yB = class01226.N("axolotl_food");
+    public static final class03530<class06581> yZ = class01226.N("nautilus_bucket_food");
+    public static final class03530<class06581> yz = class01226.N("nautilus_food");
+    public static final class03530<class06581> yU = class01226.N("nautilus_taming_items");
+    public static final class03530<class06581> yE = class01226.N("non_flammable_wood");
+    public static final class03530<class06581> yW = class01226.N("boats");
+    public static final class03530<class06581> ym = class01226.N("chest_boats");
+    public static final class03530<class06581> yP = class01226.N("fishes");
+    public static final class03530<class06581> ys = class01226.N("creeper_drop_music_discs");
+    public static final class03530<class06581> yT = class01226.N("coals");
+    public static final class03530<class06581> yb = class01226.N("arrows");
+    public static final class03530<class06581> yj = class01226.N("lectern_books");
+    public static final class03530<class06581> yv = class01226.N("bookshelf_books");
+    public static final class03530<class06581> yn = class01226.N("beacon_payment_items");
+    public static final class03530<class06581> yt = class01226.N("wooden_tool_materials");
+    public static final class03530<class06581> yG = class01226.N("stone_tool_materials");
+    public static final class03530<class06581> yl = class01226.N("copper_tool_materials");
+    public static final class03530<class06581> yd = class01226.N("iron_tool_materials");
+    public static final class03530<class06581> yw = class01226.N("gold_tool_materials");
+    public static final class03530<class06581> yk = class01226.N("diamond_tool_materials");
+    public static final class03530<class06581> yY = class01226.N("netherite_tool_materials");
+    public static final class03530<class06581> yQ = class01226.N("repairs_leather_armor");
+    public static final class03530<class06581> yO = class01226.N("repairs_copper_armor");
+    public static final class03530<class06581> yg = class01226.N("repairs_chain_armor");
+    public static final class03530<class06581> yI = class01226.N("repairs_iron_armor");
+    public static final class03530<class06581> yJ = class01226.N("repairs_gold_armor");
+    public static final class03530<class06581> yo = class01226.N("repairs_diamond_armor");
+    public static final class03530<class06581> yq = class01226.N("repairs_netherite_armor");
+    public static final class03530<class06581> yK = class01226.N("repairs_turtle_helmet");
+    public static final class03530<class06581> yV = class01226.N("repairs_wolf_armor");
+    public static final class03530<class06581> ye = class01226.N("stone_crafting_materials");
+    public static final class03530<class06581> yH = class01226.N("freeze_immune_wearables");
+    public static final class03530<class06581> yc = class01226.N("cluster_max_harvestables");
+    public static final class03530<class06581> yX = class01226.N("compasses");
+    public static final class03530<class06581> ya = class01226.N("creeper_igniters");
+    public static final class03530<class06581> yp = class01226.N("noteblock_top_instruments");
+    public static final class03530<class06581> yF = class01226.N("foot_armor");
+    public static final class03530<class06581> yA = class01226.N("leg_armor");
+    public static final class03530<class06581> yf = class01226.N("chest_armor");
+    public static final class03530<class06581> yC = class01226.N("head_armor");
+    public static final class03530<class06581> yS = class01226.N("skulls");
+    public static final class03530<class06581> yx = class01226.N("trimmable_armor");
+    public static final class03530<class06581> yD = class01226.N("trim_materials");
+    public static final class03530<class06581> yh = class01226.N("decorated_pot_sherds");
+    public static final class03530<class06581> yr = class01226.N("decorated_pot_ingredients");
+    public static final class03530<class06581> LN = class01226.N("swords");
+    public static final class03530<class06581> Ly = class01226.N("axes");
+    public static final class03530<class06581> LL = class01226.N("hoes");
+    public static final class03530<class06581> Lu = class01226.N("pickaxes");
+    public static final class03530<class06581> Li = class01226.N("shovels");
+    public static final class03530<class06581> LR = class01226.N("spears");
+    public static final class03530<class06581> LM = class01226.N("breaks_decorated_pots");
+    public static final class03530<class06581> LB = class01226.N("villager_plantable_seeds");
+    public static final class03530<class06581> LZ = class01226.N("villager_picks_up");
+    public static final class03530<class06581> Lz = class01226.N("dyeable");
+    public static final class03530<class06581> LU = class01226.N("furnace_minecart_fuel");
+    public static final class03530<class06581> LE = class01226.N("bundles");
+    public static final class03530<class06581> LW = class01226.N("book_cloning_target");
+    public static final class03530<class06581> Lm = class01226.N("skeleton_preferred_weapons");
+    public static final class03530<class06581> LP = class01226.N("drowned_preferred_weapons");
+    public static final class03530<class06581> Ls = class01226.N("piglin_preferred_weapons");
+    public static final class03530<class06581> LT = class01226.N("pillager_preferred_weapons");
+    public static final class03530<class06581> Lb = class01226.N("wither_skeleton_disliked_weapons");
+    public static final class03530<class06581> Lj = class01226.N("shearable_from_copper_golem");
+    public static final class03530<class06581> Lv = class01226.N("enchantable/foot_armor");
+    public static final class03530<class06581> Ln = class01226.N("enchantable/leg_armor");
+    public static final class03530<class06581> Lt = class01226.N("enchantable/chest_armor");
+    public static final class03530<class06581> LG = class01226.N("enchantable/head_armor");
+    public static final class03530<class06581> Ll = class01226.N("enchantable/armor");
+    public static final class03530<class06581> Ld = class01226.N("enchantable/melee_weapon");
+    public static final class03530<class06581> Lw = class01226.N("enchantable/sweeping");
+    public static final class03530<class06581> Lk = class01226.N("enchantable/fire_aspect");
+    public static final class03530<class06581> LY = class01226.N("enchantable/sharp_weapon");
+    public static final class03530<class06581> LQ = class01226.N("enchantable/weapon");
+    public static final class03530<class06581> LO = class01226.N("enchantable/mining");
+    public static final class03530<class06581> Lg = class01226.N("enchantable/mining_loot");
+    public static final class03530<class06581> LI = class01226.N("enchantable/fishing");
+    public static final class03530<class06581> LJ = class01226.N("enchantable/trident");
+    public static final class03530<class06581> Lo = class01226.N("enchantable/lunge");
+    public static final class03530<class06581> Lq = class01226.N("enchantable/durability");
+    public static final class03530<class06581> LK = class01226.N("enchantable/bow");
+    public static final class03530<class06581> LV = class01226.N("enchantable/equippable");
+    public static final class03530<class06581> Le = class01226.N("enchantable/crossbow");
+    public static final class03530<class06581> LH = class01226.N("enchantable/vanishing");
+    public static final class03530<class06581> Lc = class01226.N("enchantable/mace");
+    public static final class03530<class06581> LX = class01226.N("map_invisibility_equipment");
+    public static final class03530<class06581> La = class01226.N("gaze_disguise_equipment");
+
+    private class01226() {
+    }
+
+    private static class03530<class06581> N(String string) {
+        return class03530.N((class05946)class04227.F, (class01894)class01894.y((String)string));
+    }
+}
+
