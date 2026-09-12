@@ -1,0 +1,14 @@
+package Nursultan;
+
+import java.util.function.Consumer;
+
+public record class11861(boolean checked, Consumer<Boolean> onChange) {
+
+   public Consumer<Boolean> y() {
+      return this.onChange;
+   }
+
+   public boolean N() {
+      return this.checked;
+   }
+}

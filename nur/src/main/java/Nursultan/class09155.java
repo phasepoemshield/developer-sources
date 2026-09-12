@@ -1,0 +1,12 @@
+package Nursultan;
+
+public record class09155(float yawDelta, float pitchDelta) {
+
+   public float y() {
+      return this.yawDelta;
+   }
+
+   public float N() {
+      return this.pitchDelta;
+   }
+}

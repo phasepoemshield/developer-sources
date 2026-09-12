@@ -1,0 +1,14 @@
+package Nursultan;
+
+import minecraft.class00949;
+import minecraft.class02689;
+
+public record class09415(class02689 profile, boolean hat) implements class00949 {
+   public boolean y() {
+      return this.hat;
+   }
+
+   public class02689 N() {
+      return this.profile;
+   }
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "nursultan",
+  "version": "1.21.11",
+  "name": "Nursultan Client",
+  "description": "Nursultan Client 1.21.11 (Mod Ready Distribution)",
+  "authors": [
+    "Nursultan Team"
+  ],
+  "contact": {
+    "homepage": "https://nursultan.fun"
+  },
+  "license": "Proprietary",
+  "icon": "assets/nursultan-client/textures/moder.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "nursultan.NursultanModInit",
+      "Nursultan.class09676"
+    ]
+  },
+  "provides": [
+    "fabric-api",
+    "fabric",
+    "fabric-api-base"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "*"
+  }
+}

@@ -1,0 +1,25 @@
+package Nursultan;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
+public record class11878(String avatarRef, String username, long subscribeMinutes) {
+
+   public String L() {
+      return this.username;
+   }
+
+   public String u() {
+      return this.avatarRef;
+   }
+
+   public long y() {
+      return this.subscribeMinutes;
+   }
+
+   public String N() {
+      Locale var1 = Locale.forLanguageTag(class11938.P().N().N());
+      return LocalDate.now().plusDays(((class11472)class11938.L_2).z() / 1440L).format(DateTimeFormatter.ofPattern("d MMMM yyyy", var1)).toLowerCase(var1);
+   }
+}

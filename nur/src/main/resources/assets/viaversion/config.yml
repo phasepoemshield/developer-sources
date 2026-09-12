@@ -1,0 +1,75 @@
+# ViaVersion / ViaFabricPlus Configuration
+config-version: 2
+init-config-version: 2
+migrate-default-config-changes: false
+
+check-for-updates: false
+prevent-collision: true
+use-new-effect-indicator: true
+shield-blocking: false
+no-delay-shield-blocking: true
+show-shield-when-sword-in-hand: false
+hologram-patch: false
+piston-animation-patch: false
+bossbar-patch: true
+bossbar-anti-flicker: false
+hologram-y: -0.96
+send-supported-versions: false
+simulate-pt: false
+replace-pistons: false
+replacement-piston-id: 0
+chunk-border-fix: true
+auto-team: true
+block-disconnect-msg: "You are using an unsupported Minecraft version!"
+reload-disconnect-msg: "Server reload, please rejoin!"
+team-colour-fix: false
+disable-1_13-auto-complete: false
+serverside-blockconnections: false
+reduce-blockstorage-memory: false
+flowerstem-when-block-above: false
+snow-collision-fix: false
+fix-infested-block-breaking: false
+1_13-tab-complete-delay: 0
+truncate-1_14-books: false
+left-handed-handling: true
+fix-non-full-blocklight: false
+fix-1_14-health-nan: true
+use-1_15-instant-respawn: false
+ignore-long-1_16-channel-names: true
+forced-use-1_17-resource-pack: false
+cache-1_17-light: true
+translate-ocelot-to-cat: true
+enforce-secure-chat: false
+handle-invalid-item-count: true
+cancel-block-sounds: false
+hide-scoreboard-numbers: false
+fix-1_21-placement-rotation: false
+cancel-swing-in-inventory: false
+use-1_8-hitbox-margin: false
+send-player-details: false
+
+packet-limiter:
+  max-per-second: -1
+  max-per-second-kick-message: "You are sending too many packets!"
+  sustained-max-per-second: -1
+  sustained-threshold: 3
+  sustained-period-seconds: 7
+  sustained-kick-message: "You are sending too many packets, :("
+
+packet-size-limiter:
+  max-per-second: -1
+  max-per-second-kick-message: "You are sending too many bytes!"
+  sustained-max-per-second: -1
+  sustained-threshold: 3
+  sustained-period-seconds: 7
+  sustained-kick-message: "You are sending too many bytes, :("
+
+logging:
+  log-blocked-joins: false
+  log-entity-data-errors: false
+  max-error-length: 1500
+
+map-1_16-world-names:
+  overworld: "minecraft:overworld"
+  nether: "minecraft:the_nether"
+  end: "minecraft:the_end"

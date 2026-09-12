@@ -1,0 +1,14 @@
+package Nursultan;
+
+import java.util.List;
+import minecraft.class04468;
+
+public class class10400<T> implements class04468<T> {
+   public List<T> y(String var1) {
+      return List.of();
+   }
+
+   public List<T> N(String var1) {
+      return List.of();
+   }
+}

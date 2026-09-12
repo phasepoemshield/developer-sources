@@ -1,0 +1,14 @@
+package Nursultan;
+
+import minecraft.class06584;
+
+public record class11543(int startTick, class06584 itemStack) {
+
+   public int y() {
+      return this.startTick;
+   }
+
+   public class06584 N() {
+      return this.itemStack;
+   }
+}

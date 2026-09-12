@@ -1,0 +1,23 @@
+package Nursultan;
+
+import minecraft.class06937;
+
+public record class11564(class06937 slot, long cost) {
+
+   @Override
+   public boolean equals(Object var1) {
+      if (this == var1) {
+         return true;
+      } else {
+         return var1 instanceof class11564 var2 ? this.slot.u == var2.slot.u : false;
+      }
+   }
+
+   public class06937 y() {
+      return this.slot;
+   }
+
+   public long N() {
+      return this.cost;
+   }
+}

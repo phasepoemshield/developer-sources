@@ -1,0 +1,226 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'nursultan'
+version = '1.21.11'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Mojang'
+        url = 'https://libraries.minecraft.net/'
+    }
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+    maven {
+        name = 'Sponge'
+        url = 'https://repo.spongepowered.org/repository/maven-public/'
+    }
+}
+
+dependencies {
+    implementation 'org.jspecify:jspecify:1.0.0'
+    implementation 'io.netty:netty-handler-proxy:4.2.7.Final'
+    implementation 'io.netty:netty-codec-socks:4.2.7.Final'
+    implementation 'io.netty:netty-codec-http:4.2.7.Final'
+    // Core engine & bundled mods (Minecraft classes, Iris, Sodium, Baritone, ViaVersion)
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Fabric Loader, Mixin & ASM
+    implementation 'org.ow2.asm:asm:9.7.1'
+    implementation 'org.ow2.asm:asm-analysis:9.7.1'
+    implementation 'org.ow2.asm:asm-commons:9.7.1'
+    implementation 'org.ow2.asm:asm-tree:9.7.1'
+    implementation 'org.ow2.asm:asm-util:9.7.1'
+    implementation 'org.spongepowered:mixin:0.8.7'
+
+    runtimeOnly 'org.lwjgl:lwjgl:3.3.3:natives-windows'
+    runtimeOnly 'org.lwjgl:lwjgl-glfw:3.3.3:natives-windows'
+    runtimeOnly 'org.lwjgl:lwjgl-opengl:3.3.3:natives-windows'
+    runtimeOnly 'org.lwjgl:lwjgl-openal:3.3.3:natives-windows'
+    runtimeOnly 'org.lwjgl:lwjgl-stb:3.3.3:natives-windows'
+    runtimeOnly 'org.lwjgl:lwjgl-tinyfd:3.3.3:natives-windows'
+    runtimeOnly 'org.lwjgl:lwjgl-jemalloc:3.3.3:natives-windows'
+    runtimeOnly 'org.lwjgl:lwjgl-freetype:3.3.3:natives-windows'
+    implementation 'org.lwjgl:lwjgl-nfd:3.3.3'
+    runtimeOnly 'org.lwjgl:lwjgl-nfd:3.3.3:natives-windows'
+    // msdfgen-нативы для macOS НЕ добавляем: биндинг в core кастомный (старее 3.3.4),
+    // официальный dylib 3.3.6 ABI-несовместим и роняет JVM (SIGSEGV в msdf_shape_get_contour_count).
+    // Без натива текст в GUI пустой, но игра стабильна.
+    // zstd-jni с macOS-нативами (в nursultan-core.jar только win/*.dll, поэтому на Mac краш)
+    implementation 'com.github.luben:zstd-jni:1.5.7-7'
+    // macOS natives (Intel + Apple Silicon) — нужно для запуска на Mac
+    runtimeOnly 'org.lwjgl:lwjgl:3.3.3:natives-macos'
+    runtimeOnly 'org.lwjgl:lwjgl:3.3.3:natives-macos-arm64'
+    runtimeOnly 'org.lwjgl:lwjgl-glfw:3.3.3:natives-macos'
+    runtimeOnly 'org.lwjgl:lwjgl-glfw:3.3.3:natives-macos-arm64'
+    runtimeOnly 'org.lwjgl:lwjgl-opengl:3.3.3:natives-macos'
+    runtimeOnly 'org.lwjgl:lwjgl-opengl:3.3.3:natives-macos-arm64'
+    runtimeOnly 'org.lwjgl:lwjgl-openal:3.3.3:natives-macos'
+    runtimeOnly 'org.lwjgl:lwjgl-openal:3.3.3:natives-macos-arm64'
+    runtimeOnly 'org.lwjgl:lwjgl-stb:3.3.3:natives-macos'
+    runtimeOnly 'org.lwjgl:lwjgl-stb:3.3.3:natives-macos-arm64'
+    runtimeOnly 'org.lwjgl:lwjgl-tinyfd:3.3.3:natives-macos'
+    runtimeOnly 'org.lwjgl:lwjgl-tinyfd:3.3.3:natives-macos-arm64'
+    runtimeOnly 'org.lwjgl:lwjgl-jemalloc:3.3.3:natives-macos'
+    runtimeOnly 'org.lwjgl:lwjgl-jemalloc:3.3.3:natives-macos-arm64'
+    runtimeOnly 'org.lwjgl:lwjgl-freetype:3.3.3:natives-macos'
+    runtimeOnly 'org.lwjgl:lwjgl-freetype:3.3.3:natives-macos-arm64'
+    // Minecraft 1.21.4 Libraries (LWJGL 3, Netty, JOML, Authlib, etc.)
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.4'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.13.4'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4.2'
+    implementation 'com.github.oshi:oshi-core:6.9.0'
+    implementation 'com.github.stephenc.jcip:jcip-annotations:1.0-1'
+    implementation 'com.google.code.gson:gson:2.13.2'
+    implementation 'com.google.guava:failureaccess:1.0.2'
+    implementation 'com.google.guava:guava:33.5.0-jre'
+    implementation 'com.ibm.icu:icu4j:77.1'
+    implementation 'com.microsoft.azure:msal4j:1.23.1'
+    implementation 'com.azure:azure-json:1.4.0'
+    implementation 'com.mojang:authlib:7.0.61'
+    implementation 'com.mojang:blocklist:1.0.10'
+    implementation 'com.mojang:brigadier:1.3.10'
+    implementation 'com.mojang:datafixerupper:9.0.19'
+    implementation 'com.mojang:jtracy:1.0.37'
+    implementation 'com.mojang:jtracy:1.0.37:natives-windows'
+    implementation 'com.mojang:logging:1.6.11'
+    implementation 'com.mojang:patchy:2.2.10'
+    implementation 'com.mojang:text2speech:1.18.11'
+    implementation 'com.nimbusds:content-type:2.3'
+    implementation 'com.nimbusds:lang-tag:1.7'
+    implementation 'com.nimbusds:nimbus-jose-jwt:9.40'
+    implementation 'com.nimbusds:oauth2-oidc-sdk:11.18'
+    implementation 'commons-codec:commons-codec:1.19.0'
+    implementation 'commons-io:commons-io:2.20.0'
+    implementation 'commons-logging:commons-logging:1.3.4'
+    implementation 'io.netty:netty-buffer:4.2.7.Final'
+    implementation 'io.netty:netty-codec-base:4.2.7.Final'
+    implementation 'io.netty:netty-codec-compression:4.2.7.Final'
+    implementation 'io.netty:netty-codec-http:4.2.7.Final'
+    implementation 'io.netty:netty-codec-socks:4.2.7.Final'
+    implementation 'io.netty:netty-common:4.2.7.Final'
+    implementation 'io.netty:netty-handler:4.2.7.Final'
+    implementation 'io.netty:netty-handler-proxy:4.2.7.Final'
+    implementation 'io.netty:netty-resolver:4.2.7.Final'
+    implementation 'io.netty:netty-transport-classes-epoll:4.2.7.Final'
+    implementation 'io.netty:netty-transport-classes-kqueue:4.2.7.Final'
+    implementation 'io.netty:netty-transport-native-unix-common:4.2.7.Final'
+    implementation 'io.netty:netty-transport-native-kqueue:4.2.7.Final'
+    implementation 'io.netty:netty-transport-native-kqueue:4.2.7.Final:osx-aarch_64'
+    implementation 'io.netty:netty-transport-native-kqueue:4.2.7.Final:osx-x86_64'
+    implementation 'io.netty:netty-transport:4.2.7.Final'
+    implementation 'it.unimi.dsi:fastutil:8.5.18'
+    implementation 'net.java.dev.jna:jna-platform:5.17.0'
+    implementation 'net.java.dev.jna:jna:5.17.0'
+    implementation 'net.minidev:accessors-smart:2.5.1'
+    implementation 'net.minidev:json-smart:2.5.1'
+    implementation 'net.sf.jopt-simple:jopt-simple:5.0.4'
+    implementation 'org.apache.commons:commons-compress:1.28.0'
+    implementation 'org.apache.commons:commons-lang3:3.19.0'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.14'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.16'
+    implementation 'org.apache.logging.log4j:log4j-api:2.25.2'
+    implementation 'org.apache.logging.log4j:log4j-core:2.25.2'
+    implementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.25.2'
+    implementation 'org.jcraft:jorbis:0.0.17'
+    implementation 'org.joml:joml:1.10.8'
+    implementation 'org.lwjgl:lwjgl-freetype:3.3.3'
+    implementation 'org.lwjgl:lwjgl-freetype:3.3.3:natives-windows'
+    implementation 'org.lwjgl:lwjgl-freetype:3.3.3:natives-windows-arm64'
+    implementation 'org.lwjgl:lwjgl-freetype:3.3.3:natives-windows-x86'
+    implementation 'org.lwjgl:lwjgl-glfw:3.3.3'
+    implementation 'org.lwjgl:lwjgl-glfw:3.3.3:natives-windows'
+    implementation 'org.lwjgl:lwjgl-glfw:3.3.3:natives-windows-arm64'
+    implementation 'org.lwjgl:lwjgl-glfw:3.3.3:natives-windows-x86'
+    implementation 'org.lwjgl:lwjgl-jemalloc:3.3.3'
+    implementation 'org.lwjgl:lwjgl-jemalloc:3.3.3:natives-windows'
+    implementation 'org.lwjgl:lwjgl-jemalloc:3.3.3:natives-windows-arm64'
+    implementation 'org.lwjgl:lwjgl-jemalloc:3.3.3:natives-windows-x86'
+    implementation 'org.lwjgl:lwjgl-openal:3.3.3'
+    implementation 'org.lwjgl:lwjgl-openal:3.3.3:natives-windows'
+    implementation 'org.lwjgl:lwjgl-openal:3.3.3:natives-windows-arm64'
+    implementation 'org.lwjgl:lwjgl-openal:3.3.3:natives-windows-x86'
+    implementation 'org.lwjgl:lwjgl-opengl:3.3.3'
+    implementation 'org.lwjgl:lwjgl-opengl:3.3.3:natives-windows'
+    implementation 'org.lwjgl:lwjgl-opengl:3.3.3:natives-windows-arm64'
+    implementation 'org.lwjgl:lwjgl-opengl:3.3.3:natives-windows-x86'
+    implementation 'org.lwjgl:lwjgl-stb:3.3.3'
+    implementation 'org.lwjgl:lwjgl-stb:3.3.3:natives-windows'
+    implementation 'org.lwjgl:lwjgl-stb:3.3.3:natives-windows-arm64'
+    implementation 'org.lwjgl:lwjgl-stb:3.3.3:natives-windows-x86'
+    implementation 'org.lwjgl:lwjgl-tinyfd:3.3.3'
+    implementation 'org.lwjgl:lwjgl-tinyfd:3.3.3:natives-windows'
+    implementation 'org.lwjgl:lwjgl-tinyfd:3.3.3:natives-windows-arm64'
+    implementation 'org.lwjgl:lwjgl-tinyfd:3.3.3:natives-windows-x86'
+    implementation 'org.lwjgl:lwjgl:3.3.3'
+    implementation 'org.lwjgl:lwjgl:3.3.3:natives-windows'
+    implementation 'org.lwjgl:lwjgl:3.3.3:natives-windows-arm64'
+    implementation 'org.lwjgl:lwjgl:3.3.3:natives-windows-x86'
+    implementation 'at.yawk.lz4:lz4-java:1.8.1'
+    implementation 'org.ow2.asm:asm:9.6'
+    implementation 'org.slf4j:slf4j-api:2.0.17'
+}
+
+application {
+    mainClass = 'Main'
+}
+
+run {
+    workingDir = file('run')
+    jvmArgs = [
+        '-XstartOnFirstThread',
+        '-Xmx4G',
+        '-XX:+UnlockExperimentalVMOptions',
+        '-XX:+UseG1GC',
+        '--add-opens=java.base/java.lang=ALL-UNNAMED',
+        '--add-opens=java.base/java.lang.reflect=ALL-UNNAMED',
+        '--add-opens=java.base/java.util=ALL-UNNAMED'
+    ]
+    args = [
+        '--version', '1.21.11',
+        '--gameDir', file('run').absolutePath,
+        '--assetsDir', file('run/assets').absolutePath,
+        '--assetIndex', '17',
+        '--username', 'DevPlayer',
+        '--accessToken', '0'
+    ]
+}
+
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+            include 'Main.java'
+            include 'Nur*.java'
+            include 'Nursultan/NursultanUserDataFix.java'
+            include 'Nursultan/NursultanModInit.java'
+            include 'Nursultan/TargetInfo.java'
+            include 'Nursultan/TargetInfoHud.java'
+            include 'org/**'
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs += ['-nowarn', '-Xlint:none']
+    options.failOnError = true
+}
+
+tasks.register('printClasspath') {
+    doLast {
+        println sourceSets.main.runtimeClasspath.asPath
+    }
+}
