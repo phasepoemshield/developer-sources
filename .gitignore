@@ -51,3 +51,8 @@ out.jar.bak*
 .env.*
 !.env.example
 !.env.sample
+
+# nur local binaries / runtime (excluded from archive)
+nur/*.jar
+nur/libs/
+nur/=

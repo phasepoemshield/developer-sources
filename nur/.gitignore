@@ -1,9 +1,6 @@
 .gradle/
 build/
 run/
-!run/
-run/*
-!run/assets
 out/
 *.log
 cfr.jar
