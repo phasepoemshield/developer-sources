@@ -438,7 +438,6 @@ public class WildClient implements ClientModInitializer {
          O00000000(AutoBuy::O000000000O00O);
          O00000000(O000000O0O0O00::O000000000O0O0);
          O00000000(O000000O0OO00O::O000000000);
-         O00000000(HeartbeatClient::O000000000);
          O00000000(MusicPlayerHud::O0000000000OO0);
          O00000000(AiRotationCommand::O00000000000);
          O00000000(CloudConfigService::O0000000000);

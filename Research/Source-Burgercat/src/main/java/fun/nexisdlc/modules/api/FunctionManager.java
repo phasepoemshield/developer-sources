@@ -95,7 +95,6 @@ public class FunctionManager {
     NBTViewer nbtViewer;
     RpSpoofer rpSpoofer;
     SpookyJoin spookyJoin;
-    ClientHide clientHide;
     ProxyServer proxyServer;
     AutoTP autoTP;
     Blink blink;
@@ -208,7 +207,6 @@ public class FunctionManager {
                 nbtViewer = new NBTViewer(),
                 rpSpoofer = new RpSpoofer(),
                 spookyJoin = new SpookyJoin(),
-                clientHide = new ClientHide(),
                 proxyServer = new ProxyServer(),
                 autoTP = new AutoTP(),
                 blink = new Blink(),

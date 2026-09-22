@@ -3,7 +3,6 @@ package fun.nexisdlc.mixins.render;
 import fun.nexisdlc.client.utils.player.PlayerInventoryUtil;
 import fun.nexisdlc.client.utils.player.PlayerUtils;
 import fun.nexisdlc.modules.impl.render.Beautifully;
-import fun.nexisdlc.modules.impl.utils.ClientHide;
 import fun.nexisdlc.modules.impl.utils.Tweaks;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gl.RenderPipelines;
@@ -203,7 +202,7 @@ public abstract class InventoryScreenMixin extends HandledScreen<PlayerScreenHan
 
     @Unique
     private boolean nexis$isButtonVisible() {
-        return !ClientHide.unhooked;
+        return true;
     }
 
     @Unique

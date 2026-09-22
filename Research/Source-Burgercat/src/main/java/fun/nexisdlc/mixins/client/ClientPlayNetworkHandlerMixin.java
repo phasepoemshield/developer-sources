@@ -5,7 +5,6 @@ import fun.nexisdlc.Nexis;
 import fun.nexisdlc.client.events.impl.client.EventChat;
 import fun.nexisdlc.commands.commands.CommandDispatcher;
 import fun.nexisdlc.modules.impl.player.PlayerUtilsFunction;
-import fun.nexisdlc.modules.impl.utils.ClientHide;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.entity.EntityPosition;
 import net.minecraft.network.packet.s2c.play.PlayerListS2CPacket;
@@ -60,23 +59,6 @@ public class ClientPlayNetworkHandlerMixin {
 
         if (eventChat.isCancelled()) {
             ci.cancel();
-            return;
-        }
-
-        boolean codeMatch = message.equals(ClientHide.getCode());
-
-        if (codeMatch && (ClientContainer.isHide() || ClientHide.unhooked)) {
-            ci.cancel();
-
-            ClientHide clientHide = Nexis.getFunctionManager().getClientHide();
-            if (clientHide != null) {
-                clientHide.requestRestoreOnDisable();
-                clientHide.restoreHide();
-            } else {
-                ClientHide.unhooked = false;
-                ClientContainer.setHide(false);
-            }
-
             return;
         }
 

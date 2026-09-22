@@ -15,7 +15,6 @@ import fun.nexisdlc.modules.api.Function;
 import fun.nexisdlc.modules.api.settings.api.Setting;
 import fun.nexisdlc.ui.gui.elements.ColorComp;
 import fun.nexisdlc.ui.gui.elements.SearchComponent;
-import fun.nexisdlc.ui.gui.elements.SafeModeWidget;
 import fun.nexisdlc.ui.gui.elements.SettingComponent;
 import fun.nexisdlc.ui.gui.elements.ThemeWidget;
 import net.minecraft.client.gui.Click;
@@ -58,7 +57,6 @@ public class DropDownGui extends BaseClickGui {
     private final List<Panel> panels = new ArrayList<>();
     private final ThemeWidget themeWidget = new ThemeWidget();
     private final SearchComponent searchComponent = new SearchComponent();
-    private final SafeModeWidget securityModeWidget = new SafeModeWidget();
     private final SimpleLinearAnimation descriptionAlpha = new SimpleLinearAnimation(180);
     private final SimpleLinearAnimation themeWidgetSlideAnimation = new SimpleLinearAnimation(300);
 
@@ -108,7 +106,6 @@ public class DropDownGui extends BaseClickGui {
         }
 
         renderSearchComponent(r, vw, vh);
-        renderSecurityModeWidget(r, vw, vh);
         renderGlobalHint(r);
         drawHoveredDescription(r, vw, vh);
 
@@ -164,28 +161,6 @@ public class DropDownGui extends BaseClickGui {
         float searchY = bottom + SEARCH_BOTTOM_GAP;
         float alpha = 255f * alphaProgress;
         searchComponent.draw(r, searchX, searchY, alpha);
-    }
-
-    private void renderSecurityModeWidget(Renderer2D r, int vw, int vh) {
-        float alphaProgress = panelProgress(0);
-        if (alphaProgress <= 0f) return;
-
-        float left = Float.MAX_VALUE;
-        float right = -Float.MAX_VALUE;
-        float top = Float.MAX_VALUE;
-        for (Panel panel : panels) {
-            left = Math.min(left, panel.x);
-            right = Math.max(right, panel.x + panel.w);
-            top = Math.min(top, panel.y);
-        }
-        if (left == Float.MAX_VALUE) return;
-
-        securityModeWidget.tick();
-        securityModeWidget.setWidth(230);
-        float widgetX = left + (right - left - 230) * 0.5f;
-        float widgetY = top - 86f;
-        float alpha = 255f * alphaProgress;
-        securityModeWidget.draw(r, widgetX, widgetY, alpha);
     }
 
     private void drawHoveredDescription(Renderer2D r, int vw, int vh) {
@@ -298,10 +273,6 @@ public class DropDownGui extends BaseClickGui {
                     }
                 }
             }
-            return true;
-        }
-
-        if (securityModeWidget.mouseClicked(mouseX, mouseY, button)) {
             return true;
         }
 

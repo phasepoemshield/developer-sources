@@ -3,7 +3,6 @@ package fun.nexisdlc.mixins.render;
 import fun.nexisdlc.Nexis;
 import fun.nexisdlc.client.ClientColors;
 import fun.nexisdlc.client.utils.render.color.ColorUtils;
-import fun.nexisdlc.modules.impl.utils.ClientHide;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.PlayerListHud;
@@ -61,7 +60,7 @@ public class PlayerListHudMixin {
             )
     )
     private void nexis$drawPlayerNameWithHighlight(DrawContext context, TextRenderer textRenderer, Text text, int x, int y, int color) {
-        if (nexis$currentEntry != null && !ClientHide.unhooked && mc.player != null) {
+        if (nexis$currentEntry != null && mc.player != null) {
             String name = nexis$currentEntry.getProfile().name();
             boolean isSelf = mc.player.getUuid().equals(nexis$currentEntry.getProfile().id());
             boolean isFriend = Nexis.getInstance().getFriendStorage().isFriend(name);

@@ -1,6 +1,5 @@
 package fun.nexisdlc.mixins.render;
 
-import fun.nexisdlc.modules.impl.utils.ClientHide;
 import net.minecraft.client.gui.screen.pack.PackScreen;
 import net.minecraft.client.gui.tooltip.Tooltip;
 import net.minecraft.client.gui.widget.ButtonWidget;
@@ -35,9 +34,7 @@ public abstract class PackScreenMixin {
     private ButtonWidget nexis$redirectOpenFolderButton(ButtonWidget.Builder builder) {
         if (builder.message.equals(OPEN_FOLDER)) {
             return ButtonWidget.builder(OPEN_FOLDER, button -> {
-                File folderToOpen = ClientHide.resourcePackFolder != null && ClientHide.resourcePackFolder.exists()
-                        ? ClientHide.resourcePackFolder
-                        : file.toFile();
+                File folderToOpen = file.toFile();
                 if (!folderToOpen.exists()) {
                     return;
                 }

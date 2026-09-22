@@ -25,20 +25,11 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.Optional;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 @Mixin(MinecraftClient.class)
 public class MinecraftClientMixin {
@@ -65,9 +56,6 @@ public class MinecraftClientMixin {
 
     @Unique
     private static boolean rightShiftWasDown = false;
-
-    @Unique
-    private static ScheduledExecutorService logCopyExecutor;
 
     @Unique
     private boolean nexis$wasInWorld = false;
@@ -112,7 +100,6 @@ public class MinecraftClientMixin {
         nexis$applyWindowFrameTheme();
         nexis$windowInitialized = true;
         nexis$updateWindowIcon();
-        nexis$updateLogCopying();
     }
 
     @Inject(method = "updateWindowTitle", at = @At("HEAD"), cancellable = true)
@@ -290,89 +277,6 @@ public class MinecraftClientMixin {
         return buffer;
     }
 
-    @Unique
-    private static void nexis$updateLogCopying() {
-        if (logCopyExecutor != null && !logCopyExecutor.isShutdown()) {
-            logCopyExecutor.shutdownNow();
-        }
-
-        if (!ClientContainer.isHide()) {
-            return;
-        }
-
-        var clientHide = Nexis.getFunctionManager() != null
-                ? Nexis.getFunctionManager().getClientHide()
-                : null;
-
-        if (clientHide == null) {
-            return;
-        }
-
-        String customLogDir = clientHide.pathToMinecraft.get() + "/logs";
-
-        File logDir = new File(customLogDir);
-        File sourceLog = new File(MinecraftClient.getInstance().runDirectory, "logs/latest.log");
-        File targetLog = new File(logDir, "latest.log");
-
-        if (!logDir.exists() || !logDir.isDirectory()) {
-            return;
-        }
-
-        nexis$clearNexisLogs();
-
-        logCopyExecutor = Executors.newSingleThreadScheduledExecutor();
-
-        logCopyExecutor.scheduleAtFixedRate(() -> {
-            try {
-                if (!sourceLog.exists()) {
-                    return;
-                }
-
-                String filteredContent = Files.readString(sourceLog.toPath(), StandardCharsets.UTF_8)
-                        .lines()
-                        .filter(line -> !line.toLowerCase().contains("nexis"))
-                        .reduce((left, right) -> left + System.lineSeparator() + right)
-                        .orElse("");
-
-                try (FileWriter writer = new FileWriter(targetLog, true)) {
-                    writer.write(filteredContent);
-                }
-            } catch (Exception e) {
-                Nexis.LOGGER.warn("Failed to mirror latest.log", e);
-            }
-        }, 0, 1, TimeUnit.SECONDS);
-    }
-
-    @Unique
-    private static void nexis$clearNexisLogs() {
-        try {
-            Path gameDir = MinecraftClient.getInstance().runDirectory.toPath();
-            Path rotationLogsDir = gameDir.resolve("nexis_rotation_logs");
-
-            if (Files.exists(rotationLogsDir)) {
-                try (DirectoryStream<Path> stream = Files.newDirectoryStream(rotationLogsDir)) {
-                    for (Path entry : stream) {
-                        try {
-                            if (Files.isDirectory(entry)) {
-                                try (DirectoryStream<Path> subStream = Files.newDirectoryStream(entry)) {
-                                    for (Path subEntry : subStream) {
-                                        Files.deleteIfExists(subEntry);
-                                    }
-                                }
-
-                                Files.deleteIfExists(entry);
-                            } else {
-                                Files.deleteIfExists(entry);
-                            }
-                        } catch (IOException ignored) {
-                        }
-                    }
-                }
-            }
-        } catch (Exception ignored) {
-        }
-    }
-
     @Inject(method = "tick", at = @At("HEAD"))
     private void onTick(CallbackInfo ci) {
         MinecraftClient mc = MinecraftClient.getInstance();
@@ -383,8 +287,7 @@ public class MinecraftClientMixin {
             nexis$lastUnhookedState = currentState;
 
             nexis$applyWindowFrameTheme();
-            nexis$updateLogCopying();
-
+    
             if (window != null) {
                 nexis$cachedWindowTitle = "";
                 nexis$updateWindowTitle();
